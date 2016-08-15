@@ -140,13 +140,13 @@ if( !function_exists( "abbey_theme_enque_styles" ) ) {
 		*
 		*/
 		$bootstrap_cdn = "//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css";
-		wp_enqueue_style( 'abbey-bootstrap', esc_url($bootstrap_cdn), array(), null );
+		wp_enqueue_style( 'abbey-bootstrap-css', esc_url($bootstrap_cdn), array(), null );
 
 
 		// enqueue theme style.css//
 		wp_enqueue_style ( "abbey-style", get_stylesheet_uri() );
 
-		wp_enqueue_style ("abbey-theme-main", get_template_directory_uri()."/css/main.css" );
+		
 
 		/*
 		* action hook for other enqueueus 
