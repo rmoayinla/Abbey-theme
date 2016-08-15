@@ -14,6 +14,10 @@ body {
   margin: 0px;
   background-color: #eee;
 }
+.container-fluid,
+.container {
+  overflow: hidden;
+}
 /*
 *
 * media queries for responsive design 
