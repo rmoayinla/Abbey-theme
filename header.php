@@ -18,8 +18,10 @@
 	<div class="container-fluid" id="site-wrapper">
 	
 		<header id="sitehead" class="site-header container-fluid" role="header">
+			<div id="header-top" class="">
+				<?php do_action( "abbey_theme_before_header" ); ?>
 
-			<?php do_action( "abbey_theme_before_header" ); ?>
+			</div><!--#header-top closes -->
 
 			<div class="skip-link">
 				<a class="skip-link sr-only" href="#content"><?php _e( 'Skip to content', 'abbey' ); ?>
