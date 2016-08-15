@@ -24,6 +24,7 @@ body {
 .container-fluid .jumbotron {
   border-radius: 0px;
   width: inherit;
+  margin: 0px -20px -20px 0px;
 }
 /*
 *
