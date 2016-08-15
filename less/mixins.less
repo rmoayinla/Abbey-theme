@@ -20,6 +20,9 @@
 	border: 0px;
 	outline: 0px;
 }
+.no-border-radius(){
+	border-radius: 0px;
+}
 
 .image-size( @width,@height ){
 	width: @width;
@@ -42,5 +45,16 @@
 
 .margin(@margin){ margin: @margin; }
 .margin( @margin-x; @margin-y ){
-	margin: @arguments;
+	margin-top: @margin-x;
+	margin-bottom: @margin-x;
+	margin-left: @margin-y;
+	margin-right: @margin-y;
+}
+
+.padding( @padding: @base-padding ){ padding: @padding; }
+.padding ( @padding-x; @padding-y ){
+	padding-top: @padding-x;
+	padding-bottom: @padding-x;
+	padding-left: @padding-y;
+	padding-right: @padding-y;
 }

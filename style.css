@@ -18,6 +18,13 @@ body {
 .container {
   overflow: hidden;
 }
+.navbar {
+  border-radius: 0px;
+}
+.container-fluid .jumbotron {
+  border-radius: 0px;
+  width: inherit;
+}
 /*
 *
 * media queries for responsive design 
