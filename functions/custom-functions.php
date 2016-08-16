@@ -1,7 +1,7 @@
 <?php
 function abbey_default_header(){
 	echo '
-	<div class="alert bg-light alert-dismissable text-center full-width">
+	<div class="alert bg-dark alert-dismissable text-center full-width">
 	 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
 	 	<span aria-hidden="true">&times;</span>
 	 </button>

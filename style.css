@@ -29,12 +29,28 @@ body {
 .bg-light {
   background-color: #ffefe5;
 }
+.bg-dark {
+  background-color: #190a00;
+  color: #fff;
+}
+.white {
+  color: #fff;
+}
+.dark {
+  color: #190a00;
+}
+.primary {
+  color: #FF6600;
+}
 .full-width {
   border-radius: 0px;
   width: 100%;
   border: 0px;
   outline: 0px;
   border-color: transparent !important;
+}
+.close {
+  color: inherit !important;
 }
 /*
 *
