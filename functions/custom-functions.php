@@ -12,7 +12,7 @@ add_action( "abbey_theme_before_header", "abbey_default_header" );
 
 function abbey_header_contact(){
 	echo '
-	<div class="row pad-medium inner-pad-medium border-y">
+	<div class="row">
 		<div class="col-md-4">
 		<i class="fa fa-fw fa-map-marker"></i>
 		8, Kadiri Street, Alausa, Ikeja, Lagos. 
