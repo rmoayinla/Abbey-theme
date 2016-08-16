@@ -22,19 +22,19 @@
 				<?php do_action( "abbey_theme_before_header" ); ?>
 
 			</div><!--#header-top closes -->
+			
+			<div id="header-contact" class="">
+				<?php do_action( "abbey_theme_header_contact" ); ?>
+
+			</div><!--#header-top closes -->
 
 			<div class="skip-link">
 				<a class="skip-link sr-only" href="#content"><?php _e( 'Skip to content', 'abbey' ); ?>
 				</a>
 			</div><!--skip link closes -->
 				
-			<div class="site-header-main">
-				<div class="site-branding">
-							
-
-				</div><!-- .site-branding -->
-
-				<?php if ( has_nav_menu( 'primary' ) || has_nav_menu( 'social' ) ) : ?>
+			
+				<?php if ( has_nav_menu( 'primary' ) ): ?>
 							
 
 							

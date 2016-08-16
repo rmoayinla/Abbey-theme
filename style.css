@@ -52,6 +52,24 @@ body {
 .close {
   color: inherit !important;
 }
+.pad-medium {
+  padding: 20px;
+}
+.inner-pad-medium {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.border-y {
+  border-top: 1px soild #eee;
+  border-bottom: 1px solid #eee;
+}
+/*
+* header styles 
+*
+*/
+#header-contact {
+  margin-top: -20px;
+}
 /*
 *
 * media queries for responsive design 
