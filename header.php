@@ -17,7 +17,7 @@
 <body <?php body_class(); ?> >
 	<div class="container-fluid" id="site-wrapper">
 	
-		<header id="sitehead" class="site-header container-fluid" role="header">
+		<header id="sitehead" class="site-header row" role="header">
 			<div id="header-top" class="">
 				<?php do_action( "abbey_theme_before_header" ); ?>
 

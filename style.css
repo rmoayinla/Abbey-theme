@@ -26,6 +26,16 @@ body {
   width: inherit;
   margin: 0px -20px -20px 0px;
 }
+.alert-success {
+  background-color: #FF6600;
+}
+.full-width {
+  border-radius: 0px;
+  width: 100%;
+  border: 0px;
+  outline: 0px;
+  border-color: transparent !important;
+}
 /*
 *
 * media queries for responsive design 
