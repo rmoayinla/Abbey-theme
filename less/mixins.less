@@ -35,6 +35,13 @@
      -moz-box-shadow: @arguments;
           box-shadow: @arguments;
 }
+.box-shadow(@style, @c) when (iscolor(@c)) {
+  -webkit-box-shadow: @style @c;
+  box-shadow:         @style @c;
+}
+.box-shadow(@style, @alpha: 50%) when (isnumber(@alpha)) {
+  .box-shadow(@style, rgba(0, 0, 0, @alpha));
+}
 
 .position ( @position: relative; @top: 10px; @right: 0px; @bottom: 0px; @left: 0px){
 	position: @position;

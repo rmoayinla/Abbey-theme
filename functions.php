@@ -153,7 +153,12 @@ if( !function_exists( "abbey_theme_enque_styles" ) ) {
 		wp_enqueue_style ( "abbey-style", get_stylesheet_uri() );
 
 		
-
+		/*
+		* enque font-awesome 
+		*
+		*/
+		wp_enqueue_style("abbey-fontawesome-css", get_template_directory_uri()."/css/font-awesome.min.css" ); 
+		
 		/*
 		* action hook for other enqueueus 
 		*
