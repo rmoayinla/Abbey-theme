@@ -74,8 +74,8 @@ if( !function_exists( "abbey_theme_setup" ) ) {
 		*/
 		$abbey_theme_logo_upload_defaults = apply_filters( "abbey_theme_logo_upload_defaults", 
 			array(
-			'height'      => 100,
-	    	'width'       => 400,
+			'height'      => '',
+	    	'width'       => '',
 	    	'flex-height' => true,
 	    	'flex-width'  => true,
 	    	'header-text' => array( 'site-title', 'site-description' ),
