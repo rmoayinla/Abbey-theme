@@ -136,6 +136,12 @@ if( !function_exists( "abbey_theme_enque_styles" ) ) {
 		wp_enqueue_script( "abbey-script", get_template_directory_uri()."/js/script.js", array( "jquery" ), 1.0, true );
 
 		/*
+		* enqueueu bootstrap js 
+		*
+		*/
+		$bootstrap_js_cdn = "//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js";
+		wp_enqueue_script( "abbey-bootstrap-js", esc_url( $bootstrap_js_cdn ), array( "jquery" ), 3, true );
+		/*
 		* enqueue bootstrap css
 		*
 		*/
