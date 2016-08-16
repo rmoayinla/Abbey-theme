@@ -26,8 +26,8 @@ body {
   width: inherit;
   margin: 0px -20px -20px 0px;
 }
-.alert-success {
-  background-color: #FF6600;
+.bg-light {
+  background-color: #ffefe5;
 }
 .full-width {
   border-radius: 0px;
