@@ -1,7 +1,7 @@
 <?php
 
 require trailingslashit( get_template_directory () )."functions/custom-functions.php";
-
+require trailingslashit( get_template_directory () )."libs/wp_bootstrap_navwalker.php";
 $content_width; 
 
 if( !function_exists( "abbey_theme_setup" ) ) {

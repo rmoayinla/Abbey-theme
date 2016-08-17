@@ -67,15 +67,23 @@ body {
 * header styles 
 *
 */
-#header-contact {
-  margin-top: -20px;
-}
 #header-contact .row {
-  padding: 20px;
+  padding: 15px;
   border-top: 1px solid #c5c5c5;
   border-bottom: 1px solid #c5c5c5;
-  background-color: #ebebeb;
+  background-color: #dfdfdf;
 }
+#header-top #contact-me {
+  margin-bottom: 0px;
+  padding: 15px;
+}
+#header-top .alert-dismissable .close {
+  right: 0px;
+}
+/*
+* icons 
+*
+*/
 /*
 *
 * media queries for responsive design 

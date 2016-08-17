@@ -36,7 +36,7 @@
 			
 				<?php if ( has_nav_menu( 'primary' ) ): ?>
 							
-
+				<?php do_action("abbey_theme_primary_menu"); ?>
 							
 				<?php endif; ?>
 
