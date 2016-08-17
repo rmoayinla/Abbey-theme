@@ -52,6 +52,8 @@
 						
 						
 					<?php endif; // End header image check. ?>
+
+			<?php do_action( "abbey_theme_after_header" ); ?>
 				
 		</header><!-- .site-header -->
 

@@ -58,3 +58,13 @@ function abbey_primary_menu(){
 
 }
 add_action( "abbey_theme_primary_menu", "abbey_primary_menu" );
+
+function abbey_after_header () {
+	echo '
+		<div class="jumbotron">
+
+		</div>
+	';
+}
+
+add_action ( "abbey_theme_after_header", "abbey_after_header" );

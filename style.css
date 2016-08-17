@@ -67,8 +67,11 @@ body {
 * header styles 
 *
 */
+#sitehead .navbar {
+  margin-bottom: 0px;
+}
 #header-contact .row {
-  padding: 15px;
+  padding: 12px;
   border-top: 1px solid #c5c5c5;
   border-bottom: 1px solid #c5c5c5;
   background-color: #dfdfdf;
@@ -84,6 +87,52 @@ body {
 * icons 
 *
 */
+.base-icon {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+@instagram :
+
+a[href="*facebook"]:before {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\f230";
+}
+a[href="*twitter"]:before {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\f081";
+}
+.whatsapp-icon {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\f232";
+}
+.instagram-icon {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\f16d";
+}
 /*
 *
 * media queries for responsive design 
