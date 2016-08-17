@@ -55,6 +55,9 @@ body {
 .pad-medium {
   padding: 20px;
 }
+.pad-xx {
+  padding: 60px;
+}
 .inner-pad-medium {
   padding-left: 40px;
   padding-right: 40px;
@@ -63,12 +66,21 @@ body {
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
 }
+.no-bottom-margin {
+  margin-bottom: 0px;
+}
 /*
 * header styles 
 *
 */
 #sitehead .navbar {
   margin-bottom: 0px;
+}
+#sitehead .jumbotron {
+  padding-top: 80px;
+  padding-bottom: 200px;
+  padding-left: 120px;
+  padding-right: 120px;
 }
 #header-contact .row {
   padding: 12px;

@@ -34,24 +34,24 @@
 			</div><!--skip link closes -->
 				
 			
-				<?php if ( has_nav_menu( 'primary' ) ): ?>
+			<?php if ( has_nav_menu( 'primary' ) ): ?>
 							
 				<?php do_action("abbey_theme_primary_menu"); ?>
 							
-				<?php endif; ?>
+			<?php endif; ?>
 
-				<?php if ( has_nav_menu( 'social' ) ) : ?>
+			<?php if ( has_nav_menu( 'social' ) ) : ?>
 									
 
-				<?php endif; ?>
+			<?php endif; ?>
 
 									
-			</div><!-- .site-header-main -->
+			
 
-					<?php if ( get_header_image() ) : ?>
+			<?php if ( get_header_image() ) : ?>
 						
 						
-					<?php endif; // End header image check. ?>
+			<?php endif; // End header image check. ?>
 
 			<?php do_action( "abbey_theme_after_header" ); ?>
 				

@@ -60,11 +60,22 @@ function abbey_primary_menu(){
 add_action( "abbey_theme_primary_menu", "abbey_primary_menu" );
 
 function abbey_after_header () {
-	echo '
+	$defaults = abbey_theme_defaults();
+	ob_start(); ?>
 		<div class="jumbotron">
-
+			<div class="row">
+				<div class="col-md-6">
+					<div class="page-header no-bottom-margin"><h2><?php bloginfo('name'); ?> </h1></div>
+					<div class="small description">
+						<p><?php bloginfo('description');?></p>
+					</div>
+					<div class="" id="about-site">
+						<?php echo esc_html($defaults["about"]); ?>
+					</div>
+				</div>
+			</div>
 		</div>
-	';
+	<?php echo ob_get_clean(); 
 }
 
 add_action ( "abbey_theme_after_header", "abbey_after_header" );
