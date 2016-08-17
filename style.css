@@ -43,11 +43,11 @@ body {
   color: #FF6600;
 }
 .full-width {
-  border-radius: 0px;
   width: 100%;
-  border: 0px;
   outline: 0px;
   border-color: transparent !important;
+  border: 0px;
+  border-radius: 0px;
 }
 .close {
   color: inherit !important;
@@ -66,8 +66,18 @@ body {
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
 }
+.no-border {
+  border: 0px;
+  border-radius: 0px;
+}
 .no-bottom-margin {
   margin-bottom: 0px;
+}
+.margin-top-sm {
+  margin-top: 20px;
+}
+.margin-top-md {
+  margin-top: 30px;
 }
 /*
 * header styles 
@@ -78,9 +88,14 @@ body {
 }
 #sitehead .jumbotron {
   padding-top: 80px;
-  padding-bottom: 200px;
+  padding-bottom: 100px;
   padding-left: 120px;
   padding-right: 120px;
+}
+#sitehead #admin-info {
+  padding-top: 30px;
+  border-left: 2px dashed #797979;
+  padding-bottom: 30px;
 }
 #header-contact .row {
   padding: 12px;
@@ -94,6 +109,26 @@ body {
 }
 #header-top .alert-dismissable .close {
   right: 0px;
+}
+#secondary-menu .nav-pills .menu-item a {
+  padding: 10px 15px 10px 15px;
+  border-radius: 20px;
+  text-decoration: none;
+  border: 1px solid #FF6600;
+  background-color: #fff;
+}
+#secondary-menu .nav-pills .menu-item {
+  margin-right: 30px;
+}
+#secondary-menu .nav-pills .menu-item a:before {
+  content: "#";
+}
+#secondary-menu .nav-pills .menu-item a:hover {
+  background-color: #f8f8f8;
+}
+.logo {
+  width: 200px;
+  height: 200px;
 }
 /*
 * icons 

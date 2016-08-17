@@ -60,22 +60,56 @@ function abbey_primary_menu(){
 add_action( "abbey_theme_primary_menu", "abbey_primary_menu" );
 
 function abbey_after_header () {
-	$defaults = abbey_theme_defaults();
-	ob_start(); ?>
-		<div class="jumbotron">
-			<div class="row">
-				<div class="col-md-6">
-					<div class="page-header no-bottom-margin"><h1><?php bloginfo('name'); ?> </h1></div>
-					<div class="small description">
-						<p><?php bloginfo('description');?></p>
+	if( is_front_page() ):
+		$defaults = abbey_theme_defaults();
+		ob_start(); ?>
+			<div class="jumbotron" id="site-banner">
+				<div class="row">
+					
+					<div class="col-md-6">
+						<div class="page-header no-bottom-margin"><h1><?php bloginfo('name'); ?> </h1></div>
+						<div class="small description">
+							<p><?php bloginfo('description');?></p>
+						</div>
+						<div class="" id="about-site">
+							<?php echo esc_html($defaults["about"]); ?>
+						</div>
+						<?php if( has_nav_menu("secondary") ): 
+									do_action("abbey_theme_secondary_menu");
+							endif;//if has-nev menu//
+						?>
 					</div>
-					<div class="" id="about-site">
-						<?php echo esc_html($defaults["about"]); ?>
+					<div class="col-md-4 col-md-offset-1 text-center" id="admin-info">
+						<div class="no-border">
+							<img src="<?php echo $defaults['logo']; ?>" alt="Site Logo" class="img-circle logo">
+							<div class="">
+								<h3> <?php echo esc_html($defaults['admin']['name']); ?></h3>
+								<p class="small"> <?php echo esc_html(implode($defaults['admin']['roles'], " , " ) ); ?> </p>
+							</div>
+
+						</div>
 					</div>
 				</div>
-			</div>
-		</div>
-	<?php echo ob_get_clean(); 
+			</div><!--end of jumbotron/#site-banner -->
+		<?php echo ob_get_clean(); 
+	endif;
 }
 
 add_action ( "abbey_theme_after_header", "abbey_after_header" );
+
+function abbey_secondary_menu(){
+	echo '<div class="margin-top-md" id="secondary-menu">';
+			 wp_nav_menu( array(
+                'menu'              => 'secondary',
+                'theme_location'    => 'secondary',
+                'depth'             => 1,
+                'container'         => 'ul',
+                'menu_class'   		=> 'nav nav-pills',
+        		
+                )
+            );
+
+	echo	'</div>';
+	
+}
+add_action ( "abbey_theme_secondary_menu", "abbey_secondary_menu" );
