@@ -65,7 +65,7 @@ function abbey_after_header () {
 		<div class="jumbotron">
 			<div class="row">
 				<div class="col-md-6">
-					<div class="page-header no-bottom-margin"><h2><?php bloginfo('name'); ?> </h1></div>
+					<div class="page-header no-bottom-margin"><h1><?php bloginfo('name'); ?> </h1></div>
 					<div class="small description">
 						<p><?php bloginfo('description');?></p>
 					</div>
