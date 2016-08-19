@@ -10,6 +10,7 @@ Text Domain: abbey
 
 
 */
+@z-index = 10;
 body {
   margin: 0px;
   background-color: #f8f8f8;
@@ -72,7 +73,8 @@ body {
   padding-left: 40px;
   padding-right: 40px;
 }
-.outer-pad-medium {
+.outer-pad-medium,
+#sitehead #admin-info {
   padding-top: 40px;
   padding-bottom: 40px;
 }
@@ -93,13 +95,8 @@ body {
 * header styles 
 *
 */
-#sitehead .navbar {
-  margin-bottom: 0px;
-}
 #sitehead #admin-info {
-  padding-top: 30px;
   border-left: 2px dashed #797979;
-  padding-bottom: 30px;
 }
 #header-contact .row {
   border-top: 1px solid #c5c5c5;
@@ -133,43 +130,10 @@ body {
 * icons 
 *
 */
-.base-icon {
-  display: inline-block;
-  font: normal normal normal 14px/1 FontAwesome;
-  font-size: inherit;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-@instagram :
-
-a[href="*facebook"]:before {
-  display: inline-block;
-  font: normal normal normal 14px/1 FontAwesome;
-  font-size: inherit;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  content: "\f230";
-}
-a[href="*twitter"]:before {
-  display: inline-block;
-  font: normal normal normal 14px/1 FontAwesome;
-  font-size: inherit;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  content: "\f081";
-}
-.whatsapp-icon {
-  display: inline-block;
-  font: normal normal normal 14px/1 FontAwesome;
-  font-size: inherit;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  content: "\f232";
-}
+.base-icon,
+a[href="*facebook"]:before,
+a[href="*twitter"]:before,
+.whatsapp-icon,
 .instagram-icon {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
@@ -177,30 +141,29 @@ a[href="*twitter"]:before {
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+a[href="*facebook"]:before {
+  content: "\f230";
+}
+a[href="*twitter"]:before {
+  content: "\f081";
+}
+.whatsapp-icon {
+  content: "\f232";
+}
+.instagram-icon {
   content: "\f16d";
 }
 /*
 * front-page styles 
 *
 */
-#front-page .tool-tip-box::after {
-  border-color: black transparent transparent transparent;
-}
-#tool-tip .tool-tip-box {
-  position: relative;
-}
-#tool-tip .tool-tip-box::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-style: solid;
-}
+#tool-tip .tool-tip-box,
 .tooltip-box {
   position: relative;
 }
-.tooltip-box::after {
+#tool-tip .tool-tip-box::after,
+.tooltip-box:after {
   content: "";
   position: absolute;
   top: 100%;
@@ -208,7 +171,7 @@ a[href="*twitter"]:before {
   margin-left: -5px;
   border-style: solid;
 }
-.tooltip-box::after {
+.tooltip-box:after {
   border-width: 25px;
   border-color: #fff transparent transparent transparent;
   z-index: 50;

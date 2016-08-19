@@ -13,25 +13,25 @@
 @pinterst-square:"\f0d3";
 @tumblr: "\f173";
 @tumblr-square: "\f174";
-@instagram:
+@instagram: "";
 
 a[href="*facebook"]:before {
-	.base-icon;
+	&:extend(.base-icon);
 	content: "\f230"; //
 
 }
 
 a[href="*twitter"]:before{
-	.base-icon;
+	&:extend(.base-icon);
 	content:"\f081";
 }
 
 .whatsapp-icon{
-	.base-icon;
+	&:extend(.base-icon);
 	content:"\f232";
 }
 
 .instagram-icon{
-	.base-icon;
+	&:extend(.base-icon);
 	content: "\f16d";
 }
