@@ -81,7 +81,7 @@ function abbey_after_header () {
 					</div>
 					<div class="col-md-4 col-md-offset-1 text-center" id="admin-info">
 						<div class="no-border">
-							<img src="<?php echo $defaults['logo']; ?>" alt="Site Logo" class="img-circle logo">
+							<img src="<?php echo esc_url($defaults['logo']); ?>" alt="Site Logo" class="img-circle logo">
 							<div class="">
 								<h3> <?php echo esc_html($defaults['admin']['name']); ?></h3>
 								<p class="small italize"> <?php echo esc_html(implode($defaults['admin']['roles'], " , " ) ); ?> </p>
