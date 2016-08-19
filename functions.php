@@ -179,3 +179,9 @@ add_filter( "abbey_theme_nav_menus", function ( $nav_menus ){
 
 	return $nav_menus;
 } );
+
+function abbey_theme_page_id(){
+	$id = (is_front_page()) ? "front-page" : "blog-page" ;
+	echo esc_attr($id);
+
+}

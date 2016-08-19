@@ -33,6 +33,10 @@ body {
   background-color: #190a00;
   color: #fff;
 }
+.bg-white {
+  background-color: #fff;
+  color: #000;
+}
 .white {
   color: #fff;
 }
@@ -52,11 +56,20 @@ body {
 .close {
   color: inherit !important;
 }
-.pad-medium {
-  padding: 20px;
+.pad-small {
+  padding: 15px;
 }
-.pad-xx {
-  padding: 60px;
+.pad-medium {
+  padding: 30px;
+}
+.pad-large {
+  padding-top: 80px;
+  padding-bottom: 100px;
+  padding-left: 120px;
+  padding-right: 120px;
+}
+.pad-large .page-header {
+  border-bottom: 0px;
 }
 .inner-pad-medium {
   padding-left: 40px;
@@ -92,13 +105,16 @@ body {
   padding-left: 120px;
   padding-right: 120px;
 }
+#sitehead .jumbotron .page-header {
+  border-bottom: 0px;
+}
 #sitehead #admin-info {
   padding-top: 30px;
   border-left: 2px dashed #797979;
   padding-bottom: 30px;
 }
 #header-contact .row {
-  padding: 12px;
+  padding: 15px;
   border-top: 1px solid #c5c5c5;
   border-bottom: 1px solid #c5c5c5;
   background-color: #dfdfdf;
@@ -179,6 +195,44 @@ a[href="*twitter"]:before {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   content: "\f16d";
+}
+/*
+* front-page styles 
+*
+*/
+#front-page .description {
+  padding-left: 60px;
+  padding-right: 60px;
+}
+#front-page .tool-tip-box::after {
+  border-color: black transparent transparent transparent;
+}
+#tool-tip .tool-tip-box {
+  position: relative;
+}
+#tool-tip .tool-tip-box::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-style: solid;
+}
+.tooltip-box {
+  position: relative;
+}
+.tooltip-box::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-style: solid;
+}
+.tooltip-box::after {
+  border-width: 25px;
+  border-color: #fff transparent transparent transparent;
+  z-index: 50;
 }
 /*
 *

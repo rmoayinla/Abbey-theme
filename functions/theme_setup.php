@@ -23,9 +23,38 @@ function abbey_theme_defaults(){
 			"admin" => array(
 				"name" => __("Rabiu Mustapha", "abbey"),
 				"roles" => array("Developer", "Writer", "Administrator")
+				), 
+			"front-page" => array(
+					"blog-posts" => array(
+						"header-text" => __("latest from my blog", "abbey"),
+						"body-text" => __("Read the latest articles from my trending blog posts ", "abbey"),
+						"posts_no" => 5
+					), 
+					"services" => array(
+						"header-text" => __("My Services - What I do", "abbey"), 
+						"body-text" => __("Since my service is based in Lagos, Nigeria, I am totally
+							aware of the difficulties and the lack of tehcnical know-how that has 
+							discouraged lots of organisations and indiviudals from having a Personal
+							blog or a business website. I dont just build websites, what makes me 
+							standout is I give you a website and handover all the necessary tools
+							to fully utilize, personalize and customize your website without contacting 
+							a Developer.", "abbey"),
+						"lists" => array(
+							__("Domain registration", "abbey"), 
+							__("Web Hosting and Website/Domain transfer", "abbey"),
+							__("Website security, backup and maintenance", "abbey"), 
+							__("Wordpress themes and plugins", "abbey"), 
+							__("Personal Blogs and Corporate/Institutional Websites", "abbey")
+						)
+					)
 				)
 		)
 	);
 
 	return $defaults;
+}
+
+function abbey_theme_front_page_defaults(){
+	$defaults = abbey_theme_defaults();
+	return $defaults["front-page"];
 }

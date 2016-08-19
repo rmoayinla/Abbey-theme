@@ -1,0 +1,23 @@
+#tool-tip{
+	.tool-tip-box{
+		position: relative;
+			&::after{
+				content: "";
+    			position: absolute;
+			    top: 100%;
+			    left: 50%;
+			    margin-left: -5px;
+			    border-style: solid;
+			    
+			}
+	}
+}
+
+.tooltip-box{
+	#tool-tip > .tool-tip-box;
+	&::after{
+		border-width: 25px;
+		border-color: #fff transparent transparent transparent;
+		z-index: 50;
+	}
+}

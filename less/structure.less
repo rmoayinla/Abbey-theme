@@ -25,6 +25,10 @@ body{
 	background-color: @primary-color-dark;
 	color: #fff;
 }
+.bg-white{
+	background-color: @white;
+	color: #000;
+}
 .white{
 	color: #fff;
 }
@@ -45,12 +49,22 @@ body{
 	color: inherit !important;
 }
 
-.pad-medium{
-	.padding(@base-padding * 2);
+.pad-small{
+	.padding(@base-padding * 1.5);
 }
 
-.pad-xx{
-	.padding(@base-padding * 6 );
+.pad-medium{
+	.padding(@base-padding * 3);
+}
+
+.pad-large{
+	padding-top:80px;
+	padding-bottom: 100px;
+	padding-left: 120px;
+	padding-right: 120px;
+		.page-header{
+			border-bottom: 0px;
+		}
 }
 .inner-pad-medium{
 	padding-left: @base-padding * 4;
@@ -67,6 +81,7 @@ body{
 	border-radius: 0px;
 }
 
+
 .no-bottom-margin{
 	margin-bottom: 0px;
 }
@@ -78,3 +93,4 @@ body{
 .margin-top-md{
 	margin-top: 30px;
 }
+

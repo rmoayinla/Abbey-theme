@@ -1,4 +1,4 @@
-		</div><!-- site content -->
+		</main><!-- site content -->
 	</div><!--site wrapper -->
 </body>
 </html>
