@@ -45,9 +45,7 @@ body{
 	.no-border();
 
 }
-.close{
-	color: inherit !important;
-}
+
 
 .pad-small{
 	.padding(@base-padding * 1.5);
@@ -70,12 +68,24 @@ body{
 	padding-left: @base-padding * 4;
 	padding-right: @base-padding * 4;
 }
-
-.border-y{
-	border-top: 1px solid #eee;
-	border-bottom: 1px solid #eee;
+.outer-pad-medium{
+	padding-top: @base-padding * 4;
+	padding-bottom: @base-padding * 4;
 }
 
+
+.border-y(@width: 1px; @color: @default-border-color){
+	border-top: @width solid @color;
+	border-bottom: @width solid @color;
+}
+.border-x (@width: 1px; @color: @default-border-color){
+	border-left:@width solid @color;
+	border-right: @width solid @color;
+}
+
+.border(@side:top; @width:1px; @color: @default-border-color){
+	
+}
 .no-border{
 	border:0px;
 	border-radius: 0px;

@@ -1,7 +1,7 @@
 <?php
 function abbey_default_header(){
 	echo '
-	<div class="alert bg-dark alert-dismissable text-center full-width" id="contact-me">
+	<div class="alert bg-dark alert-dismissable text-center full-width pad-small no-bottom-margin" id="contact-me">
 	 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
 	 	<span aria-hidden="true">&times;</span>
 	 </button>
@@ -12,7 +12,7 @@ add_action( "abbey_theme_before_header", "abbey_default_header" );
 
 function abbey_header_contact(){
 	echo '
-	<div class="row">
+	<div class="row pad-small">
 		<div class="col-md-4">
 		<i class="fa fa-fw fa-map-marker"></i>
 		8, Kadiri Street, Alausa, Ikeja, Lagos. 
@@ -63,7 +63,7 @@ function abbey_after_header () {
 	if( is_front_page() ):
 		$defaults = abbey_theme_defaults();
 		ob_start(); ?>
-			<div class="jumbotron" id="site-banner">
+			<div class="jumbotron pad-large" id="site-banner">
 				<div class="row">
 					
 					<div class="col-md-6">

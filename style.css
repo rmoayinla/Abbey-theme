@@ -53,9 +53,6 @@ body {
   border: 0px;
   border-radius: 0px;
 }
-.close {
-  color: inherit !important;
-}
 .pad-small {
   padding: 15px;
 }
@@ -75,9 +72,9 @@ body {
   padding-left: 40px;
   padding-right: 40px;
 }
-.border-y {
-  border-top: 1px solid #eee;
-  border-bottom: 1px solid #eee;
+.outer-pad-medium {
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 .no-border {
   border: 0px;
@@ -99,29 +96,15 @@ body {
 #sitehead .navbar {
   margin-bottom: 0px;
 }
-#sitehead .jumbotron {
-  padding-top: 80px;
-  padding-bottom: 100px;
-  padding-left: 120px;
-  padding-right: 120px;
-}
-#sitehead .jumbotron .page-header {
-  border-bottom: 0px;
-}
 #sitehead #admin-info {
   padding-top: 30px;
   border-left: 2px dashed #797979;
   padding-bottom: 30px;
 }
 #header-contact .row {
-  padding: 15px;
   border-top: 1px solid #c5c5c5;
   border-bottom: 1px solid #c5c5c5;
   background-color: #dfdfdf;
-}
-#header-top #contact-me {
-  margin-bottom: 0px;
-  padding: 15px;
 }
 #header-top .alert-dismissable .close {
   right: 0px;
@@ -200,10 +183,6 @@ a[href="*twitter"]:before {
 * front-page styles 
 *
 */
-#front-page .description {
-  padding-left: 60px;
-  padding-right: 60px;
-}
 #front-page .tool-tip-box::after {
   border-color: black transparent transparent transparent;
 }

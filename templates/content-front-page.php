@@ -13,7 +13,7 @@ $service_section = $front_page_defaults["services"];
 	<section id="latest-posts" class="pad-large bg-white text-center row tooltip-box">
 		<div class="inner-wrapper">
 			<h2 class="page-header text-capitalize"> <?php echo esc_html($blog_section["header-text"]); ?></h2>
-			<div class="small description">
+			<div class="small description inner-pad-medium">
 				<?php echo esc_html($blog_section["body-text"]); ?>
 			</div>
 			<article>
@@ -31,7 +31,7 @@ $service_section = $front_page_defaults["services"];
 
 	<section id="services" class="pad-large bg-light text-center row">
 		<h2 class="page-header text-capitalize"><?php echo esc_html($service_section["header-text"]);?></h2>
-		<div class="small description">
+		<div class="small description inner-pad-medium">
 			<?php echo esc_html($service_section["body-text"]); ?>
 		</div>
 	</section>
