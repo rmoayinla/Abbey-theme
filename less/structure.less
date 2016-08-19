@@ -83,8 +83,8 @@ body{
 	border-right: @width solid @color;
 }
 
-.border(@side:top; @width:1px; @color: @default-border-color){
-	
+.border(@side:top; @width:1px; @style: solid; @color: @default-border-color){
+	border-@{side}: @width @style @color;
 }
 .no-border{
 	border:0px;
