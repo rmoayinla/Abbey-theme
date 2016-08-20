@@ -90,6 +90,9 @@ body {
 .margin-top-md {
   margin-top: 30px;
 }
+.margin-bottom-md {
+  margin-bottom: 30px;
+}
 /*
 * header styles 
 *
@@ -157,6 +160,15 @@ a[href="*twitter"]:before {
 * front-page styles 
 *
 */
+#front-page #services .col-md-3 {
+  height: 250px;
+}
+#front-page #services .service-wrapper * {
+  margin-bottom: 10px;
+}
+#front-page #services .service-body {
+  font-size: 13px;
+}
 #tool-tip .tool-tip-box,
 .tooltip-box {
   position: relative;

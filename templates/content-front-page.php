@@ -28,8 +28,15 @@ $service_section = $front_page_defaults["services"];
 		<div class="small description">
 			<?php echo esc_html($service_section["body-text"]); ?>
 		</div>
-		<div class="row">
-			<?php abbey_theme_show_services(); ?>
+		<div class="row margin-top-md">
+			<div class="col-md-8">
+				<div class="row">
+					<?php abbey_theme_show_services(); ?>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<?php ?>
+			</div>
 		</div>
 	</section>
 

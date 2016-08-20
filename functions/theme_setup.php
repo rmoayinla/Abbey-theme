@@ -56,22 +56,26 @@ function abbey_theme_front_page_defaults(){
 
 function abbey_theme_add_services($defaults){
 	$defaults["services"]["lists"] = array(
-		array("icon" => "", "header-text" => __("Domain registration", "abbey"), 
+		array("icon" => "fa-registered", "header-text" => __("Domain registration", "abbey"), 
 				"body-text" => __("We register and transfer domain names from the most popular and trusted domain providers", "abbey") 
 		), 
-		array("icon"=> "", "header-text" => __("Web Hosting and Website/Domain transfer", "abbey"),
+		array("icon"=> "fa-globe", "header-text" => __("Web Hosting and Website/Domain transfer", "abbey"),
 				"body-text" => __("Never experience hosting or bandwith issues with your websites again,
 				tell us your budget and we would recommend suitable hosting plans for your websites or blog
 				without experiencing downtime issues", "abbey")
 		),
-		array("icon" => "", "header-text" => __("Website security, backup and maintenance", "abbey"), 
-			"body-text" => __( "", "abbey" )
+		array("icon" => "fa-lock", "header-text" => __("Website security, backup and maintenance", "abbey"), 
+			"body-text" => __( "We secure websites from hackers, bots, spammers and site crash, either its 
+				a site built by us or another developer, we provide intensive code review to fix bugs and loopholes
+				in your website source codes", "abbey" )
 		),
-		array("icon" => "", "header-text" => __("Wordpress themes and plugins", "abbey"), 
-			"body-text" => __("","abbey")
+		array("icon" => "fa-wordpress", "header-text" => __("Wordpress themes and plugins", "abbey"), 
+			"body-text" => __("I am a wordpress fan both as a user and a developer, I build themes and plugins either 
+				for personal use or open source.","abbey")
 		),
-		array( "icon" => "", "header-text" => __("Personal Blogs and Corporate/Institutional Websites", "abbey"),
-			"body-text" => __("", "abbey")
+		array( "icon" => "fa-rss", "header-text" => __("Personal Blogs and Corporate/Institutional Websites", "abbey"),
+			"body-text" => __("There are mulitple reasons you need a website, either its a blog where you 
+				can share your ideas or a full blown website for your business", "abbey")
 		)
 	);
 	return $defaults;
@@ -84,15 +88,15 @@ function abbey_theme_show_services(){
 	if( count($services) > 0 ){
 			$html = "";
 		foreach( $services as $service ){
-			$html .= "<div class='panel panel-default inline-3'><div class='panel-heading'>";
-			if( !empty($service["icon"]) ){$html .= "<span class=' fa ".esc_attr($service["icon"])."' > </span>"; }
-			if( !empty($service["header-text"]) ){$html .= esc_html($service["header-text"]). "</div>"; }
+			$html .= "<div class='col-md-4' id='services'><div class='service-wrapper'>";
+			if( !empty($service["icon"]) ){$html .= "<div class='service-icon'><span class='fa ".esc_attr($service["icon"])." fa-3x' > </span></div>"; }
+			if( !empty($service["header-text"]) ){$html .= "<div class='service-heading text-capitalize'><h4>".esc_html($service["header-text"]). "</h4></div>"; }
 			if( !empty($service["body-text"]) ){
-				$html .= "<div class='panel-body'>";
+				$html .= "<div class='service-body'>";
 				$html .= esc_html($service["body-text"]);
 				$html .= "</div>";
 			 }
-			$html .= "</div>";
+			$html .= "</div></div>";
 
 		}
 	}
