@@ -7,6 +7,7 @@
 $front_page_defaults = abbey_theme_front_page_defaults();
 $blog_section = $front_page_defaults["blog-posts"];
 $service_section = $front_page_defaults["services"];
+$quote_section = $front_page_defaults["quotes"];
 
 ?>
 <main id="<?php abbey_theme_page_id();?>" class="site-content">
@@ -34,10 +35,21 @@ $service_section = $front_page_defaults["services"];
 					<?php abbey_theme_show_services(); ?>
 				</div>
 			</div>
-			<div class="col-md-4">
-				<?php do_action("abbey_theme_service_slides");?>
+			<div class="col-md-4 panel panel-default text-left" id="service-lists">
+				<div class="panel-body">
+					<?php do_action("abbey_theme_service_lists");?>
+				</div>
 			</div>
 		</div>
+	</section>
+
+	<section id="quotes" class="pad-large text-center row tooltip-box">
+		<h2 class="page-header text-capitalize"> <?php echo esc_html($quote_section["header-text"]); ?> </h2>
+		<div class="small description">
+			<?php echo wp_kses_post($quote_section["body-text"]); ?>
+		</div>
+
+
 	</section>
 
 	

@@ -23,22 +23,3 @@
 	}
 	
 }
-
-@gutter: 10px;
-
-.inline{
-	float: left;
-	
-}
-.inline(@grid: 2){
-	&:extend(.inline);
-	width: percentage(@grid)/10;
-	margin-left: @gutter;
-	margin-bottom: 20px;
-	margin-top: 30px;
-
-}
-
-.inline-3{
-	.inline(3);
-}

@@ -113,3 +113,29 @@ function abbey_secondary_menu(){
 	
 }
 add_action ( "abbey_theme_secondary_menu", "abbey_secondary_menu" );
+
+
+
+
+function abbey_service_lists(){
+	$defaults = abbey_theme_defaults();
+	$services = $defaults["services"]["extras"];
+	$html = "";
+	if(count($services) > 0 ){
+		$html .= "<ul class='fa-ul'>";
+		foreach($services as $service){
+			$html .= "<li>";
+			if( !empty($service["icon"]) ){ 
+				$html .= "<span class='fa-li fa ".esc_attr($service["icon"])." fa-2x ' > </span> ";
+			 }
+			
+			if( !empty($service["text"]) ){ $html .= esc_html( $service["text"] ); }
+			$html .= "</li>";
+		}
+	$html .=  "</ul>";
+	}
+
+	echo $html;
+	
+}
+add_action( "abbey_theme_service_lists", "abbey_service_lists" );

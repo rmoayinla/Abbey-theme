@@ -41,6 +41,15 @@ function abbey_theme_defaults(){
 							a Developer.", "abbey"),
 						"lists" => array()
 							
+					), 
+					"quotes" =>  array(
+						"header-text" => __("rmo quotes", "abbey"), 
+						"body-text" => __("Straight out of my Quotes Book, Read my quote of the day. ", "abbey"), 
+						"default" => __("This is only a default quote, this is not fetched from my quotes 
+							post type or quotes post format", 
+							"abbey"
+						),
+						"quotes_no" => 3
 					)
 			)
 		)
@@ -82,23 +91,18 @@ function abbey_theme_add_services($defaults){
 }
 add_filter( "abbey_theme_defaults", "abbey_theme_add_services" );
 
-function abbey_theme_show_services(){
-	$defaults = abbey_theme_defaults();
-	$services = $defaults["services"]["lists"];
-	if( count($services) > 0 ){
-			$html = "";
-		foreach( $services as $service ){
-			$html .= "<div class='col-md-4' id='services'><div class='service-wrapper'>";
-			if( !empty($service["icon"]) ){$html .= "<div class='service-icon'><span class='fa ".esc_attr($service["icon"])." fa-3x' > </span></div>"; }
-			if( !empty($service["header-text"]) ){$html .= "<div class='service-heading text-capitalize'><h4>".esc_html($service["header-text"]). "</h4></div>"; }
-			if( !empty($service["body-text"]) ){
-				$html .= "<div class='service-body'>";
-				$html .= esc_html($service["body-text"]);
-				$html .= "</div>";
-			 }
-			$html .= "</div></div>";
-
-		}
-	}
-	echo $html;
+function abbey_theme_extra_services($defaults){
+	$defaults["services"]["extras"] = array(
+		array("icon" => "fa-code", "text" => __("Own a website without writing a line of code", "abbey") ),
+		array("icon" => "fa-mobile", "text" => __("Mobile First Design: your site will look cool on every device no matter the size", "abbey") ),
+		array("icon" => "fa-photo", "text" => __("Easily integrate photo galleries into your blog or websites", "abbey") ),
+		array("icon" => "fa-video-camera", "text" => __("Want to share videos, easily embed videos from youtube or vimeo", "abbey") ),
+		array("icon" => "fa-rocket", "text" => __("Our websites are optimized for speed, fast loading time and less bandwith", "abbey") ),
+		array("icon" => "fa-signal", "text" => __("Let us handle your hosting and wave goodbye to downtime errors and unresponding servers", "abbey") ),
+		array("icon" => "fa-upload", "text" => __("You dont need to code or contact an developer, be in charge of your website and customize to your taste", "abbey") )
+	);
+	return $defaults;
 }
+add_filter( "abbey_theme_defaults", "abbey_theme_extra_services", 20 );
+
+

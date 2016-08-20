@@ -185,3 +185,25 @@ function abbey_theme_page_id(){
 	echo esc_attr($id);
 
 }
+
+function abbey_theme_show_services(){
+	$defaults = abbey_theme_defaults();
+	$services = $defaults["services"]["lists"];
+	if( count($services) > 0 ){
+			$html = "";
+		foreach( $services as $service ){
+			$html .= "<div class='col-md-4' id='service-icons'><div class='service-wrapper'>";
+			if( !empty($service["icon"]) ){$html .= "<div class='service-icon'><span class='fa ".esc_attr($service["icon"])." fa-3x' > </span></div>"; }
+			if( !empty($service["header-text"]) ){$html .= "<div class='service-heading text-capitalize'><h4>".esc_html($service["header-text"]). "</h4></div>"; }
+			if( !empty($service["body-text"]) ){
+				$html .= "<div class='service-body'>";
+				$html .= esc_html($service["body-text"]);
+				$html .= "</div>";
+			 }
+			$html .= "</div></div>";
+
+		}
+	}
+	echo $html;
+}
+

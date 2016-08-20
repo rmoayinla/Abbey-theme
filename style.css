@@ -85,7 +85,11 @@ body {
   margin-bottom: 0px;
 }
 .margin-top-sm {
-  margin-top: 20px;
+  margin-top: 15px;
+}
+.margin-bottom-sm,
+#front-page #services #service-lists li {
+  margin-bottom: 15px;
 }
 .margin-top-md {
   margin-top: 30px;
@@ -186,16 +190,6 @@ a[href="*twitter"]:before {
   border-width: 25px;
   border-color: #fff transparent transparent transparent;
   z-index: 50;
-}
-.inline,
-.inline-3 {
-  float: left;
-}
-.inline-3 {
-  width: 30%;
-  margin-left: 10px;
-  margin-bottom: 20px;
-  margin-top: 30px;
 }
 /*
 *
