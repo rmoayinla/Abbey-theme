@@ -35,7 +35,7 @@ $service_section = $front_page_defaults["services"];
 				</div>
 			</div>
 			<div class="col-md-4">
-				<?php ?>
+				<?php do_action("abbey_theme_service_slides");?>
 			</div>
 		</div>
 	</section>
