@@ -41,7 +41,7 @@ $quote_section = $front_page_defaults["quotes"];
 				</div>
 			</div>
 		</div>
-	</section>
+	</section><!--end of #services section -->
 
 	<section id="quotes" class="pad-large text-center row tooltip-box">
 		<h2 class="page-header text-capitalize"> <?php echo esc_html($quote_section["header-text"]); ?> </h2>
