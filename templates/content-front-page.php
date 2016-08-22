@@ -50,6 +50,6 @@ $quote_section = $front_page_defaults["quotes"];
 		</div>
 
 
-	</section>
+	</section><!--end of section #quotes -->
 
 	
