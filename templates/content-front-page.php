@@ -18,10 +18,17 @@ $quote_section = $front_page_defaults["quotes"];
 			<div class="small description inner-pad-medium">
 				<?php echo esc_html($blog_section["body-text"]); ?>
 			</div>
+			
 			<article>
 				<?php do_action("abbey_theme_front_page_recent_posts"); ?>
 			</article>
+			
+			<div class="md-50 margin-top-md col-md-offset-3 center-block">
+				<a href="" role="button" class="btn btn-default btn-lg btn-block"> <?php esc_html_e("View all articles", "abbey" ); ?></a>
+			</div><!--.inner-wrapper closes -->
+		
 		</div>
+
 	</section>
 
 	<section id="services" class="pad-large bg-light text-center row tooltip-box">
@@ -29,18 +36,16 @@ $quote_section = $front_page_defaults["quotes"];
 		<div class="small description">
 			<?php echo esc_html($service_section["body-text"]); ?>
 		</div>
-		<div class="row margin-top-md">
-			<div class="col-md-8">
-				<div class="row">
-					<?php abbey_theme_show_services(); ?>
-				</div>
-			</div>
-			<div class="col-md-4 panel panel-default text-left" id="service-lists">
-				<div class="panel-body">
-					<?php do_action("abbey_theme_service_lists");?>
-				</div>
-			</div>
+		<div class="row margin-top-md" id="">
+			
+			<?php abbey_theme_show_services(); ?>
+				
 		</div>
+		<div class="row margin-top-md" id="">
+				<?php do_action("abbey_theme_more_services");?>
+		</div>
+			
+		
 	</section><!--end of #services section -->
 
 	<section id="quotes" class="pad-large text-center row tooltip-box">

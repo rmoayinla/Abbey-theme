@@ -1,19 +1,21 @@
 #front-page {
+	#latest-posts{
+
+	}
 	#services{
-		.col-md-3{
-			height: 250px;
+		#service-icons {
+			min-height: 250px;
 		}
-		.service-wrapper *{
-			margin-bottom: 10px;
+		#more-service-icons{
+			min-height: 150px;
+		}
+		.service-wrapper {
+			&:extend(.margin-bottom-md);
 		}
 
 		.service-body{
-			font-size: 13px;
+			&:extend(.font-small);
 		}
-		#service-lists{
-			li {
-				&:extend(.margin-bottom-sm);
-			}
-		}
+		
 	}
 }

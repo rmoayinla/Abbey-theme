@@ -133,22 +133,28 @@ add_action ( "abbey_theme_secondary_menu", "abbey_secondary_menu" );
 function abbey_service_lists(){
 	$defaults = abbey_theme_defaults();
 	$services = $defaults["services"]["extras"];
-	$html = "";
+	
 	if(count($services) > 0 ){
-		$html .= "<ul class='fa-ul'>";
+		$html = "";
 		foreach($services as $service){
-			$html .= "<li>";
+			$html .= "<div class='col-md-3' id='more-service-icons'><div class='service-wrapper row'>";	
 			if( !empty($service["icon"]) ){ 
-				$html .= "<span class='fa-li fa ".esc_attr($service["icon"])." fa-2x ' > </span> ";
+				$html .= "<div class='more-service-icon col-md-3'>
+							<span class='fa ".esc_attr($service["icon"])." fa-3x' > 
+							</span> </div> ";
 			 }
 			
-			if( !empty($service["text"]) ){ $html .= esc_html( $service["text"] ); }
-			$html .= "</li>";
+			if( !empty($service["text"]) ){ 
+				$html .= "<div class='more-service-heading col-md-9 text-left'>"
+						. esc_html( $service["text"] ). 
+						"</div>" ; 
+			}
+			$html .= "</div></div>";
 		}
-	$html .=  "</ul>";
+	
 	}
 
 	echo $html;
 	
 }
-add_action( "abbey_theme_service_lists", "abbey_service_lists" );
+add_action( "abbey_theme_more_services", "abbey_service_lists" );

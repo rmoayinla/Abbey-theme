@@ -87,15 +87,25 @@ body {
 .margin-top-sm {
   margin-top: 15px;
 }
-.margin-bottom-sm,
-#front-page #services #service-lists li {
+.margin-bottom-sm {
   margin-bottom: 15px;
 }
 .margin-top-md {
   margin-top: 30px;
 }
-.margin-bottom-md {
+.margin-bottom-md,
+#front-page #services .service-wrapper {
   margin-bottom: 30px;
+}
+.md-50 {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  clear: both;
+}
+.font-small,
+#front-page #services .service-body {
+  font-size: 13px;
 }
 /*
 * header styles 
@@ -164,14 +174,11 @@ a[href="*twitter"]:before {
 * front-page styles 
 *
 */
-#front-page #services .col-md-3 {
-  height: 250px;
+#front-page #services #service-icons {
+  min-height: 250px;
 }
-#front-page #services .service-wrapper * {
-  margin-bottom: 10px;
-}
-#front-page #services .service-body {
-  font-size: 13px;
+#front-page #services #more-service-icons {
+  min-height: 150px;
 }
 #tool-tip .tool-tip-box,
 .tooltip-box {
