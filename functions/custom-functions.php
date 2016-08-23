@@ -33,7 +33,7 @@ function abbey_header_contact(){
 	</div>
 	';
 }
-add_action( "abbey_theme_header_contact", "abbey_header_contact" );
+add_action( "abbey_theme_header_contact", "abbey_header_contact" );//hook to header_contact; check header.php //
 
 function abbey_primary_menu(){
 	ob_start(); ?>
