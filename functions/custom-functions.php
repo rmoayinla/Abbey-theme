@@ -1,4 +1,17 @@
 <?php
+/*
+	* the functions here are added to actions or filters 
+	* Check each function to know the exact action or filter attached to 
+	* @theme: Abbey
+	* @package: wordpress
+	* @version: 0.1 
+*/
+
+/*
+	* this function is hooked to abbey_theme_before_header
+	* it echoes/prints out any site notice 
+	*
+*/
 function abbey_default_header(){
 	echo '
 	<div class="alert bg-dark alert-dismissable text-center full-width pad-small no-bottom-margin" id="contact-me">
