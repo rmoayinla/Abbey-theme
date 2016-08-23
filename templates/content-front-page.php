@@ -8,6 +8,7 @@ $front_page_defaults = abbey_theme_front_page_defaults();
 $blog_section = $front_page_defaults["blog-posts"];
 $service_section = $front_page_defaults["services"];
 $quote_section = $front_page_defaults["quotes"];
+$contact_section = $front_page_defaults["contact"];
 
 ?>
 <main id="<?php abbey_theme_page_id();?>" class="site-content">
@@ -53,8 +54,23 @@ $quote_section = $front_page_defaults["quotes"];
 		<div class="small description">
 			<?php echo wp_kses_post($quote_section["body-text"]); ?>
 		</div>
-
+		<div id="front-page-quotes" class="">
+			<?php do_action("abbey_theme_front_page_quotes"); ?>
+		</div>
 
 	</section><!--end of section #quotes -->
+
+	<section id="contact" class="pad-large text-center row tooltip-box bg-white">
+		<h2 class="page-header text-capitalize"> <?php echo esc_html($contact_section["header-text"]); ?> </h2>
+		<div class="small description">
+			<?php echo wp_kses_post($contact_section["body-text"]); ?>
+		</div>
+		<div class="row margin-top-md">
+			<div id="front-page-contact-form col-md-4 text-left" class="float-right">
+				<?php do_action("abbey_theme_front_page_contact_form"); ?>
+			</div>
+		</div>
+
+	</section>
 
 	

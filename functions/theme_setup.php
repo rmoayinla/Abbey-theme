@@ -50,7 +50,14 @@ function abbey_theme_defaults(){
 							"abbey"
 						),
 						"quotes_no" => 3
+					),
+					"contact" => array(
+						"header-text" => __("contact me", "abbey"),
+						"body-text" => __("Hire me for your web projects, Want me to review your codes,
+							Want to join my dev team, you have a feedback/review/comment on any of my
+							projects?. <br/> Kindly visit me, mail me or fill the contact form below.")
 					)
+
 			)
 		)
 	);

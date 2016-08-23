@@ -107,6 +107,9 @@ body {
 #front-page #services .service-body {
   font-size: 13px;
 }
+.float-right {
+  float: right;
+}
 /*
 * header styles 
 *
