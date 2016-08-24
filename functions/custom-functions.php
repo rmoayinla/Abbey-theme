@@ -162,31 +162,70 @@ add_action( "abbey_theme_more_services", "abbey_service_lists" );
 function abbey_theme_contact_form(){
 	ob_start(); ?>
 		<form role="form" id="contact-form" method="post">
-			<div class="panel panel-default text-left">
-				<div class="panel-body">
-					<div class="form-group">
-					    <label for="exampleInputEmail1">Email address</label>
-					    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-					  </div>
-					  <div class="form-group">
-					    <label for="exampleInputPassword1">Password</label>
-					    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-					  </div>
-					  <div class="form-group">
-					    <label for="exampleInputFile">File input</label>
-					    <input type="file" id="exampleInputFile">
-					    <p class="help-block">Example block-level help text here.</p>
-					  </div>
-					  <div class="checkbox">
-					    <label>
-					      <input type="checkbox"> Check me out
-					    </label>
-					  </div>
-					  <button type="submit" class="btn btn-default">Submit</button>
-				</div><!--.panel-body closes-->
-			</div><!--.panel closes-->
+			<div class="form-group">
+				<label for="exampleInputEmail1">Email address</label>
+				<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+			</div>
+			<div class="form-group">
+				<label for="exampleInputPassword1">Password</label>
+				<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+			</div>
+			<div class="form-group">
+				<label for="exampleInputFile">File input</label>
+				<input type="file" id="exampleInputFile">
+				<p class="help-block">Example block-level help text here.</p>
+			</div>
+			<div class="checkbox">
+				<label>
+					<input type="checkbox"> Check me out
+				 </label>
+			</div>
+			<button type="submit" class="btn btn-default">Submit</button>
+				
 		</form> <?php
 	echo ob_get_clean(); 
 
 }
 add_action("abbey_theme_front_page_contact_form", "abbey_theme_contact_form");
+
+function abbey_show_contacts(){
+	$defaults = abbey_theme_defaults();
+	$contacts = $defaults["contacts"];
+	ob_start(); ?>
+	<aside class="row">
+		<div class="col-md-4" id="contact-address">
+			<div class="contact-header">
+				<span class="fa fa-map-marker"> </span>	
+				<span> Address: </span>
+			</div>
+			<div class="medium">
+				<?php echo esc_html( $contacts["address"] ); ?>
+			</div>
+
+		</div><!--#contact-address closes -->
+		<div class="col-md-4" id="contact-telephone">
+			<div class="contact-header">
+				<span class="fa fa-phone"> </span>
+				<span> Telephone: </span>
+			</div>
+			<div class="medium">
+				<?php 
+					$tel = (count($contacts["tel"]) > 1) ? join( ", ", $contacts["tel"] ) : $contacts["tel"][0];
+					echo esc_html( abbey_numerize( $tel ) ); 
+				?>
+			</div>
+		</div><!--#contact-telephone closes -->
+		<div class="col-md-4" id="contact-email">
+			<div class="contact-header">
+				<span class="fa fa-envelope-o"> </span>
+				<span class=""
+		</div>
+		
+
+	</aside>
+	<div class="">
+		<?php do_action("abbey_theme_front_page_contact_map"); ?>
+	</div> <?php
+	echo ob_get_clean(); 
+}
+add_action( "abbey_theme_front_page_contacts", "abbey_show_contacts" );

@@ -26,6 +26,10 @@ body{
 	background-color: @primary-color-dark;
 	color: #fff;
 }
+.bg-gray{
+	background-color: @gray-color;
+	&:extend(.dark);
+}
 .bg-white{
 	background-color: @white;
 	color: #000;
@@ -92,6 +96,9 @@ body{
 	border-radius: 0px;
 }
 
+.bottom-border{
+	border-bottom: 1px solid @default-border-color;
+}
 
 .no-bottom-margin{
 	margin-bottom: 0px;

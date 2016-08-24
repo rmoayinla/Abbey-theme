@@ -4,7 +4,7 @@ function abbey_theme_defaults(){
 		array(
 			"contacts" => array(
 				"address" => __( "8, Kadiri street, Alausa, Ikeja, Lagos State, Nigeria", "abbey"),
-				"tel" => array( 08028617830 ), 
+				"tel" => array( "08028617830me" ), 
 				"facebook" => "facebook.com/rabiu.mustapha.5",
 				"twitter" => "twitter.com/rabiu.mustapha",
 				"instagram" => "instagram.com/rmoayinla",
@@ -55,7 +55,8 @@ function abbey_theme_defaults(){
 						"header-text" => __("contact me", "abbey"),
 						"body-text" => __("Hire me for your web projects, Want me to review your codes,
 							Want to join my dev team, you have a feedback/review/comment on any of my
-							projects?. <br/> Kindly visit me, mail me or fill the contact form below.")
+							projects?.", "abbey"),
+						"form-header-text" => __("Kindly visit me, mail me or fill the contact form below.", "abbey")
 					)
 
 			)

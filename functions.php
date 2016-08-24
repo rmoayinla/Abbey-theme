@@ -207,3 +207,7 @@ function abbey_theme_show_services(){
 	echo $html;
 }
 
+function abbey_numerize($string){
+	$result = preg_replace("/[^0-9.]/", '', $string);
+	return $result;
+}

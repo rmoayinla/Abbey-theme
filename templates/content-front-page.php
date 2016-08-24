@@ -63,14 +63,28 @@ $contact_section = $front_page_defaults["contact"];
 	<section id="contact" class="pad-large text-center row tooltip-box bg-white">
 		<h2 class="page-header text-capitalize"> <?php echo esc_html($contact_section["header-text"]); ?> </h2>
 		<div class="small description">
-			<?php echo wp_kses_post($contact_section["body-text"]); ?>
+			<?php echo esc_html($contact_section["body-text"]); ?>
 		</div>
-		<div class="row margin-top-md">
-			<div id="front-page-contact-form col-md-4 text-left" class="float-right">
-				<?php do_action("abbey_theme_front_page_contact_form"); ?>
+		<div class="row margin-top-md text-left">
+			<div class="panel panel-default row">
+				<div class="panel-body col-md-8 pad-medium">
+					<?php do_action("abbey_theme_front_page_contacts"); ?>
+					
+				</div>
+			
+				<div id="front-page-contact-form" class="panel-footer col-md-4 pad-medium">
+					<div class="" id="contact-form-wrapper">
+						<div class="text-center">
+							<h4>
+							<?php echo apply_filters("abbey_theme_front_page_contact_form_header_text", esc_html($contact_section["form-header-text"]) ); ?>
+							</h4>
+						</div>
+						<?php do_action("abbey_theme_front_page_contact_form"); ?>
+					</div>
+				</div><!--#front-page-contact-form closes -->
 			</div>
 		</div>
 
-	</section>
+	</section><!-- #contact section closes -->
 
 	

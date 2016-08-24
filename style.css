@@ -33,6 +33,9 @@ body {
   background-color: #190a00;
   color: #fff;
 }
+.bg-gray {
+  background-color: #ddd;
+}
 .bg-white {
   background-color: #fff;
   color: #000;
@@ -40,7 +43,8 @@ body {
 .white {
   color: #fff;
 }
-.dark {
+.dark,
+.bg-gray {
   color: #190a00;
 }
 .primary {
@@ -80,6 +84,9 @@ body {
 .no-border {
   border: 0px;
   border-radius: 0px;
+}
+.bottom-border {
+  border-bottom: 1px solid #eee;
 }
 .no-bottom-margin {
   margin-bottom: 0px;
