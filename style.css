@@ -81,7 +81,8 @@ body {
   padding-top: 40px;
   padding-bottom: 40px;
 }
-.no-border {
+.no-border,
+#front-page #contact .panel-default {
   border: 0px;
   border-radius: 0px;
 }
@@ -101,7 +102,8 @@ body {
   margin-top: 30px;
 }
 .margin-bottom-md,
-#front-page #services .service-wrapper {
+#front-page #services .service-wrapper,
+#front-page #contact .contact-wrapper {
   margin-bottom: 30px;
 }
 .md-50 {
@@ -116,6 +118,15 @@ body {
 }
 .float-right {
   float: right;
+}
+.float-left,
+#front-page #contact .contact-icon {
+  float: left;
+}
+.inline {
+  display: inline-block !important;
+  width: auto;
+  height: auto;
 }
 /*
 * header styles 

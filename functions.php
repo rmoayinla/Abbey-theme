@@ -211,3 +211,77 @@ function abbey_numerize($string){
 	$result = preg_replace("/[^0-9.]/", '', $string);
 	return $result;
 }
+
+function abbey_contact_icon($contact){
+	$contact = esc_attr($contact);
+	switch ( $contact ){
+		case "address" : 
+			$icon = "fa-map-marker";
+			break;
+		case "tel":
+		case "telephone":
+		case "phone-no":
+		case "mobile-no":
+			$icon = "fa-phone";
+			break;
+		case "email":
+		case "mail":
+			$icon = "fa-envelope";
+			break;
+		case "facebook" :
+			$icon = "fa-facebook";
+			break;
+		case "twitter" :
+			$icon = "fa-twitter";
+			break;
+		case "whatsapp":
+		case "whats-app":
+			$icon = "fa-whatsapp";
+			break;
+		case "pinterest":
+		case "pininterest":
+			$icon = "fa-pinterest";
+			break;
+		case "g-plus":
+		case "google-plus":
+		case "googleplus":
+			$icon = "fa-google-plus";
+			break;
+		case "instagram":
+			$icon = "fa-instagram";
+			break;
+		case "tumblr":
+			$icon = "fa-tumblr";
+			break;
+		case "github":
+			$icon = "fa-github";
+			break;
+		case "bitbucket":
+			$icon = "fa-bitbucket";
+			break;
+		default:
+			$icon = "fa-list";
+
+	}
+	return $icon;
+}
+
+function abbey_display_contact( $contact, $heading ){
+	$html = "";
+	
+	if( !is_array( $contact ) ) {
+		$html .= "<div class='col-md-6 margin-bottom-sm'>";
+		$html .= "<header class='text-capitalize'>". esc_html( $heading ). "</header>";
+		$html .= "<div clas;s='medium'>". esc_html( $contact ) . "</div>";
+		$html .= "</div>";
+	}
+	else{
+		$contacts = $contact;
+		foreach ( $contacts as $contact_heading => $contact ){
+			$contact_heading = $contact_heading." ".$heading;
+			$html .= abbey_display_contact($contact, $contact_heading);
+		}
+	}
+
+	return $html;
+}

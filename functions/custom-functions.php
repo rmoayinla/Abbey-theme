@@ -191,41 +191,46 @@ add_action("abbey_theme_front_page_contact_form", "abbey_theme_contact_form");
 function abbey_show_contacts(){
 	$defaults = abbey_theme_defaults();
 	$contacts = $defaults["contacts"];
-	ob_start(); ?>
-	<aside class="row">
-		<div class="col-md-4" id="contact-address">
-			<div class="contact-header">
-				<span class="fa fa-map-marker"> </span>	
-				<span> Address: </span>
-			</div>
-			<div class="medium">
-				<?php echo esc_html( $contacts["address"] ); ?>
-			</div>
-
-		</div><!--#contact-address closes -->
-		<div class="col-md-4" id="contact-telephone">
-			<div class="contact-header">
-				<span class="fa fa-phone"> </span>
-				<span> Telephone: </span>
-			</div>
-			<div class="medium">
-				<?php 
-					$tel = (count($contacts["tel"]) > 1) ? join( ", ", $contacts["tel"] ) : $contacts["tel"][0];
-					echo esc_html( abbey_numerize( $tel ) ); 
-				?>
-			</div>
-		</div><!--#contact-telephone closes -->
-		<div class="col-md-4" id="contact-email">
-			<div class="contact-header">
-				<span class="fa fa-envelope-o"> </span>
-				<span class=""
-		</div>
+	
+	if( count($contacts) > 0 ){
+		$html = "<aside class='row inner-pad-medium'>";
+		foreach( $contacts as $heading => $contact ){
+			$html .= "<div class='row contact-wrapper' id='contact-".esc_attr($heading)."'>";
+			$html .= "<div class='contact-icon lead'> <span class='fa ".abbey_contact_icon($heading)."'> </span> </div>";
+			$html .= "<div class='col-md-11'><div class='row'>";
+			$html .= abbey_display_contact( $contact, $heading );
+			$html .= "</div></div>"; 
+			$html .= "</div>";
+			
+		}
 		
+		$html .= "</aside>";
+	}
 
-	</aside>
-	<div class="">
-		<?php do_action("abbey_theme_front_page_contact_map"); ?>
-	</div> <?php
-	echo ob_get_clean(); 
+	echo $html;
+	
+	
 }
 add_action( "abbey_theme_front_page_contacts", "abbey_show_contacts" );
+
+function abbey_show_social_contacts(){
+	$defaults = abbey_theme_defaults();
+	$social_contacts = $defaults["social-contacts"];
+
+	if( count( $social_contacts ) > 0 ){
+		$html = "<footer id='social-contacts' class='row inner-pad-medium'>";
+		$html .= "<div id='social-icons-header'><h4>".apply_filters( "abbey_theme_social_icons_header_text", "Follow me on social media" )."</h4></div>";
+		$html .= "<div class='social-icons' id='social-contacts'><ul class='nav'>";
+		foreach ( $social_contacts as $social => $contact ){
+			if( empty($contact) ) continue;
+			$html .= "<li class='inline'><a href='".esc_url($contact)."' class='' target='_blank' >";
+			$html .= "<span class='fa fa-fw fa-2x ". abbey_contact_icon($social)."'> </span>"; 
+			$html .= "</a></li>";
+		}
+
+		$html .= "</ul></div>";
+		$html .= "</footer>";
+	}
+	echo $html;
+}
+add_action ( "abbey_theme_front_page_contacts", "abbey_show_social_contacts", 20 );

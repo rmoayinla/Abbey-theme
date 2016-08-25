@@ -67,6 +67,7 @@ $contact_section = $front_page_defaults["contact"];
 		</div>
 		<div class="row margin-top-md text-left">
 			<div class="panel panel-default row">
+
 				<div class="panel-body col-md-8 pad-medium">
 					<?php do_action("abbey_theme_front_page_contacts"); ?>
 					
@@ -82,6 +83,7 @@ $contact_section = $front_page_defaults["contact"];
 						<?php do_action("abbey_theme_front_page_contact_form"); ?>
 					</div>
 				</div><!--#front-page-contact-form closes -->
+
 			</div>
 		</div>
 

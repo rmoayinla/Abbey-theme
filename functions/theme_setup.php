@@ -4,7 +4,9 @@ function abbey_theme_defaults(){
 		array(
 			"contacts" => array(
 				"address" => __( "8, Kadiri street, Alausa, Ikeja, Lagos State, Nigeria", "abbey"),
-				"tel" => array( "08028617830me" ), 
+				"tel" => array( "08028617830me" )
+			),
+			"social-contacts" => array(
 				"facebook" => "facebook.com/rabiu.mustapha.5",
 				"twitter" => "twitter.com/rabiu.mustapha",
 				"instagram" => "instagram.com/rmoayinla",
@@ -113,4 +115,26 @@ function abbey_theme_extra_services($defaults){
 }
 add_filter( "abbey_theme_defaults", "abbey_theme_extra_services", 20 );
 
+function abbey_theme_add_contacts($defaults){
+	$contacts = $defaults["contacts"];
+	
+	$contacts["address"] = array(
+		"office" => __("8, Kadiri street, Alausa, Ikeja, Lagos State, Nigeria", "abbey"),
+		"branch" => __("19, Omobanta Street, Mile 12, Lagos State, Nigeria", "abbey")
 
+	); 
+	$contacts["tel"] = array(
+		"office" => __("08028617830", "abbey"), 
+		"branch" => __("08184278864", "abbey")
+	);
+	$contacts["email"] = array(
+		"helpdesk" => __("enquiries@rmodiary.com", "abbey"),
+		"services" => __("services@rmodiary.com", "abbey"),
+		"customer-service" => __("customers_service@rmodairy.com", "abbey")
+	);
+
+	$defaults["contacts"] = wp_parse_args( $contacts, $defaults["contacts"] );
+	return $defaults;
+}
+
+add_filter( "abbey_theme_defaults", "abbey_theme_add_contacts", 30 );
