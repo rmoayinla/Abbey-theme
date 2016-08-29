@@ -1,0 +1,728 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"default",
+				"defaults"
+			],
+			[
+				"text",
+				"text-capitalize"
+			],
+			[
+				"pad-",
+				"pad-medium	 style.css"
+			],
+			[
+				"pad",
+				"pad-medium	 style.css"
+			],
+			[
+				"bg-",
+				"bg-white	 style.css"
+			],
+			[
+				"margin",
+				"margin-top-md	 style.css"
+			],
+			[
+				"quote",
+				"quote_section"
+			],
+			[
+				"abbey_theme_",
+				"abbey_theme_extra_services"
+			],
+			[
+				"no-bo",
+				"no-bottom-margin"
+			],
+			[
+				"service",
+				"service_section"
+			],
+			[
+				"blog",
+				"blog_section"
+			],
+			[
+				"get_templa",
+				"get_template_directory_uri"
+			],
+			[
+				"check_field",
+				"check_field_options"
+			],
+			[
+				"is_a",
+				"is_array"
+			],
+			[
+				"defa",
+				"default_attributes"
+			],
+			[
+				"array_key",
+				"array_key_exists"
+			],
+			[
+				"opt",
+				"option3"
+			],
+			[
+				"option",
+				"option4"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/C/wamp/www/wp/wp-content/themes/Abbey/templates/content-front-page.php",
+			"settings":
+			{
+				"buffer_size": 3142,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "structure.less",
+			"settings":
+			{
+				"buffer_size": 2131,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "responsive.less",
+			"settings":
+			{
+				"buffer_size": 1210,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "navigation.less",
+			"settings":
+			{
+				"buffer_size": 607,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/wamp/www/wp/wp-content/themes/Abbey/functions/custom-functions.php",
+			"settings":
+			{
+				"buffer_size": 7868,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/wamp/www/wp/wp-content/themes/Abbey/functions/core.php",
+			"settings":
+			{
+				"buffer_size": 2971,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "front-page.less",
+			"settings":
+			{
+				"buffer_size": 403,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 104.0,
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"Snippet: ",
+				"Snippet: <?php else: ?>"
+			]
+		],
+		"width": 400.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/wamp/www/wp/wp-content/themes/Abbey/functions.php",
+		"/C/wamp/www/wp/wp-content/themes/Abbey/style.css",
+		"/C/wamp/www/wp/wp-content/themes/Abbey/less/navigation.less",
+		"/C/wamp/www/wp/wp-content/themes/Abbey/header.php",
+		"/C/wamp/www/wp/wp-content/themes/Abbey/functions/core.php",
+		"/C/wamp/www/wp/wp-content/themes/Abbey/customizer/front-page-customizer.php",
+		"/C/wamp/www/wp/wp-content/themes/Abbey/functions/custom-functions.php",
+		"/C/wamp/www/wp/wp-content/themes/Abbey/less/style.less",
+		"/C/wamp/www/wp/wp-content/themes/Abbey/less/images.less",
+		"/C/wamp/www/wp/wp-content/themes/Abbey/less/header.less",
+		"/C/wamp/www/wp/wp-content/themes/Abbey/less/mixins.less",
+		"/C/wamp/www/wp/wp-content/themes/Abbey/functions/theme_setup.php",
+		"/C/wamp/www/wp/wp-content/themes/Abbey/less/variables.less",
+		"/C/wamp/www/wp/wp-content/themes/Abbey/less/front-page.less",
+		"/C/wamp/www/wp/wp-content/themes/Abbey/less/structure.less",
+		"/C/wamp/www/wp/wp-content/themes/Abbey/front-page.php",
+		"/C/wamp/www/wp/wp-content/themes/Abbey/less/misc.less",
+		"/C/wamp/www/wp/wp-content/themes/Abbey/less/icons.less",
+		"/C/wamp/www/wp/wp-content/themes/Abbey/home.php",
+		"/C/wamp/www/wp/wp-content/themes/Abbey/footer.php",
+		"/C/wamp/www/wp/wp-content/themes/Abbey/libs/wp_bootstrap_navwalker.php",
+		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.881/font-awesome-4.6.3/css/font-awesome.css",
+		"/C/wamp/www/wp/wp-content/themes/Abbey/css/font-awesome.min.css",
+		"/C/wamp/www/wp/wp-content/themes/Abbey/less/abbey.sublime-project",
+		"/C/wamp/www/wp/wp-content/themes/Abbey/index.php",
+		"/C/wamp/www/wp/wp-content/themes/Abbey/less/abbey.sublime-workspace",
+		"/C/Users/ACER/AppData/Roaming/Sublime Text 2/Packages/User/abbey.sublime-project",
+		"/C/wamp/www/wordpress/wp-content/themes/Abbey/less/structure.less",
+		"/C/wamp/www/wordpress/wp-content/themes/Abbey/less/mixins.less",
+		"/C/wamp/www/wordpress/wp-content/themes/Abbey/less/style.less",
+		"/C/wamp/www/wordpress/wp-content/themes/Abbey/style.css",
+		"/C/wamp/www/wordpress/wp-content/themes/Abbey",
+		"/C/wamp/www/wordpress/wp-content/themes/Abbey/less/style.css",
+		"/C/Users/ACER/AppData/Roaming/Sublime Text 2/Packages/User/less2css.sublime-settings",
+		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.113/virtue/functions.php",
+		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.113/virtue/lib/metaboxes.php",
+		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.113/virtue/lib/widgets.php",
+		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.113/virtue/lib/nav.php",
+		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.113/virtue/templates/header-topbar.php",
+		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.113/virtue/templates/entry-meta.php",
+		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.113/virtue/templates/entry-meta-subhead.php",
+		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.113/virtue/templates/content.php",
+		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.113/virtue/page-sidebar.php",
+		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.113/virtue/lib/config.php",
+		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.113/virtue/lib/admin_scripts.php",
+		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.113/virtue/themeoptions/core/dashboard.php",
+		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.113/virtue/themeoptions/options/virtue_extension.php",
+		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.113/virtue/themeoptions/options.php",
+		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.113/virtue/themeoptions/framework.php",
+		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.553/wordpress-theme-customizer-custom-controls-master/theme-customizer-demo.php",
+		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.553/wordpress-theme-customizer-custom-controls-master/date/date-picker-custom-control.php",
+		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.553/wordpress-theme-customizer-custom-controls-master/select/google-font-dropdown-custom-control.php",
+		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.553/wordpress-theme-customizer-custom-controls-master/select/cache/google-web-fonts.txt",
+		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.553/wordpress-theme-customizer-custom-controls-master/select/taxonomy-dropdown-custom-control.php",
+		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.553/wordpress-theme-customizer-custom-controls-master/select/post-type-dropdown-custom-control.php",
+		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.553/wordpress-theme-customizer-custom-controls-master/layout/layout-picker-custom-control.php",
+		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.472/debut-master/functions.php",
+		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.472/debut-master/inc/customizer.php",
+		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.297/easy-author-image/easy-author-image.php",
+		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.055/custom-user-profile-photo/3five_cupp.php",
+		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.355/custom-user-profile-photo/3five_cupp.php",
+		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.879/custom-user-profile-photo/js/scripts.js",
+		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.828/wp-user-avatar/includes/class-wp-user-avatar-shortcode.php",
+		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.934/sparkling/image.php",
+		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.828/wp-user-avatar/index.html",
+		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.828/wp-user-avatar/readme.txt",
+		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.828/wp-user-avatar/includes/wpua-globals.php",
+		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.828/wp-user-avatar/includes/wpua-functions.php",
+		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.828/wp-user-avatar/uninstall.php",
+		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.828/wp-user-avatar/wp-user-avatar.php",
+		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.828/wp-user-avatar/includes/class-wp-user-avatar-functions.php",
+		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.934/sparkling/header.php",
+		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.934/sparkling/inc/js/flexslider-custom.js",
+		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.934/sparkling/inc/js/flexslider.min.js",
+		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.934/sparkling/inc/js/functions.min.js",
+		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.934/sparkling/inc/template-tags.php",
+		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.934/sparkling/inc/custom-header.php",
+		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.934/sparkling/inc/extras.php",
+		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.934/sparkling/inc/metaboxes.php",
+		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.934/sparkling/inc/navwalker.php",
+		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.934/sparkling/functions.php",
+		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.540/wordpress/wp-content/themes/twentyfifteen/functions.php",
+		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.540/wordpress/wp-content/themes/twentyfifteen/inc/custom-header.php",
+		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.540/wordpress/wp-content/themes/twentyfifteen/style.css",
+		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.540/wordpress/wp-content/themes/twentyfifteen/inc/template-tags.php",
+		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.540/wordpress/wp-content/themes/twentyfifteen/content.php",
+		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.540/wordpress/wp-content/themes/twentyfifteen/single.php",
+		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.540/wordpress/wp-content/themes/twentyfifteen/page.php",
+		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.540/wordpress/wp-content/themes/twentyfifteen/content-page.php",
+		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.540/wordpress/wp-content/themes/twentyfifteen/screenshot.png",
+		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.540/wordpress/wp-content/themes/twentyfifteen/header.php",
+		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.540/wordpress/wp-content/themes/twentyfifteen/author-bio.php",
+		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.540/wordpress/wp-content/themes/twentyfifteen/js/functions.js",
+		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.076/wordpress/wp-content/themes/twentysixteen/functions.php",
+		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.076/wordpress/wp-content/themes/twentysixteen/css/editor-style.css",
+		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.076/wordpress/wp-content/themes/twentysixteen/inc/customizer.php",
+		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.076/wordpress/wp-content/themes/twentysixteen/js/keyboard-image-navigation.js",
+		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.076/wordpress/wp-content/themes/twentysixteen/js/skip-link-focus-fix.js",
+		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.076/wordpress/wp-content/themes/twentysixteen/archive.php",
+		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.076/wordpress/wp-content/themes/twentysixteen/searchform.php",
+		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.076/wordpress/wp-content/themes/twentysixteen/genericons/genericons.css",
+		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.076/wordpress/wp-content/themes/twentysixteen/js/color-scheme-control.js",
+		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.076/wordpress/wp-content/themes/twentysixteen/header.php",
+		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.076/wordpress/wp-content/themes/twentysixteen/sidebar-content-bottom.php",
+		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.076/wordpress/wp-content/themes/twentysixteen/404.php",
+		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.076/wordpress/wp-content/themes/twentysixteen/template-parts/content.php",
+		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.076/wordpress/wp-content/themes/twentysixteen/template-parts/content-single.php",
+		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.076/wordpress/wp-content/themes/twentysixteen/template-parts/content-search.php",
+		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.076/wordpress/wp-content/themes/twentysixteen/template-parts/biography.php",
+		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.076/wordpress/wp-content/themes/twentysixteen/search.php",
+		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.076/wordpress/wp-content/themes/twentysixteen/inc/template-tags.php",
+		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.076/wordpress/wp-content/themes/twentysixteen/inc/back-compat.php",
+		"/C/Users/ACER/Documents/php/form_class_setup.php",
+		"/C/Users/ACER/Documents/php/form.php",
+		"/C/wamp/www/etproject/wp-content/themes/virtue/home.php",
+		"/C/wamp/www/etproject/wp-content/themes/virtue/templates/header.php",
+		"/C/wamp/www/etproject/wp-content/themes/virtue/templates/header-topbar.php",
+		"/C/wamp/www/etproject/wp-content/themes/virtue/assets/css/skins/default.css",
+		"/C/wamp/www/etproject/wp-content/themes/virtue/style.css",
+		"/C/wamp/www/etproject/wp-content/themes/virtue/functions.php",
+		"/C/wamp/www/etproject/wp-content/themes/virtue/templates/flex-slider.php",
+		"/C/wamp/www/etproject/wp-content/themes/virtue/404.php",
+		"/C/wamp/www/etproject/wp-content/themes/virtue/themeoptions/core/required.php",
+		"/C/wamp/www/etproject/wp-content/themes/virtue/themeoptions/core/enqueue.php",
+		"/C/wamp/www/etproject/wp-content/themes/virtue/single.php",
+		"/C/wamp/www/etproject/wp-content/themes/virtue/index.php",
+		"/C/wamp/www/etproject/wp-content/themes/virtue/header.php",
+		"/C/wamp/www/etproject/wp-content/themes/pinnacle/front-page.php"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			";\n",
+			"}",
+			"md",
+			"twitter",
+			"facebook"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/C/wamp/www/wp/wp-content/themes/Abbey/templates/content-front-page.php",
+					"settings":
+					{
+						"buffer_size": 3142,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3141,
+								3141
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": "<",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								}
+							],
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 968.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "structure.less",
+					"settings":
+					{
+						"buffer_size": 2131,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								864,
+								864
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": "<",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								}
+							],
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 615.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "responsive.less",
+					"settings":
+					{
+						"buffer_size": 1210,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								341,
+								341
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": "<",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								}
+							],
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "navigation.less",
+					"settings":
+					{
+						"buffer_size": 607,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								542,
+								542
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": "<",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								}
+							],
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/C/wamp/www/wp/wp-content/themes/Abbey/functions/custom-functions.php",
+					"settings":
+					{
+						"buffer_size": 7868,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4725,
+								4725
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": "<",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								}
+							],
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1883.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/C/wamp/www/wp/wp-content/themes/Abbey/functions/core.php",
+					"settings":
+					{
+						"buffer_size": 2971,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2008,
+								2008
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": "<",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								}
+							],
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1086.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "front-page.less",
+					"settings":
+					{
+						"buffer_size": 403,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								121,
+								30
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": "<",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								}
+							],
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.CSS Extended Completions":
+	{
+		"height": 0.0
+	},
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 307.0,
+	"status_bar_visible": true
+}

@@ -1,0 +1,63 @@
+@screen-sm-max: 768px; 
+@screen-md-max: 1026px;
+
+
+@screen-xs: 468px;
+@screen-lg: (@screen-md-max + 1); // 1026 + 1 = 1027 //
+
+@screen-sm-min: (@screen-xs + 1px); // 468 + 1 = 469 //
+@screen-md-min: (@screen-sm-max + 1); // 768 + 1 = 769 //
+
+
+/* reponsive design for devices larger than 1027px */
+@media(min-width: @screen-lg){
+	.pad-large-lg{
+		padding-left: 120px;
+		padding-right: 120px;
+	}
+}
+
+/* responsive design for desktops i.e. between 769 and 1026px */
+@media(min-width: @screen-md-min) and (max-width: @screen-md-max){
+	.pad-large-md{
+		padding-left: 120px;
+		padding-right: 120px;
+	}
+}
+
+/* responsive design for tablets i.e between 768 and 460px */
+@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max){
+	.float-none-sm{
+		float: none;
+	}
+	.pad-large-sm{
+		padding-left: 60px;
+		padding-right: 60px;
+	}
+
+	#site-banner{
+		padding-right: 30px;
+	}
+
+	.service-icons {
+		min-height: 300px !important;
+	}
+	.more-service-icons{
+		min-height: 200px !important;
+	}
+}
+
+
+/* responsive styles for mobile phones i.e 468px and below */
+@media (max-width: @screen-xs){
+	.pad-large-xs{
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+	.full-width-xs{
+		float: none;
+		width: 90%; 
+		margin: auto;
+	}
+	
+}

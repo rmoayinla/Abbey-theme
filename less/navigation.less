@@ -1,0 +1,38 @@
+#secondary-menu{
+	.nav-pills {
+		.menu-item a {
+			padding: 10px 15px 10px 15px;
+			border-radius: 20px;
+			text-decoration: none;
+			border: 1px solid @primary-color;
+			background-color: #fff;
+
+		}
+		.menu-item{
+			margin-right: 30px;
+		}
+		.menu-item a:before{
+			content: "#";
+		}
+
+		.menu-item a:hover{
+			background-color: @bg-color;
+			
+		}
+	}
+}
+
+#primary-menu{
+	&:extend(.no-border, .bg-white, .padding-bottom-sm);
+
+	.custom-logo{
+		.image-size(60px,60px) !important;
+	}
+	.navbar-collapse{
+		&:extend(.float-right, .float-none-sm);
+	}
+	.navbar-brand{
+		height: auto;
+		&:extend(.float-none-sm);
+	}
+}

@@ -1,0 +1,305 @@
+/*
+Theme Name: Abbey
+Theme URI: https://rmodiary.com/abbey
+Author: Rabiu Mustapha
+Author URI: https://rmodiary.com
+Description: Abbey is my first wordpress theme.
+Version: 0.1
+Tags: black, blue, gray, red, white, yellow, dark, light, one-column, two-columns, right-sidebar, fixed-layout, responsive-layout, accessibility-ready, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, flexible-header, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready
+Text Domain: abbey
+
+
+*/
+body {
+  margin: 0px;
+  background-color: #f8f8f8;
+}
+.container-fluid,
+.container {
+  overflow: hidden;
+}
+.navbar {
+  border-radius: 0px;
+}
+.container-fluid .jumbotron {
+  border-radius: 0px;
+  width: inherit;
+  margin: 0px -20px -20px 0px;
+}
+.bg-light {
+  background-color: #ffefe5;
+}
+.bg-dark {
+  background-color: #190a00;
+  color: #fff;
+}
+.bg-gray {
+  background-color: #ddd;
+}
+.bg-white,
+#sitehead #main-header,
+#primary-menu {
+  background-color: #fff;
+  color: #000;
+}
+.white {
+  color: #fff;
+}
+.dark,
+.bg-gray {
+  color: #190a00;
+}
+.primary {
+  color: #FF6600;
+}
+.full-width {
+  width: 100%;
+  outline: 0px;
+  border-color: transparent !important;
+  border: 0px;
+  border-radius: 0px;
+}
+.pad-small {
+  padding: 15px;
+}
+.pad-medium {
+  padding: 30px;
+}
+.pad-large {
+  padding-top: 80px;
+  padding-bottom: 100px;
+}
+.pad-large .page-header {
+  border-bottom: 0px;
+}
+.inner-pad-medium {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.outer-pad-medium,
+#sitehead #admin-info {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.padding-bottom-sm,
+#primary-menu {
+  padding-bottom: 15px;
+}
+.no-border,
+#primary-menu,
+#front-page #contact .panel-default {
+  border: 0px;
+  border-radius: 0px;
+}
+.bottom-border {
+  border-bottom: 1px solid #eee;
+}
+.no-bottom-margin {
+  margin-bottom: 0px;
+}
+.margin-top-sm {
+  margin-top: 15px;
+}
+.margin-bottom-sm {
+  margin-bottom: 15px;
+}
+.margin-top-md,
+#sitehead #main-header .navbar-collapse {
+  margin-top: 30px;
+}
+.margin-bottom-md,
+#front-page #services .service-wrapper,
+#front-page #contact .contact-wrapper {
+  margin-bottom: 30px;
+}
+.md-50 {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  clear: both;
+}
+.font-small,
+#front-page #services .service-body {
+  font-size: 13px;
+}
+.float-right,
+#primary-menu .navbar-collapse {
+  float: right;
+}
+.float-left,
+#front-page #contact .contact-icon {
+  float: left;
+}
+.float-none {
+  clear: both;
+}
+.inline {
+  display: inline-block !important;
+  width: auto;
+  height: auto;
+}
+.relative,
+#tool-tip .tool-tip-box,
+.tooltip-box {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
+.fixed {
+  position: fixed;
+}
+/*
+* header styles 
+*
+*/
+#sitehead #header-top .alert-dismissable .close {
+  right: 0px;
+}
+#secondary-menu .nav-pills .menu-item a {
+  padding: 10px 15px 10px 15px;
+  border-radius: 20px;
+  text-decoration: none;
+  border: 1px solid #FF6600;
+  background-color: #fff;
+}
+#secondary-menu .nav-pills .menu-item {
+  margin-right: 30px;
+}
+#secondary-menu .nav-pills .menu-item a:before {
+  content: "#";
+}
+#secondary-menu .nav-pills .menu-item a:hover {
+  background-color: #f8f8f8;
+}
+#primary-menu .custom-logo {
+  width: 60px !important;
+  height: 60px !important;
+}
+#primary-menu .navbar-brand {
+  height: auto;
+}
+.logo-small {
+  width: 60px;
+  height: 60px;
+}
+.logo-md {
+  width: 120px;
+  height: 120px;
+}
+.logo-x {
+  width: 180px;
+  height: 180px;
+}
+.logo-xx {
+  width: 240px;
+  height: 240px;
+}
+/*
+* icons 
+*
+*/
+.base-icon,
+a[href="*facebook"]:before,
+a[href="*twitter"]:before,
+.whatsapp-icon,
+.instagram-icon {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+a[href="*facebook"]:before {
+  content: "\f230";
+}
+a[href="*twitter"]:before {
+  content: "\f081";
+}
+.whatsapp-icon {
+  content: "\f232";
+}
+.instagram-icon {
+  content: "\f16d";
+}
+/*
+* front-page styles 
+*
+*/
+#front-page #services .service-icons {
+  min-height: 250px;
+}
+#front-page #services .more-service-icons {
+  min-height: 150px;
+}
+#tool-tip .tool-tip-box::after,
+.tooltip-box:after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-style: solid;
+}
+.tooltip-box:after {
+  border-width: 25px;
+  border-color: #fff transparent transparent transparent;
+  z-index: 50;
+}
+/*
+*
+* media queries for responsive design 
+*
+*/
+/* reponsive design for devices larger than 1027px */
+@media (min-width: 1027px) {
+  .pad-large-lg,
+  .pad-large {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+}
+/* responsive design for desktops i.e. between 769 and 1026px */
+@media (min-width: 769px) and (max-width: 1026px) {
+  .pad-large-md,
+  .pad-large {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+}
+/* responsive design for tablets i.e between 768 and 460px */
+@media (min-width: 469px) and (max-width: 768px) {
+  .float-none-sm,
+  #primary-menu .navbar-collapse,
+  #primary-menu .navbar-brand {
+    float: none;
+  }
+  .pad-large-sm,
+  .pad-large {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  #site-banner {
+    padding-right: 30px;
+  }
+  .service-icons {
+    min-height: 300px !important;
+  }
+  .more-service-icons {
+    min-height: 200px !important;
+  }
+}
+/* responsive styles for mobile phones i.e 468px and below */
+@media (max-width: 468px) {
+  .pad-large-xs,
+  .pad-large {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .full-width-xs {
+    float: none;
+    width: 90%;
+    margin: auto;
+  }
+}

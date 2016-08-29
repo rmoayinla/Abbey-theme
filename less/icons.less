@@ -1,0 +1,37 @@
+.base-icon{
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@facebook: "\f09a";
+@twitter: "\f099";
+@pinterest: "\f0d2";
+@pinterst-square:"\f0d3";
+@tumblr: "\f173";
+@tumblr-square: "\f174";
+@instagram: "";
+
+a[href="*facebook"]:before {
+	&:extend(.base-icon);
+	content: "\f230"; //
+
+}
+
+a[href="*twitter"]:before{
+	&:extend(.base-icon);
+	content:"\f081";
+}
+
+.whatsapp-icon{
+	&:extend(.base-icon);
+	content:"\f232";
+}
+
+.instagram-icon{
+	&:extend(.base-icon);
+	content: "\f16d";
+}
