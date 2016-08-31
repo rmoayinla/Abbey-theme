@@ -6,17 +6,30 @@
 		
 	#admin-info{
 		&:extend(.outer-pad-medium);
+
 		
 	}
 	#header-top{
-		.alert-dismissable .close{
+		.alert-dismissable {
+			&:extend(.full-width, .no-bottom-margin);
+			background-color: transparent;
+			padding-right: 15px !important;
+			.close{
 			right: 0px;
+			}
+		}
+		.alert{
+			padding: 7px;
 		}
 	}
 	#main-header{
 		&:extend(.bg-white);
+		#header-contact{
+			border-top: 4px solid @dark-primary-color;
+		}
 		.navbar-collapse{
 			&:extend(.margin-top-md);
+			
 		}
 	}
 }

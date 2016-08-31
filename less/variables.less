@@ -3,19 +3,20 @@
 @primary-color:#FF6600; 
 
 @primary-color-light: #ffefe5;
-@primary-color-dark: #190a00;
+@primary-color-dark: desaturate(@primary-color, 15%);
 
 
 
 @text-color: #171717;
 
-@dark-primary-color: #CC5100; // darken(@primary-color, 15%)
+@dark-primary-color: darken(@primary-color, 15%);
 
 @light-primary-color: #FF8432; //lighten(@primary-color, 20%)
 
 
 @default-border-radius: 10px;
-@default-border-color: #eee;
+@default-border-color: @dark-primary-color;
+@default-shadow-color: rgb(0,0,0,0.3);
 
 @base-padding: 10px;
 

@@ -61,6 +61,11 @@ function abbey_theme_defaults(){
 						"form-header-text" => __("Kindly visit me, mail me or fill the contact form below.", "abbey")
 					)
 
+			), 
+			"page" => array(
+				"description" => __("This is a sample of a page description, 
+							a simple small text saying something brief about the page", "abbey"),
+				"icon" => ""
 			)
 		)
 	);

@@ -29,8 +29,9 @@ body {
 .bg-light {
   background-color: #ffefe5;
 }
-.bg-dark {
-  background-color: #190a00;
+.bg-dark,
+#page-content #page-content-header {
+  background-color: #b34700;
   color: #fff;
 }
 .bg-gray {
@@ -38,7 +39,8 @@ body {
 }
 .bg-white,
 #sitehead #main-header,
-#primary-menu {
+#primary-menu,
+#page-content #page-post {
   background-color: #fff;
   color: #000;
 }
@@ -47,12 +49,13 @@ body {
 }
 .dark,
 .bg-gray {
-  color: #190a00;
+  color: #ec6a13;
 }
 .primary {
   color: #FF6600;
 }
-.full-width {
+.full-width,
+#sitehead #header-top .alert-dismissable {
   width: 100%;
   outline: 0px;
   border-color: transparent !important;
@@ -81,8 +84,12 @@ body {
   padding-top: 40px;
   padding-bottom: 40px;
 }
-.padding-bottom-sm,
-#primary-menu {
+.outer-pad-lg,
+#page-content #page-content-header {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.padding-bottom-sm {
   padding-bottom: 15px;
 }
 .no-border,
@@ -92,9 +99,14 @@ body {
   border-radius: 0px;
 }
 .bottom-border {
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #b34700;
 }
-.no-bottom-margin {
+.border-radius-md,
+#page-content #page-post {
+  border-radius: 10px;
+}
+.no-bottom-margin,
+#sitehead #header-top .alert-dismissable {
   margin-bottom: 0px;
 }
 .margin-top-sm {
@@ -104,13 +116,22 @@ body {
   margin-bottom: 15px;
 }
 .margin-top-md,
-#sitehead #main-header .navbar-collapse {
+#sitehead #main-header .navbar-collapse,
+#page-content #page-post {
   margin-top: 30px;
 }
 .margin-bottom-md,
 #front-page #services .service-wrapper,
-#front-page #contact .contact-wrapper {
+#front-page #contact .contact-wrapper,
+#page-content #page-post {
   margin-bottom: 30px;
+}
+.margin-left-sm {
+  margin-left: 15px;
+}
+.margin-left-md,
+#page-content #page-post {
+  margin-left: 30px;
 }
 .md-50 {
   width: 50%;
@@ -149,12 +170,25 @@ body {
 .fixed {
   position: fixed;
 }
+.icon-large {
+  font-size: 7em;
+}
 /*
 * header styles 
 *
 */
+#sitehead #header-top .alert-dismissable {
+  background-color: transparent;
+  padding-right: 15px !important;
+}
 #sitehead #header-top .alert-dismissable .close {
   right: 0px;
+}
+#sitehead #header-top .alert {
+  padding: 7px;
+}
+#sitehead #main-header #header-contact {
+  border-top: 4px solid #b34700;
 }
 #secondary-menu .nav-pills .menu-item a {
   padding: 10px 15px 10px 15px;
@@ -233,6 +267,10 @@ a[href="*twitter"]:before {
 #front-page #services .more-service-icons {
   min-height: 150px;
 }
+/*
+* Styling pages 
+*
+*/
 #tool-tip .tool-tip-box::after,
 .tooltip-box:after {
   content: "";
@@ -247,6 +285,17 @@ a[href="*twitter"]:before {
   border-color: #fff transparent transparent transparent;
   z-index: 50;
 }
+#box-shadow .box-shadow-small,
+#primary-menu {
+  -webkit-box-shadow: 0px 1px 2px 0px #e2e2e2;
+  box-shadow: 0px 1px 2px 0px #e2e2e2;
+}
+#box-shadow .box-shadow-md,
+#page-content #page-post {
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3), 0px 2px 4px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3), 0px 2px 4px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3), 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
 /*
 *
 * media queries for responsive design 
@@ -259,6 +308,11 @@ a[href="*twitter"]:before {
     padding-left: 120px;
     padding-right: 120px;
   }
+  .inner-pad-responsive,
+  #page-content #page-content-header {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
 }
 /* responsive design for desktops i.e. between 769 and 1026px */
 @media (min-width: 769px) and (max-width: 1026px) {
@@ -266,6 +320,11 @@ a[href="*twitter"]:before {
   .pad-large {
     padding-left: 120px;
     padding-right: 120px;
+  }
+  .inner-pad-responsive,
+  #page-content #page-content-header {
+    padding-left: 50px;
+    padding-right: 50px;
   }
 }
 /* responsive design for tablets i.e between 768 and 460px */

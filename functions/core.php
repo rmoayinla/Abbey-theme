@@ -121,3 +121,10 @@ function abbey_custom_logo( $class = "" ){
 		echo "<h2>".blog_info("name")."</h2>";
 	}
 }
+
+function abbey_class ( $prefix ) {
+	global $wp_query;
+	$class = "";
+	if( $wp_query->is_page() ){ $class = "page"; }
+	esc_attr_e ( $prefix."-".$class );
+}

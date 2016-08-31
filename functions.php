@@ -2,9 +2,11 @@
 
 require trailingslashit( get_template_directory () )."libs/wp_bootstrap_navwalker.php";
 require trailingslashit( get_template_directory () )."functions/theme_setup.php";
-require trailingslashit( get_template_directory () )."functions/custom-functions.php";
+require trailingslashit( get_template_directory () )."functions/front-page-hooks.php";
+require trailingslashit( get_template_directory () )."functions/page-hooks.php";
 require trailingslashit( get_template_directory () )."functions/core.php";
-$content_width; 
+
+$content_width = $abbey_defaults = ""; 
 
 if( !function_exists( "abbey_theme_setup" ) ) {
 	
@@ -112,6 +114,9 @@ if( !function_exists( "abbey_theme_setup" ) ) {
 
     	$content_width = apply_filters( "abbey_theme_content_width", 600 );
 
+    	global $abbey_defaults;
+
+    	$abbey_defaults = abbey_theme_defaults();
 
 		/*
 		* abbey theme custom hook

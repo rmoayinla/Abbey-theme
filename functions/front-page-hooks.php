@@ -14,7 +14,7 @@
 */
 function abbey_default_header(){
 	echo '
-	<div class="alert bg-dark alert-dismissable text-center full-width pad-small no-bottom-margin" id="contact-me">
+	<div class="alert alert-dismissable text-center " id="contact-me">
 	 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
 	 	<span aria-hidden="true">&times;</span>
 	 </button>
@@ -25,12 +25,10 @@ add_action( "abbey_theme_before_header", "abbey_default_header" );//hook to defa
 
 function abbey_header_contact(){
 	echo '
-	<div class="row pad-small">
 		<div class="col-md-4">
 		<i class="fa fa-fw fa-map-marker"></i>
 		8, Kadiri Street, Alausa, Ikeja, Lagos. 
 		</div>
-	</div>
 	';
 }
 add_action( "abbey_theme_header_contact", "abbey_header_contact" );//hook to header_contact; check header.php //
@@ -196,8 +194,8 @@ function abbey_theme_contact_form(){
 add_action("abbey_theme_front_page_contact_form", "abbey_theme_contact_form");
 
 function abbey_show_contacts(){
-	$defaults = abbey_theme_defaults();
-	$contacts = $defaults["contacts"];
+	global $abbey_defaults;
+	$contacts = ( !empty( $abbey_defaults["contacts"] ) ) ? $abbey_defaults["contacts"] : "";
 	
 	if( count($contacts) > 0 ){
 		$html = "<aside class='row inner-pad-medium'>";
@@ -221,8 +219,8 @@ function abbey_show_contacts(){
 add_action( "abbey_theme_front_page_contacts", "abbey_show_contacts" );
 
 function abbey_show_social_contacts(){
-	$defaults = abbey_theme_defaults();
-	$social_contacts = $defaults["social-contacts"];
+	global $abbey_defaults;
+	$social_contacts = ( !empty( $abbey_defaults["social-contacts"] ) ) ? $abbey_defaults["social-contacts"] : "";
 
 	if( count( $social_contacts ) > 0 ){
 		$html = "<footer id='social-contacts' class='row inner-pad-medium'>";

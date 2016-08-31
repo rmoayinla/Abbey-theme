@@ -27,7 +27,7 @@
 			</div><!--skip link closes -->
 
 			<div id="main-header">
-				<div id="header-contact" class="">
+				<div id="header-contact" class="<?php abbey_class( "contact-header" ) ?> row pad-small" >
 					<?php do_action( "abbey_theme_header_contact" ); ?>
 
 				</div><!--#header-contact closes -->
