@@ -1,5 +1,5 @@
-		</main><!-- site content -->
-	</div><!--site wrapper -->
+		
+	</div><!--#site wrapper -->
 	<?php wp_footer(); ?>
 </body>
 </html>

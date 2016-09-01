@@ -30,7 +30,7 @@ body {
   background-color: #ffefe5;
 }
 .bg-dark,
-#page-content #page-content-header {
+#site-page .page-content #page-content-header {
   background-color: #b34700;
   color: #fff;
 }
@@ -40,7 +40,7 @@ body {
 .bg-white,
 #sitehead #main-header,
 #primary-menu,
-#page-content #page-post {
+#site-page .page-content #page-post {
   background-color: #fff;
   color: #000;
 }
@@ -48,8 +48,9 @@ body {
   color: #fff;
 }
 .dark,
-.bg-gray {
-  color: #ec6a13;
+.bg-gray,
+#error-404-page .content .page-header {
+  color: #b34700;
 }
 .primary {
   color: #FF6600;
@@ -85,7 +86,7 @@ body {
   padding-bottom: 40px;
 }
 .outer-pad-lg,
-#page-content #page-content-header {
+#site-page .page-content #page-content-header {
   padding-top: 80px;
   padding-bottom: 80px;
 }
@@ -102,14 +103,15 @@ body {
   border-bottom: 1px solid #b34700;
 }
 .border-radius-md,
-#page-content #page-post {
+#site-page .page-content #page-post {
   border-radius: 10px;
 }
 .no-bottom-margin,
 #sitehead #header-top .alert-dismissable {
   margin-bottom: 0px;
 }
-.margin-top-sm {
+.margin-top-sm,
+#error-404-page .content #search-form {
   margin-top: 15px;
 }
 .margin-bottom-sm {
@@ -117,21 +119,25 @@ body {
 }
 .margin-top-md,
 #sitehead #main-header .navbar-collapse,
-#page-content #page-post {
+#site-page .page-content #page-post {
   margin-top: 30px;
 }
 .margin-bottom-md,
 #front-page #services .service-wrapper,
 #front-page #contact .contact-wrapper,
-#page-content #page-post {
+#site-page .page-content #page-post,
+#error-404-page .page-content {
   margin-bottom: 30px;
 }
 .margin-left-sm {
   margin-left: 15px;
 }
 .margin-left-md,
-#page-content #page-post {
+#site-page .page-content #page-post {
   margin-left: 30px;
+}
+.margin-md {
+  margin: 30px;
 }
 .md-50 {
   width: 50%;
@@ -271,6 +277,17 @@ a[href="*twitter"]:before {
 * Styling pages 
 *
 */
+#error-404-page .content .page-header {
+  font-size: 8em;
+  text-shadow: 6px 6px 20px #FF6600;
+}
+#error-404-page .content #search-form .input-group .form-control {
+  padding: 20px;
+  border-radius: 10px 0px 0px 10px;
+}
+#error-404-page .content #search-form .input-group .btn {
+  padding: 10px;
+}
 #tool-tip .tool-tip-box::after,
 .tooltip-box:after {
   content: "";
@@ -291,7 +308,7 @@ a[href="*twitter"]:before {
   box-shadow: 0px 1px 2px 0px #e2e2e2;
 }
 #box-shadow .box-shadow-md,
-#page-content #page-post {
+#site-page .page-content #page-post {
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3), 0px 2px 4px rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3), 0px 2px 4px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3), 0px 2px 4px rgba(0, 0, 0, 0.1);
@@ -309,7 +326,7 @@ a[href="*twitter"]:before {
     padding-right: 120px;
   }
   .inner-pad-responsive,
-  #page-content #page-content-header {
+  #site-page .page-content #page-content-header {
     padding-left: 80px;
     padding-right: 80px;
   }
@@ -322,7 +339,7 @@ a[href="*twitter"]:before {
     padding-right: 120px;
   }
   .inner-pad-responsive,
-  #page-content #page-content-header {
+  #site-page .page-content #page-content-header {
     padding-left: 50px;
     padding-right: 50px;
   }

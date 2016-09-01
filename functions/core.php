@@ -80,14 +80,19 @@ function abbey_display_contact( $contact, $heading ){
 }
 
 function abbey_theme_page_id(){
-	$id = (is_front_page()) ? "front-page" : "blog-page" ;
-	echo esc_attr($id);
+	$id = "";
+	if( is_front_page() ){ $id = "front-page"; }
+	if ( is_page() ) { $id = "site-page"; }
+	if( is_404() ) { $id = "error-404-page"; }
+	if( is_search() ) { $id = "search-page"; }
+	
+	echo esc_attr( apply_filters( "abbey_theme_page_id", $id ) );
 
 }
 
 function abbey_theme_show_services(){
-	$defaults = abbey_theme_defaults();
-	$services = $defaults["services"]["lists"];
+	global $abbey_defaults;
+	$services = ( !empty( $abbey_defaults["services"]["lists"] ) ) ? $abbey_defaults["services"]["lists"] : "";
 	if( count($services) > 0 ){
 			$html = "";
 		foreach( $services as $service ){

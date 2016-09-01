@@ -2,13 +2,42 @@
 * Styling pages 
 *
 */
-#page-content{
-	#page-content-header{
-		&:extend(.outer-pad-lg, .bg-dark, .inner-pad-responsive);
+
+#site-page{
+	.page-content{
+		#page-content-header{
+			&:extend(.outer-pad-lg, .bg-dark, .inner-pad-responsive);
+		}
+		#page-post{
+			&:extend(.margin-top-md, .margin-left-md, .bg-white, .margin-bottom-md, .border-radius-md, 
+			#box-shadow .box-shadow-md);
+			
+		}
 	}
-	#page-post{
-		&:extend(.margin-top-md, .margin-left-md, .bg-white, .margin-bottom-md, .border-radius-md, 
-		#box-shadow .box-shadow-md);
-		
+}
+
+
+#error-404-page{
+	.page-content{
+		&:extend(.margin-bottom-md);
+
 	}
+	.content{
+		.page-header{
+			&:extend(.dark);
+			font-size: 8em;
+			text-shadow: 6px 6px 20px @primary-color;
+		}
+		#search-form{
+			&:extend(.margin-top-sm);
+				.input-group{
+					.form-control{ 
+						padding: 20px;
+						border-radius: 10px 0px 0px 10px;
+					}
+					.btn{ padding: 10px;}
+				}
+		}
+	}
+	
 }

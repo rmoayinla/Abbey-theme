@@ -66,6 +66,12 @@ function abbey_theme_defaults(){
 				"description" => __("This is a sample of a page description, 
 							a simple small text saying something brief about the page", "abbey"),
 				"icon" => ""
+			), 
+			"error-404-page" => array(
+				"error-title" => __("404 Error", "abbey"),
+				"error-message" => __("Oops, seems the page or post you are looking for have been moved or does
+					not exist.", "abbey"), 
+				"icon" => "fa fa-exclamation-triangle"
 			)
 		)
 	);
@@ -74,10 +80,15 @@ function abbey_theme_defaults(){
 }
 
 function abbey_theme_front_page_defaults(){
-	$defaults = abbey_theme_defaults();
-	return $defaults["front-page"];
+	global $abbey_defaults; 
+	return $abbey_defaults["front-page"];
 }
 
+function abbey_get_defaults( $key ){
+	global $abbey_defaults;
+
+	return ( isset( $abbey_defaults[$key] ) ) ? $abbey_defaults[$key] : "";
+}
 function abbey_theme_add_services($defaults){
 	$defaults["services"]["lists"] = array(
 		array("icon" => "fa-registered", "header-text" => __("Domain registration", "abbey"), 

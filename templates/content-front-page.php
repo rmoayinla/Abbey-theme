@@ -92,4 +92,5 @@ $contact_section = $front_page_defaults["contact"];
 
 	<?php do_action( "abbey_theme_front_page_sections" ); ?>
 
+</main>
 	
