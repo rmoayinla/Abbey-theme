@@ -79,13 +79,13 @@ function abbey_display_contact( $contact, $heading ){
 	return $html;
 }
 
-function abbey_theme_page_id(){
-	$id = "";
-	if( is_front_page() ){ $id = "front-page"; }
-	if ( is_page() ) { $id = "site-page"; }
-	if( is_404() ) { $id = "error-404-page"; }
-	if( is_search() ) { $id = "search-page"; }
-	
+function abbey_theme_page_id( $id= "" ){
+	if ( empty($id) ) {
+		if( is_front_page() ){ $id = "front-page"; }
+		if ( is_page() ) { $id = "site-page"; }
+		if( is_404() ) { $id = "error-404-page"; }
+		if( is_search() ) { $id = "search-page"; }
+	} 
 	echo esc_attr( apply_filters( "abbey_theme_page_id", $id ) );
 
 }

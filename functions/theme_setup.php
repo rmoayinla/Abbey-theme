@@ -72,6 +72,16 @@ function abbey_theme_defaults(){
 				"error-message" => __("Oops, seems the page or post you are looking for have been moved or does
 					not exist.", "abbey"), 
 				"icon" => "fa fa-exclamation-triangle"
+			), 
+			"footer" => array(
+				"contacts" => true, 
+				"social-icons" => true, 
+				"credits" => array(
+					"package" => sprintf ( __( "<em> Powered by: </em> <strong> %s </strong>", "abbey" ), "<a href='".esc_url('http://wordpress.org')."'>Wordpress</a>" ), 
+					"theme" => sprintf ( __( "<em> Built with: </em><strong> %s </strong>", "abbey" ), "Abbey" ), 
+					"version" => sprintf ( __( "<em> Version: </em><strong> %s </strong>", "abbey" ), "0.1" ), 
+					"designer" => sprintf( __( "<em>Designed and Developed by: </em> <strong> %s </strong>", "abbey" ), "Rabiu Mustapha" )
+				)
 			)
 		)
 	);

@@ -41,3 +41,21 @@
 	}
 	
 }
+
+/*
+* custom page template
+*
+*/
+#custom-page{
+	#inner-content{
+		&:extend(.bg-white, #box-shadow .box-shadow-small, .pad-medium);
+	}
+
+	#page-content-header{
+		&:extend(.outer-pad-medium);
+		padding-bottom: 60px;
+		.page-title{
+			&:extend(.margin-bottom-sm);
+		}
+	}
+}

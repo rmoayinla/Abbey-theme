@@ -16,6 +16,7 @@ get_header();	?>
 	</section>
 
 
-</main> 	<?php
 
+</main> 	<?php
+get_sidebar("404");
 get_footer();

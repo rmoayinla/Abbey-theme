@@ -19,6 +19,22 @@
 		padding-left: 80px;
 		padding-right: 80px;
 	}
+
+	.float-right-responsive{
+		float: right;
+	}
+	
+	.responsive-width(){
+		@responsive-center-width: 60%;
+	}
+	.md-50{
+		.responsive-width();
+		width: @responsive-center-width;
+		margin-left: auto;
+		margin-right: auto;
+		clear: both;
+	}
+	
 }
 
 /* responsive design for desktops i.e. between 769 and 1026px */
@@ -30,6 +46,20 @@
 	.inner-pad-responsive{
 		padding-left: 50px;
 		padding-right:50px;
+	}
+	.float-right-responsive{
+		float: right;
+	}
+
+	.responsive-width(){
+		@responsive-center-width: 70%;
+	}
+	.md-50{
+		.responsive-width();
+		width: @responsive-center-width;
+		margin-left: auto;
+		margin-right: auto;
+		clear: both;
 	}
 }
 
@@ -43,6 +73,11 @@
 		padding-right: 60px;
 	}
 
+	.inner-pad-responsive{
+		padding-left: 30px;
+		padding-right:30px;
+	}
+
 	#site-banner{
 		padding-right: 30px;
 	}
@@ -52,6 +87,20 @@
 	}
 	.more-service-icons{
 		min-height: 200px !important;
+	}
+	.float-right-responsive{
+		float: left;
+	}
+
+	.responsive-width(){
+		@responsive-center-width: 70%;
+	}
+	.md-50{
+		.responsive-width();
+		width: @responsive-center-width;
+		margin-left: auto;
+		margin-right: auto;
+		clear: both;
 	}
 }
 
@@ -66,6 +115,26 @@
 		float: none;
 		width: 90%; 
 		margin: auto;
+	}
+
+	.float-right-responsive{
+		float: none;
+	}
+
+	.inner-pad-responsive{
+		padding-left: 15px;
+		padding-right:15px;
+	}
+
+	.responsive-width(){
+		@responsive-center-width: 85%;
+	}
+	.md-50{
+		.responsive-width();
+		width: @responsive-center-width;
+		margin-left: auto;
+		margin-right: auto;
+		clear: both;
 	}
 	
 }

@@ -1,0 +1,17 @@
+/*
+* Sidebar styles 
+*/
+#sidebar-404{
+	&:extend(.margin-bottom-md);
+	.page-header{
+		&:extend(.pad-large .page-header);
+	}
+	#latest-posts{
+		&:extend(.bg-white, .pad-medium, #box-shadow .box-shadow-small);
+		
+	}
+	#quotes{
+		background-color: darken( @bg-color, 30% );
+		&:extend(#box-shadow .box-shadow-small);
+	}
+}

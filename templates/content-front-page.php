@@ -52,7 +52,7 @@ $contact_section = $front_page_defaults["contact"];
 	<section id="quotes" class="pad-large text-center row tooltip-box">
 		<h2 class="page-header text-capitalize"> <?php echo esc_html($quote_section["header-text"]); ?> </h2>
 		<div class="small description">
-			<?php echo wp_kses_post($quote_section["body-text"]); ?>
+			<?php echo esc_html ($quote_section["body-text"]); ?>
 		</div>
 		<div id="front-page-quotes" class="">
 			<?php do_action("abbey_theme_front_page_quotes"); ?>
