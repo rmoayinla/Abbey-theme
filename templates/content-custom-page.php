@@ -14,7 +14,7 @@
 	<div class="row"><?php do_action("abbey_theme_after_page_header"); ?></div>
 
 	<section class="row" id="inner-content">
-		<article <?php post_class( apply_filters( "abbey_post_classes", "col-md-6 pad-medium") ); ?> id="page-post">
+		<article <?php post_class( apply_filters( "abbey_post_classes", "col-md-9 pad-medium") ); ?> id="page-post">
 			<?php the_content("Read more . . "); ?>
 		</article>
 	</section>

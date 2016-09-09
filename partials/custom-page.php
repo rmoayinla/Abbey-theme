@@ -3,7 +3,7 @@
 * Template Name: Custom Page 
 *
 */
-get_header(); ?>
+get_header("custom"); ?>
 
 <main id="<?php abbey_theme_page_id( "custom-page" );?>" class="row site-content">
 	<?php if ( have_posts() ) : ?>

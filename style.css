@@ -34,6 +34,7 @@ body {
   background-color: #ffefe5;
 }
 .bg-dark,
+#custom-header #header-top,
 #site-page .page-content #page-content-header,
 #site-footer {
   background-color: #b34700;
@@ -56,7 +57,8 @@ body {
 }
 .dark,
 .bg-gray,
-#error-404-page .content .page-header {
+#error-404-page .content .page-header,
+#custom-page #page-content-header .page-title {
   color: #b34700;
 }
 .primary {
@@ -70,14 +72,20 @@ body {
   border: 0px;
   border-radius: 0px;
 }
-.pad-small {
+.pad-small,
+#custom-header #inner-header {
   padding: 15px;
 }
 .pad-medium,
-#custom-page #inner-content,
 #sidebar-404 #latest-posts,
 #site-footer #footer-bottom {
   padding: 30px;
+}
+.no-padding-right {
+  padding-right: 0px !important;
+}
+.no-padding-left {
+  padding-left: 0px !important;
 }
 .pad-large {
   padding-top: 80px;
@@ -119,7 +127,8 @@ body {
   border-radius: 10px;
 }
 .no-bottom-margin,
-#sitehead #header-top .alert-dismissable {
+#sitehead #header-top .alert-dismissable,
+#custom-header #header-top .alert {
   margin-bottom: 0px;
 }
 .no-top-margin {
@@ -159,8 +168,16 @@ body {
   margin: 30px;
 }
 .font-small,
+#custom-header #inner-header #header-contact,
 #front-page #services .service-body {
   font-size: 13px;
+}
+.font-large,
+#custom-page #page-content-header .page-title {
+  font-size: 60px;
+}
+.strong {
+  font-weight: 600;
 }
 .float-right,
 #primary-menu .navbar-collapse {
@@ -208,6 +225,21 @@ body {
 }
 #sitehead #main-header #header-contact {
   border-top: 4px solid #b34700;
+}
+#custom-header #header-top {
+  Padding-right: 20px;
+}
+#custom-header #inner-header .navbar-header .navbar-brand {
+  height: auto !important;
+  padding: 0px !important;
+  font-size: 24px;
+}
+#custom-header #inner-header .navbar-header .custom-logo {
+  width: 45px;
+  height: 45px;
+}
+#custom-header #inner-header #menu-icon li > a {
+  padding: 5px;
 }
 #secondary-menu .nav-pills .menu-item a {
   padding: 10px 15px 10px 15px;
@@ -264,7 +296,6 @@ body {
 */
 #error-404-page .content .page-header {
   font-size: 8em;
-  text-shadow: 6px 6px 20px #FF6600;
 }
 #error-404-page .content #search-form .input-group .form-control {
   padding: 20px;
@@ -277,8 +308,13 @@ body {
 * custom page template
 *
 */
+#custom-page #inner-content #page-post {
+  padding: 80px;
+  border-right-color: #ddd !important;
+  border-bottom-color: #ddd !important;
+}
 #custom-page #page-content-header {
-  padding-bottom: 60px;
+  padding-bottom: 80px;
 }
 #tool-tip .tool-tip-box::after,
 .tooltip-box:after {
@@ -308,6 +344,13 @@ body {
   -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3), 0px 2px 4px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3), 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
+#text-shadow .text-shadow-md,
+#error-404-page .content .page-header,
+#custom-page #page-content-header .page-title {
+  text-shadow: 6px 6px 20px #FF6600;
+  -webkit-text-shadow: 6px 6px 20px #FF6600;
+  -o-text-shadow: 6px 6px 20px #FF6600;
+}
 /*
 * Sidebar styles 
 */
@@ -331,7 +374,8 @@ body {
     padding-right: 120px;
   }
   .inner-pad-responsive,
-  #site-page .page-content #page-content-header {
+  #site-page .page-content #page-content-header,
+  #custom-page #inner-content #page-post {
     padding-left: 80px;
     padding-right: 80px;
   }
@@ -344,6 +388,10 @@ body {
     margin-right: auto;
     clear: both;
   }
+  .responsive-right-border,
+  #custom-page #inner-content #page-post {
+    border-right: 1px solid;
+  }
 }
 /* responsive design for desktops i.e. between 769 and 1026px */
 @media (min-width: 769px) and (max-width: 1026px) {
@@ -353,7 +401,8 @@ body {
     padding-right: 120px;
   }
   .inner-pad-responsive,
-  #site-page .page-content #page-content-header {
+  #site-page .page-content #page-content-header,
+  #custom-page #inner-content #page-post {
     padding-left: 50px;
     padding-right: 50px;
   }
@@ -366,6 +415,10 @@ body {
     margin-right: auto;
     clear: both;
   }
+  .responsive-right-border,
+  #custom-page #inner-content #page-post {
+    border-right: 1px solid;
+  }
 }
 /* responsive design for tablets i.e between 768 and 460px */
 @media (min-width: 469px) and (max-width: 768px) {
@@ -375,17 +428,16 @@ body {
     float: none;
   }
   .pad-large-sm,
+  #site-banner,
   .pad-large {
     padding-left: 60px;
     padding-right: 60px;
   }
   .inner-pad-responsive,
-  #site-page .page-content #page-content-header {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-  #site-banner {
-    padding-right: 30px;
+  #site-page .page-content #page-content-header,
+  #custom-page #inner-content #page-post {
+    padding-left: 45px;
+    padding-right: 45px;
   }
   .service-icons {
     min-height: 300px !important;
@@ -401,6 +453,10 @@ body {
     margin-left: auto;
     margin-right: auto;
     clear: both;
+  }
+  .responsive-right-border,
+  #custom-page #inner-content #page-post {
+    border-bottom: 1px solid;
   }
 }
 /* responsive styles for mobile phones i.e 468px and below */
@@ -419,14 +475,25 @@ body {
     float: none;
   }
   .inner-pad-responsive,
-  #site-page .page-content #page-content-header {
-    padding-left: 15px;
-    padding-right: 15px;
+  #site-page .page-content #page-content-header,
+  #custom-page #inner-content #page-post {
+    padding-left: 30px;
+    padding-right: 30px;
   }
   .md-50 {
     width: 85%;
     margin-left: auto;
     margin-right: auto;
     clear: both;
+  }
+  .responsive-right-border,
+  #custom-page #inner-content #page-post {
+    border-bottom: 1px solid;
+  }
+  .service-icons {
+    min-height: 300px !important;
+  }
+  .more-service-icons {
+    min-height: 200px !important;
   }
 }

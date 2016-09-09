@@ -5,6 +5,27 @@ function abbey_numerize($string){
 	return $result;
 }
 
+/*
+* wrapper function for wp_nav_menu 
+*
+*/
+function abbey_nav_menu( $args = array() ){
+	$defaults = array(	'menu'              => '',
+	                	'theme_location'    => '',
+	                	'depth'             => 1,
+	                	'container'         => 'div',
+	                	'container_class'   => '',
+	        			'container_id'      => '',
+	                	'menu_class'        => '',
+	                	'fallback_cb'       => '',
+	                	'walker'            => ''
+	            );
+	$args = wp_parse_args( $args, $defaults );
+
+	wp_nav_menu( $args );
+
+
+}
 function abbey_contact_icon($contact){
 	$contact = esc_attr($contact);
 	switch ( $contact ){
@@ -65,7 +86,7 @@ function abbey_display_contact( $contact, $heading ){
 	if( !is_array( $contact ) ) {
 		$html .= "<div class='col-md-6 margin-bottom-sm'>";
 		$html .= "<header class='text-capitalize'>". esc_html( $heading ). "</header>";
-		$html .= "<div clas;s='medium'>". esc_html( $contact ) . "</div>";
+		$html .= "<div class='medium'>". esc_html( $contact ) . "</div>";
 		$html .= "</div>";
 	}
 	else{
@@ -79,6 +100,18 @@ function abbey_display_contact( $contact, $heading ){
 	return $html;
 }
 
+function abbey_get_contact( $type, $key = "" ){
+	global $abbey_defaults;
+	if( isset( $abbey_defaults["contacts"] ) ){
+		$contacts = $abbey_defaults["contacts"];
+		$contact_type = ( isset ( $contacts[ $type ] ) ) ? $contacts[$type] : "";
+		if (! empty ( $contact_type ) ) {
+			$contact = ( !empty($key) && isset($contact_type[$key]) ) ? $contact_type[$key] : $contact_type;
+		}
+		
+	}
+	return $contact;
+}
 function abbey_theme_page_id( $id= "" ){
 	if ( empty($id) ) {
 		if( is_front_page() ){ $id = "front-page"; }
@@ -115,15 +148,17 @@ function abbey_theme_show_services(){
 
 function abbey_custom_logo( $class = "" ){
 	$class = ( !empty($class) ) ? esc_attr( $class ) : "";
+	$title = get_bloginfo("name");
 	if( has_custom_logo() ){
 		$logo = get_theme_mod("custom_logo");
 		$logo_attachment = wp_get_attachment_image_src( $logo, "full" );
 		$logo_url = $logo_attachment[0]; 
-		$image = "<img src='".esc_url($logo_url)."' class='custom-logo ".$class."' />";
+		$image = "<img src='".esc_url($logo_url)."' class='custom-logo {$class}' alt ='{$title}' ";
+		$image .= " /> ";
 		echo $image;
 	}
 	else{
-		echo "<h2>".blog_info("name")."</h2>";
+		echo "<h2>".bloginfo("name")."</h2>";
 	}
 }
 
@@ -133,3 +168,74 @@ function abbey_class ( $prefix ) {
 	if( $wp_query->is_page() ){ $class = "page"; }
 	esc_attr_e ( $prefix."-".$class );
 }
+
+function abbey_nav_toggle () { ?>
+	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+	    <span class="sr-only">Toggle navigation</span>
+	    <span class="icon-bar"></span>
+	    <span class="icon-bar"></span>
+	    <span class="icon-bar"></span>
+	</button>	<?php
+}
+
+/*
+* display the theme set primary menu 
+*
+*/
+function abbey_primary_menu(){
+    $args = apply_filters( "abbey_primary_menu_args", array(
+	                	'menu'              => 'primary',
+	                	'theme_location'    => 'primary',
+	              		'depth'             => 2,
+	                	'container'         => 'div',
+	                	'container_class'   => 'collapse navbar-collapse',
+	        			'container_id'      => 'bs-example-navbar-collapse-1',
+	                	'menu_class'        => 'nav navbar-nav',
+	                	'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+	                	'walker'            => new wp_bootstrap_navwalker()
+	               	 	)
+	);
+	if ( has_nav_menu( 'primary' ) ):
+    	abbey_nav_menu ( $args );
+    endif;
+}
+add_action( "abbey_theme_primary_menu", "abbey_primary_menu" ); 
+
+/*
+* display the theme set secondary menu
+*
+*/
+function abbey_secondary_menu( $args = array() ){
+	$defaults = apply_filters( "abbey_theme_secondary_menu_args", array(
+	                		'menu'              => 'secondary',
+	                		'theme_location'    => 'secondary',
+	                		'depth'             => 1,
+	                		'container'         => 'ul',
+	                		'menu_class'   		=> 'nav nav-pills',
+	                	)
+    );
+    $args = ( count( $args ) > 0 ) ? wp_parse_args( $args, $defaults ) : $defaults;
+	if( has_nav_menu("secondary") ) :
+		abbey_nav_menu( $args );
+	endif;
+	
+}
+
+/*
+* display the theme set social menu 
+*
+*/
+function abbey_social_menu(){
+	$defaults = apply_filters( "abbey_theme_social_menu_args", array(
+								'menu' => 'social', 
+								'theme_location' => 'social',
+								'depth' => 1, 
+								'container' => 'ul', 
+								'menu_class' => 'nav', 
+								'walker' => new Abbey_Social_Nav_Walker()
+							) 
+	);
+	if (! has_nav_menu("social") ) {abbey_show_social_contacts();}
+	else{ abbey_nav_menu ($defaults); }
+}
+

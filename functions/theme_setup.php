@@ -15,17 +15,17 @@ function abbey_theme_defaults(){
 				"tumblr"=> "",
 				"whatsapp" => "+2348028617830"
 			),
-			"logo" => get_template_directory_uri()."/img/author.jpg", 
 			"services" => array(), 
 			"about" => __("I am Rabiu Mustapha, a blogger and developer from Lagos, Nigeria. This 
 							blog is where I share my latest projects, code snippets and new hacks
 							I have just learn in the ever evolving web developing field.",
 						"abbey"
-						),
+			),
 			"admin" => array(
 				"name" => __("Rabiu Mustapha", "abbey"),
-				"roles" => array("Developer", "Writer", "Administrator")
-				), 
+				"roles" => array("Developer", "Writer", "Administrator"), 
+				"pics"	=> get_template_directory_uri()."/img/author.jpg"
+			), 
 			"front-page" => array(
 					"blog-posts" => array(
 						"header-text" => __("latest from my blog", "abbey"),

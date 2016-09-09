@@ -24,9 +24,9 @@
 	}
 	.content{
 		.page-header{
-			&:extend(.dark);
+			&:extend(.dark, #text-shadow .text-shadow-md);
 			font-size: 8em;
-			text-shadow: 6px 6px 20px @primary-color;
+			
 		}
 		#search-form{
 			&:extend(.margin-top-sm);
@@ -48,14 +48,22 @@
 */
 #custom-page{
 	#inner-content{
-		&:extend(.bg-white, #box-shadow .box-shadow-small, .pad-medium);
+		&:extend(.bg-white, #box-shadow .box-shadow-small);
+		#page-post{
+			&:extend(.responsive-right-border, .inner-pad-responsive);
+			padding: 80px;
+			border-right-color: @gray-color !important;
+			border-bottom-color: @gray-color !important;
+		}
 	}
 
 	#page-content-header{
 		&:extend(.outer-pad-medium);
-		padding-bottom: 60px;
+		padding-bottom: 80px;
 		.page-title{
-			&:extend(.margin-bottom-sm);
+			&:extend(.margin-bottom-sm, .font-large, .dark, #text-shadow .text-shadow-md);
+
 		}
+
 	}
 }

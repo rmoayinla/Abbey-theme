@@ -34,6 +34,9 @@
 		margin-right: auto;
 		clear: both;
 	}
+	.responsive-right-border{
+		border-right: 1px solid;
+	}
 	
 }
 
@@ -61,6 +64,9 @@
 		margin-right: auto;
 		clear: both;
 	}
+	.responsive-right-border{
+		border-right: 1px solid;
+	}
 }
 
 /* responsive design for tablets i.e between 768 and 460px */
@@ -74,12 +80,12 @@
 	}
 
 	.inner-pad-responsive{
-		padding-left: 30px;
-		padding-right:30px;
+		padding-left: 45px;
+		padding-right: 45px;
 	}
 
 	#site-banner{
-		padding-right: 30px;
+		&:extend(.pad-large-sm);
 	}
 
 	.service-icons {
@@ -102,6 +108,9 @@
 		margin-right: auto;
 		clear: both;
 	}
+	.responsive-right-border{
+		border-bottom: 1px solid;
+	}
 }
 
 
@@ -122,8 +131,8 @@
 	}
 
 	.inner-pad-responsive{
-		padding-left: 15px;
-		padding-right:15px;
+		padding-left: 30px;
+		padding-right: 30px;
 	}
 
 	.responsive-width(){
@@ -136,5 +145,14 @@
 		margin-right: auto;
 		clear: both;
 	}
+	.responsive-right-border{
+		border-bottom: 1px solid;
+	}
 	
+	.service-icons {
+		min-height: 300px !important;
+	}
+	.more-service-icons{
+		min-height: 200px !important;
+	}
 }

@@ -1,6 +1,8 @@
 <?php
 
 require trailingslashit( get_template_directory () )."libs/wp_bootstrap_navwalker.php";
+require trailingslashit( get_template_directory () )."libs/abbey_social_navwalker.php";
+
 require trailingslashit( get_template_directory () )."functions/theme_setup.php";
 require trailingslashit( get_template_directory () )."functions/front-page-hooks.php";
 require trailingslashit( get_template_directory () )."functions/page-hooks.php";

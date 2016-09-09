@@ -8,5 +8,6 @@
 */
 
 get_header();
+
 get_template_part("templates/content", "front-page");//include the front-page content layout //
 get_footer();
