@@ -241,7 +241,16 @@ function abbey_social_menu(){
 								'walker' => new Abbey_Social_Nav_Walker()
 							) 
 	);
-	if (! has_nav_menu("social") ) {abbey_show_social_contacts();}
+	if (! has_nav_menu("social") ) { abbey_show_social_contacts();}
 	else{ abbey_nav_menu ($defaults); }
 }
 
+/*
+* wrapper class for wp post_class() function 
+*
+*/
+function abbey_post_class ( $class = "" ){
+	if ( !is_array( $class ) ) { $class .= " entry-content"; }
+	else { $class[] = "entry-content"; }
+	post_class( apply_filters( "abbey_post_classes", $class ) );
+}

@@ -1,7 +1,7 @@
 <?php
 
 ?>
-<section  id="page-<?php the_ID(); ?>" class="page-content">
+<section  id="content" class="page-content">
 	<header id="page-content-header" class="row">
 		<div class="col-md-6"><?php do_action( "abbey_theme_page_title", get_the_ID() ); ?></div>
 					
@@ -15,13 +15,13 @@
 	<div class="row"><?php do_action("abbey_theme_after_page_header"); ?></div>
 
 	<section class="row">
-		<article <?php post_class( apply_filters( "abbey_post_classes", "col-md-6 pad-medium") ); ?> id="page-post">
+		<article <?php abbey_post_class("col-md-6"); ?> id="page-<?php the_ID(); ?>">
 			<?php the_content("Read more . . "); ?>
 		</article>
 	</section>
 
 
-</section><!-- .page-content closes -->
+</section><!-- #content .page-content closes -->
 		
 	
 	

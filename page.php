@@ -27,6 +27,6 @@ get_header(); ?>
 
 
 
-</main>	<?php 
+</main> <!--main #page closes -->	<?php 
 
 get_footer();

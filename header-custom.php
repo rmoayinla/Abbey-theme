@@ -42,7 +42,7 @@ global $abbey_defaults;
 
 					<div id="main-header">
 						<div id="inner-header" role="contact" class="row">
-							<div class="float-right-responsive col-md-9" id="header-contact">
+							<div class="float-right-responsive col-md-9 col-sm-12" id="header-contact">
 								<div class="row">
 									<?php do_action ("abbey_theme_header_contact", $abbey_defaults["contacts"] ); ?>
 								</div>

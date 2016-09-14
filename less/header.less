@@ -11,24 +11,29 @@
 	#header-top{
 		.alert-dismissable {
 			&:extend(.full-width, .no-bottom-margin);
-			background-color: transparent;
+			background-color: @bg-color-dark;
 			padding-right: 15px !important;
 			.close{
 			right: 0px;
 			}
 		}
 		.alert{
-			padding: 7px;
+			padding: 10px;
 		}
 	}
 	#main-header{
 		&:extend(.bg-white);
 		#header-contact{
-			border-top: 4px solid @dark-primary-color;
+			border-top: 4px solid @bg-color-dark;
 		}
 		.navbar-collapse{
 			&:extend(.margin-top-md);
 			
+		}
+		#menu-icon{
+			li > a {
+				&:extend( #custom-header #inner-header #menu-icon li > a);
+			}
 		}
 	}
 }

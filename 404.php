@@ -11,12 +11,10 @@ get_header();	?>
 					<?php do_action( "abbey_theme_before_page_content" ); ?>
 			</header>
 			
-			<section id="page-404" class="page-content">
+			<section id="content" class="page-content">
 				<?php get_template_part( "templates/content", "none" ); ?>
-			</section>
+			</section><!--#content closes -->
 
-
-
-		</main> 	<?php
+		</main> <!-- #page-404 main closes -->	<?php
 get_sidebar("404");
 get_footer();
