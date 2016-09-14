@@ -1,7 +1,7 @@
 <?php
 /*
 * Wordpress Nav Class for social icons menu 
-*
+* This class is inspired by WP_Bootstrap_Nav_Walker 
 *
 */
 class Abbey_Social_Nav_Walker extends Walker_Nav_Menu {
@@ -12,8 +12,8 @@ class Abbey_Social_Nav_Walker extends Walker_Nav_Menu {
 	}
 
 	/**
-	 * @see Walker::start_el()
-	 * @since 3.0.0
+	 * 
+	 *
 	 *
 	 * @param string $output Passed by reference. Used to append additional content.
 	 * @param object $item Menu item data object.
@@ -62,10 +62,6 @@ class Abbey_Social_Nav_Walker extends Walker_Nav_Menu {
 			$output .= apply_filters( 'abbey_social_nav_start_el', $item_output, $item, $depth, $args );
 		
 	}
-
-
-
-
 
 
 

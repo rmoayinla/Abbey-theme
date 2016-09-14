@@ -138,14 +138,14 @@ if( !function_exists( "abbey_theme_enque_styles" ) ) {
 	
 	function abbey_theme_enque_styles () {
 
-		wp_enqueue_script( "abbey-script", get_template_directory_uri()."/js/script.js", array( "jquery" ), 1.0, false );
+		wp_enqueue_script( "abbey-script", get_template_directory_uri()."/js/script.js", array( "jquery" ), 1.0, true );
 
 		/*
 		* enqueueu bootstrap js 
 		*
 		*/
 		$bootstrap_js_cdn = "//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js";
-		wp_enqueue_script( "abbey-bootstrap-js", esc_url( $bootstrap_js_cdn ), array( "jquery" ), "", false );
+		wp_enqueue_script( "abbey-bootstrap-js", esc_url( $bootstrap_js_cdn ), array( "jquery" ), "", true );
 		/*
 		* enqueue bootstrap css
 		*

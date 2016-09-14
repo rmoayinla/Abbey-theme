@@ -7,7 +7,7 @@ function abbey_numerize($string){
 
 /*
 * wrapper function for wp_nav_menu 
-*
+* instead of calling wp_nav_menu, I am using my own custom wrapper for the wordpress built in function
 */
 function abbey_nav_menu( $args = array() ){
 	$defaults = array(	'menu'              => '',
@@ -24,37 +24,43 @@ function abbey_nav_menu( $args = array() ){
 
 	wp_nav_menu( $args );
 
-
 }
+
+/*
+* function to generate font-awesome classes for social icons
+* this function will only work properly when you have font-awesome enqueued in your theme
+* @return: string 
+*
+*/
 function abbey_contact_icon($contact){
 	$contact = esc_attr($contact);
 	switch ( $contact ){
 		case "address" : 
-			$icon = "fa-map-marker";
+			$icon = "fa-map-marker"; //icon for address//
 			break;
 		case "tel":
 		case "telephone":
 		case "phone-no":
 		case "mobile-no":
-			$icon = "fa-phone";
+			$icon = "fa-phone"; // mobile phone icon//
 			break;
 		case "email":
 		case "mail":
-			$icon = "fa-envelope";
+			$icon = "fa-envelope"; // mail icon //
 			break;
 		case "facebook" :
-			$icon = "fa-facebook";
+			$icon = "fa-facebook"; // icon for facebook //
 			break;
 		case "twitter" :
-			$icon = "fa-twitter";
+			$icon = "fa-twitter"; // twitter icon //
 			break;
 		case "whatsapp":
 		case "whats-app":
-			$icon = "fa-whatsapp";
+			$icon = "fa-whatsapp"; // whatsapp icon //
 			break;
 		case "pinterest":
 		case "pininterest":
-			$icon = "fa-pinterest";
+			$icon = "fa-pinterest"; // pinterst icon //
 			break;
 		case "g-plus":
 		case "google-plus":
@@ -74,7 +80,7 @@ function abbey_contact_icon($contact){
 			$icon = "fa-bitbucket";
 			break;
 		default:
-			$icon = "fa-list";
+			$icon = "fa-list"; // default icon if icon is not set nor found //
 
 	}
 	return $icon;

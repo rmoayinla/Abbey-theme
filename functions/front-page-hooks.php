@@ -57,9 +57,9 @@ function abbey_header_telephone( $contact ){
 add_action( "abbey_theme_header_contact", "abbey_header_telephone", 20 );
 
 function abbey_header_social_icons($contact){
-	echo '
-		<div class="col-md-4" id="header-social-icons">'.abbey_social_menu().'</div>
-	';
+	echo '<div class="col-md-3" id="header-social-icons">';
+	abbey_social_menu();
+	echo '</div>';
 }
 add_action( "abbey_theme_header_contact", "abbey_header_social_icons", 30 );
 
