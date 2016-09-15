@@ -26,10 +26,10 @@ add_action( "abbey_theme_before_header", "abbey_default_header" );//hook to defa
 function abbey_header_address( $contact ){
 
 	echo '
-		<div class="col-md-3" id="header-address">
+		<div class="col-md-3 col-sm-4 col-xs-6 header-contacts" id="header-address">
 			<div class="row">
-				<div class="col-md-1 lead"> <i class="fa fa-map-marker"></i> </div>
-				<div class="col-md-10">
+				<div class="col-md-1 col-sm-1 col-xs-1 lead"> <i class="fa fa-map-marker"></i> </div>
+				<div class="col-md-10 col-sm-10 col-xs-10">
 					<p class="no-bottom-margin strong"> Visit me: </p>
 					<p>'.esc_html(abbey_get_contact( "address", "office" ) ).'</p>
 				</div>
@@ -43,10 +43,10 @@ add_action( "abbey_theme_header_contact", "abbey_header_address" );//hook to hea
 
 function abbey_header_telephone( $contact ){
 	echo '
-		<div class="col-md-3" id="header-telephone">
+		<div class="col-md-3 col-sm-4 col-xs-6 header-contacts" id="header-telephone">
 			<div class="row">
-				<div class="col-md-1 lead"> <i class="fa fa-clock-o"> </i> </div>
-				<div class="col-md-10">
+				<div class="col-md-1 col-sm-1 col-xs-1 lead"> <i class="fa fa-clock-o"> </i> </div>
+				<div class="col-md-10 col-sm-10 col-xs-10">
 					<p class="no-bottom-margin strong"> Call me: </p>
 					<p>'.esc_html( implode( abbey_get_contact( "tel" ), "," ) ).'</p>
 				</div>
@@ -57,7 +57,7 @@ function abbey_header_telephone( $contact ){
 add_action( "abbey_theme_header_contact", "abbey_header_telephone", 20 );
 
 function abbey_header_social_icons($contact){
-	echo '<div class="col-md-3" id="header-social-icons">';
+	echo '<div class="col-md-3 col-sm-4 col-xs-12 header-contacts" id="header-social-icons">';
 	abbey_social_menu();
 	echo '</div>';
 }

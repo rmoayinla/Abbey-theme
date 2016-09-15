@@ -150,7 +150,10 @@ function abbey_theme_show_services(){
 	echo $html;
 }
 
-
+/*
+* a wrapper function to get the uploaded logo 
+*
+*/
 
 function abbey_custom_logo( $class = "" ){
 	$class = ( !empty($class) ) ? esc_attr( $class ) : "";
@@ -161,13 +164,21 @@ function abbey_custom_logo( $class = "" ){
 		$logo_url = $logo_attachment[0]; 
 		$image = "<img src='".esc_url($logo_url)."' class='custom-logo {$class}' alt ='{$title}' ";
 		$image .= " /> ";
-		echo $image;
+		return $image;
 	}
 	else{
-		echo "<h2>".bloginfo("name")."</h2>";
+		return "<h2>".bloginfo("name")."</h2>";
 	}
 }
 
+function abbey_show_logo ( $prefix_id = "", $logo_class = "" ){
+	$prefix_id = ( !empty( $prefix_id ) ) ? esc_attr( $prefix_id ) : "";
+
+	echo ' 
+	<div id="{$prefix_id}-site-logo" class="inline">'.abbey_custom_logo( $logo_class ).'</div>
+	<div id="{$prefix_id}-site-name" class="inline">'.get_bloginfo('name'). '</div>
+	';
+}
 function abbey_class ( $prefix ) {
 	global $wp_query;
 	$class = "";
@@ -254,3 +265,38 @@ function abbey_post_class ( $class = "" ){
 	else { $class[] = "entry-content"; }
 	post_class( apply_filters( "abbey_post_classes", $class ) );
 }
+
+/*
+* a wp filter to add icons to nav_menu
+*
+*/
+function abbey_add_to_primary_menu ( $items, $args ) {
+	if( 'primary' === $args->theme_location ) {
+		$items .= '</ul>';
+		$items = apply_filters( "abbey_extra_primary_menu", $items );
+	}
+	return $items;
+}
+add_filter( 'wp_nav_menu_items','abbey_add_to_primary_menu',10,2 );
+
+function abbey_add_extra_primary_menu ( $extras ){
+	$extras .= "<div class='navbar-right'><ul class='nav navbar-nav' id='primary-icon-nav'>";
+	$icons = apply_filters( "abbey_icon_navs", array(
+			"search" => "fa-search",
+			"comment" => "fa-comments", 
+			"read snippets" => "fa-code", 
+			"print" => "fa-print",
+			"read latest posts" => "fa-th"
+		) 
+	);
+	foreach ( $icons as $title => $icon ){
+		$extras .= '<li><a href="#" id="'.esc_attr( $title ).'-icon-nav" class="js-link" 
+			title="'.esc_attr__( sprintf( "Click to %s", $title ) ).'">
+			<span class="fa '.esc_attr( $icon ) .'"></span>
+			</a></li>';
+	}
+	
+	$extras .= "</ul></div>";
+	return $extras;
+}
+add_filter( "abbey_extra_primary_menu", "abbey_add_extra_primary_menu" );

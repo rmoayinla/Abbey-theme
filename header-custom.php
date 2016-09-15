@@ -51,8 +51,7 @@ global $abbey_defaults;
 	      						<!-- Brand and toggle get grouped for better mobile display -->
 	      						<?php echo abbey_nav_toggle(); ?>
 	      						<a class="navbar-brand" href="<?php echo home_url( "/" ); ?>" title="<?php echo home_url("/"); ?>">
-	               					<div id="header-site-logo" class="inline"> <?php abbey_custom_logo(); ?> </div>
-	               					<div id="header-site-name" class="inline"> <?php bloginfo('name'); ?> </div>
+	               					<?php abbey_show_logo(); ?>
 	      						</a>
 	      					</div>
 
@@ -61,6 +60,7 @@ global $abbey_defaults;
 							<?php do_action("abbey_theme_primary_menu"); ?>
 						</nav>
 					</div><!--#main-header closes-->
+				</header><!--#custom-header closes -->
 
 
 

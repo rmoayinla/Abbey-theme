@@ -3,7 +3,7 @@
 $site_about = ( !empty( abbey_get_defaults( "about" ) ) ) ? abbey_get_defaults( "about" ) : "";
 
 ?>
-		<footer class="row" id="site-footer">	
+		<footer class="row" id="site-footer" role="footer">	
 			<header id="footer-header">
 				<?php do_action( "abbey_theme_footer_widgets" ); ?>
 			</header>
@@ -22,15 +22,12 @@ $site_about = ( !empty( abbey_get_defaults( "about" ) ) ) ? abbey_get_defaults( 
 
 			</section>
 
-			<div id="footer-bottom" class="row">
-				<?php do_action( "abbey_theme_footer_credits" ); ?>
-
-			</div>
+			<div id="footer-bottom" class="row"><?php do_action( "abbey_theme_footer_credits" ); ?></div>
 
 
 		</footer>
 
-	</div><!-- #content open in header.php -->
+	
 </div><!--#site wrapper open in header.php -->
 	<?php wp_footer(); ?>
 </body>

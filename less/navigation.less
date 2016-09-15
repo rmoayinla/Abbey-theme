@@ -30,11 +30,20 @@
 		.image-size(60px,60px) !important;
 	}
 	.navbar-collapse{
-		&:extend(.float-right, .float-none-sm);
+		&:extend(.float-left,.float-none-sm, .float-none-xs);
 
 	}
 	.navbar-brand{
-		height: auto;
 		&:extend(.float-none-sm);
+		height: auto;
+		padding: 0px;
+	}
+
+	
+}
+
+#primary-icon-nav{
+	.fa{
+		font-size: 18px;
 	}
 }

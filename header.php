@@ -26,8 +26,8 @@
 			</div><!--skip link closes -->
 
 			<div id="main-header">
-				<div id="header-contact" class="<?php abbey_class( "contact-header" ) ?> row" >
-					<?php do_action( "abbey_theme_header_contact" ); ?>
+				<div id="" class="<?php ?> row" >
+					
 				</div><!--#header-contact closes -->
 	
 				<nav class="navbar navbar-default no-bottom-margin" role="navigation" id="primary-menu">
@@ -35,7 +35,7 @@
 	      				<!-- Brand and toggle get grouped for better mobile display -->
 	      				<?php echo abbey_nav_toggle(); ?>
 	      				<a class="navbar-brand" href="<?php echo home_url( "/" ); ?>">
-	               			<div id="header-site-logo" class="inline"> <?php abbey_custom_logo(); ?> </div>
+	               			<div id="header-site-logo" class="inline"> <?php echo abbey_custom_logo(); ?> </div>
 	               			<div id="header-site-name" class="inline"> <?php bloginfo('name'); ?> </div>
 	      				</a>
 	      			</div>
@@ -55,6 +55,5 @@
 				
 		</header><!-- .site-header -->
 
-		<div id="content">
 
 		

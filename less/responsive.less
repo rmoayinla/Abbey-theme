@@ -38,6 +38,26 @@
 		border-right: 1px solid;
 	}
 	
+	#main-header #header-contact{
+		padding: 0px 60px 0px 80px;
+		.col-md-3{
+			border-right: 1px solid @gray-color;
+			min-height: 80px;
+		}
+		.col-md-3:last-child{
+			border-right: 0px;
+		}
+	}
+	#primary-menu{
+		padding: 5px 0px 5px 30px;
+		.navbar-collapse{
+			width: 85%;
+			margin-top: 5px;
+		}
+		.navbar-brand{
+			
+		}
+	}
 }
 
 /* responsive design for desktops i.e. between 769 and 1026px */
@@ -66,6 +86,9 @@
 	}
 	.responsive-right-border{
 		border-right: 1px solid;
+	}
+	#main-header #header-contact{
+		padding: 5px 15px 5px 15px;
 	}
 }
 
@@ -111,6 +134,23 @@
 	.responsive-right-border{
 		border-bottom: 1px solid;
 	}
+	#main-header #header-contact{
+		padding: 5px 15px 5px 15px;
+	}
+	#primary-menu{
+		padding: 5px;
+		.navbar-brand{
+			padding-bottom: 5px;
+		}
+		.navbar-collapse{
+			margin-left: -5px;
+		}
+	}
+	#primary-icon-nav{
+		li{
+			display: inline-block;
+		}
+	}
 }
 
 
@@ -155,4 +195,19 @@
 	.more-service-icons{
 		min-height: 200px !important;
 	}
+	#main-header #header-contact{
+		padding: 5px 15px 5px 15px;
+	}
+	.float-none-xs{
+		float: none;
+	}
+	.navbar-toggle{
+		margin-top: 20px !important;
+	}
+	#primary-icon-nav{
+		li{
+			display: inline-block;
+		}
+	}
+
 }

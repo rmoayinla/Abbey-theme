@@ -144,7 +144,6 @@ body {
   margin-bottom: 15px;
 }
 .margin-top-md,
-#sitehead #main-header .navbar-collapse,
 #site-page .page-content .entry-content,
 #site-footer,
 #site-footer #footer-bottom {
@@ -168,6 +167,10 @@ body {
 .margin-md {
   margin: 30px;
 }
+.inner-auto-margin {
+  margin-left: auto;
+  margin-right: auto;
+}
 .font-small,
 #custom-header #inner-header #header-contact,
 #front-page #services .service-body {
@@ -180,11 +183,11 @@ body {
 .strong {
   font-weight: 600;
 }
-.float-right,
-#primary-menu .navbar-collapse {
+.float-right {
   float: right;
 }
 .float-left,
+#primary-menu .navbar-collapse,
 #front-page #contact .contact-icon {
   float: left;
 }
@@ -225,7 +228,10 @@ body {
   padding: 10px;
 }
 #sitehead #main-header #header-contact {
-  border-top: 4px solid #acacac;
+  border-top: 3px inset #acacac;
+}
+#sitehead #main-header #header-contact .header-contacts {
+  padding: 5px 10px;
 }
 #custom-header #header-top {
   Padding-right: 20px;
@@ -265,6 +271,10 @@ body {
 }
 #primary-menu .navbar-brand {
   height: auto;
+  padding: 0px;
+}
+#primary-icon-nav .fa {
+  font-size: 18px;
 }
 .logo-small {
   width: 60px;
@@ -310,10 +320,12 @@ body {
 * custom page template
 *
 */
-#custom-page #inner-content #page-post {
+#custom-page #inner-content .entry-content {
   padding: 80px;
   border-right-color: #ddd !important;
   border-bottom-color: #ddd !important;
+  font-size: 18px;
+  line-height: 1.8;
 }
 #custom-page #page-content-header {
   padding-bottom: 80px;
@@ -377,7 +389,7 @@ body {
   }
   .inner-pad-responsive,
   #site-page .page-content #page-content-header,
-  #custom-page #inner-content #page-post {
+  #custom-page #inner-content .entry-content {
     padding-left: 80px;
     padding-right: 80px;
   }
@@ -391,8 +403,25 @@ body {
     clear: both;
   }
   .responsive-right-border,
-  #custom-page #inner-content #page-post {
+  #custom-page #inner-content .entry-content {
     border-right: 1px solid;
+  }
+  #main-header #header-contact {
+    padding: 0px 60px 0px 80px;
+  }
+  #main-header #header-contact .col-md-3 {
+    border-right: 1px solid #ddd;
+    min-height: 80px;
+  }
+  #main-header #header-contact .col-md-3:last-child {
+    border-right: 0px;
+  }
+  #primary-menu {
+    padding: 5px 0px 5px 30px;
+  }
+  #primary-menu .navbar-collapse {
+    width: 85%;
+    margin-top: 5px;
   }
 }
 /* responsive design for desktops i.e. between 769 and 1026px */
@@ -404,7 +433,7 @@ body {
   }
   .inner-pad-responsive,
   #site-page .page-content #page-content-header,
-  #custom-page #inner-content #page-post {
+  #custom-page #inner-content .entry-content {
     padding-left: 50px;
     padding-right: 50px;
   }
@@ -418,8 +447,11 @@ body {
     clear: both;
   }
   .responsive-right-border,
-  #custom-page #inner-content #page-post {
+  #custom-page #inner-content .entry-content {
     border-right: 1px solid;
+  }
+  #main-header #header-contact {
+    padding: 5px 15px 5px 15px;
   }
 }
 /* responsive design for tablets i.e between 768 and 460px */
@@ -437,7 +469,7 @@ body {
   }
   .inner-pad-responsive,
   #site-page .page-content #page-content-header,
-  #custom-page #inner-content #page-post {
+  #custom-page #inner-content .entry-content {
     padding-left: 45px;
     padding-right: 45px;
   }
@@ -457,8 +489,23 @@ body {
     clear: both;
   }
   .responsive-right-border,
-  #custom-page #inner-content #page-post {
+  #custom-page #inner-content .entry-content {
     border-bottom: 1px solid;
+  }
+  #main-header #header-contact {
+    padding: 5px 15px 5px 15px;
+  }
+  #primary-menu {
+    padding: 5px;
+  }
+  #primary-menu .navbar-brand {
+    padding-bottom: 5px;
+  }
+  #primary-menu .navbar-collapse {
+    margin-left: -5px;
+  }
+  #primary-icon-nav li {
+    display: inline-block;
   }
 }
 /* responsive styles for mobile phones i.e 468px and below */
@@ -478,7 +525,7 @@ body {
   }
   .inner-pad-responsive,
   #site-page .page-content #page-content-header,
-  #custom-page #inner-content #page-post {
+  #custom-page #inner-content .entry-content {
     padding-left: 30px;
     padding-right: 30px;
   }
@@ -489,7 +536,7 @@ body {
     clear: both;
   }
   .responsive-right-border,
-  #custom-page #inner-content #page-post {
+  #custom-page #inner-content .entry-content {
     border-bottom: 1px solid;
   }
   .service-icons {
@@ -497,5 +544,18 @@ body {
   }
   .more-service-icons {
     min-height: 200px !important;
+  }
+  #main-header #header-contact {
+    padding: 5px 15px 5px 15px;
+  }
+  .float-none-xs,
+  #primary-menu .navbar-collapse {
+    float: none;
+  }
+  .navbar-toggle {
+    margin-top: 20px !important;
+  }
+  #primary-icon-nav li {
+    display: inline-block;
   }
 }
