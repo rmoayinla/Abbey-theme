@@ -38,16 +38,6 @@
 		border-right: 1px solid;
 	}
 	
-	#main-header #header-contact{
-		padding: 0px 60px 0px 80px;
-		.col-md-3{
-			border-right: 1px solid @gray-color;
-			min-height: 80px;
-		}
-		.col-md-3:last-child{
-			border-right: 0px;
-		}
-	}
 	#primary-menu{
 		padding: 5px 0px 5px 30px;
 		.navbar-collapse{
@@ -201,13 +191,47 @@
 	.float-none-xs{
 		float: none;
 	}
-	.navbar-toggle{
-		margin-top: 20px !important;
+
+	#primary-menu{
+		.navbar-header{
+			padding: 10px 10px 40px 10px;
+			border-bottom: 4px inset;
+			text-align: center;
+			background-color: @dark-primary-color;
+			.navbar-brand{
+				width: 100%;
+				color: @white;
+				font-size: 36px;
+			}
+			.navbar-toggle{
+				&:extend(.float-none-xs);
+				margin-top: 0px;
+				top: 80px;
+				position: absolute;
+				left: 45%;
+				border-radius: 100%;
+				padding: 15px;
+				background-color: @white;
+				&:hover,&:active{
+					background-color: @primary-color;
+				}
+			}
+		}
+	}
+	#inner-header{
+		#header-social-icons{
+			text-align: center;
+		}
+		.navbar-toggle{
+			margin-top: 10px;
+		}
 	}
 	#primary-icon-nav{
 		li{
 			display: inline-block;
 		}
 	}
-
+	.entry-content{
+		&:extend(.float-none-xs);
+	}
 }

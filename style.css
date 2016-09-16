@@ -27,6 +27,7 @@ body {
   margin: 0px -20px -20px 0px;
 }
 .bg-primary,
+#custom-header #inner-header .navbar-header .navbar-toggle,
 #site-footer #footer-bottom {
   background-color: #FF6600;
 }
@@ -45,6 +46,8 @@ body {
 }
 .bg-white,
 #sitehead #main-header,
+#custom-header #inner-header,
+#custom-header #inner-header .navbar-header .navbar-toggle .icon-bar,
 #primary-menu,
 #site-page .page-content .entry-content,
 #custom-page #inner-content,
@@ -93,6 +96,7 @@ body {
   padding-bottom: 100px;
 }
 .pad-large .page-header,
+#front-page #site-banner #carousel .carousel-caption .page-header,
 #sidebar-404 .page-header {
   border-bottom: 0px;
 }
@@ -144,6 +148,7 @@ body {
   margin-bottom: 15px;
 }
 .margin-top-md,
+#front-page #site-banner #carousel .carousel-caption #admin-info,
 #site-page .page-content .entry-content,
 #site-footer,
 #site-footer #footer-bottom {
@@ -177,6 +182,7 @@ body {
   font-size: 13px;
 }
 .font-large,
+#front-page #site-banner #carousel .carousel-caption .page-header h1,
 #custom-page #page-content-header .page-title {
   font-size: 60px;
 }
@@ -200,6 +206,7 @@ body {
   height: auto;
 }
 .relative,
+#front-page #site-banner,
 #tool-tip .tool-tip-box,
 .tooltip-box {
   position: relative;
@@ -227,19 +234,14 @@ body {
 #sitehead #header-top .alert {
   padding: 10px;
 }
-#sitehead #main-header #header-contact {
-  border-top: 3px inset #acacac;
-}
 #sitehead #main-header #header-contact .header-contacts {
   padding: 5px 10px;
 }
+#sitehead #main-header .navbar-header .navbar-toggle {
+  border: 2px solid #FF6600;
+}
 #custom-header #header-top {
   Padding-right: 20px;
-}
-#custom-header #inner-header .navbar-header .navbar-brand {
-  height: auto !important;
-  padding: 0px !important;
-  font-size: 24px;
 }
 #custom-header #inner-header .navbar-header .custom-logo {
   width: 45px;
@@ -270,8 +272,9 @@ body {
   height: 60px !important;
 }
 #primary-menu .navbar-brand {
-  height: auto;
-  padding: 0px;
+  height: auto !important;
+  padding: 0px !important;
+  font-size: 24px;
 }
 #primary-icon-nav .fa {
   font-size: 18px;
@@ -296,6 +299,20 @@ body {
 * front-page styles 
 *
 */
+#front-page #site-banner {
+  height: auto;
+}
+#front-page #site-banner p {
+  font-size: 20px;
+}
+#front-page #site-banner #carousel .carousel-image {
+  width: 100%;
+  height: 480px;
+}
+#front-page #site-banner #carousel .carousel-caption {
+  top: 10px;
+  right: 15%;
+}
 #front-page #services .service-icons {
   min-height: 250px;
 }
@@ -405,16 +422,6 @@ body {
   .responsive-right-border,
   #custom-page #inner-content .entry-content {
     border-right: 1px solid;
-  }
-  #main-header #header-contact {
-    padding: 0px 60px 0px 80px;
-  }
-  #main-header #header-contact .col-md-3 {
-    border-right: 1px solid #ddd;
-    min-height: 80px;
-  }
-  #main-header #header-contact .col-md-3:last-child {
-    border-right: 0px;
   }
   #primary-menu {
     padding: 5px 0px 5px 30px;
@@ -549,11 +556,40 @@ body {
     padding: 5px 15px 5px 15px;
   }
   .float-none-xs,
+  #primary-menu .navbar-header .navbar-toggle,
+  .entry-content,
   #primary-menu .navbar-collapse {
     float: none;
   }
-  .navbar-toggle {
-    margin-top: 20px !important;
+  #primary-menu .navbar-header {
+    padding: 10px 10px 40px 10px;
+    border-bottom: 4px inset;
+    text-align: center;
+    background-color: #b34700;
+  }
+  #primary-menu .navbar-header .navbar-brand {
+    width: 100%;
+    color: #fff;
+    font-size: 36px;
+  }
+  #primary-menu .navbar-header .navbar-toggle {
+    margin-top: 0px;
+    top: 80px;
+    position: absolute;
+    left: 45%;
+    border-radius: 100%;
+    padding: 15px;
+    background-color: #fff;
+  }
+  #primary-menu .navbar-header .navbar-toggle:hover,
+  #primary-menu .navbar-header .navbar-toggle:active {
+    background-color: #FF6600;
+  }
+  #inner-header #header-social-icons {
+    text-align: center;
+  }
+  #inner-header .navbar-toggle {
+    margin-top: 10px;
   }
   #primary-icon-nav li {
     display: inline-block;

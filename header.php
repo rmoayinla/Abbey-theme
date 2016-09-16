@@ -26,32 +26,20 @@
 			</div><!--skip link closes -->
 
 			<div id="main-header">
-				<div id="" class="<?php ?> row" >
-					
-				</div><!--#header-contact closes -->
-	
 				<nav class="navbar navbar-default no-bottom-margin" role="navigation" id="primary-menu">
 	  				<div class="navbar-header">
+	      				<a class="navbar-brand" href="<?php echo home_url( "/" ); ?>">
+	               			<?php abbey_show_logo(); ?>
+	      				</a>
 	      				<!-- Brand and toggle get grouped for better mobile display -->
 	      				<?php echo abbey_nav_toggle(); ?>
-	      				<a class="navbar-brand" href="<?php echo home_url( "/" ); ?>">
-	               			<div id="header-site-logo" class="inline"> <?php echo abbey_custom_logo(); ?> </div>
-	               			<div id="header-site-name" class="inline"> <?php bloginfo('name'); ?> </div>
-	      				</a>
 	      			</div>
 					<?php do_action("abbey_theme_primary_menu"); ?>
 				</nav>
 			
 			</div><!--#main-header closes -->
 
-			<?php if ( is_front_page() ) : ?>
-					<div class="jumbotron pad-large" id="site-banner" role="banner">
-						<div class="row">
-							<?php do_action( "abbey_theme_after_main_header" ); ?>
-						</div>
-					</div><!--end of jumbotron/#site-banner -->
-			<?php endif; ?>
-
+			
 				
 		</header><!-- .site-header -->
 

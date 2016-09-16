@@ -63,19 +63,26 @@ function abbey_header_social_icons($contact){
 }
 add_action( "abbey_theme_header_contact", "abbey_header_social_icons", 30 );
 
-function abbey_after_header () {
+function abbey_slide_default_caption () {
 	global $abbey_defaults;
 	$defaults = $abbey_defaults;
 	ob_start(); ?>
-		<div class="col-md-6 col-sm-8 col-xs-12" id="site-info">
+		<div class="col-md-6 col-sm-8 col-xs-12 text-left" id="site-info">
 			<div class="page-header no-bottom-margin"><h1><?php bloginfo('name'); ?> </h1></div>
-			<div class="small description"><p><?php bloginfo('description');?></p></div>
+			<div class="description"><p><?php bloginfo('description');?></p></div>
 			<div class="" id="about-site"><?php echo esc_html($defaults["about"]); ?></div>
 			<div class="margin-top-md" id="secondary-menu">
 				<?php abbey_secondary_menu(); ?>
 			</div>
-		</div>
-		<div class="col-md-4 col-md-offset-1 text-center col-sm-3 col-xs-12" id="admin-info">
+		</div><!--#site-info closes-->
+	<?php return ob_get_clean(); 
+}
+
+function abbey_slide_permanent_caption(){
+	global $abbey_defaults;
+	$defaults = $abbey_defaults; 
+	ob_start(); ?>
+	<div class="col-md-4 col-md-offset-1 text-center col-sm-3 col-xs-12" id="admin-info">
 			<?php do_action( "abbey_theme_before_admin_info" ); ?>
 			<div class="no-border">
 				<div class="col-xs-4 col-md-12">
@@ -88,13 +95,47 @@ function abbey_after_header () {
 				</div>
 
 			</div>
-		</div><!--#admin-info closes -->
-				
-	<?php echo ob_get_clean(); 
+	</div><!--#admin-info closes --> <?php
+	return ob_get_clean();
 }
+function abbey_front_page_slides(){
+	global $abbey_defaults;
+	$slides = ( isset( $abbey_defaults["front-page"]["slides"] ) ) ? $abbey_defaults["front-page"]["slides"] : "";
+	if ( count( $slides ) > 0 ){
+		$html = '<div id="carousel" class="carousel slide" data-ride="carousel">';
+		$html .= '<div class="carousel-inner" role="listbox">';
+		$indicators = "";
+		foreach ( $slides as $no => $slide ){
+			$active = ( $no === 0 ) ? "active" : "";
+			$default_caption = abbey_slide_default_caption();
+			$fixed_caption = abbey_slide_permanent_caption();
 
-add_action ( "abbey_theme_after_main_header", "abbey_after_header" );
-
+			$indicators .= '<li data-target="carousel" data-slide-to="'.esc_attr($no).'" class="'.$active.'"> </li>';
+			$html .= '<div class="item '.$active.'">';
+			$html .= '<img src="'.esc_url( $slide["image"] ).'" alt="'.basename( $slide["image"], "jpg" ).'" class="carousel-image">';
+      		$html .= '<div class="carousel-caption">';
+      		if( !empty( $slide["caption"] ) ){ $html .= "";}
+      		else{ $html .= $default_caption;}
+      		$html .= $fixed_caption;
+      		$html .= '</div></div>';
+		}
+		$html .= '<ol class="carousel-indicators">';
+		$html .= $indicators;
+ 		$html .= '</ol>';
+		$html .= '</div>';
+		$html .= '<a class="left carousel-control" href="#carousel" role="button" data-slide="prev" title="previous slide">
+    				<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    				<span class="sr-only">Previous</span>
+  				</a>';
+  		$html .= '<a class="right carousel-control" href="#carousel" role="button" data-slide="next" title="next slide">
+    				<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    				<span class="sr-only">Next</span>
+  					</a>';
+  		$html .= '</div>';
+	}
+	echo $html;
+}
+add_action ( "abbey_theme_front_page_banner", "abbey_front_page_slides" );
 
 
 function abbey_service_lists(){

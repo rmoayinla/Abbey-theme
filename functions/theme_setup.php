@@ -164,3 +164,23 @@ function abbey_theme_add_contacts($defaults){
 }
 
 add_filter( "abbey_theme_defaults", "abbey_theme_add_contacts", 30 );
+
+function abbey_add_front_page_slides( $defaults ){
+	$front_page = $defaults["front-page"]; 
+	$front_page[ "slides" ] = apply_filters( "abbey_front_page_slides", array(
+			array(
+				"image" => get_template_directory_uri()."/img/banner-1.jpg"
+			), 	
+			array(
+				"image" => get_template_directory_uri()."/img/banner-2.jpg"
+			 ),
+			array(
+				"image" => get_template_directory_uri()."/img/banner-3.jpg"
+			 )
+
+		)
+	);
+	$defaults[ "front-page" ] = wp_parse_args ( $front_page, $defaults["front-page"] );
+	return $defaults;
+}
+add_filter( "abbey_theme_defaults", "abbey_add_front_page_slides", 40 );

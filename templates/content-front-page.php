@@ -11,7 +11,7 @@ $quote_section = $front_page_defaults["quotes"];
 $contact_section = $front_page_defaults["contact"];
 
 ?>
-<main id="<?php abbey_theme_page_id();?>" class="site-content">
+
 <!-- #content is already open in header.php -->
 	<section id="latest-posts" class="pad-large bg-white text-center row tooltip-box">
 		<div class="inner-wrapper">
