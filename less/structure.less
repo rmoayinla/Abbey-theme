@@ -57,6 +57,9 @@ body{
 .pad-small{
 	.padding(@base-padding * 1.5);
 }
+.pad-xs{
+	.padding(@base-padding/2);
+}
 
 .pad-medium{
 	.padding(@base-padding * 3);
@@ -93,6 +96,9 @@ body{
 .padding-bottom-sm{
 	padding-bottom: @base-padding * 1.5;
 }
+.no-left-padding{
+	padding-left: 0px;
+}
 
 .border-y(@width: 1px; @color: @default-border-color){
 	border-top: @width solid @color;
@@ -116,6 +122,9 @@ body{
 }
 .border-radius-md{
 	border-radius: @default-border-radius;
+}
+.no-bottom-border{
+	border-bottom: 0px;
 }
 
 .no-bottom-margin{
@@ -194,4 +203,12 @@ body{
 
 .icon-large{
 	font-size: 7em;
+}
+
+.text-center{
+	text-align: center;
+}
+
+.oblique{
+	font-style: italic;
 }

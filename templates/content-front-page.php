@@ -13,7 +13,7 @@ $contact_section = $front_page_defaults["contact"];
 ?>
 
 <!-- #content is already open in header.php -->
-	<section id="latest-posts" class="pad-large bg-white text-center row tooltip-box">
+	<section id="latest-posts" class="bg-white text-center row frontpage-sections">
 		<div class="inner-wrapper">
 			<h2 class="page-header text-capitalize"> <?php echo esc_html($blog_section["header-text"]); ?></h2>
 			<div class="small description inner-pad-medium"><?php echo esc_html($blog_section["body-text"]); ?></div>
@@ -25,14 +25,14 @@ $contact_section = $front_page_defaults["contact"];
 		</div>
 	</section><!-- #latest-posts section closes -->
 
-	<section id="services" class="pad-large bg-light text-center row tooltip-box">
+	<section id="services" class="bg-light text-center row frontpage-sections">
 		<h2 class="page-header text-capitalize"><?php echo esc_html($service_section["header-text"]);?></h2>
 		<div class="small description"><?php echo esc_html($service_section["body-text"]); ?></div>
 		<div class="row margin-top-md" id=""><?php abbey_theme_show_services(); ?></div>
 		<div class="row margin-top-md" id=""><?php do_action("abbey_theme_more_services");?></div>
 	</section><!--end of #services section -->
 
-	<section id="quotes" class="pad-large text-center row tooltip-box">
+	<section id="quotes" class="frontpage-sections text-center row">
 		<h2 class="page-header text-capitalize"> <?php echo esc_html($quote_section["header-text"]); ?> </h2>
 		<div class="small description">
 			<?php echo esc_html ($quote_section["body-text"]); ?>
@@ -42,7 +42,7 @@ $contact_section = $front_page_defaults["contact"];
 		</div>
 	</section><!--end of section #quotes -->
 
-	<section id="contact" class="pad-large text-center row tooltip-box bg-white">
+	<section id="contact" class="text-center row bg-white frontpage-sections">
 		<h2 class="page-header text-capitalize"> <?php echo esc_html($contact_section["header-text"]); ?> </h2>
 		<div class="small description"><?php echo esc_html($contact_section["body-text"]); ?></div>
 		<div class="row margin-top-md text-left">

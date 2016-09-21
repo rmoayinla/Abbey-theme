@@ -1,25 +1,21 @@
 <?php
 
-function abbey_page_title( $page_id ){
+function abbey_page_title(){
 	global $abbey_defaults;
 	$page_description = ( !empty( $abbey_defaults["page"]["description"] ) ) ? esc_html( $abbey_defaults["page"]["description"] ) : "";
-	echo '<h1 class="page-title">' . get_the_title() . '</h1>
+	$title = '<h1 class="page-title">' . get_the_title() . '</h1>
 		<summary class="description">
 			<em>'.apply_filters( "abbey_page_description", $page_description, get_the_ID() ) . '</em>.
 		</summary>';
+	echo apply_filters( "abbey_theme_page_title", $title );
 }
 
-add_action( "abbey_theme_page_title", "abbey_page_title" );
 
-function abbey_page_header_icon( $page_id ){
-	echo '<div><h2 class="icon-large"><span class="glyphicon glyphicon-blackboard"></span></h2></div>';
+function abbey_page_icon(){
+	$icon = '<div><h2 class="icon-large"><span class="glyphicon glyphicon-blackboard"></span></h2></div>';
+	echo apply_filters( "abbey_theme_page_header_media", $icon );
 }
-add_action ( "abbey_theme_page_header_media", "abbey_page_header_icon"  );
 
-function abbey_page_header_menu(){
-
-}
-add_action( "abbey_theme_header_contact", "abbey_page_header_menu" );
 
 function abbey_latest_posts(){
 	echo '

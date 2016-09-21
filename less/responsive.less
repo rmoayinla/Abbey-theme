@@ -97,10 +97,6 @@
 		padding-right: 45px;
 	}
 
-	#site-banner{
-		&:extend(.pad-large-sm);
-	}
-
 	.service-icons {
 		min-height: 300px !important;
 	}
@@ -128,17 +124,44 @@
 		padding: 5px 15px 5px 15px;
 	}
 	#primary-menu{
-		padding: 5px;
+		padding-top: 5px;
 		.navbar-brand{
 			padding-bottom: 5px;
 		}
 		.navbar-collapse{
 			margin-left: -5px;
 		}
+		
 	}
 	#primary-icon-nav{
+		background-color: @primary-color;
 		li{
 			display: inline-block;
+		}
+	}
+	#site-banner{
+		#carousel{
+			.carousel-caption{
+				left: 7% !important; 
+				right: 7% !important;
+			}
+			.carousel-control{
+				width: 10% !important;
+			}
+			.carousel-image{
+				height: 540px !important;
+			}
+		}
+		#admin-profile{
+			border-top: 1px solid rgba(255,255,255,0.5);
+			padding-top: 5px;
+			#admin-info{
+				text-align: left !important;
+			}
+			#admin-picture img{
+				width: 90px;
+				height: 90px;
+			}
 		}
 	}
 }
@@ -195,12 +218,9 @@
 	#primary-menu{
 		.navbar-header{
 			padding: 10px 10px 40px 10px;
-			border-bottom: 4px inset;
 			text-align: center;
-			background-color: @dark-primary-color;
 			.navbar-brand{
 				width: 100%;
-				color: @white;
 				font-size: 36px;
 			}
 			.navbar-toggle{

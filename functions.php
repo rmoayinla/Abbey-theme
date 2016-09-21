@@ -6,7 +6,9 @@ require trailingslashit( get_template_directory () )."libs/abbey_social_navwalke
 require trailingslashit( get_template_directory () )."functions/theme_setup.php";
 require trailingslashit( get_template_directory () )."functions/front-page-hooks.php";
 require trailingslashit( get_template_directory () )."functions/page-hooks.php";
+require trailingslashit( get_template_directory () )."functions/post-hooks.php";
 require trailingslashit( get_template_directory () )."functions/core.php";
+require trailingslashit( get_template_directory () )."functions/plugins.php";
 
 $content_width = $abbey_defaults = ""; 
 
@@ -114,7 +116,7 @@ if( !function_exists( "abbey_theme_setup" ) ) {
 
     	global $content_width; 
 
-    	$content_width = apply_filters( "abbey_theme_content_width", 600 );
+    	$content_width = apply_filters( "abbey_theme_content_width", 400 );
 
     	global $abbey_defaults;
 

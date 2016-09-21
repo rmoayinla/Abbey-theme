@@ -82,14 +82,14 @@ function abbey_slide_permanent_caption(){
 	global $abbey_defaults;
 	$defaults = $abbey_defaults; 
 	ob_start(); ?>
-	<div class="col-md-4 col-md-offset-1 text-center col-sm-3 col-xs-12" id="admin-info">
+	<div class="col-md-4 col-md-offset-1 text-center col-sm-3 col-xs-12" id="admin-profile">
 			<?php do_action( "abbey_theme_before_admin_info" ); ?>
 			<div class="no-border">
-				<div class="col-xs-4 col-md-12">
+				<div class="col-xs-4 col-md-12 col-sm-12" id="admin-picture">
 					<img src="<?php echo esc_url($defaults['admin']['pics']); ?>" 
 						alt="Admin Logo" class="img-circle logo-md">
 				</div>
-				<div class="col-xs-8 col-md-12">
+				<div class="col-xs-8 col-md-12 col-sm-12" id="admin-info">
 					<h3> <?php echo esc_html($defaults['admin']['name']); ?></h3>
 					<em class="small italize"> <?php echo esc_html(implode($defaults['admin']['roles'], " , " ) ); ?> </em>
 				</div>
