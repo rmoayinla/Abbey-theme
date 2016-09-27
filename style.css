@@ -62,7 +62,8 @@ body {
 .dark,
 .bg-gray,
 #error-404-page .entry-content .page-header,
-#custom-page #page-content-header .page-title {
+#custom-page #page-content-header .page-title,
+#post-page .post-content .post-entry .entry-content > p:first-of-type::first-letter {
   color: #b34700;
 }
 .primary {
@@ -77,11 +78,12 @@ body {
   border-radius: 0px;
 }
 .pad-small,
-#custom-header #inner-header {
+#custom-header #inner-header,
+#post-page .post-content .post-entry .entry-content figcaption.wp-caption-text {
   padding: 15px;
 }
 .pad-xs,
-#post-page .post-content .post-entry .entry-content figcaption.wp-caption-text {
+#post-page .post-content .post-excerpt {
   padding: 5px;
 }
 .pad-medium,
@@ -134,8 +136,17 @@ body {
   border: 0px;
   border-radius: 0px;
 }
-.bottom-border {
+.border,
+#post-page .post-content .post-entry {
+  border: 1px solid #b34700;
+}
+.bottom-border,
+#post-page .post-content .post-excerpt {
   border-bottom: 1px solid #b34700;
+}
+.top-border,
+#post-page .post-content .post-excerpt {
+  border-top: 1px solid #b34700;
 }
 .border-radius-md,
 #site-page .page-content .entry-content,
@@ -155,7 +166,8 @@ body {
   margin-top: 0px;
 }
 .margin-top-sm,
-#error-404-page .entry-content #search-form {
+#error-404-page .entry-content #search-form,
+#post-page #post-content-header {
   margin-top: 15px;
 }
 .margin-bottom-sm,
@@ -178,6 +190,16 @@ body {
 #sidebar-404 {
   margin-bottom: 30px;
 }
+.margin-right-sm {
+  margin-right: 15px;
+}
+.margin-right-xs {
+  margin-right: 7px;
+}
+.margin-left-xs,
+#post-page .post-content .post-entry .entry-content figure.alignleft {
+  margin-left: 5px;
+}
 .margin-left-sm {
   margin-left: 15px;
 }
@@ -194,7 +216,8 @@ body {
 }
 .font-small,
 #custom-header #inner-header #header-contact,
-#front-page #services .service-body {
+#front-page #services .service-body,
+#post-page .post-content .post-excerpt {
   font-size: 13px;
 }
 .font-large,
@@ -210,7 +233,9 @@ body {
 }
 .float-left,
 #primary-menu .navbar-collapse,
-#front-page #contact .contact-icon {
+#front-page #contact .contact-icon,
+#post-page .post-content .post-entry .entry-content figure.alignleft,
+#post-page .post-content .post-entry .entry-content > p:first-of-type::first-letter {
   float: left;
 }
 .float-none {
@@ -223,7 +248,7 @@ body {
 }
 .relative,
 #front-page #site-banner,
-#post-page .post-content .post-entry,
+#post-page .post-content,
 #tool-tip .tool-tip-box,
 .tooltip-box {
   position: relative;
@@ -238,12 +263,25 @@ body {
   font-size: 7em;
 }
 .text-center,
-#post-page .post-content .post-entry .entry-content figcaption.wp-caption-text {
+#post-page .post-content .post-entry .entry-content figure.alignnone {
   text-align: center;
+}
+.text-uppercase,
+#post-page .post-content .post-entry .entry-content h2 {
+  text-transform: uppercase;
+}
+.text-capitalize {
+  text-transform: capitalize;
 }
 .oblique,
 #post-page .post-content .post-entry .entry-content figcaption.wp-caption-text {
   font-style: italic;
+}
+.full-width-image,
+#post-page .post-content .post-entry .entry-content figure.alignnone,
+#post-page .post-content img.wp-post-image {
+  width: 100% !important;
+  height: auto;
 }
 /*
 * header styles 
@@ -369,18 +407,21 @@ body {
 #custom-page #page-content-header {
   padding-bottom: 80px;
 }
-#post-page .post-content .post-entry {
-  border: 1px solid #ddd;
+#post-page #post-content-header > .col-md-12 {
+  width: 70%;
+}
+#post-page .post-content {
   left: 5%;
-  width: 75%;
+  width: 70%;
+}
+#post-page .post-content .post-entry {
+  border-color: #ddd;
 }
 #post-page .post-content .post-entry .entry-content {
   line-height: 1.8em;
   /* Images */
 }
-#post-page .post-content .post-entry .entry-content .entry-content img,
-#post-page .post-content .post-entry .entry-content .comment-content img,
-#post-page .post-content .post-entry .entry-content .widget img {
+#post-page .post-content .post-entry .entry-content .entry-content img {
   max-width: 97.5%;
   /* Fluid images for posts, comments, and widgets */
 }
@@ -395,8 +436,39 @@ body {
   width: auto;
   /* Prevent stretching of full-size images with height and >>width attributes in IE8 */
 }
-#post-page .post-content .post-entry .entry-content figure.alignnone {
-  width: 100% !important;
+#post-page .post-content .post-entry .entry-content figcaption.wp-caption-text {
+  line-height: 1.3em;
+}
+#post-page .post-content .post-entry .entry-content figure.alignnone img {
+  max-width: 100% !important;
+}
+#post-page .post-content .post-entry .entry-content figure.alignnone:hover,
+#post-page .post-content .post-entry .entry-content iframe[src*="youtube"]:hover {
+  opacity: 0.5;
+  filter: alpha(opacity=0.5);
+  /* For IE8 and earlier */
+}
+#post-page .post-content .post-entry .entry-content figure.alignleft {
+  max-width: 50% !important;
+}
+#post-page .post-content .post-entry .entry-content figure.alignleft + p {
+  clear: both;
+}
+#post-page .post-content .post-entry .entry-content > p:first-of-type::first-letter {
+  font-size: 64px;
+  margin: auto;
+}
+#post-page .post-content .post-entry .entry-content h2 {
+  border-left: 3px solid #b34700;
+  padding: 10px 3px 10px 40px;
+  margin-left: -45px;
+}
+#post-page .post-content .post-entry .entry-content iframe[src*="youtube"] {
+  max-width: 100%;
+  min-height: 314px;
+}
+#post-page .post-content .page-title {
+  font-size: 48px;
 }
 #tool-tip .tool-tip-box::after,
 .tooltip-box:after {
@@ -422,8 +494,7 @@ body {
   box-shadow: 0px 1px 2px 0px #e2e2e2;
 }
 #box-shadow .box-shadow-md,
-#site-page .page-content .entry-content,
-#post-page .post-content .post-entry .entry-content figure:hover {
+#site-page .page-content .entry-content {
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3), 0px 2px 4px rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3), 0px 2px 4px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3), 0px 2px 4px rgba(0, 0, 0, 0.1);
@@ -434,6 +505,12 @@ body {
   text-shadow: 6px 6px 20px #FF6600;
   -webkit-text-shadow: 6px 6px 20px #FF6600;
   -o-text-shadow: 6px 6px 20px #FF6600;
+}
+#text-shadow .text-shadow-small,
+#post-page .post-content .page-title {
+  text-shadow: 2px 2px 10px #FF6600;
+  -webkit-text-shadow: 2px 2px 10px #FF6600;
+  -o-text-shadow: 2px 2px 10px #FF6600;
 }
 /*
 * Sidebar styles 

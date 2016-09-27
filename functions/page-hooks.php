@@ -10,6 +10,15 @@ function abbey_page_title(){
 	echo apply_filters( "abbey_theme_page_title", $title );
 }
 
+function abbey_post_title(){
+	$summary = get_the_excerpt();
+	$title = '<h1 class="page-title">' . get_the_title() . '</h1>
+		<summary class="post-excerpt">
+			<em>'.apply_filters( "abbey_post_summary", $summary, get_the_ID() ) . '</em>.
+		</summary>';
+	echo apply_filters( "abbey_theme_post_title", $title );
+}
+
 
 function abbey_page_icon(){
 	$icon = '<div><h2 class="icon-large"><span class="glyphicon glyphicon-blackboard"></span></h2></div>';

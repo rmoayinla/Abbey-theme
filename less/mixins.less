@@ -73,7 +73,18 @@
 
 .font-small(){
 	font-size: @font-size-small;
-	font-style: italic;
-	
+	font-style: italic;	
 }
 
+.opacity( @alpha: 0.5 ){
+	opacity: @alpha;
+	filter: alpha(opacity=@alpha); /* For IE8 and earlier */
+}
+
+.primary-color-rgba( @alpha: 0.8){
+	@primary-color-rgba: rgba(255,102,0, @alpha);
+}
+
+.dark-primary-color-rgba ( @alpha: 0.8 ){
+	@dark-primary-color-rgba: rgba(179,71,0, @alpha);
+}

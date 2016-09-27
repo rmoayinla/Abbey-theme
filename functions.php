@@ -34,7 +34,7 @@ if( !function_exists( "abbey_theme_setup" ) ) {
 
    	 	$abbey_theme_thumbnail_size = apply_filters ( "abbey_theme_thumbnail_size", array ("width" => 320, "height" => 320 ) );
 
-   	 	set_post_thumbnail_size ( $abbey_theme_thumbnail_size );
+   	 	set_post_thumbnail_size ( $abbey_theme_thumbnail_size["width"], $abbey_theme_thumbnail_size["height"] );
 
    	 	/*
    	 	* add theme support for custom backgrounds 

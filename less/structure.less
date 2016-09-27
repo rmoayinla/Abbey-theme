@@ -100,25 +100,22 @@ body{
 	padding-left: 0px;
 }
 
-.border-y(@width: 1px; @color: @default-border-color){
-	border-top: @width solid @color;
-	border-bottom: @width solid @color;
-}
-.border-x (@width: 1px; @color: @default-border-color){
-	border-left:@width solid @color;
-	border-right: @width solid @color;
-}
 
-.border(@side:top; @width:1px; @style: solid; @color: @default-border-color){
-	border-@{side}: @width @style @color;
-}
+
+
 .no-border{
 	border:0px;
 	border-radius: 0px;
 }
 
+.border{
+	border: 1px solid @default-border-color;
+}
 .bottom-border{
 	border-bottom: 1px solid @default-border-color;
+}
+.top-border{
+	border-top: 1px solid @default-border-color;
 }
 .border-radius-md{
 	border-radius: @default-border-radius;
@@ -148,6 +145,15 @@ body{
 	margin-bottom: 30px;
 }
 
+.margin-right-sm{
+	margin-right: 15px;
+}
+.margin-right-xs{
+	margin-right: 7px;
+}
+.margin-left-xs{
+	margin-left: 5px;
+}
 .margin-left-sm{
 	margin-left: 15px;
 }
@@ -209,6 +215,19 @@ body{
 	text-align: center;
 }
 
+.text-uppercase{
+	text-transform: uppercase;
+}
+
+.text-capitalize{
+	text-transform: capitalize;
+}
+
 .oblique{
 	font-style: italic;
+}
+
+.full-width-image{
+	width: 100% !important; 
+	height: auto;
 }

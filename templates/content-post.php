@@ -1,11 +1,11 @@
 <?php
-
+	$title_class = ( has_post_thumbnail() ) ? "col-md-6" : "col-md-12";
 ?>
 <section  id="content" class="post-content">
-	<header id="page-content-header" class="row">
-		<div class="col-md-6"><?php ?></div>
-		<div class="col-md-4 col-md-offset-2"><?php ?> </div>
-		<div class="row"><?php do_action( "abbey_theme_page_extra_header" ); ?></div>
+	<header id="post-content-header" class="row">
+		<div class="<?php echo esc_attr( $title_class ); ?>"><?php abbey_post_title(); ?></div>
+		<?php if( has_post_thumbnail() ) : ?><div class="col-md-6"><?php the_post_thumbnail( "large" ); ?> </div> <?php endif; ?>
+		
 	
 	</header><!-- #page-content-header closes -->
 
