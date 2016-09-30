@@ -27,6 +27,11 @@ function abbey_nav_menu( $args = array() ){
 }
 
 /*
+* wrapper function for wordpress register_sidebar
+*
+*/
+
+/*
 * function to generate font-awesome classes for social icons
 * this function will only work properly when you have font-awesome enqueued in your theme
 * @return: string 
@@ -172,13 +177,15 @@ function abbey_custom_logo( $class = "" ){
 	}
 }
 
-function abbey_show_logo ( $prefix_id = "", $logo_class = "" ){
-	$prefix_id = ( !empty( $prefix_id ) ) ? esc_attr( $prefix_id ) : "";
+function abbey_show_logo ( $prefix_id = "", $logo_class = "", $show_site_name = true ){
+	$prefix_id = ( !empty( $prefix_id ) ) ? esc_attr( $prefix_id."-" ) : "";
 
-	echo ' 
-	<div id="{$prefix_id}-site-logo" class="inline">'.abbey_custom_logo( $logo_class ).'</div>
-	<div id="{$prefix_id}-site-name" class="inline">'.get_bloginfo('name'). '</div>
-	';
+	$html = '<div id="'.$prefix_id.'site-logo" class="inline">'.abbey_custom_logo( $logo_class ).'</div>';
+	if ( $show_site_name )
+		$html .= '<div id="'.$prefix_id.'site-name" class="inline">'.get_bloginfo('name'). '</div>';
+	
+	echo $html; 
+	
 }
 function abbey_class ( $prefix ) {
 	global $wp_query;
@@ -258,13 +265,21 @@ function abbey_social_menu(){
 }
 
 /*
-* wrapper class for wp post_class() function 
+* wrapper function for wp post_class() function 
 *
 */
 function abbey_post_class ( $class = "" ){
 	if ( !is_array( $class ) ) { $class .= " entry-content"; }
 	else { $class[] = "entry-content"; }
 	post_class( apply_filters( "abbey_post_classes", $class ) );
+}
+
+/*
+* 
+*
+*/
+function abbey_display_sidebar ( $sidebar_id = "" ){
+	
 }
 
 /*

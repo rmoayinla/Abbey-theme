@@ -3,18 +3,18 @@
 $site_about = ( !empty( abbey_get_defaults( "about" ) ) ) ? abbey_get_defaults( "about" ) : "";
 
 ?>
+		<aside class="row" id="before-footer"> <?php do_action( "abbey_theme_before_footer" ) ; ?></aside> 
 		<footer class="row" id="site-footer" role="footer">	
 			<header id="footer-header">
 				<?php do_action( "abbey_theme_footer_widgets" ); ?>
 			</header>
 
-			<section class="row margin-top-sm pad-large" id="inner-footer">
-				<div id="footer-logo" class="col-md-4 col-md-offset-2 float-right-responsive">
-
+			<section class="row margin-top-md margin-bottom-sm" id="inner-footer">
+				<div class="col-md-4" id="site-info"> 
+					<?php abbey_show_logo(); ?> 
+					<p class="small description text-center"> <?php bloginfo( "description" ); ?> </p>
 				</div>
-				<div class="col-md-6" id="site-info"> 
-					<h2 class="large-text"> <?php bloginfo( "name" ); ?> </h2> 
-					<p class="small description"> <?php bloginfo( "description" ); ?> </p>
+				<div class="col-md-8" id="site-about">
 					<?php if ( !empty( $site_about ) ) : ?>
 						<summary> <?php echo esc_html ( $site_about ); ?> </summary>
 					<?php endif; ?>

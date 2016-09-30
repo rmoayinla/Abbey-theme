@@ -6,12 +6,24 @@
 #site-page{
 	.page-content{
 		#page-content-header{
-			&:extend(.outer-pad-lg, .bg-dark, .inner-pad-responsive);
+			&:extend(.bg-dark, .inner-pad-responsive, .padding-top-sm, .padding-bottom-sm);
+		}
+		.has-thumbnail{
+			&:extend( .top-border);
+			border-top-width: 3px;
+			#page-media{
+				&:extend( .no-left-margin );
+				.wp-post-image{
+					width: 100%;
+					height: 220px;
+					z-index: 0;
+				}
+			}
 		}
 		.entry-content{
-			&:extend(.margin-top-md, .margin-left-md, .bg-white, .margin-bottom-md, .border-radius-md, 
+			&:extend(.margin-top-md, .margin-left-md, .bg-white, .margin-bottom-md, 
 			#box-shadow .box-shadow-md, .pad-medium);
-			
+			border-radius: 10px 0px 0px 10px;
 		}
 	}
 }

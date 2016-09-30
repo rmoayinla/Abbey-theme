@@ -93,8 +93,16 @@ body{
 	padding-top: @base-padding * 8;
 	padding-bottom: @base-padding * 8;
 }
+
+.inner-pad-lg{
+	padding-left: @base-padding * 8;
+	padding-right: @base-padding * 8;
+}
 .padding-bottom-sm{
 	padding-bottom: @base-padding * 1.5;
+}
+.padding-top-sm{
+	padding-top: @base-padding * 1.5;
 }
 .no-left-padding{
 	padding-left: 0px;
@@ -117,6 +125,9 @@ body{
 .top-border{
 	border-top: 1px solid @default-border-color;
 }
+.left-border{
+	border-left: 1px solid @default-border-color;
+}
 .border-radius-md{
 	border-radius: @default-border-radius;
 }
@@ -129,6 +140,9 @@ body{
 }
 .no-top-margin{
 	margin-top: 0px;
+}
+.no-left-margin{
+	margin-left: 0px;
 }
 .margin-top-sm{
 	margin-top: 15px;
@@ -154,6 +168,9 @@ body{
 .margin-left-xs{
 	margin-left: 5px;
 }
+.margin-top-xs{
+	margin-top: 5px;
+}
 .margin-left-sm{
 	margin-left: 15px;
 }
@@ -168,6 +185,25 @@ body{
 	margin-right: auto;
 }
 
+.margin-minus-left-md{
+	margin-left: -40px;
+}
+.margin-minus-right-md{
+	margin-right: -40px;
+}
+.margin-minus-bottom-md{
+	margin-bottom: -40px;
+}
+
+.margin-minus-left-sm{
+	margin-left: -15px;
+}
+.margin-minus-bottom-sm{
+	margin-bottom: -15px;
+}
+.margin-minus-right-sm{
+	margin-right: -15px;
+}
 
 .font-small{
 	font-size: 13px;
@@ -229,5 +265,59 @@ body{
 
 .full-width-image{
 	width: 100% !important; 
+	&:extend(.auto-height);
+}
+.auto-height{
 	height: auto;
+}
+.max-full-width{
+	max-width: 100% !important;
+}
+
+.entry-content{
+	line-height: 1.5em;
+	img[class*="align"],img[class*="wp-image-"] {
+		&:extend(.auto-height) ;
+	}
+	img.size-full, img.size-large {
+		&:extend(.max-full-width);
+		width: auto; 
+	}
+	figcaption.wp-caption-text{
+		&:extend(.oblique, .pad-small);
+	}
+	figure.alignnone {
+		&:extend(.full-width-image, .text-center);
+		img{
+			&:extend(.max-full-width);
+		}
+	}
+	figure.alignnone:hover, iframe[src *= "youtube"]:hover {
+		.opacity(0.5);
+		& a img{
+			&:extend(.zoom-cursor);
+		}
+	}
+	figure.alignleft{
+		&:extend(.float-left, .margin-left-xs);
+		max-width: 50% !important;
+	}
+	figure.alignleft + p{
+		&:extend(.float-none);
+	}
+	& > p:first-of-type::first-letter{
+		font-size: 64px;
+		&:extend(.float-left, .dark, .margin-top-xs );
+	}
+	h2 {
+		border-left: 3px solid @dark-primary-color;
+		padding: 10px 3px 10px 40px;
+		margin-left: -45px;
+		&:extend(.text-uppercase);
+	}
+	iframe[src *= "youtube"]{
+		&:extend(.max-full-width);
+		min-height: 314px;
+	}
+				
 }

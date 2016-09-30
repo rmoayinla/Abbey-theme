@@ -16,7 +16,8 @@
 			<?php the_content("Read more . . "); ?>
 		</article>
 
-		<aside class="col-md-4"> <?php do_action ( "abbey_theme_post_content_sidebar" ); ?> </as
+		<aside class="col-md-4"> <?php do_action ( "abbey_theme_post_content_sidebar" ); ?> </aside>
+		<aside class="post-meta"> </aside>
 	</section>
 
 

@@ -12,59 +12,19 @@
 		.post-entry{
 			&:extend(.margin-top-md, .pad-medium, .bg-white, .border-radius-md, 
 			#box-shadow .box-shadow-small, .border);
+			overflow: hidden;
 			border-color: #ddd;
 			.entry-content{
-				line-height: 1.8em;
-				/* Images */
-				.entry-content img {
-				    max-width: 97.5%; /* Fluid images for posts, comments, and widgets */
-				}
-				img[class*="align"],
-				img[class*="wp-image-"] {
-				    height: auto; /* Make sure images with WordPress-added height and width >attributes are scaled correctly */
-				}
-				img.size-full, img.size-large {
-				    max-width: 100%;
-				    width: auto; /* Prevent stretching of full-size images with height and >>width attributes in IE8 */
-				}
-				figcaption.wp-caption-text{
-					&:extend(.oblique, .pad-small);
-					line-height: 1.3em;
-				}
-				figure.alignnone {
-					&:extend(.full-width-image, .text-center);
-					img{
-						max-width: 100% !important;
-					}
-				}
-				figure.alignnone:hover, iframe[src *= "youtube"]:hover {
-					.opacity(0.5);
-				}
-				figure.alignleft{
-					&:extend(.float-left, .margin-left-xs);
-					max-width: 50% !important;
-				}
-				figure.alignleft + p{
-					clear: both;
-				}
-				& > p:first-of-type::first-letter{
-					font-size: 64px;
-					&:extend(.float-left, .dark );
-					margin: auto;
-
-				}
-				h2 {
-					border-left: 3px solid @dark-primary-color;
-					padding: 10px 3px 10px 40px;
-					margin-left: -45px;
-					&:extend(.text-uppercase);
-
-				}
-				iframe[src *= "youtube"]{
-					max-width: 100%;
-					min-height: 314px;
-				}
 				
+				
+			}
+
+			.post-meta{
+				&:extend(.bg-gray, .pad-medium);
+				clear: both;
+				margin-left: -40px;
+				margin-right: -40px;
+				margin-bottom: -40px;
 			}
 		}
 		img.wp-post-image{

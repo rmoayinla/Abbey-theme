@@ -27,6 +27,11 @@
 	.responsive-width(){
 		@responsive-center-width: 60%;
 	}
+	#site-footer{
+		#inner-footer{
+			width: 70% !important;
+		}
+	}
 	.md-50{
 		.responsive-width();
 		width: @responsive-center-width;
@@ -47,6 +52,18 @@
 		.navbar-brand{
 			
 		}
+	}
+	#site-page{
+		#page-content-header.has-thumbnail{
+			&:extend( .no-padding-right-lg-screen);
+			#page-media{
+				margin-top: -15px;
+				margin-bottom: -15px;
+			}
+		}
+	}
+	.no-padding-right-lg-screen{
+		padding-right: 0px !important;
 	}
 }
 

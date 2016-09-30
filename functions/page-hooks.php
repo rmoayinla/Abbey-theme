@@ -20,8 +20,13 @@ function abbey_post_title(){
 }
 
 
-function abbey_page_icon(){
-	$icon = '<div><h2 class="icon-large"><span class="glyphicon glyphicon-blackboard"></span></h2></div>';
+function abbey_page_media(){
+	if ( has_post_thumbnail() ){
+		$icon = the_post_thumbnail();
+	} else{
+		$icon = "";
+	}
+	//$icon = '<div><h2 class="icon-large"><span class="glyphicon glyphicon-blackboard"></span></h2></div>';//
 	echo apply_filters( "abbey_theme_page_header_media", $icon );
 }
 

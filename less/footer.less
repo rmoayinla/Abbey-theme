@@ -3,9 +3,33 @@
 *
 */
 #site-footer{
-	&:extend(.margin-top-md, .bg-dark);
+	&:extend(.inner-pad-lg);
+	padding-top: 80px;
+	box-shadow: 2px 0px 2px @dark-primary-color;
+	webkit-box-shadow: 2px 0px 2px @dark-primary-color;
+	&:extend(.margin-top-md, .bg-light);
+	
 	#footer-bottom{
-		&:extend(.margin-top-md, .pad-medium, .bg-primary);
+		&:extend(.margin-top-md);
 
+	}
+	#inner-footer{
+		&:extend(.relative, .md-50);
+		#site-about{
+			&:extend(.pad-small, .oblique, .left-border);
+		}
+	}
+	#site-info{
+		.custom-logo{
+			&:extend(.logo-small);
+		}
+		#site-name{
+			font-size: 32px;
+			margin-left: 10px;
+			vertical-align: middle;
+		}
+		.description{
+			&:extend(.margin-top-xs, .strong);
+		}
 	}
 }
