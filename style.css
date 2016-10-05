@@ -195,7 +195,7 @@ body {
 }
 .margin-top-md,
 #front-page #site-banner #carousel .carousel-caption #admin-profile,
-#site-page .page-content .entry-content,
+#site-page .page-content .page-entry,
 #post-page .post-content .post-entry,
 #site-footer,
 #site-footer #footer-bottom {
@@ -204,7 +204,7 @@ body {
 .margin-bottom-md,
 #front-page #services .service-wrapper,
 #front-page #contact .contact-wrapper,
-#site-page .page-content .entry-content,
+#site-page .page-content .page-entry,
 #error-404-page .page-content,
 #sidebar-404 {
   margin-bottom: 30px;

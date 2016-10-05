@@ -199,7 +199,7 @@ function abbey_theme_register_sidebars() {
 	if ( count ( $sidebars ) > 0 ) {
 		foreach ( $sidebars as $count => $sidebar ){
 			$args = wp_parse_args( $sidebar, $defaults );
-			register_sidebar( $sidebar );
+			register_sidebar( $args );
 		}
 	}
 }
@@ -215,9 +215,9 @@ add_filter( "abbey_theme_nav_menus", function ( $nav_menus ){
 
 add_filter( "abbey_theme_sidebars", function ( $sidebars ){
 	$sidebars[] = array(
-		"name" => __( "Footer Sidebar", "abbey" ),
-		"id" => "sidebar-footer-main",
-		"description" => __( "This sidebar appears on the footer of the page, 
+		"name" =>		 	__( "Footer Sidebar", "abbey" ),
+		"id" => 			"sidebar-footer-main",
+		"description" => 	__( "This sidebar appears on the footer of the page, 
 			you can display a footer notice here.", "abbey" )
 	);
 	return $sidebars;

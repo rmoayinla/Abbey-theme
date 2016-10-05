@@ -11,12 +11,12 @@
 
 	<div class="row"><?php do_action("abbey_theme_after_page_header"); ?></div>
 
-	<section class="row">
+	<section class="row page-entry">
 		<article <?php abbey_post_class( "col-md-6 col-xs-12 col-sm-8" ); ?> id="page-<?php the_ID(); ?>">
 			<?php the_content("Read more . . "); ?>
 		</article>
 		
-		<aside class="col-md-3">
+		<aside class="col-md-3" role="complimentary">
 			<?php abbey_display_sidebar( "sidebar-main" ); ?>
 		</aside>
 	</section>

@@ -278,8 +278,10 @@ function abbey_post_class ( $class = "" ){
 * 
 *
 */
-function abbey_display_sidebar ( $sidebar_id = "" ){
-	
+function abbey_display_sidebar ( $sidebar_id ){
+	if ( is_active_sidebar( $sidebar_id ) ){
+		dynamic_sidebar( $sidebar_id );
+	}
 }
 
 /*
