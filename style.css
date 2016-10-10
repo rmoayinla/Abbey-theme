@@ -31,7 +31,10 @@ body {
   background-color: #FF6600;
 }
 .bg-light,
-#site-footer {
+#custom-page #inner-content .entry-content .well,
+#site-footer,
+#custom-page #inner-content .entry-content .panel-heading,
+#custom-page #inner-content .entry-content .panel-footer {
   background-color: #ffefe5;
 }
 .bg-dark,
@@ -52,6 +55,7 @@ body {
 #site-page .page-content .entry-content,
 #custom-page #inner-content,
 #post-page .post-content .post-entry,
+.mini-popup,
 #sidebar-404 #latest-posts {
   background-color: #fff;
   color: #000;
@@ -111,13 +115,17 @@ body {
 #sidebar-404 .page-header {
   border-bottom: 0px;
 }
+.inner-pad-small,
+#custom-page #inner-content #page-sidebar {
+  padding-left: 15px;
+  padding-right: 15px;
+}
 .inner-pad-medium {
   padding-left: 40px;
   padding-right: 40px;
 }
 .outer-pad-medium,
-#sitehead #admin-info,
-#custom-page #page-content-header {
+#sitehead #admin-info {
   padding-top: 40px;
   padding-bottom: 40px;
 }
@@ -131,7 +139,9 @@ body {
   padding-right: 80px;
 }
 .padding-bottom-sm,
-#site-page .page-content #page-content-header {
+#site-page .page-content #page-content-header,
+#custom-page #inner-content #page-sidebar,
+#custom-page #page-content-header {
   padding-bottom: 15px;
 }
 .padding-top-sm,
@@ -148,10 +158,13 @@ body {
   border-radius: 0px;
 }
 .border,
+#custom-page #inner-content .entry-content figure.alignleft,
 #post-page .post-content .post-entry {
   border: 1px solid #b34700;
 }
 .bottom-border,
+#custom-page #inner-content .entry-content .panel-heading,
+#custom-page #inner-content .entry-content .panel-footer,
 #post-page .post-content .post-excerpt {
   border-bottom: 1px solid #b34700;
 }
@@ -259,6 +272,7 @@ body {
 .font-small,
 #custom-header #inner-header #header-contact,
 #front-page #services .service-body,
+#custom-page #inner-content .entry-content figure.alignleft .wp-caption-text,
 #post-page .post-content .post-excerpt {
   font-size: 13px;
 }
@@ -301,7 +315,8 @@ body {
 .absolute {
   position: absolute;
 }
-.fixed {
+.fixed,
+.mini-popup {
   position: fixed;
 }
 .icon-large {
@@ -325,6 +340,7 @@ body {
 }
 .full-width-image,
 .entry-content figure.alignnone,
+#custom-page #inner-content .entry-content figure.alignleft a img,
 #post-page .post-content img.wp-post-image {
   width: 100% !important;
 }
@@ -333,6 +349,7 @@ body {
 .entry-content img[class*="align"],
 .entry-content img[class*="wp-image-"],
 .entry-content figure.alignnone,
+#custom-page #inner-content .entry-content figure.alignleft a img,
 #post-page .post-content img.wp-post-image {
   height: auto;
 }
@@ -497,14 +514,26 @@ body {
 *
 */
 #custom-page #inner-content .entry-content {
+  overflow: auto;
   padding: 80px;
   border-right-color: #ddd !important;
   border-bottom-color: #ddd !important;
   font-size: 18px;
   line-height: 1.8;
 }
-#custom-page #page-content-header {
-  padding-bottom: 80px;
+#custom-page #inner-content .entry-content figure.alignleft {
+  border-color: #eee;
+}
+#custom-page #inner-content .entry-content .well,
+#custom-page #inner-content .entry-content .panel-heading,
+#custom-page #inner-content .entry-content .panel-footer {
+  border-color: #b34700;
+}
+#custom-page #inner-content .entry-content .panel-default {
+  border-color: #b34700;
+}
+#custom-page #page-content-header .post-thumbnail .wp-post-image {
+  width: 80% !important;
 }
 #post-page #post-content-header > .col-md-12 {
   width: 70%;
@@ -543,6 +572,8 @@ body {
 #box-shadow .box-shadow-small,
 #primary-menu,
 #custom-page #inner-content,
+#custom-page #inner-content .entry-content figure.alignleft,
+#custom-page #page-content-header .post-thumbnail .wp-post-image,
 #post-page .post-content .post-entry,
 #sidebar-404 #latest-posts,
 #sidebar-404 #quotes {
@@ -572,6 +603,13 @@ body {
 .entry-content figure.alignnone:hover a img,
 .entry-content iframe[src*="youtube"]:hover a img {
   cursor: zoom-in;
+}
+.mini-popup {
+  bottom: 10px;
+  right: 20px;
+  padding: 20px;
+  width: 200px;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
 }
 /*
 * Sidebar styles 
@@ -833,5 +871,13 @@ body {
   }
   #primary-icon-nav li {
     display: inline-block;
+  }
+  .entry-content figure.alignleft {
+    max-width: 45% !important;
+  }
+  .inner-padding-mobile,
+  #custom-page #inner-content #page-sidebar {
+    padding-left: 30px;
+    padding-right: 30px;
   }
 }

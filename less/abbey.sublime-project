@@ -5,15 +5,13 @@
 			"path": "/C/wamp/www/wp/wp-content/themes/Abbey"
 		},
 		{
-			"path": "/C/wamp/www/wp/wp-content/plugins/abbey-plugins"
+			"path": "/C/wamp/www/wp/wp-content/plugins/abbey-contact-form"
 		}
 	],
 	"settings":
 	{
 		"less2css":
 		{
-
 		}
-		
 	}
 }

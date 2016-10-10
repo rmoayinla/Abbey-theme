@@ -177,6 +177,8 @@ if( !function_exists( "abbey_theme_enque_styles" ) ) {
 
 }//end of function exist abbey_theme_enque_styles//
 
+add_action( "wp_enqueue_scripts", "abbey_theme_enque_styles" );
+
 function abbey_theme_register_sidebars() {
 	$defaults = array (
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
@@ -205,7 +207,7 @@ function abbey_theme_register_sidebars() {
 }
 add_action( "widgets_init", "abbey_theme_register_sidebars" );
 
-add_action( "wp_enqueue_scripts", "abbey_theme_enque_styles" );
+
 
 add_filter( "abbey_theme_nav_menus", function ( $nav_menus ){
 	$nav_menus ["footer-menu"] = __( "Footer Menu", "abbey" );
