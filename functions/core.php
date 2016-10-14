@@ -84,6 +84,15 @@ function abbey_contact_icon($contact){
 		case "bitbucket":
 			$icon = "fa-bitbucket";
 			break;
+		case "website":
+			$icon = "fa-globe"; 
+			break;
+		case "profile":
+			$icon = "fa-user";
+			break;
+		case "posts":
+			$icon = "fa-newspapar-o";
+			break;
 		default:
 			$icon = "fa-list"; // default icon if icon is not set nor found //
 
@@ -281,6 +290,8 @@ function abbey_post_class ( $class = "" ){
 function abbey_display_sidebar ( $sidebar_id ){
 	if ( is_active_sidebar( $sidebar_id ) ){
 		dynamic_sidebar( $sidebar_id );
+	} else {
+		echo __( "Sorry, there is no sidebar widget registerd with {$sidebar_id}", "abbey" );
 	}
 }
 
@@ -299,7 +310,8 @@ add_filter( 'wp_nav_menu_items','abbey_add_to_primary_menu',10,2 );
 
 function abbey_add_extra_primary_menu ( $extras ){
 	$extras .= "<div class='navbar-right'><ul class='nav navbar-nav' id='primary-icon-nav'>";
-	$icons = apply_filters( "abbey_icon_navs", array(
+	$icons = apply_filters( "abbey_icon_navs", 
+		array(
 			"search" => "fa-search",
 			"comment" => "fa-comments", 
 			"read snippets" => "fa-code", 
@@ -308,13 +320,95 @@ function abbey_add_extra_primary_menu ( $extras ){
 		) 
 	);
 	foreach ( $icons as $title => $icon ){
-		$extras .= '<li><a href="#" id="'.esc_attr( $title ).'-icon-nav" class="js-link" 
-			title="'.esc_attr__( sprintf( "Click to %s", $title ) ).'">
-			<span class="fa '.esc_attr( $icon ) .'"></span>
-			</a></li>';
+		$extras .= sprintf( '<li><a href="#" id="%1$s-icon-nav" class="js-link" title="%2$s">
+							<span class="fa %3$s"></span>
+							</a></li>', 
+							esc_attr( $title ),
+							esc_attr__( sprintf( "Click to %s", $title ) ), 
+							esc_attr( $icon )
+			);
 	}
 	
 	$extras .= "</ul></div>";
 	return $extras;
 }
 add_filter( "abbey_extra_primary_menu", "abbey_add_extra_primary_menu" );
+
+function abbey_post_nav(){
+	// previous_post_link();next_post_link(); //
+	$prev_post = get_previous_post();
+	$next_post = get_next_post();
+	$html = "<div class='row post-navigation'>";
+	if ( !empty( $prev_post ) ) {
+		$html .= "<div class='col-md-6 previous-post text-left'>";
+		$html .= sprintf( '<a href="%1$s" class="previous-button" title="%2$s">
+							<span class="glyphicon glyphicon-chevron-left"></span>
+		 					<p> %3$s </p>
+		 					<h4 class="previous-post-title">%4$s</h4>
+		 				</a>',
+					get_permalink($prev_post->ID),
+					__( "Click to view previous post", "abbey" ), 
+					__( "Previous post:", "abbey" ), 
+					apply_filters( "the_title", $prev_post->post_title )
+				);
+		$html .= "</div>";
+	}
+	if ( !empty( $next_post ) ){
+		$html .= "<div class='col-md-6 next-post text-right'>";
+		$html .= "<a href='".get_permalink($next_post->ID)."' class='next-button'>";
+		$html .= "<span class='glyphicon glyphicon-chevron-right'> </span>";
+		$html .= "<p class=''>".__( "Next Post:", "abbey" ). "</p>";
+		$html .= "<h4 class='previous-post-title'>".$next_post->post_title."</h4></a>";
+		$html .= "</div>"; 
+	}
+	$html .= "</div>";
+	echo $html;
+}
+
+add_action( "abbey_theme_post_footer", "abbey_post_nav", 99);
+
+function abbey_post_author(){
+	// get_author_posts_url( get_the_author_meta( 'ID' ), get_the_author_meta( 'user_nicename' ) ); - get author post link//
+	// global authordata //
+	//<a href="mailto:<?php echo get_the_author_meta( 'user_email', 25 ); the_author_meta( 'display_name', 25 );//
+	// get author number of posts - get_the_author_posts() //
+	global $authordata, $post;
+
+	$author_id = ( is_object( $authordata ) ) ? $authordata->ID : $post->post_author;
+	$author = get_userdata( $author_id );
+	$author_name = $author->display_name; 
+	$author_post_count = get_the_author_posts();
+	$author_info = array();
+	
+	$author_info["email"] = sprintf( '<a href="mailto:%1$s" title="%2$s" id="emailauthor">%3$s </a>', 
+							antispambot( $author->user_email ), 
+							esc_attr( __( "Send this author an email", "abbey" ) ), 
+							esc_html( __( "Mail Author", "abbey" ) )
+							); 
+	
+	$author_info["website"] = sprintf( '<a href="%1$s" title="%2$s" target="_blank">%3$s </a>',
+									esc_url( $author->user_url ),
+									esc_attr( __( "Visit author's website", "abbey" ) ), 
+									esc_html( __( "Author Website", "abbey" ) )
+							);
+
+
+	$author_info["profile"] = "<a href='#'> Profile </a>";
+	$author_info["posts"] = sprintf( '<a href="%1$s" title="%2s">%3$s </a>', 
+							esc_url( get_author_posts_url( $author_id ) ),
+							esc_attr( sprintf( __( 'View posts by %s', 'abbey' ), $author_name ) ),
+							 __( "Posts", "abbey" ) );
+
+	$html = "<div>"; 
+	$html .=  "<div class='inline post-author-image'>".get_avatar( $author_id, 32, "", "", array("class" => "img-circle") )."</div>"; 
+	$html .= "<div class='inline post-author-info'><span class='h4'>".esc_html( $author_name ).
+				"</span><span class='badge'>".(int) $author_post_count."</span>";
+	$html .= "<a href='#' data-toggle='dropdown' class='dropdown'><span class='caret'></span></a>";
+	$html .= "<ul class='dropdown-menu'>";
+	foreach ( $author_info as $title => $info ){
+		$html .= "<li>".$info."</li>";
+	}
+	$html .= "</ul>";
+	$html .= "</div></div>";
+	echo $html;
+}

@@ -63,10 +63,10 @@
 */
 #custom-page{
 	#inner-content{
-		&:extend(.bg-white, #box-shadow .box-shadow-small);
+		&:extend(.pad-medium);
 
 		.entry-content{
-			&:extend(.responsive-right-border, .inner-pad-responsive);
+			&:extend(.responsive-right-border, .inner-pad-responsive,.bg-white, #box-shadow .box-shadow-small );
 			overflow: auto;
 			padding: 80px;
 			border-right-color: @gray-color !important;
@@ -107,6 +107,7 @@
 		.post-thumbnail{
 			.wp-post-image{
 				width: 80% !important;
+				max-height: 360px;
 				&:extend(#box-shadow .box-shadow-small);
 			}
 		}

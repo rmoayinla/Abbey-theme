@@ -62,8 +62,22 @@
 			}
 		}
 	}
+	#post-page{
+		#post-page-header{
+			& > .col-md-12{
+				width: 70%;
+			}
+		}
+		.post-content{
+			left: 5%;
+			width: 70%;
+		}
+	}
 	.no-padding-right-lg-screen{
 		padding-right: 0px !important;
+	}
+	.page-title{
+		font-size: 48px;
 	}
 }
 
@@ -274,8 +288,16 @@
 			max-width: 45% !important;
 		}
 	}
+	.post-title{
+		font-size: 36px;
+	}
 	.inner-padding-mobile{
 		padding-left: 30px;
 		padding-right: 30px;
+	}
+	#post-page{
+		.post-content{
+			&:extend(.inner-padding-mobile);
+		}
 	}
 }

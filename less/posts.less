@@ -1,37 +1,90 @@
 #post-page{
 	#post-content-header{
 		&:extend(.margin-top-sm);
-		& > .col-md-12{
-			width: 70%;
+		.post-author{
+			.post-author-info{
+				&:extend(.margin-left-sm);
+				vertical-align: middle;
+			}
 		}
 	}
 	.post-content{
 		&:extend(.relative);
-		left: 5%;
-		width: 70%;
 		.post-entry{
 			&:extend(.margin-top-md, .pad-medium, .bg-white, .border-radius-md, 
-			#box-shadow .box-shadow-small, .border);
+			#box-shadow .box-shadow-small, .border, .no-bottom-padding);
 			overflow: hidden;
 			border-color: #ddd;
 			.entry-content{
-				
+				&:extend(.padding-bottom-sm);
+				figure.alignnone{
+					&:extend(#box-shadow .box-shadow-small, .border, .margin-bottom-sm);
+					border-radius: 0px 0px 10px 10px;
+					border-color: @gray-color;
+					figcaption{
+						&:extend(.bg-gray);
+					}
+				}
+				p a{
+					&:extend(.primary, .inline);
+					border-bottom: 1px dotted @primary-color;
+					&:visited{
+						border-bottom: 1px solid @primary-color;
+						&:extend(.strong);
+					}
+					&:hover{
+						&:extend(.dark);
+						text-decoration: none;
+						border-bottom: 1px solid @dark-primary-color;
+					}
+
+				}
 				
 			}
 
-			.post-meta{
-				&:extend(.bg-gray, .pad-medium);
-				clear: both;
-				margin-left: -40px;
-				margin-right: -40px;
-				margin-bottom: -40px;
+			.entry-footer{
+				&:extend(.margin-minus-left-md, .margin-minus-right-md);
+				.post-navigation{
+					.glyphicon{
+						font-size: 48px;
+						top: 10%;
+					}
+					.previous-post{
+						&:extend(.no-padding-left, .no-padding-right);
+						.previous-button{
+							&:extend(#button .button-md, .block, .relative);
+							padding-left: 80px !important;
+							padding-right: 30px !important;
+							&:hover{
+								&:extend( #button .button-md:hover );
+							}
+							.glyphicon{
+								&:extend(.absolute);
+								left: 25px;
+							}
+						}
+					}
+					.next-post{
+						&:extend(.no-padding-left, .no-padding-right);
+						.next-button{
+							&:extend(#button .button-md, .block, .relative);
+							padding-left: 30px !important;
+							padding-right: 80px !important;
+							&:hover{
+								&:extend(#button .button-md:hover);
+							}
+							.glyphicon{
+								&:extend(.absolute);
+							}
+						}
+					}
+				}
 			}
 		}
 		img.wp-post-image{
 			&:extend(.full-width-image);
 		}
 		.page-title{
-			font-size: 48px;
 			&:extend(#text-shadow .text-shadow-small);
 		}
 		.post-excerpt{
