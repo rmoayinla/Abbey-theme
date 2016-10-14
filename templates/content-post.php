@@ -6,8 +6,14 @@
 		<div class="<?php echo esc_attr( $title_class ); ?>"><?php abbey_post_title(); ?></div>
 		<?php if( has_post_thumbnail() ) : ?><div class="col-md-6"><?php the_post_thumbnail( "large" ); ?> </div> <?php endif; ?>
 		<div class="clearfix"> </div>
-		<div class="row margin-top-sm">
-			<div class="col-md-6 post-author"><?php abbey_post_author(); ?> </div>
+		<div class="row margin-top-sm pad-small" id="post-info">
+			<div class="col-md-3 post-author"><?php abbey_post_author(); ?> </div>
+			<div class="col-md-3 post-date text-small">
+				<?php echo abbey_post_date(); ?> 
+			</div>
+			<div class="col-md-3 post-date text-small"> 
+				<?php echo abbey_post_time(); ?> 
+			</div>
 		</div>
 	</header><!-- #page-content-header closes -->
 

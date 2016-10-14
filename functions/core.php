@@ -324,7 +324,7 @@ function abbey_add_extra_primary_menu ( $extras ){
 							<span class="fa %3$s"></span>
 							</a></li>', 
 							esc_attr( $title ),
-							esc_attr__( sprintf( "Click to %s", $title ) ), 
+							esc_attr( sprintf( __( "Click to %s", "abbey" ), $title ) ), 
 							esc_attr( $icon )
 			);
 	}
@@ -335,80 +335,113 @@ function abbey_add_extra_primary_menu ( $extras ){
 add_filter( "abbey_extra_primary_menu", "abbey_add_extra_primary_menu" );
 
 function abbey_post_nav(){
-	// previous_post_link();next_post_link(); //
-	$prev_post = get_previous_post();
-	$next_post = get_next_post();
-	$html = "<div class='row post-navigation'>";
+	$prev_post = get_previous_post(); // previous post//
+	$next_post = get_next_post(); // next post //
+	$html = "<div class='row post-navigation'>\n";
 	if ( !empty( $prev_post ) ) {
-		$html .= "<div class='col-md-6 previous-post text-left'>";
-		$html .= sprintf( '<a href="%1$s" class="previous-button" title="%2$s">
-							<span class="glyphicon glyphicon-chevron-left"></span>
-		 					<p> %3$s </p>
-		 					<h4 class="previous-post-title">%4$s</h4>
-		 				</a>',
-					get_permalink($prev_post->ID),
-					__( "Click to view previous post", "abbey" ), 
-					__( "Previous post:", "abbey" ), 
-					apply_filters( "the_title", $prev_post->post_title )
-				);
-		$html .= "</div>";
+		$html .= "<div class='col-md-6 previous-post text-left'>\n";
+		$html .= abbey_show_nav( $prev_post ); // check core for function documentation //
+		$html .= "</div>";//close of previous-post class div//
 	}
 	if ( !empty( $next_post ) ){
-		$html .= "<div class='col-md-6 next-post text-right'>";
-		$html .= "<a href='".get_permalink($next_post->ID)."' class='next-button'>";
-		$html .= "<span class='glyphicon glyphicon-chevron-right'> </span>";
-		$html .= "<p class=''>".__( "Next Post:", "abbey" ). "</p>";
-		$html .= "<h4 class='previous-post-title'>".$next_post->post_title."</h4></a>";
-		$html .= "</div>"; 
+		$html .= "<div class='col-md-6 next-post text-right'>\n";
+		$html .= abbey_show_nav( $next_post, "next" );
+		$html .= "</div>"; // close of next-post div //
 	}
-	$html .= "</div>";
+	$html .= "</div>"; // close of post-navigation class div //
 	echo $html;
 }
 
 add_action( "abbey_theme_post_footer", "abbey_post_nav", 99);
 
+function abbey_show_nav( $post, $nav = "previous" ){
+	$class = ( $nav === "previous" ) ? "previous-button" : "next-button";
+	$icon = ( $nav === "previous" ) ? "glyphicon-chevron-left" : "glyphicon glyphicon-chevron-right";
+	
+	return sprintf( '<a href="%1$s" class="%5$s-button" title="%2$s">
+				<span class="glyphicon %6$s"></span>
+		 		<p> %3$s </p><h4 class="%5$s-post-title">%4$s</h4>
+		 	   </a>',
+			get_permalink($post->ID),
+			sprintf( __( "Click to view %s post", "abbey" ), $nav ),
+			sprintf( __( "%s post:", "abbey" ), ucwords( $nav ) ), 
+			apply_filters( "the_title", $post->post_title ), 
+			esc_attr( $nav ),
+			esc_attr( $icon ) 
+			);
+}
+
 function abbey_post_author(){
-	// get_author_posts_url( get_the_author_meta( 'ID' ), get_the_author_meta( 'user_nicename' ) ); - get author post link//
-	// global authordata //
-	//<a href="mailto:<?php echo get_the_author_meta( 'user_email', 25 ); the_author_meta( 'display_name', 25 );//
-	// get author number of posts - get_the_author_posts() //
 	global $authordata, $post;
 
-	$author_id = ( is_object( $authordata ) ) ? $authordata->ID : $post->post_author;
+	$author_id = ( is_object( $authordata ) ) ? $authordata->ID : $post->post_author; // get the post author id //
 	$author = get_userdata( $author_id );
-	$author_name = $author->display_name; 
-	$author_post_count = get_the_author_posts();
-	$author_info = array();
-	
-	$author_info["email"] = sprintf( '<a href="mailto:%1$s" title="%2$s" id="emailauthor">%3$s </a>', 
-							antispambot( $author->user_email ), 
-							esc_attr( __( "Send this author an email", "abbey" ) ), 
-							esc_html( __( "Mail Author", "abbey" ) )
-							); 
-	
-	$author_info["website"] = sprintf( '<a href="%1$s" title="%2$s" target="_blank">%3$s </a>',
-									esc_url( $author->user_url ),
-									esc_attr( __( "Visit author's website", "abbey" ) ), 
-									esc_html( __( "Author Website", "abbey" ) )
-							);
-
-
-	$author_info["profile"] = "<a href='#'> Profile </a>";
-	$author_info["posts"] = sprintf( '<a href="%1$s" title="%2s">%3$s </a>', 
-							esc_url( get_author_posts_url( $author_id ) ),
-							esc_attr( sprintf( __( 'View posts by %s', 'abbey' ), $author_name ) ),
-							 __( "Posts", "abbey" ) );
+	$author_name = $author->display_name; // the author display name//
+	$author_post_count = get_the_author_posts(); // the author post count //
 
 	$html = "<div>"; 
-	$html .=  "<div class='inline post-author-image'>".get_avatar( $author_id, 32, "", "", array("class" => "img-circle") )."</div>"; 
-	$html .= "<div class='inline post-author-info'><span class='h4'>".esc_html( $author_name ).
-				"</span><span class='badge'>".(int) $author_post_count."</span>";
-	$html .= "<a href='#' data-toggle='dropdown' class='dropdown'><span class='caret'></span></a>";
-	$html .= "<ul class='dropdown-menu'>";
+	
+	$html .= sprintf( '<div class="post-author-info"><span class="author-name"> %1$s </span>
+						<span class="badge author-post-count"> %2$s </span>
+						<a href="" data-toggle="dropdown" class="dropdown"><span class="caret"> </span> </a>',
+						esc_html( $author_name ), 
+						(int) $author_post_count
+					);
+	/* $html .= "<ul class='dropdown-menu'>";
 	foreach ( $author_info as $title => $info ){
 		$html .= "<li>".$info."</li>";
 	}
-	$html .= "</ul>";
+	$html .= "</ul>";*/
 	$html .= "</div></div>";
 	echo $html;
+	
+}
+
+function abbey_author_info( $author, $key = "" ){
+	$author_info = array(); // array to contain author info which will be displayed in a dropdown //
+	$author_info["email"] = sprintf( '<a href="mailto:%1$s" title="%2$s" id="emailauthor">
+									<span class="fa fa-envelope"></span> %3$s </a>', 
+							antispambot( $author->user_email ), 
+							esc_attr( __( "Send this author an email", "abbey" ) ), 
+							esc_html( __( "Send author a mail", "abbey" ) )
+							); 
+	
+	$author_info["website"] = sprintf( '<a href="%1$s" title="%2$s" target="_blank">
+										<span class="fa fa-fw fa-globe"></span> %2$s </a>',
+									esc_url( $author->user_url ),
+									esc_attr( __( "Visit author's website", "abbey" ) )
+							);
+
+
+	$author_info["profile"] = sprintf( '<a href="#" title="%1$s" id="authorprofile" class="js-link"> 
+										<span class="fa fa-fw fa-user"></span> %2$s </a>',
+										esc_attr( __( "View author's profile", "abbey" ) ), 
+										esc_html( __(  "Author profile", "abbey" ) )
+							);
+
+	$author_info["posts"] = sprintf( '<a href="%1$s" title="%2$s"> 
+									<span class="fa fa-fw fa-newspaper-o"></span>%3$s </a>', 
+							esc_url( get_author_posts_url( $author->ID ) ),
+							esc_attr( sprintf( __( "View posts by %s", "abbey" ), $author->display_name ) ),
+							 __( "Read Author posts", "abbey" ) 
+							 );
+	return $author_info;
+}
+
+function abbey_author_photo( $id, $size = 32, $class = "" ){
+	return get_avatar( $id, $size, "", "", array("class" => $class ) );
+}
+
+function abbey_post_date(){
+	return sprintf( '<p class="small-heading"> %1$s </p> <p class="posted-on"> %2$s </p>',
+				__( "Posted on:", "abbey" ), 
+				get_the_time('l, F jS, Y')
+			); 
+}
+
+function abbey_post_time(){
+	return sprintf( '<p class="small-heading"> %1$s </p> <p class="posted-time">%2$s </p>',
+						__( "Time:", "abbey" ), 
+						get_the_time('g:i A')
+			); 
 }

@@ -31,7 +31,7 @@ function abbey_custom_avatar( $avatar, $id_or_email, $size, $default, $alt, $arg
 
     if ( $user && is_object( $user ) ) {
             $avatar = $abbey_defaults["admin"]["pics"];
-            $class = ( !empty($args) && isset( $args["class"] ) ) ? $args["class"] : "";
+            $class = ( !empty($args) && isset( $args["class"] ) ) ? esc_attr( $args["class"] ) : "";
             $avatar = "<img alt='{$alt}' src='{$avatar}' class='avatar avatar-{$size} {$class}' height='{$size}' width='{$size}' />";
         }
 

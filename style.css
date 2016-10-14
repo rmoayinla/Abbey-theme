@@ -334,6 +334,9 @@ body {
   width: auto;
   height: auto;
 }
+.middle {
+  vertical-align: middle;
+}
 .block,
 #post-page .post-content .post-entry .entry-footer .post-navigation .previous-post .previous-button,
 #post-page .post-content .post-entry .entry-footer .post-navigation .next-post .next-button {
