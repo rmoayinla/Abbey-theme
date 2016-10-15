@@ -382,8 +382,7 @@ function abbey_post_author(){
 	$html = "<div>"; 
 	
 	$html .= sprintf( '<div class="post-author-info"><span class="author-name"> %1$s </span>
-						<span class="badge author-post-count"> %2$s </span>
-						<a href="" data-toggle="dropdown" class="dropdown"><span class="caret"> </span> </a>',
+						<span class="badge author-post-count"> %2$s </span>',
 						esc_html( $author_name ), 
 						(int) $author_post_count
 					);
@@ -435,7 +434,7 @@ function abbey_author_photo( $id, $size = 32, $class = "" ){
 function abbey_post_date(){
 	return sprintf( '<p class="small-heading"> %1$s </p> <p class="posted-on"> %2$s </p>',
 				__( "Posted on:", "abbey" ), 
-				get_the_time('l, F jS, Y')
+				get_the_time('D, F jS, Y')
 			); 
 }
 
