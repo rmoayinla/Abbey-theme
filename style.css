@@ -235,7 +235,8 @@ body {
 }
 .margin-top-sm,
 #error-404-page .entry-content #search-form,
-#post-page #post-content-header {
+#post-page #post-content-header,
+#post-page .post-content .post-entry .entry-footer .author-info .author-description {
   margin-top: 15px;
 }
 .margin-bottom-sm,
@@ -254,6 +255,7 @@ body {
 #front-page #services .service-wrapper,
 #front-page #contact .contact-wrapper,
 #error-404-page .page-content,
+#post-page .post-content .post-entry .entry-footer .author-info,
 #sidebar-404 {
   margin-bottom: 30px;
 }
@@ -274,7 +276,8 @@ body {
 }
 .margin-left-sm,
 #site-page .page-content .entry-content blockquote,
-#post-page #post-content-header .post-author .post-author-info {
+#post-page #post-content-header .post-author .post-author-info,
+#post-page .post-content .post-entry .entry-footer .author-info .author-title {
   margin-left: 15px;
 }
 .margin-left-md {
@@ -339,12 +342,15 @@ body {
   clear: both;
 }
 .inline,
-#post-page .post-content .post-entry .entry-content p a {
+#post-page .post-content .post-entry .entry-content p a,
+#post-page .post-content .post-entry .entry-footer .author-info .author-photo,
+#post-page .post-content .post-entry .entry-footer .author-info .author-title {
   display: inline-block !important;
   width: auto;
   height: auto;
 }
-.middle {
+.middle,
+#post-page .post-content .post-entry .entry-footer .author-info .author-title {
   vertical-align: middle;
 }
 .block,
@@ -658,6 +664,12 @@ body {
   left: 0px;
   right: 25px;
 }
+#post-page .post-content .post-entry .entry-footer .author-info {
+  width: 75% !important;
+}
+#post-page .post-content .post-entry .entry-footer .author-info .author-title {
+  width: 75%;
+}
 #tool-tip .tool-tip-box::after,
 .tooltip-box:after {
   content: "";
@@ -779,6 +791,7 @@ body {
     width: 70% !important;
   }
   .md-50,
+  #post-page .post-content .post-entry .entry-footer .author-info,
   #site-footer #inner-footer {
     width: 60%;
     margin-left: auto;
@@ -833,6 +846,7 @@ body {
     float: right;
   }
   .md-50,
+  #post-page .post-content .post-entry .entry-footer .author-info,
   #site-footer #inner-footer {
     width: 70%;
     margin-left: auto;
@@ -876,6 +890,7 @@ body {
     float: left;
   }
   .md-50,
+  #post-page .post-content .post-entry .entry-footer .author-info,
   #site-footer #inner-footer {
     width: 70%;
     margin-left: auto;
@@ -949,6 +964,7 @@ body {
     padding-right: 30px;
   }
   .md-50,
+  #post-page .post-content .post-entry .entry-footer .author-info,
   #site-footer #inner-footer {
     width: 85%;
     margin-left: auto;

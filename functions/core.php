@@ -361,6 +361,7 @@ function abbey_post_author( $key = "" ){
 	$values["display_name"] = $author->display_name; // the author display name//
 	$values["post_count"] = get_the_author_posts(); // the author post count //
 	$values["description"] = $author->description;
+	$values["author"] = $author;
 	
 	if ( !empty( $key ) && array_key_exists( $key, $values ) )
 		return $values[$key];
@@ -370,11 +371,6 @@ function abbey_post_author( $key = "" ){
 						esc_html( $values["display_name"] ), 
 						(int) $values["post_count"]
 					);
-	/* $html .= "<ul class='dropdown-menu'>";
-	foreach ( $author_info as $title => $info ){
-		$html .= "<li>".$info."</li>";
-	}
-	$html .= "</ul>";*/
 	
 	echo $html;
 	
@@ -383,30 +379,27 @@ function abbey_post_author( $key = "" ){
 function abbey_author_info( $author, $key = "" ){
 	$author_info = array(); // array to contain author info which will be displayed in a dropdown //
 	$author_info["email"] = sprintf( '<a href="mailto:%1$s" title="%2$s" id="emailauthor">
-									<span class="fa fa-envelope"></span> %3$s </a>', 
+									<span class="fa fa-envelope"></span></a>', 
 							antispambot( $author->user_email ), 
-							esc_attr( __( "Send this author an email", "abbey" ) ), 
-							esc_html( __( "Send author a mail", "abbey" ) )
+							esc_attr( __( "Send this author an email", "abbey" ) )
 							); 
 	
 	$author_info["website"] = sprintf( '<a href="%1$s" title="%2$s" target="_blank">
-										<span class="fa fa-fw fa-globe"></span> %2$s </a>',
+										<span class="fa fa-fw fa-globe"></span> </a>',
 									esc_url( $author->user_url ),
 									esc_attr( __( "Visit author's website", "abbey" ) )
 							);
 
 
 	$author_info["profile"] = sprintf( '<a href="#" title="%1$s" id="authorprofile" class="js-link"> 
-										<span class="fa fa-fw fa-user"></span> %2$s </a>',
-										esc_attr( __( "View author's profile", "abbey" ) ), 
-										esc_html( __(  "Author profile", "abbey" ) )
+										<span class="fa fa-fw fa-user"></span> </a>',
+										esc_attr( __( "View author's profile", "abbey" ) )
 							);
 
 	$author_info["posts"] = sprintf( '<a href="%1$s" title="%2$s"> 
-									<span class="fa fa-fw fa-newspaper-o"></span>%3$s </a>', 
+									<span class="fa fa-fw fa-newspaper-o"></span> </a>', 
 							esc_url( get_author_posts_url( $author->ID ) ),
-							esc_attr( sprintf( __( "View posts by %s", "abbey" ), $author->display_name ) ),
-							 __( "Read Author posts", "abbey" ) 
+							esc_attr( sprintf( __( "View posts by %s", "abbey" ), $author->display_name ) )
 							 );
 	return $author_info;
 }

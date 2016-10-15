@@ -76,7 +76,18 @@
 					}
 				}
 				.author-info{
-					&:extend(.pad-medium);
+					&:extend(.pad-medium,.md-50,.margin-bottom-md);
+					width: 75% !important;
+					.author-photo, .author-title{
+						&:extend(.inline);
+					}
+					.author-title{
+						&:extend(.middle, .margin-left-sm);
+						width: 75%;
+					}
+					.author-description{
+						&:extend(.margin-top-sm);
+					}
 				}
 			} //entry-footer
 		}
