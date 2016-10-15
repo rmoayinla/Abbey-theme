@@ -21,12 +21,14 @@
 			}
 		}
 		.entry-content{
-			&:extend(.margin-left-md, .bg-white,
-			#box-shadow .box-shadow-md, .pad-medium);
-			border-radius: 10px 0px 0px 10px;
+			&:extend(.bg-white,#box-shadow .box-shadow-md, .pad-medium);
+			line-height: 24px;
+			blockquote{
+				&:extend(.margin-left-sm, .pad-medium);
+			}
 		}
 		.page-entry{
-			&:extend(.margin-top-md, .margin-bottom-md);
+			&:extend(.pad-medium);
 		}
 	}
 }
@@ -64,7 +66,6 @@
 #custom-page{
 	#inner-content{
 		&:extend(.pad-medium);
-
 		.entry-content{
 			&:extend(.responsive-right-border, .inner-pad-responsive,.bg-white, #box-shadow .box-shadow-small );
 			overflow: auto;
@@ -102,13 +103,19 @@
 	#page-content-header{
 		&:extend(.padding-bottom-sm);
 		.page-title{
-			&:extend(.margin-bottom-sm, .font-large, .dark, #text-shadow .text-shadow-md);
+			&:extend(.margin-bottom-sm, .font-large, .white );
+			text-shadow: 3px 6px 12px #000;
+			top: 25%;
+			left: 25%;
 		}
 		.post-thumbnail{
+		top: 0px;
+		width: 100%;
+		z-index: -1;
 			.wp-post-image{
-				width: 80% !important;
-				max-height: 360px;
 				&:extend(#box-shadow .box-shadow-small);
+				width: 100%; 
+				height: 640px !important;
 			}
 		}
 

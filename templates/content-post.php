@@ -4,16 +4,15 @@
 <section  id="content" class="post-content">
 	<header id="post-content-header" class="row">
 		<div class="<?php echo esc_attr( $title_class ); ?>"><?php abbey_post_title(); ?></div>
-		<?php if( has_post_thumbnail() ) : ?><div class="col-md-6"><?php the_post_thumbnail( "large" ); ?> </div> <?php endif; ?>
+		<?php if( has_post_thumbnail() ) : ?>
+			<div class="col-md-6"><?php the_post_thumbnail( "large" ); ?> </div>
+		 <?php endif; ?>
 		<div class="clearfix"> </div>
 		<div class="row margin-top-sm pad-small" id="post-info">
-			<div class="col-md-3 post-author"><?php abbey_post_author(); ?> </div>
-			<div class="col-md-3 post-date text-small">
-				<?php echo abbey_post_date(); ?> 
-			</div>
-			<div class="col-md-3 post-date text-small"> 
-				<?php echo abbey_post_time(); ?> 
-			</div>
+			<ul class="breadcrumb">
+				<li><?php abbey_post_author();?> </li>
+				<li><?php the_time('D F jS, Y g:i A'); ?> </li>
+			</ul>
 		</div>
 	</header><!-- #page-content-header closes -->
 

@@ -2,13 +2,11 @@
 
 ?>
 <section  id="content" class="page-content">
-	<header id="page-content-header" class="row text-center">
-		<div class="md-50">
-			<div id="page-title"><h1 class="page-title"><?php the_title(); ?></h2></div>
+	<header id="page-content-header" class="row text-center relative">
+			<div id="page-title"><h1 class="page-title absolute"><?php the_title(); ?></h2></div>
 			<?php if ( has_post_thumbnail() ) : ?>
-				<div class="post-thumbnail"><?php the_post_thumbnail(); ?> </div>
+				<div class="post-thumbnail relative"><?php the_post_thumbnail(); ?> </div>
 			<?php endif; ?>
-		</div>
 					
 		<div class="row"><?php do_action( "abbey_theme_page_extra_header" ); ?></div>
 	

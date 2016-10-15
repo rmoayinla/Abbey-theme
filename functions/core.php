@@ -334,25 +334,6 @@ function abbey_add_extra_primary_menu ( $extras ){
 }
 add_filter( "abbey_extra_primary_menu", "abbey_add_extra_primary_menu" );
 
-function abbey_post_nav(){
-	$prev_post = get_previous_post(); // previous post//
-	$next_post = get_next_post(); // next post //
-	$html = "<div class='row post-navigation'>\n";
-	if ( !empty( $prev_post ) ) {
-		$html .= "<div class='col-md-6 previous-post text-left'>\n";
-		$html .= abbey_show_nav( $prev_post ); // check core for function documentation //
-		$html .= "</div>";//close of previous-post class div//
-	}
-	if ( !empty( $next_post ) ){
-		$html .= "<div class='col-md-6 next-post text-right'>\n";
-		$html .= abbey_show_nav( $next_post, "next" );
-		$html .= "</div>"; // close of next-post div //
-	}
-	$html .= "</div>"; // close of post-navigation class div //
-	echo $html;
-}
-
-add_action( "abbey_theme_post_footer", "abbey_post_nav", 99);
 
 function abbey_show_nav( $post, $nav = "previous" ){
 	$class = ( $nav === "previous" ) ? "previous-button" : "next-button";
@@ -371,27 +352,30 @@ function abbey_show_nav( $post, $nav = "previous" ){
 			);
 }
 
-function abbey_post_author(){
+function abbey_post_author( $key = "" ){
 	global $authordata, $post;
 
 	$author_id = ( is_object( $authordata ) ) ? $authordata->ID : $post->post_author; // get the post author id //
 	$author = get_userdata( $author_id );
-	$author_name = $author->display_name; // the author display name//
-	$author_post_count = get_the_author_posts(); // the author post count //
-
-	$html = "<div>"; 
+	$values = array(); 
+	$values["display_name"] = $author->display_name; // the author display name//
+	$values["post_count"] = get_the_author_posts(); // the author post count //
+	$values["description"] = $author->description;
 	
-	$html .= sprintf( '<div class="post-author-info"><span class="author-name"> %1$s </span>
-						<span class="badge author-post-count"> %2$s </span>',
-						esc_html( $author_name ), 
-						(int) $author_post_count
+	if ( !empty( $key ) && array_key_exists( $key, $values ) )
+		return $values[$key];
+
+	$html = sprintf( '<span class="post-author-info"><span class="author-name"> %1$s </span>
+						<span class="badge author-post-count"> %2$s </span> </span>',
+						esc_html( $values["display_name"] ), 
+						(int) $values["post_count"]
 					);
 	/* $html .= "<ul class='dropdown-menu'>";
 	foreach ( $author_info as $title => $info ){
 		$html .= "<li>".$info."</li>";
 	}
 	$html .= "</ul>";*/
-	$html .= "</div></div>";
+	
 	echo $html;
 	
 }
@@ -427,20 +411,10 @@ function abbey_author_info( $author, $key = "" ){
 	return $author_info;
 }
 
-function abbey_author_photo( $id, $size = 32, $class = "" ){
+function abbey_author_photo( $id = "", $size = 32, $class = "" ){
+	global $authordata;
+	if ( empty($id) && !empty( $authordata->ID ) )
+		$id = (int) $authordata->ID;
 	return get_avatar( $id, $size, "", "", array("class" => $class ) );
 }
 
-function abbey_post_date(){
-	return sprintf( '<p class="small-heading"> %1$s </p> <p class="posted-on"> %2$s </p>',
-				__( "Posted on:", "abbey" ), 
-				get_the_time('D, F jS, Y')
-			); 
-}
-
-function abbey_post_time(){
-	return sprintf( '<p class="small-heading"> %1$s </p> <p class="posted-time">%2$s </p>',
-						__( "Time:", "abbey" ), 
-						get_the_time('g:i A')
-			); 
-}

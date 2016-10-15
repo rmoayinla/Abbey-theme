@@ -13,10 +13,6 @@ get_header(); ?>
 		<?php while ( have_posts() ) : the_post(); ?>
 			<?php global $more; $more = 0; ?>
 
-			<header id="site-content-header">
-				<?php do_action( "abbey_theme_before_page_content" ); ?>
-			</header>
-			
 			<?php get_template_part("templates/content", "page"); ?>
 
 		<?php endwhile; ?> 

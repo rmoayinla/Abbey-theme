@@ -49,9 +49,9 @@
 						font-size: 48px;
 						top: 10%;
 					}
-					.previous-post{
+					.previous-post, .next-post{
 						&:extend(.no-padding-left, .no-padding-right);
-						.previous-button{
+						.previous-button, .next-button{
 							&:extend(#button .button-md, .block, .relative);
 							padding-left: 80px !important;
 							padding-right: 30px !important;
@@ -65,21 +65,20 @@
 						}
 					}
 					.next-post{
-						&:extend(.no-padding-left, .no-padding-right);
 						.next-button{
-							&:extend(#button .button-md, .block, .relative);
 							padding-left: 30px !important;
 							padding-right: 80px !important;
-							&:hover{
-								&:extend(#button .button-md:hover);
-							}
 							.glyphicon{
-								&:extend(.absolute);
+							left: 0px;
+							right: 25px;
 							}
 						}
 					}
 				}
-			}
+				.author-info{
+					&:extend(.pad-medium);
+				}
+			} //entry-footer
 		}
 		img.wp-post-image{
 			&:extend(.full-width-image);

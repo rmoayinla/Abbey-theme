@@ -77,3 +77,34 @@ function abbey_footer_credits(){
 }
 
 add_action ( "abbey_theme_footer_credits", "abbey_footer_credits" );
+
+function abbey_post_nav(){
+	$prev_post = get_previous_post(); // previous post//
+	$next_post = get_next_post(); // next post //
+	$html = "<div class='row post-navigation'>\n";
+	if ( !empty( $prev_post ) ) {
+		$html .= "<div class='col-md-6 previous-post text-left'>\n";
+		$html .= abbey_show_nav( $prev_post ); // check core for function documentation //
+		$html .= "</div>";//close of previous-post class div//
+	}
+	if ( !empty( $next_post ) ){
+		$html .= "<div class='col-md-6 next-post text-right'>\n";
+		$html .= abbey_show_nav( $next_post, "next" );
+		$html .= "</div>"; // close of next-post div //
+	}
+	$html .= "</div>"; // close of post-navigation class div //
+	echo $html;
+}
+
+add_action( "abbey_theme_post_footer", "abbey_post_nav", 99);
+
+function abbey_post_author_info( $content ){
+	$html = "<div class='author-info'>";
+	$html .= "<div class='author-photo'>".abbey_author_photo( "", 96, "img-circle" ). "</div>";
+	$html .= "<h4 class='author-name'>". abbey_post_author( "display_name" ). "</h4>";
+	$html .= esc_html( abbey_post_author( "description" ) );
+	$html .= "</div>";
+
+	return $content.$html;
+}
+add_filter ( "the_content", "abbey_post_author_info", 20);

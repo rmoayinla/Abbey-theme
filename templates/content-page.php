@@ -12,7 +12,7 @@
 	<div class="row"><?php do_action("abbey_theme_after_page_header"); ?></div>
 
 	<section class="row page-entry">
-		<article <?php abbey_post_class( "col-md-6 col-xs-12 col-sm-8" ); ?> id="page-<?php the_ID(); ?>">
+		<article <?php abbey_post_class( "col-md-8 col-xs-12 col-sm-8" ); ?> id="page-<?php the_ID(); ?>">
 			<?php the_content("Read more . . "); ?>
 		</article>
 		
