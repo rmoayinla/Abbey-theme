@@ -8,7 +8,7 @@
 			<div class="col-md-6"><?php the_post_thumbnail( "large" ); ?> </div>
 		 <?php endif; ?>
 		<div class="clearfix"> </div>
-		<div class="row margin-top-sm pad-small" id="post-info">
+		<div class="row" id="post-info">
 			<ul class="breadcrumb">
 				<li><?php abbey_post_author();?> </li>
 				<li><?php the_time('D F jS, Y g:i A'); ?> </li>
@@ -23,9 +23,12 @@
 			<?php the_content("Read more . . "); ?>
 		</article>
 		<aside class="col-md-4"> <?php  ?> </aside>
+		
 		<div class="clearfix"></div>
+		
 		<aside class="entry-footer"> <?php do_action( "abbey_theme_post_footer" ) ?>
 		</aside>
+		
 	</section>
 
 

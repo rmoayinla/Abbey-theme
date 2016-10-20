@@ -61,6 +61,21 @@
 		
 	}
 }
+
+#link{
+	.primary{
+		&:extend(.primary, .inline);
+		border-bottom: 1px dotted @primary-color;
+		&:visited{
+			border-bottom: 1px solid @primary-color;
+			&:extend(.strong);
+		}
+		&:hover{
+			&:extend(.dark, .no-text-decoration);
+			border-bottom: 1px solid @dark-primary-color;
+		}
+	}
+}
 .zoom-cursor{
 	cursor: zoom-in;
 }

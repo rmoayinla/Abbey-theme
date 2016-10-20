@@ -8,6 +8,7 @@ require trailingslashit( get_template_directory () )."functions/front-page-hooks
 require trailingslashit( get_template_directory () )."functions/page-hooks.php";
 require trailingslashit( get_template_directory () )."functions/post-hooks.php";
 require trailingslashit( get_template_directory () )."functions/core.php";
+require trailingslashit( get_template_directory () )."functions/template-tags.php";
 require trailingslashit( get_template_directory () )."functions/plugins.php";
 
 $content_width = $abbey_defaults = ""; 

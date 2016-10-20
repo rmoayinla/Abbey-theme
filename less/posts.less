@@ -1,4 +1,7 @@
 #post-page{
+	#content{
+		&:extend(.pad-medium);
+	}
 	#post-content-header{
 		&:extend(.margin-top-sm);
 		.post-author{
@@ -11,12 +14,12 @@
 	.post-content{
 		&:extend(.relative);
 		.post-entry{
-			&:extend(.margin-top-md, .pad-medium, .bg-white, .border-radius-md, 
+			&:extend(.pad-medium, .bg-white, .border-radius-md, 
 			#box-shadow .box-shadow-small, .border, .no-bottom-padding);
 			overflow: hidden;
 			border-color: #ddd;
 			.entry-content{
-				&:extend(.padding-bottom-sm);
+				&:extend(.padding-bottom-sm, .margin-bottom-md);
 				figure.alignnone{
 					&:extend(#box-shadow .box-shadow-small, .border, .margin-bottom-sm);
 					border-radius: 0px 0px 10px 10px;
@@ -25,25 +28,12 @@
 						&:extend(.bg-gray);
 					}
 				}
-				p a{
-					&:extend(.primary, .inline);
-					border-bottom: 1px dotted @primary-color;
-					&:visited{
-						border-bottom: 1px solid @primary-color;
-						&:extend(.strong);
-					}
-					&:hover{
-						&:extend(.dark);
-						text-decoration: none;
-						border-bottom: 1px solid @dark-primary-color;
-					}
-
-				}
 				
 			}
 
 			.entry-footer{
-				&:extend(.margin-minus-left-md, .margin-minus-right-md);
+				&:extend(.margin-minus-left-md, .margin-minus-right-md, .bg-gray, .margin-top-sm);
+				color: #000;
 				.post-navigation{
 					.glyphicon{
 						font-size: 48px;
@@ -101,5 +91,18 @@
 			&:extend(.font-small, .pad-xs, .top-border, .bottom-border);
 			
 		}
+	}
+	.text-mute{
+		&:extend(.light);
+	}
+	li > a, p > a{
+		&:extend(#link .primary); 
+		&:visited{
+
+		}
+		&:hover{
+			&:extend(#link .primary:hover);
+		}
+
 	}
 }

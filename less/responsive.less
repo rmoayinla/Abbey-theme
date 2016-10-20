@@ -24,12 +24,16 @@
 		float: right;
 	}
 	
+	.wid-70{
+		width: 70% !important;
+		clear: both;
+	}
 	.responsive-width(){
 		@responsive-center-width: 60%;
 	}
 	#site-footer{
 		#inner-footer{
-			width: 70% !important;
+			&:extend(.wid-70);
 		}
 	}
 	.md-50{
@@ -65,12 +69,11 @@
 	#post-page{
 		#post-page-header{
 			& > .col-md-12{
-				width: 70%;
+				&:extend(.wid-70);
 			}
 		}
 		.post-content{
-			left: 5%;
-			width: 70%;
+			&:extend(.wid-70);
 		}
 	}
 	.no-padding-right-lg-screen{

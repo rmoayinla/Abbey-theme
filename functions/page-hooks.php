@@ -98,7 +98,7 @@ function abbey_post_nav(){
 
 add_action( "abbey_theme_post_footer", "abbey_post_nav", 99);
 
-function abbey_post_author_info(  ){
+function abbey_post_author_info(){
 	$html = "<div class='author-info'>";
 	$html .= "<div class='author-photo'>".abbey_author_photo( "", 64, "img-circle" ). "</div>";
 	$html .= sprintf( '<div class="author-title row">
@@ -110,7 +110,7 @@ function abbey_post_author_info(  ){
 						abbey_post_author( "post_count" )
 					);
 	$html .= "<div class='author-description'>".esc_html( abbey_post_author( "description" ) ). "</div>";
-	$html .= sprintf( '<footer class="author-info-footer h3">%1$s<footer>',
+	$html .= sprintf( '<footer class="author-info-footer h4">%1$s<footer>',
 						implode( " ", abbey_author_info( abbey_post_author( "author" ) ) ) 
 					);
 	$html .= "</div>";
