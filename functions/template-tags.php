@@ -1,9 +1,6 @@
 <?php
 
-function abbey_author_photo( $id = "", $size = 32, $class = "" ){
-	global $authordata;
-	if ( empty($id) && !empty( $authordata->ID ) )
-		$id = (int) $authordata->ID;
+function abbey_author_photo( $id, $size = 32, $class = "" ){
 	return get_avatar( $id, $size, "", "", array("class" => $class ) );
 }
 
@@ -29,22 +26,23 @@ function abbey_post_author( $key = "" ){
 
 	$author_id = ( is_object( $authordata ) ) ? $authordata->ID : $post->post_author; // get the post author id //
 	$author = get_userdata( $author_id );
+	
 	$values = array(); 
 	$values["display_name"] = $author->display_name; // the author display name//
 	$values["post_count"] = get_the_author_posts(); // the author post count //
 	$values["description"] = $author->description;
-	$values["author"] = $author;
 	
 	if ( !empty( $key ) && array_key_exists( $key, $values ) )
 		return $values[$key];
 
-	$html = sprintf( '<span class="post-author-info"><span class="author-name"> %1$s </span>
+	return $author;
+	/*$html = sprintf( '<span class="post-author-info"><span class="author-name"> %1$s </span>
 						<span class="badge author-post-count"> %2$s </span> </span>',
 						esc_html( $values["display_name"] ), 
 						(int) $values["post_count"]
 					);
 	
-	echo $html;
+	*/
 	
 }
 
@@ -78,8 +76,8 @@ function abbey_author_info( $author, $key = "" ){
 
 function abbey_post_pagination( $args = array() ){
 	$defaults = array(
-		'before'           => '<li>',
-		'after'            => '</li>',
+		'before'           => '<ul class="pagination">',
+		'after'            => '</ul>',
 		'link_before'      => '',
 		'link_after'       => '',
 		'next_or_number'   => 'number',
@@ -89,5 +87,6 @@ function abbey_post_pagination( $args = array() ){
 		'pagelink'         => '%',
 		'echo'             => 1
 	);
-	echo '<ul class="pagination">'.wp_link_pages( $defaults );
+	wp_link_pages( $defaults );
+
 }

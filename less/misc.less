@@ -75,6 +75,18 @@
 			border-bottom: 1px solid @dark-primary-color;
 		}
 	}
+	.secondary{
+		&:extend(.primary, .bg-white); 
+		&:visited{
+
+		}
+		&:hover{
+			&:extend(.bg-light);
+		}
+		.active{
+			&:extend(.bg-dark);
+		}
+	}
 }
 .zoom-cursor{
 	cursor: zoom-in;

@@ -32,15 +32,19 @@ body {
 }
 .bg-light,
 #custom-page #inner-content .entry-content .well,
+#link .secondary:hover,
 #site-footer,
 #custom-page #inner-content .entry-content .panel-heading,
-#custom-page #inner-content .entry-content .panel-footer {
+#custom-page #inner-content .entry-content .panel-footer,
+#post-page .post-content .post-entry .entry-content .pagination li > a:hover {
   background-color: #ffefe5;
 }
 .bg-dark,
 #custom-header #header-top,
 #site-page .page-content #page-content-header,
 #button .button-md:hover,
+#link .secondary .active,
+#post-page .post-content .post-entry .entry-content .pagination li.active > a,
 #post-page .post-content .post-entry .entry-footer .post-navigation .previous-post .previous-button:hover,
 #post-page .post-content .post-entry .entry-footer .post-navigation .next-post .previous-button:hover,
 #post-page .post-content .post-entry .entry-footer .post-navigation .previous-post .next-button:hover,
@@ -50,7 +54,7 @@ body {
 }
 .bg-gray,
 #post-page .post-content .post-entry .entry-content figure.alignnone figcaption,
-#post-page .post-content .post-entry .entry-footer {
+#post-page .post-content .post-entry .entry-footer .author-info {
   background-color: #ddd;
 }
 .bg-white,
@@ -62,8 +66,10 @@ body {
 #custom-page #inner-content .entry-content,
 #post-page .post-content .post-entry,
 #button .button-md,
+#link .secondary,
 .mini-popup,
 #sidebar-404 #latest-posts,
+#post-page .post-content .post-entry .entry-content .pagination li > a,
 #post-page .post-content .post-entry .entry-footer .post-navigation .previous-post .previous-button,
 #post-page .post-content .post-entry .entry-footer .post-navigation .next-post .previous-button,
 #post-page .post-content .post-entry .entry-footer .post-navigation .previous-post .next-button,
@@ -80,25 +86,22 @@ body {
   color: #ffefe5;
 }
 .dark,
-.bg-gray,
 .entry-content > p:first-of-type::first-letter,
 #error-404-page .entry-content .page-header,
 #link .primary:hover,
-#post-page .post-content .post-entry .entry-content figure.alignnone figcaption,
-#post-page .post-content .post-entry .entry-footer,
-#post-page li > a:hover,
-#post-page p > a:hover {
+#post-page .post-content .post-entry .entry-content p > a:hover {
   color: #b34700;
 }
 .primary,
 #button .button-md,
 #link .primary,
+#link .secondary,
+#post-page .post-content .post-entry .entry-content p > a,
+#post-page .post-content .post-entry .entry-content .pagination li > a,
 #post-page .post-content .post-entry .entry-footer .post-navigation .previous-post .previous-button,
 #post-page .post-content .post-entry .entry-footer .post-navigation .next-post .previous-button,
 #post-page .post-content .post-entry .entry-footer .post-navigation .previous-post .next-button,
-#post-page .post-content .post-entry .entry-footer .post-navigation .next-post .next-button,
-#post-page li > a,
-#post-page p > a {
+#post-page .post-content .post-entry .entry-footer .post-navigation .next-post .next-button {
   color: #FF6600;
 }
 .full-width,
@@ -357,8 +360,7 @@ body {
 #post-page .post-content .post-entry .entry-footer .author-info .author-photo,
 #post-page .post-content .post-entry .entry-footer .author-info .author-title,
 #link .primary,
-#post-page li > a,
-#post-page p > a {
+#post-page .post-content .post-entry .entry-content p > a {
   display: inline-block !important;
   width: auto;
   height: auto;
@@ -414,12 +416,11 @@ body {
 .no-text-decoration,
 #button .button-md:hover,
 #link .primary:hover,
+#post-page .post-content .post-entry .entry-content p > a:hover,
 #post-page .post-content .post-entry .entry-footer .post-navigation .previous-post .previous-button:hover,
 #post-page .post-content .post-entry .entry-footer .post-navigation .next-post .previous-button:hover,
 #post-page .post-content .post-entry .entry-footer .post-navigation .previous-post .next-button:hover,
-#post-page .post-content .post-entry .entry-footer .post-navigation .next-post .next-button:hover,
-#post-page li > a:hover,
-#post-page p > a:hover {
+#post-page .post-content .post-entry .entry-footer .post-navigation .next-post .next-button:hover {
   text-decoration: none;
 }
 .oblique,
@@ -646,6 +647,9 @@ body {
   border-radius: 0px 0px 10px 10px;
   border-color: #ddd;
 }
+#post-page .post-content .post-entry .entry-content .pagination li > a {
+  border-color: #FF6600 !important;
+}
 #post-page .post-content .post-entry .entry-footer {
   color: #000;
 }
@@ -673,9 +677,6 @@ body {
 #post-page .post-content .post-entry .entry-footer .post-navigation .next-post .next-button .glyphicon {
   left: 0px;
   right: 25px;
-}
-#post-page .post-content .post-entry .entry-footer .author-info {
-  width: 75% !important;
 }
 #post-page .post-content .post-entry .entry-footer .author-info .author-title {
   width: 75%;
@@ -744,16 +745,14 @@ body {
   box-shadow: 0px 3px 8px #b34700;
 }
 #link .primary,
-#post-page li > a,
-#post-page p > a {
+#post-page .post-content .post-entry .entry-content p > a {
   border-bottom: 1px dotted #FF6600;
 }
 #link .primary:visited {
   border-bottom: 1px solid #FF6600;
 }
 #link .primary:hover,
-#post-page li > a:hover,
-#post-page p > a:hover {
+#post-page .post-content .post-entry .entry-content p > a:hover {
   border-bottom: 1px solid #b34700;
 }
 .zoom-cursor,
@@ -803,7 +802,8 @@ body {
   }
   .inner-pad-responsive,
   #site-page .page-content #page-content-header,
-  #custom-page #inner-content .entry-content {
+  #custom-page #inner-content .entry-content,
+  #post-page .post-content .post-entry .entry-footer .author-info {
     padding-left: 80px;
     padding-right: 80px;
   }
@@ -818,7 +818,6 @@ body {
     clear: both;
   }
   .md-50,
-  #post-page .post-content .post-entry .entry-footer .author-info,
   #site-footer #inner-footer {
     width: 60%;
     margin-left: auto;
@@ -858,7 +857,8 @@ body {
   }
   .inner-pad-responsive,
   #site-page .page-content #page-content-header,
-  #custom-page #inner-content .entry-content {
+  #custom-page #inner-content .entry-content,
+  #post-page .post-content .post-entry .entry-footer .author-info {
     padding-left: 50px;
     padding-right: 50px;
   }
@@ -866,7 +866,6 @@ body {
     float: right;
   }
   .md-50,
-  #post-page .post-content .post-entry .entry-footer .author-info,
   #site-footer #inner-footer {
     width: 70%;
     margin-left: auto;
@@ -896,7 +895,8 @@ body {
   }
   .inner-pad-responsive,
   #site-page .page-content #page-content-header,
-  #custom-page #inner-content .entry-content {
+  #custom-page #inner-content .entry-content,
+  #post-page .post-content .post-entry .entry-footer .author-info {
     padding-left: 45px;
     padding-right: 45px;
   }
@@ -910,7 +910,6 @@ body {
     float: left;
   }
   .md-50,
-  #post-page .post-content .post-entry .entry-footer .author-info,
   #site-footer #inner-footer {
     width: 70%;
     margin-left: auto;
@@ -979,12 +978,12 @@ body {
   }
   .inner-pad-responsive,
   #site-page .page-content #page-content-header,
-  #custom-page #inner-content .entry-content {
+  #custom-page #inner-content .entry-content,
+  #post-page .post-content .post-entry .entry-footer .author-info {
     padding-left: 30px;
     padding-right: 30px;
   }
   .md-50,
-  #post-page .post-content .post-entry .entry-footer .author-info,
   #site-footer #inner-footer {
     width: 85%;
     margin-left: auto;

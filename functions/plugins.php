@@ -39,6 +39,45 @@ function abbey_custom_avatar( $avatar, $id_or_email, $size, $default, $alt, $arg
     return $avatar;
 }
 
+add_filter( 'wp_link_pages_link', 'abbey_post_navigation_link', 10, 2 );
+
+function abbey_post_navigation_link( $link, $i ){
+    global $page, $numpages, $multipage, $more;
+    $active = ( $i === $page ) ? "active" : "";
+    if ( $page === $numpages && $i === $page ){
+        $link = "<li class='active'><a>".esc_html( $page )."</a></li>";
+    } else {
+        $link = preg_replace('~<a(.*)>(.*)</a>~i',"<li class='$active'><a $1>$2</a></li>", $link );
+    }
+    return $link;
+}
+
+add_filter('wp_link_pages_args','abbey_add_next_and_number');
+function abbey_add_next_and_number( $args ){
+        global $page, $numpages, $multipage, $more, $pagenow;
+        $args['next_or_number'] = 'number';
+        $prev = '';
+        $next = '';
+        if ( $multipage ) {
+            if ( ! $more ) {
+                $i = $page - 1;
+                if ( $i && ! $more ) {
+                    $prev .= "<li>"._wp_link_page($i);
+                    $prev .= $args['link_before']. $args['previouspagelink'] . $args['link_after'] . '</a></li>';
+                }
+                $i = $page + 1;
+                if ( $i <= $numpages && ! $more ) {
+                    $next .= "<li>"._wp_link_page($i);
+                    $next .= $args['link_before']. $args['nextpagelink'] . $args['link_after'] . '</a></li>';
+                }
+            }
+        }
+        $args['before'] = $args['before'].$prev;
+        $args['after'] = $next.$args['after'];   
+    
+    return $args;
+}
+
 /*
 function modify_read_more_link() {
     return '<a class="more-link" href="' . get_permalink() . '">Your Read More Link Text</a>';

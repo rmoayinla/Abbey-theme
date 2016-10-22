@@ -99,21 +99,30 @@ function abbey_post_nav(){
 add_action( "abbey_theme_post_footer", "abbey_post_nav", 99);
 
 function abbey_post_author_info(){
+	$author = abbey_post_author();
+	$author_info = abbey_author_info( $author );
+
 	$html = "<div class='author-info'>";
-	$html .= "<div class='author-photo'>".abbey_author_photo( "", 64, "img-circle" ). "</div>";
+	$html .= "<div class='author-photo'>".abbey_author_photo( $author->ID, 64, "img-circle" ). "</div>";
 	$html .= sprintf( '<div class="author-title row">
 						<div class="author-name col-md-7"><h4 class="no-top-margin no-bottom-margin"> %1$s </h4></div>
 						<div class="author-rate col-md-5"> <em> %2$s </em> <span class="author-post-count"> %3$s </span>
 						</div></div>',
-						abbey_post_author( "display_name" ), 
+						$author->display_name, 
 						__( "Published posts:", "abbey" ),
-						abbey_post_author( "post_count" )
+						get_the_author_posts()
 					);
-	$html .= "<div class='author-description'>".esc_html( abbey_post_author( "description" ) ). "</div>";
-	$html .= sprintf( '<footer class="author-info-footer h4">%1$s<footer>',
-						implode( " ", abbey_author_info( abbey_post_author( "author" ) ) ) 
-					);
-	$html .= "</div>";
+	$html .= "<div class='author-description'>".esc_html( $author->description ). "</div>";
+	$html .= '<footer class="author-info-footer h4">';
+	if ( !empty( $author_info ) ){
+		$html .= "<ul class='list-inline'>";
+		foreach ( $author_info as $info ){
+			$html .= "<li>$info</li>";
+		}
+		$html .= "</ul>";
+	}
+	$html .= "</footer>";
+	$html .= "</div>"; //.author-info //
 
 	echo $html; 
 }
