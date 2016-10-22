@@ -10,11 +10,8 @@
 		 <?php endif; ?>
 
 		<div class="clearfix"> </div>
-		<div class="row" id="post-info">
-			<ul class="breadcrumb">
-				<li><?php?> </li>
-				<li><?php the_time('D F jS, Y g:i A'); ?> </li>
-			</ul>
+		<div class="" id="post-info">
+			<ul class="breadcrumb"><?php abbey_post_info(); ?></ul>
 		</div>
 	</header><!-- #page-content-header closes -->
 

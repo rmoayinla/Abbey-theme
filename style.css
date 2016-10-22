@@ -77,6 +77,10 @@ body {
   background-color: #fff;
   color: #000;
 }
+.no-bg,
+#post-page #post-content-header #post-info .breadcrumb {
+  background-color: transparent !important;
+}
 .white,
 #custom-page #page-content-header .page-title {
   color: #fff;
@@ -91,6 +95,10 @@ body {
 #link .primary:hover,
 #post-page .post-content .post-entry .entry-content p > a:hover {
   color: #b34700;
+}
+.gray,
+#post-page #post-content-header #post-info em {
+  color: #ddd;
 }
 .primary,
 #button .button-md,
@@ -291,7 +299,7 @@ body {
 }
 .margin-left-sm,
 #site-page .page-content .entry-content blockquote,
-#post-page #post-content-header .post-author .post-author-info,
+#post-page #post-content-header .post-author .post-author-name,
 #post-page .post-content .post-entry .entry-footer .author-info .author-title {
   margin-left: 15px;
 }
@@ -329,6 +337,7 @@ body {
 #custom-header #inner-header #header-contact,
 #front-page #services .service-body,
 #custom-page #inner-content .entry-content figure.alignleft .wp-caption-text,
+#post-page #post-content-header #post-info em,
 #post-page .post-content .post-excerpt {
   font-size: 13px;
 }
@@ -636,7 +645,10 @@ body {
   width: 100%;
   height: 640px !important;
 }
-#post-page #post-content-header .post-author .post-author-info {
+#post-page #post-content-header #post-info .fa {
+  font-size: 24px;
+}
+#post-page #post-content-header .post-author .post-author-name {
   vertical-align: middle;
 }
 #post-page .post-content .post-entry {

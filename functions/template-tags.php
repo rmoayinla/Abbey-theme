@@ -4,23 +4,6 @@ function abbey_author_photo( $id, $size = 32, $class = "" ){
 	return get_avatar( $id, $size, "", "", array("class" => $class ) );
 }
 
-function abbey_show_nav( $post, $nav = "previous" ){
-	$class = ( $nav === "previous" ) ? "previous-button" : "next-button";
-	$icon = ( $nav === "previous" ) ? "glyphicon-chevron-left" : "glyphicon glyphicon-chevron-right";
-	
-	return sprintf( '<a href="%1$s" class="%5$s-button" title="%2$s">
-				<span class="glyphicon %6$s"></span>
-		 		<p> %3$s </p><h4 class="%5$s-post-title">%4$s</h4>
-		 	   </a>',
-			get_permalink($post->ID),
-			sprintf( __( "Click to view %s post", "abbey" ), $nav ),
-			sprintf( __( "%s post:", "abbey" ), ucwords( $nav ) ), 
-			apply_filters( "the_title", $post->post_title ), 
-			esc_attr( $nav ),
-			esc_attr( $icon ) 
-			);
-}
-
 function abbey_post_author( $key = "" ){
 	global $authordata, $post;
 
@@ -44,6 +27,18 @@ function abbey_post_author( $key = "" ){
 	
 	*/
 	
+}
+
+function abbey_show_author( $echo = true ){
+	$author = abbey_post_author();
+	$html = sprintf( '<span class="post-author-image">%1$s</span>
+					<span class="post-author-name strong"> %2$s </span>', 
+					abbey_author_photo( $author->ID, 32, "img-circle" ), 
+					esc_html( $author->display_name ) 
+				);
+	if ( $echo ) 
+		echo $html;
+	return $html;
 }
 
 function abbey_author_info( $author, $key = "" ){
@@ -74,6 +69,25 @@ function abbey_author_info( $author, $key = "" ){
 	return $author_info;
 }
 
+function abbey_post_info( $echo = true ){
+	$info = array();
+	$info[] = sprintf ( '<em> %1$s </em> %2$s', __( "Posted by:", "abbey" ), abbey_show_author( false )
+						); 
+	$info[] = sprintf( '<span class="fa fa-clock-o"></span>&nbsp;<span>%1$s </span>',
+						get_the_time('D M jS, Y \@ g:i A')
+					); 
+	$post_infos = apply_filters( "abbey_post_info", $info );
+	$html = "";
+	if( !empty( $post_infos ) ) {
+		foreach ( $post_infos as $post_info ){
+			$html .= "<li>$post_info</li>\n";
+		}
+	}
+	if ( $echo )
+		echo $html; 
+	return $html;
+}
+
 function abbey_post_pagination( $args = array() ){
 	$defaults = array(
 		'before'           => '<ul class="pagination">',
@@ -89,4 +103,21 @@ function abbey_post_pagination( $args = array() ){
 	);
 	wp_link_pages( $defaults );
 
+}
+
+function abbey_show_nav( $post, $nav = "previous" ){
+	$class = ( $nav === "previous" ) ? "previous-button" : "next-button";
+	$icon = ( $nav === "previous" ) ? "glyphicon-chevron-left" : "glyphicon glyphicon-chevron-right";
+	
+	return sprintf( '<a href="%1$s" class="%5$s-button" title="%2$s">
+				<span class="glyphicon %6$s"></span>
+		 		<p> %3$s </p><h4 class="%5$s-post-title">%4$s</h4>
+		 	   </a>',
+			get_permalink($post->ID),
+			sprintf( __( "Click to view %s post", "abbey" ), $nav ),
+			sprintf( __( "%s post:", "abbey" ), ucwords( $nav ) ), 
+			apply_filters( "the_title", $post->post_title ), 
+			esc_attr( $nav ),
+			esc_attr( $icon ) 
+			);
 }

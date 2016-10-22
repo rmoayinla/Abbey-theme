@@ -4,8 +4,17 @@
 	}
 	#post-content-header{
 		&:extend(.margin-top-sm);
+		#post-info{
+			.breadcrumb{ &:extend(.no-bg); }
+			em{
+				&:extend(.font-small,.gray);
+			}
+			.fa{
+				font-size: 24px;
+			}
+		}
 		.post-author{
-			.post-author-info{
+			.post-author-name{
 				&:extend(.margin-left-sm);
 				vertical-align: middle;
 			}
