@@ -13,6 +13,13 @@
 		<div class="" id="post-info">
 			<ul class="breadcrumb"><?php abbey_post_info(); ?></ul>
 		</div>
+		<div>
+			<?php 
+			$cats = get_the_category();
+			$cat_link = get_category_link( $cats[0]->cat_ID );
+			print_r ( $cats ); 
+			?>
+		</div>
 	</header><!-- #page-content-header closes -->
 
 	<div class="row"><?php do_action("abbey_theme_after_page_header"); ?></div>

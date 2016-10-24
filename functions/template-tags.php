@@ -76,10 +76,13 @@ function abbey_post_info( $echo = true ){
 	$info[] = sprintf( '<span class="fa fa-clock-o"></span>&nbsp;<span>%1$s </span>',
 						get_the_time('D M jS, Y \@ g:i A')
 					); 
+	$info[] = 
 	$post_infos = apply_filters( "abbey_post_info", $info );
 	$html = "";
 	if( !empty( $post_infos ) ) {
-		foreach ( $post_infos as $post_info ){
+		foreach ( $post_infos as $key => $post_info ){
+			if ( $style === "right" )
+				$html .= "<li class='right'>$post_info</li>\n";
 			$html .= "<li>$post_info</li>\n";
 		}
 	}
