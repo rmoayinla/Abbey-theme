@@ -10,16 +10,7 @@
 		 <?php endif; ?>
 
 		<div class="clearfix"> </div>
-		<div class="" id="post-info">
-			<ul class="breadcrumb"><?php abbey_post_info(); ?></ul>
-		</div>
-		<div>
-			<?php 
-			$cats = get_the_category();
-			$cat_link = get_category_link( $cats[0]->cat_ID );
-			print_r ( $cats ); 
-			?>
-		</div>
+		<div class="" id="post-info"><ul class="breadcrumb"><?php abbey_post_info(); ?></ul></div>
 	</header><!-- #page-content-header closes -->
 
 	<div class="row"><?php do_action("abbey_theme_after_page_header"); ?></div>
@@ -33,8 +24,7 @@
 		
 		<div class="clearfix"></div>
 		
-		<aside class="entry-footer"> <?php do_action( "abbey_theme_post_footer" ) ?>
-		</aside>
+		<footer class="entry-footer"> <?php do_action( "abbey_theme_post_footer" ) ?></footer>
 		
 	</section>
 

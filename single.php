@@ -1,10 +1,11 @@
 <?php
-get_header(); ?>
+get_header(); 
+global $more; ?>
 
 	<main id="<?php abbey_theme_page_id(); ?>" class="row">
 		<?php if ( have_posts() ) : ?>
 		<?php while ( have_posts() ) : the_post(); ?>
-			<?php global $more; $more = 0; ?>
+			<?php $more = 0; ?>
 
 			<header id="site-content-header">
 				<?php do_action( "abbey_theme_before_post_content" ); ?>

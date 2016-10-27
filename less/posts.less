@@ -5,7 +5,12 @@
 	#post-content-header{
 		&:extend(.margin-top-sm);
 		#post-info{
-			.breadcrumb{ &:extend(.no-bg); }
+			.breadcrumb{ 
+			&:extend(.no-bg); 
+			li{
+				display: inline !important;
+				}
+			}
 			em{
 				&:extend(.font-small,.gray);
 			}
@@ -28,7 +33,7 @@
 			overflow: hidden;
 			border-color: #ddd;
 			.entry-content{
-				&:extend(.padding-bottom-sm, .margin-bottom-md);
+				&:extend(.padding-bottom-sm, .margin-bottom-sm);
 				figure.alignnone{
 					&:extend(#box-shadow .box-shadow-small, .border, .margin-bottom-sm);
 					border-radius: 0px 0px 10px 10px;
@@ -37,7 +42,17 @@
 						&:extend(.bg-gray);
 					}
 				}
-					p > a{
+				figure.alignleft{
+					&:extend(.border, .bg-light);
+					img{
+						&:extend(.full-width-image);
+					}
+				}
+				.well{
+					&:extend(.bg-white);
+					border-color: @primary-color;
+					.box-shadow (0px, 2px, 2px, @primary-color);
+				}	p > a{
 						&:extend(#link .primary); 
 						&:visited{
 
@@ -66,6 +81,9 @@
 			.entry-footer{
 				&:extend(.margin-minus-left-md, .margin-minus-right-md, .margin-top-sm);
 				color: #000;
+				.post-categories{
+					&:extend(.no-list-style);
+				}
 				.post-navigation{
 					.glyphicon{
 						font-size: 48px;

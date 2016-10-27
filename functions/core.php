@@ -1,7 +1,7 @@
 <?php
 
 function abbey_numerize($string){
-	$result = preg_replace("/[^0-9.]/", '', $string);
+	$result = preg_replace("/[^0-9.]/", '', $string); //use regex to remove non digit characters //
 	return $result;
 }
 
@@ -20,9 +20,9 @@ function abbey_nav_menu( $args = array() ){
 	                	'fallback_cb'       => '',
 	                	'walker'            => ''
 	            );
-	$args = wp_parse_args( $args, $defaults );
+	$args = wp_parse_args( $args, $defaults ); //replace the default arguments with the user arguments if set //
 
-	wp_nav_menu( $args );
+	wp_nav_menu( $args ); //call the wordpress menu function //
 
 }
 
@@ -91,7 +91,7 @@ function abbey_contact_icon($contact){
 			$icon = "fa-user";
 			break;
 		case "posts":
-			$icon = "fa-newspapar-o";
+			$icon = "fa-newspaper-o";
 			break;
 		default:
 			$icon = "fa-list"; // default icon if icon is not set nor found //
@@ -113,7 +113,7 @@ function abbey_display_contact( $contact, $heading ){
 		$contacts = $contact;
 		foreach ( $contacts as $contact_heading => $contact ){
 			$contact_heading = $contact_heading." ".$heading;
-			$html .= abbey_display_contact($contact, $contact_heading);
+			$html .= abbey_display_contact($contact, $contact_heading); // recursive function //
 		}
 	}
 
@@ -121,7 +121,7 @@ function abbey_display_contact( $contact, $heading ){
 }
 
 function abbey_get_contact( $type, $key = "" ){
-	global $abbey_defaults;
+	global $abbey_defaults; // theme default values set in theme_setup.php //
 	if( isset( $abbey_defaults["contacts"] ) ){
 		$contacts = $abbey_defaults["contacts"];
 		$contact_type = ( isset ( $contacts[ $type ] ) ) ? $contacts[$type] : "";
@@ -230,7 +230,7 @@ function abbey_primary_menu(){
 	               	 	)
 	);
 	if ( has_nav_menu( 'primary' ) ):
-    	abbey_nav_menu ( $args );
+    	abbey_nav_menu ( $args ); //this function is a wrapper function for wp_nav_menu
     endif;
 }
 add_action( "abbey_theme_primary_menu", "abbey_primary_menu" ); 
@@ -250,7 +250,7 @@ function abbey_secondary_menu( $args = array() ){
     );
     $args = ( count( $args ) > 0 ) ? wp_parse_args( $args, $defaults ) : $defaults;
 	if( has_nav_menu("secondary") ) :
-		abbey_nav_menu( $args );
+		abbey_nav_menu( $args ); // this function is a wrapper function for wp_nav_menu
 	endif;
 	
 }
@@ -266,11 +266,13 @@ function abbey_social_menu(){
 								'depth' => 1, 
 								'container' => 'ul', 
 								'menu_class' => 'nav', 
-								'walker' => new Abbey_Social_Nav_Walker()
+								'walker' => new Abbey_Social_Nav_Walker() // custom walker for social menu//
 							) 
 	);
-	if (! has_nav_menu("social") ) { abbey_show_social_contacts();}
-	else{ abbey_nav_menu ($defaults); }
+	if (! has_nav_menu("social") ) 
+		abbey_show_social_contacts(); //if there is no social menu set, just show the social contacts instead //
+	
+	abbey_nav_menu ($defaults);
 }
 
 /*
@@ -288,7 +290,7 @@ function abbey_post_class ( $class = "" ){
 *
 */
 function abbey_display_sidebar ( $sidebar_id ){
-	if ( is_active_sidebar( $sidebar_id ) ){
+	if ( is_active_sidebar( $sidebar_id ) ){ // check if a sidebar is registered with this id //
 		dynamic_sidebar( $sidebar_id );
 	} else {
 		echo __( "Sorry, there is no sidebar widget registerd with {$sidebar_id}", "abbey" );
@@ -306,7 +308,7 @@ function abbey_add_to_primary_menu ( $items, $args ) {
 	}
 	return $items;
 }
-add_filter( 'wp_nav_menu_items','abbey_add_to_primary_menu',10,2 );
+add_filter( 'wp_nav_menu_items','abbey_add_to_primary_menu',10,2 );//wp filter to add to nav menus //
 
 function abbey_add_extra_primary_menu ( $extras ){
 	$extras .= "<div class='navbar-right'><ul class='nav navbar-nav' id='primary-icon-nav'>";
@@ -314,9 +316,9 @@ function abbey_add_extra_primary_menu ( $extras ){
 		array(
 			"search" => "fa-search",
 			"comment" => "fa-comments", 
-			"read snippets" => "fa-code", 
+			"read-snippets" => "fa-code", 
 			"print" => "fa-print",
-			"read latest posts" => "fa-th"
+			"read-latest-posts" => "fa-th"
 		) 
 	);
 	foreach ( $icons as $title => $icon ){

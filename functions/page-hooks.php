@@ -127,3 +127,18 @@ function abbey_post_author_info(){
 	echo $html; 
 }
 add_action ( "abbey_theme_post_footer", "abbey_post_author_info", 20);
+
+function abbey_post_categories_and_tags(){
+	$html = "<div class='row inner-pad-responsive'>";
+	if ( count( get_the_category() ) > 0 ){
+		$html .= abbey_cats_or_tags( "categories" );
+	}
+	if ( count( get_the_tags() ) > 0 ){
+		$html .= abbey_cats_or_tags( "tags" );
+	}
+
+	$html .= "</div>";//.row div closes //
+
+	echo $html;
+}
+add_action ( "abbey_theme_post_footer", "abbey_post_categories_and_tags", 5);

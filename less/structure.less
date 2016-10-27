@@ -6,7 +6,7 @@ body{
 }
 .container-fluid, 
 .container{
-	overflow:hidden;
+	&:extend(.no-overflow);
 }
 
 .navbar{
@@ -263,7 +263,12 @@ body{
 .fixed{
 	position: fixed;
 }
-
+.no-overflow{
+	overflow: hidden;
+}
+.no-display{
+	display: none !important;
+}
 .icon-large{
 	font-size: 7em;
 }
@@ -343,6 +348,53 @@ body{
 	iframe[src *= "youtube"]{
 		&:extend(.max-full-width);
 		min-height: 314px;
+	}
+	.gallery{
+		&:extend(.margin-top-sm, .margin-bottom-sm);
+	}
+	.gallery-item{
+		&:extend(.relative, .no-overflow, .no-border);
+		&:hover{
+			&:extend(.border);
+			figcaption{
+				display: block !important;
+			}
+		}
+		figcaption{
+			&:extend(.bg-dark, .no-display);
+		}
+	}
+	.gallery-columns-2{
+		&:extend(.margin-right-xs);
+		.gallery-item{
+			&:extend(.inline, .pad-xs);
+			vertical-align: top;
+			width: 50% !important;
+			img{
+				&:extend(.full-width-image);
+			}
+		}
+	}
+	.gallery-columns-1{
+		&:extend(.pad-medium);
+		.gallery-item{
+			&:extend(.block, .margin-top-sm);
+			width: 100% !important;
+			img{
+				&:extend(.full-width-image);
+			}
+		}
+	}
+	.gallery-columns-3, 
+	div[class*="columns-4"]{
+		.gallery-item{
+			&:extend(.inline, .margin-right-xs, .margin-top-xs);
+			vertical-align: top;
+			width: 30% !important;
+			img{
+				&:extend(.full-width-image);
+			}
+		}
 	}
 				
 }

@@ -71,19 +71,25 @@ function abbey_author_info( $author, $key = "" ){
 
 function abbey_post_info( $echo = true ){
 	$info = array();
-	$info[] = sprintf ( '<em> %1$s </em> %2$s', __( "Posted by:", "abbey" ), abbey_show_author( false )
+	$cats = get_the_category(); // $cats[0]->name->categroy_count
+	$cat_link = get_category_link( $cats[0]->cat_ID );
+	$info["author"] = sprintf ( '<span class="sr-only"> %1$s </span> %2$s', __( "Posted by:", "abbey" ), abbey_show_author( false )
 						); 
-	$info[] = sprintf( '<span class="fa fa-clock-o"></span>&nbsp;<span>%1$s </span>',
-						get_the_time('D M jS, Y \@ g:i A')
+	$info["date"] = sprintf( '<time><span class="sr-only">%2$s</span><span>%1$s </span></time>',
+						get_the_time('D M jS, Y \@ g:i A'), 
+						__( "Posted on:", "abbey" )
 					); 
-	$info[] = 
+	$info["more"] = sprintf( '<a href="%1$s" title="%2$s" role="button" class="">%3$s </a>', 
+	 				esc_url( $cat_link ), 
+	 				__( "Click to read more posts", "abbey" ), 
+	 				sprintf( __( "More posts from %s", "abbey" ), esc_html( $cats[0]->name ) )
+	 				);
 	$post_infos = apply_filters( "abbey_post_info", $info );
 	$html = "";
 	if( !empty( $post_infos ) ) {
 		foreach ( $post_infos as $key => $post_info ){
-			if ( $style === "right" )
-				$html .= "<li class='right'>$post_info</li>\n";
-			$html .= "<li>$post_info</li>\n";
+			$class = esc_attr( $key );
+			$html .= "<li class='$class'>$post_info</li>\n";
 		}
 	}
 	if ( $echo )
@@ -123,4 +129,22 @@ function abbey_show_nav( $post, $nav = "previous" ){
 			esc_attr( $nav ),
 			esc_attr( $icon ) 
 			);
+}
+
+function abbey_cats_or_tags( $cats ){
+	$list = $title = $icon = ""; 
+	$list = ( $cats === "categories" ) ? get_the_category_list() : get_the_tag_list( "<ul class='tag-list'><li>", "</li><li>", "</li></ul>" ); 
+	$title = ( $cats === "categories" ) ? __( "This post can be found in:", "abbey" ) : __( "This post is tagged with:", "abbey" );
+	$icon = ( $cats === "categories" ) ? "fa-folder-open" : "fa-tags";
+	$html = sprintf( '<div class="col-md-6">
+							<span class="inline"><i class="fa %3$s fa-3x"></i></span>
+							<div class="inline middle">
+								<h4 class="oblique">%1$s</h4>
+								%2$s </div>
+							</div>', 
+							esc_html( $title ), 
+							$list, 
+							esc_attr( $icon )
+				);
+	return $html;
 }
