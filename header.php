@@ -14,7 +14,7 @@
 	
 </head>
 
-<body <?php body_class(); ?> >
+<body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage">
 	<div class="container-fluid" id="site-wrapper">
 	
 		<header id="sitehead" class="site-header row" role="header">

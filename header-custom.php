@@ -23,13 +23,12 @@ global $abbey_defaults;
 			<!-- link tags --> 
 			<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 			<link rel="shortcut icon" href="<?php ?>" />
-			<link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS2 Feed" 
-				href="<?php bloginfo('rss2_url'); ?>" />
+
      
 
 			<?php wp_head(); ?>
 		</head> 
-		<body <?php body_class(); ?>>
+		<body <?php body_class(); ?>itemscope itemtype="http://schema.org/WebPage">
 			<div class="container-fluid" id="site-wrapper">
 				<header id="custom-header" class="row" role="header">
 					<div id="header-top"> <?php do_action( "abbey_theme_before_header" ); ?></div>

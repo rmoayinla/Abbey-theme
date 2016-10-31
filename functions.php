@@ -2,6 +2,7 @@
 
 require trailingslashit( get_template_directory () )."libs/wp_bootstrap_navwalker.php";
 require trailingslashit( get_template_directory () )."libs/abbey_social_navwalker.php";
+require trailingslashit( get_template_directory () )."libs/abbey_bootstrap_comments.php";
 
 require trailingslashit( get_template_directory () )."functions/theme_setup.php";
 require trailingslashit( get_template_directory () )."functions/front-page-hooks.php";
@@ -166,6 +167,10 @@ if( !function_exists( "abbey_theme_enque_styles" ) ) {
 		*
 		*/
 		wp_enqueue_style("abbey-fontawesome-css", get_template_directory_uri()."/css/font-awesome.min.css" ); 
+
+		if ( !is_admin() && is_singular() && comments_open() && get_option('thread_comments') )
+  			wp_enqueue_script( 'comment-reply' );
+
 		
 		/*
 		* action hook for other enqueueus 

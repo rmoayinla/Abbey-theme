@@ -1,7 +1,7 @@
 <?php
 
 function abbey_author_photo( $id, $size = 32, $class = "" ){
-	return get_avatar( $id, $size, "", "", array("class" => $class ) );
+	return get_avatar( $id, $size, "user_upload", "", array("class" => $class ) );
 }
 
 function abbey_post_author( $key = "" ){
@@ -75,9 +75,10 @@ function abbey_post_info( $echo = true ){
 	$cat_link = get_category_link( $cats[0]->cat_ID );
 	$info["author"] = sprintf ( '<span class="sr-only"> %1$s </span> %2$s', __( "Posted by:", "abbey" ), abbey_show_author( false )
 						); 
-	$info["date"] = sprintf( '<time><span class="sr-only">%2$s</span><span>%1$s </span></time>',
-						get_the_time('D M jS, Y \@ g:i A'), 
-						__( "Posted on:", "abbey" )
+	$info["date"] = sprintf( '<time datetime="%3$s"><span class="sr-only">%2$s</span><span>%1$s </span></time>',
+						get_the_time( get_option( 'date_format' ).' \@ '.get_option( 'time_format' ) ), 
+						__( "Posted on:", "abbey" ), 
+						get_the_time('Y-md-d')
 					); 
 	$info["more"] = sprintf( '<a href="%1$s" title="%2$s" role="button" class="">%3$s </a>', 
 	 				esc_url( $cat_link ), 
@@ -137,7 +138,7 @@ function abbey_cats_or_tags( $cats ){
 	$title = ( $cats === "categories" ) ? __( "This post can be found in:", "abbey" ) : __( "This post is tagged with:", "abbey" );
 	$icon = ( $cats === "categories" ) ? "fa-folder-open" : "fa-tags";
 	$html = sprintf( '<div class="col-md-6">
-							<span class="inline"><i class="fa %3$s fa-3x"></i></span>
+							<span class="inline"><i class="fa %3$s fa-2x"></i></span>
 							<div class="inline middle">
 								<h4 class="oblique">%1$s</h4>
 								%2$s </div>
@@ -147,4 +148,14 @@ function abbey_cats_or_tags( $cats ){
 							esc_attr( $icon )
 				);
 	return $html;
+}
+
+function abbey_list_comments( $args = array() ){
+	wp_list_comments( array(
+		'style'      => 'ol',
+		'short_ping' => true,
+		'avatar_size'=> 60,	
+		'callback'	=> 'html5_comment'			
+		) 
+	);
 }

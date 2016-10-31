@@ -13,6 +13,8 @@ global $more; ?>
 			
 			<?php get_template_part("templates/content", "post"); ?>
 
+			
+			
 		<?php endwhile; ?> 
 
 	<?php else : get_template_part("templates/content", "none"); ?>

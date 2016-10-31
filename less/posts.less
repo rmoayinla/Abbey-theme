@@ -6,16 +6,10 @@
 		&:extend(.margin-top-sm);
 		#post-info{
 			.breadcrumb{ 
-			&:extend(.no-bg); 
+			&:extend(.no-bg, .font-small, .dark); 
 			li{
 				display: inline !important;
 				}
-			}
-			em{
-				&:extend(.font-small,.gray);
-			}
-			.fa{
-				font-size: 24px;
 			}
 		}
 		.post-author{
@@ -50,8 +44,8 @@
 				}
 				.well{
 					&:extend(.bg-white);
-					border-color: @primary-color;
-					.box-shadow (0px, 2px, 2px, @primary-color);
+					border: 3px dotted @primary-color;
+
 				}	p > a{
 						&:extend(#link .primary); 
 						&:visited{
@@ -81,7 +75,7 @@
 			.entry-footer{
 				&:extend(.margin-minus-left-md, .margin-minus-right-md, .margin-top-sm);
 				color: #000;
-				.post-categories{
+				.post-categories, .tag-list{
 					&:extend(.no-list-style);
 				}
 				.post-navigation{
@@ -116,7 +110,7 @@
 					}
 				}
 				.author-info{
-					&:extend(.pad-medium, .margin-bottom-md, .bg-gray, .inner-pad-responsive);
+					&:extend(.pad-medium, .bg-gray, .inner-pad-responsive);
 					.author-photo, .author-title{
 						&:extend(.inline);
 					}

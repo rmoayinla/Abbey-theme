@@ -3,8 +3,8 @@
 function abbey_page_title(){
 	global $abbey_defaults;
 	$page_description = ( !empty( $abbey_defaults["page"]["description"] ) ) ? esc_html( $abbey_defaults["page"]["description"] ) : "";
-	$title = '<h1 class="page-title">' . get_the_title() . '</h1>
-		<summary class="description">
+	$title = '<h1 class="page-title" itemprop="headline">' . get_the_title() . '</h1>
+		<summary class="description" itemprop="summary">
 			<em>'.apply_filters( "abbey_page_description", $page_description, get_the_ID() ) . '</em>.
 		</summary>';
 	echo apply_filters( "abbey_theme_page_title", $title );
@@ -12,8 +12,8 @@ function abbey_page_title(){
 
 function abbey_post_title(){
 	$summary = get_the_excerpt();
-	$title = '<h1 class="page-title">' . get_the_title() . '</h1>
-		<summary class="post-excerpt">
+	$title = '<h1 class="page-title" itemprop="headline">' . get_the_title() . '</h1>
+		<summary class="post-excerpt" itemprop="summary">
 			<em>'.apply_filters( "abbey_post_summary", $summary, get_the_ID() ) . '</em>.
 		</summary>';
 	echo apply_filters( "abbey_theme_post_title", $title );

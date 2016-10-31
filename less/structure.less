@@ -303,6 +303,9 @@ body{
 .max-full-width{
 	max-width: 100% !important;
 }
+.full-width{
+	width: 100%;
+}
 
 .entry-content{
 	line-height: 1.5em;
@@ -350,7 +353,7 @@ body{
 		min-height: 314px;
 	}
 	.gallery{
-		&:extend(.margin-top-sm, .margin-bottom-sm);
+		&:extend(.margin-top-sm, .margin-bottom-sm, .max-full-width);
 	}
 	.gallery-item{
 		&:extend(.relative, .no-overflow, .no-border);
@@ -360,6 +363,9 @@ body{
 				display: block !important;
 			}
 		}
+		img{
+			&:extend(.full-width-image);
+		}
 		figcaption{
 			&:extend(.bg-dark, .no-display);
 		}
@@ -367,33 +373,22 @@ body{
 	.gallery-columns-2{
 		&:extend(.margin-right-xs);
 		.gallery-item{
-			&:extend(.inline, .pad-xs);
+			&:extend(.inline, .pad-xs, .half-largescreen);
 			vertical-align: top;
-			width: 50% !important;
-			img{
-				&:extend(.full-width-image);
-			}
+			
 		}
 	}
 	.gallery-columns-1{
 		&:extend(.pad-medium);
 		.gallery-item{
-			&:extend(.block, .margin-top-sm);
-			width: 100% !important;
-			img{
-				&:extend(.full-width-image);
-			}
+			&:extend(.block, .margin-top-sm, .full-width);
 		}
 	}
 	.gallery-columns-3, 
 	div[class*="columns-4"]{
 		.gallery-item{
-			&:extend(.inline, .margin-right-xs, .margin-top-xs);
+			&:extend(.inline, .margin-right-xs, .margin-top-xs, .third-largescreen, .half-mobile, .half-tablets);
 			vertical-align: top;
-			width: 30% !important;
-			img{
-				&:extend(.full-width-image);
-			}
 		}
 	}
 				

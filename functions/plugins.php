@@ -8,7 +8,7 @@ function remove_width_attribute( $html ) {
    return $html;
 }
 // Apply filter
-add_filter( 'get_avatar' , 'abbey_custom_avatar' , 1 , 6 );
+add_filter( 'get_avatar' , 'abbey_custom_avatar' , 1 , 6 );//
 
 function abbey_custom_avatar( $avatar, $id_or_email, $size, $default, $alt, $args ) {
     $user = false;
@@ -29,7 +29,7 @@ function abbey_custom_avatar( $avatar, $id_or_email, $size, $default, $alt, $arg
         $user = get_user_by( 'email', $id_or_email );	
     }
 
-    if ( $user && is_object( $user ) ) {
+    if ( $user && is_object( $user ) && $default === "user_upload" ) {
             $avatar = $abbey_defaults["admin"]["pics"];
             $class = ( !empty($args) && isset( $args["class"] ) ) ? esc_attr( $args["class"] ) : "";
             $avatar = "<img alt='{$alt}' src='{$avatar}' class='avatar avatar-{$size} {$class}' height='{$size}' width='{$size}' />";
@@ -76,6 +76,17 @@ function abbey_add_next_and_number( $args ){
         $args['after'] = $next.$args['after'];   
     
     return $args;
+}
+
+add_filter( 'avatar_defaults', 'new_default_avatar' );
+
+function new_default_avatar ( $avatar_defaults ) {
+    global $abbey_defaults;
+        //Set the URL where the image file for your avatar is located
+        $new_avatar_url = site_url()."/img/author.jpg";
+        //Set the text that will appear to the right of your avatar in Settings>>Discussion
+        $avatar_defaults[$new_avatar_url] = 'Custom Avatar';
+        return $avatar_defaults;
 }
 
 /*

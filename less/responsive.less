@@ -82,6 +82,12 @@
 	.page-title{
 		font-size: 48px;
 	}
+	.half-largescreen{
+		width: 48%;
+	}
+	.third-largescreen{
+		width: 31%;
+	}
 }
 
 /* responsive design for desktops i.e. between 769 and 1026px */
@@ -113,6 +119,9 @@
 	}
 	#main-header #header-contact{
 		padding: 5px 15px 5px 15px;
+	}
+	.half-largescreen{
+		width: 48%;
 	}
 }
 
@@ -198,6 +207,12 @@
 			}
 		}
 	}
+	.half-tablets{
+		width: 46%;
+	}
+	.full-width-tablets{
+		width: 100%;
+	}
 }
 
 
@@ -209,7 +224,7 @@
 	}
 	.full-width-xs{
 		float: none;
-		width: 90%; 
+		width: 100%; 
 		margin: auto;
 	}
 
@@ -287,7 +302,7 @@
 	}
 	.entry-content{
 		&:extend(.float-none-xs);
-		figure.alignleft{
+		figure.alignleft {
 			max-width: 45% !important;
 		}
 	}
@@ -303,4 +318,11 @@
 			&:extend(.inner-padding-mobile);
 		}
 	}
+	.half-mobile{
+		width: 46%;
+	}
+	.full-width-mobile{
+		width: 100%;
+	}
+
 }

@@ -336,8 +336,44 @@ function abbey_add_extra_primary_menu ( $extras ){
 }
 add_filter( "abbey_extra_primary_menu", "abbey_add_extra_primary_menu" );
 
+function abbey_comments_args(){
+	$commenter = wp_get_current_commenter();
+	$fields = array(
+	'author' => sprintf( '<div class="comment-form-author form-group">
+						<label for="author">%1$s<span class="required">*</span></label>
+						<input id="author" name="author" type="text" value="%2$s" maxlength="245" class="form-control" />
+						</div>',  
+						__( 'Name', 'abbey' ), 
+						esc_attr( $commenter['comment_author'] ) 
+				), 
+	'email'  => sprintf( '<div class="comment-form-email form-group">
+						<label for="email">%1$s<span class="required">*</span></label> 
+						<input id="email" name="email" type="email" value="" maxlength="100" aria-describedby="email-notes" class="form-control"/>
+						</div>',
+						__( 'Email' ), 
+						esc_attr(  $commenter['comment_author_email'] )
+					)
+ 	);
+
+	$args = array(
+		"fields" => $fields, 
+		"comment_field" => sprintf( '<div class="comment-form-comment form-group">
+									<label for="comment">%1$s</label> 
+									<textarea id="comment" name="comment" rows="3" maxlength="65525" aria-required="true" 
+										required="required" placeholder="%2$s" class="form-control"></textarea>
+									</div>',
+							 __( 'Comment', 'abbey' ), 
+							 __( "Enter your comment", "abbey" )
+							), 
+		'submit_button' => '<input name="%1$s" type="submit" id="%2$s" class="%3$s btn btn-block" value="%4$s" />',
+		'submit_field'  => '<div class="form-submit form-group">%1$s %2$s</div>'
 
 
+
+	); 
+
+	return $args;
+}
 
 
 
