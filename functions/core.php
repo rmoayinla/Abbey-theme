@@ -365,7 +365,7 @@ function abbey_comments_args(){
 							 __( 'Comment', 'abbey' ), 
 							 __( "Enter your comment", "abbey" )
 							), 
-		'submit_button' => '<input name="%1$s" type="submit" id="%2$s" class="%3$s btn btn-block" value="%4$s" />',
+		'submit_button' => '<button name="%1$s" type="submit" id="%2$s" class="%3$s btn btn-block btn-primary">%4$s</button>',
 		'submit_field'  => '<div class="form-submit form-group">%1$s %2$s</div>'
 
 

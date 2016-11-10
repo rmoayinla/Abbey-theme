@@ -2,6 +2,30 @@
 	&:extend( .margin-top-md, .bg-white, .pad-medium, #box-shadow .box-shadow-md );
 	.media{
 		&:extend( .margin-bottom-md );
+		.media-left{
+			p{
+			&:extend(.margin-top-xs);
+			}
+		}
+		.media-body{
+			&:extend(.relative);
+			time{
+			&:extend(.font-small, .oblique, .dark);
+			}
+			.comment-content{
+			&:extend(.pad-small,.no-left-padding);
+			}
+			.list-inline{
+			.collapse.in{
+				&:extend(.inline);
+			}
+			}
+		}
+		.media-heading{
+			.secondary{
+				&:extend(.oblique, .gray);
+			}
+		}
 	}
 	ol.children{
 		&:extend( .margin-top-sm );

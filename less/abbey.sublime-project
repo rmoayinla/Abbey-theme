@@ -6,6 +6,9 @@
 		},
 		{
 			"path": "/C/wamp/www/wp/wp-content/plugins/abbey-contact-form"
+		},
+		{
+			"path": "/C/wamp/www/wp/wp-content/plugins/abbey-ajax-comment"
 		}
 	],
 	"settings":

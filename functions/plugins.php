@@ -89,6 +89,35 @@ function new_default_avatar ( $avatar_defaults ) {
         return $avatar_defaults;
 }
 
+add_filter( 'comment_class', 'abbey_custom_comment_class', 10, 5 );
+function abbey_custom_comment_class ( $classes, $class, $comment_ID, $comment, $post_id ){
+    $status = ( !empty( wp_get_comment_status( $comment_ID ) ) ) ? esc_attr( wp_get_comment_status( $comment_ID ) ) : "";
+    $classes[] = $status; 
+    
+    return $classes; 
+}
+
+add_action('pre_get_comments', 'abbey_show_all_comments' ); 
+function abbey_show_all_comments ( $query ) {
+    if ( is_admin() || !is_user_logged_in() || !current_user_can( 'moderate_comments' ) )
+        return;
+    $args = array( 'status' => [ 'all', 'spam' ] );
+
+    $query->query_vars = wp_parse_args( $args, $query->query_vars );
+
+}
+
+add_filter( 'comment_reply_link', 'abbey_custom_comment_reply_link', 10, 4 ); 
+function abbey_custom_comment_reply_link ( $link, $args, $comment, $post ){
+    $link = preg_replace('~<a(.*)>(.*)</a>~i',"<a $1><span class='fa fa-reply'></span>&nbsp;$2</a>", $link );
+    return $link;
+}
+
+add_filter( 'edit_comment_link', 'abbey_custom_edit_comment_link', 10, 3 );
+function abbey_custom_edit_comment_link ( $link, $comment_ID, $text ){
+    $link = preg_replace('~<a(.*)>(.*)</a>~i',"<a $1 target='_blank'><span class='fa fa-pencil'></span>&nbsp;$2</a>", $link );
+    return $link;
+}
 /*
 function modify_read_more_link() {
     return '<a class="more-link" href="' . get_permalink() . '">Your Read More Link Text</a>';
