@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"abbey_custom",
+				"abbey_custom_comment_reply"
+			],
+			[
+				"appro",
+				"approve_url"
+			],
+			[
+				"comment",
+				"comment_ID"
+			],
+			[
+				"abbey_cust",
+				"abbey_custom_comment_class"
+			],
+			[
 				"abbe",
 				"abbeyContact"
 			],
@@ -164,51 +180,44 @@
 	"buffers":
 	[
 		{
-			"file": "structure.less",
+			"file": "/C/wamp/www/wp/wp-content/plugins/abbey-ajax-comment/abbey-ajax-comment.php",
 			"settings":
 			{
-				"buffer_size": 4907,
-				"line_ending": "Unix"
+				"buffer_size": 3846,
+				"line_ending": "Windows",
+				"name": "<?php"
 			}
 		},
 		{
-			"file": "/C/wamp/www/wp/wp-content/themes/Abbey/single.php",
+			"file": "/C/wamp/www/wp/wp-content/plugins/abbey-ajax-comment/abbey-comment-rating.php",
 			"settings":
 			{
-				"buffer_size": 514,
+				"buffer_size": 3168,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "/C/wamp/www/wp/wp-content/themes/Abbey/templates/content-post.php",
+			"file": "/C/wamp/www/wp/wp-content/plugins/abbey-ajax-comment/abbey-ajax-comment.js",
 			"settings":
 			{
-				"buffer_size": 1144,
+				"buffer_size": 2096,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "posts.less",
+			"file": "/C/wamp/www/wp/wp-content/plugins/abbey-contact-form/contact-form.js",
 			"settings":
 			{
-				"buffer_size": 2279,
+				"buffer_size": 1394,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "responsive.less",
+			"file": "/C/wamp/www/wp/wp-content/themes/Abbey/functions/plugins.php",
 			"settings":
 			{
-				"buffer_size": 5148,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "misc.less",
-			"settings":
-			{
-				"buffer_size": 1904,
-				"line_ending": "Unix"
+				"buffer_size": 6244,
+				"line_ending": "Windows"
 			}
 		}
 	],
@@ -260,38 +269,47 @@
 	},
 	"file_history":
 	[
-		"/C/wamp/www/wp/wp-content/themes/Abbey/functions/page-hooks.php",
-		"/C/wamp/www/wp/wp-content/themes/Abbey/functions/template-tags.php",
+		"/C/wamp/www/wp/wp-content/themes/Abbey/functions/front-page-hooks.php",
 		"/C/wamp/www/wp/wp-content/themes/Abbey/functions/post-hooks.php",
-		"/C/wamp/www/wp/wp-content/themes/Abbey/functions/core.php",
-		"/C/wamp/www/wp/wp-content/themes/Abbey/functions/plugins.php",
-		"/C/wamp/www/wp/wp-content/themes/Abbey/functions.php",
 		"/C/wamp/www/wp/wp-content/themes/Abbey/functions/theme_setup.php",
+		"/C/wamp/www/wp/wp-content/themes/Abbey/functions/template-tags.php",
+		"/C/wamp/www/wp/wp-content/themes/Abbey/functions/core.php",
+		"/C/wamp/www/wp/wp-content/themes/Abbey/libs/abbey_bootstrap_comments.php",
+		"/C/wamp/www/wp/wp-content/themes/Abbey/less/comments.less",
+		"/C/wamp/www/wp/wp-content/themes/Abbey/less/structure.less",
+		"/C/wamp/www/wp/wp-content/themes/Abbey/less/posts.less",
+		"/C/wamp/www/wp/wp-content/plugins/abbey-ajax-comment/abbey-html5-comment.php",
+		"/C/wamp/www/wp/wp-content/plugins/abbey-contact-form/contact-form.php",
+		"/C/wamp/www/wp/wp-content/themes/Abbey/functions/plugins.php",
+		"/C/wamp/www/wp/wp-content/plugins/abbey-ajax-comment/abbey-hmtl5-comment.php",
+		"/C/wamp/www/wp/wp-content/themes/Abbey/comments.php",
+		"/C/wamp/www/wp/wp-content/plugins/abbey-contact-form/contact-form.js",
+		"/C/wamp/www/wp/wp-content/themes/Abbey/templates/content-post.php",
+		"/C/wamp/www/wp/wp-content/plugins/abbey-comments-meta/comments-meta.php",
+		"/C/wamp/www/wp/wp-content/themes/Abbey/less/misc.less",
+		"/C/wamp/www/wp/wp-content/themes/Abbey/libs/wp_bootstrap_navwalker.php",
+		"/C/wamp/www/wp/wp-content/themes/Abbey/less/responsive.less",
+		"/C/wamp/www/wp/wp-content/themes/Abbey/header-custom.php",
+		"/C/wamp/www/wp/wp-content/themes/Abbey/header.php",
+		"/C/wamp/www/wp/wp-content/themes/Abbey/functions/page-hooks.php",
+		"/C/wamp/www/wp/wp-content/themes/Abbey/functions.php",
+		"/C/wamp/www/wp/wp-content/themes/Abbey/footer.php",
+		"/C/wamp/www/wp/wp-content/themes/Abbey/single.php",
+		"/C/wamp/www/wp/wp-content/themes/Abbey/less/style.less",
+		"/C/wamp/www/wp/wp-content/themes/Abbey/less/mixins.less",
 		"/C/wamp/www/wp/wp-content/themes/Abbey/partials/custom-page.php",
 		"/C/wamp/www/wp/wp-content/themes/Abbey/templates/content-custom-page.php",
 		"/C/wamp/www/wp/wp-content/themes/Abbey/less/page.less",
 		"/C/wamp/www/wp/wp-content/themes/Abbey/page.php",
 		"/C/wamp/www/wp/wp-content/themes/Abbey/templates/content-page.php",
-		"/C/wamp/www/wp/wp-content/themes/Abbey/templates/content-post.php",
-		"/C/wamp/www/wp/wp-content/themes/Abbey/single.php",
-		"/C/wamp/www/wp/wp-content/themes/Abbey/less/posts.less",
-		"/C/wamp/www/wp/wp-content/themes/Abbey/less/responsive.less",
-		"/C/wamp/www/wp/wp-content/themes/Abbey/less/mixins.less",
-		"/C/wamp/www/wp/wp-content/themes/Abbey/less/misc.less",
 		"/C/wamp/www/wp/wp-content/themes/Abbey/style.css",
 		"/C/wamp/www/wp/wp-content/plugins/abbey-plugins/extend-tinymce.php",
-		"/C/wamp/www/wp/wp-content/themes/Abbey/less/structure.less",
-		"/C/wamp/www/wp/wp-content/plugins/abbey-contact-form/contact-form.js",
-		"/C/wamp/www/wp/wp-content/plugins/abbey-contact-form/contact-form.php",
-		"/C/wamp/www/wp/wp-content/themes/Abbey/header.php",
 		"/C/wamp/www/wp/wp-content/themes/Abbey/js/script.js",
 		"/C/wamp/www/wp/wp-content/plugins/abbey-plugins/abbey-contact-form/contact-form.js",
 		"/C/wamp/www/wp/wp-content/plugins/abbey-plugins/abbey-contact-form/contact-form.php",
 		"/C/wamp/www/wp/wp-content/plugins/abbey-plugins/contact-form.php",
-		"/C/wamp/www/wp/wp-content/themes/Abbey/functions/front-page-hooks.php",
 		"/C/wamp/www/wp/wp-content/plugins/abbey-plugins/post_templates.php",
 		"/C/wamp/www/wp/wp-content/plugins/abbey-plugins/abbey-plugins.php",
-		"/C/wamp/www/wp/wp-content/themes/Abbey/footer.php",
 		"/C/wamp/www/wp/wp-content/themes/Abbey/less/footer.less",
 		"/C/wamp/www/wp/wp-content/themes/Abbey/less/images.less",
 		"/C/wamp/www/wp/wp-content/themes/Abbey/custom-single.php",
@@ -304,17 +322,14 @@
 		"/C/wamp/www/wp/wp-content/themes/Abbey/less/abbey.sublime-workspace",
 		"/C/wamp/www/wp/wp-content/themes/Abbey/less/variables.less",
 		"/C/wamp/www/wp/wp-content/plugins/abbey-plugins/register_post_types.php",
-		"/C/wamp/www/wp/wp-content/themes/Abbey/less/style.less",
 		"/C/wamp/www/wp/wp-content/themes/Abbey/front-page.php",
 		"/C/wamp/www/wp/wp-content/themes/Abbey/less/front-page.less",
 		"/C/wamp/www/wp/wp-content/themes/Abbey/templates/content-front-page.php",
 		"/C/wamp/www/wp/wp-content/themes/Abbey/less/header.less",
 		"/C/wamp/www/wp/wp-content/themes/Abbey/less/navigation.less",
-		"/C/wamp/www/wp/wp-content/themes/Abbey/header-custom.php",
 		"/C/wamp/www/wp/wp-content/themes/Abbey/less/sidebar.less",
 		"/C/wamp/www/wp/wp-content/themes/Abbey/templates/content-none.php",
 		"/C/wamp/www/wp/wp-content/themes/Abbey/404.php",
-		"/C/wamp/www/wp/wp-content/themes/Abbey/libs/wp_bootstrap_navwalker.php",
 		"/C/wamp/www/wp/wp-content/themes/Abbey/libs/abbey_social_navwalker.php",
 		"/C/wamp/www/wp/wp-content/themes/Abbey/partials/header-custom.php",
 		"/C/wamp/www/wp/wp-content/themes/Abbey/sidebar-404.php",
@@ -381,13 +396,7 @@
 		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.934/sparkling/inc/metaboxes.php",
 		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.934/sparkling/inc/navwalker.php",
 		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.934/sparkling/functions.php",
-		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.540/wordpress/wp-content/themes/twentyfifteen/functions.php",
-		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.540/wordpress/wp-content/themes/twentyfifteen/inc/custom-header.php",
-		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.540/wordpress/wp-content/themes/twentyfifteen/style.css",
-		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.540/wordpress/wp-content/themes/twentyfifteen/inc/template-tags.php",
-		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.540/wordpress/wp-content/themes/twentyfifteen/content.php",
-		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.540/wordpress/wp-content/themes/twentyfifteen/single.php",
-		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.540/wordpress/wp-content/themes/twentyfifteen/page.php"
+		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.540/wordpress/wp-content/themes/twentyfifteen/functions.php"
 	],
 	"find":
 	{
@@ -405,6 +414,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"= ",
+			"largescreen",
 			"	\n",
 			">\";",
 			"site_url()",
@@ -438,23 +449,23 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "structure.less",
+					"file": "/C/wamp/www/wp/wp-content/plugins/abbey-ajax-comment/abbey-ajax-comment.php",
 					"settings":
 					{
-						"buffer_size": 4907,
+						"buffer_size": 3846,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								621,
-								621
+								291,
+								291
 							]
 						],
 						"settings":
@@ -480,9 +491,40 @@
 								{
 									"characters": ".#",
 									"selector": "text.html"
-								},
+								}
+							],
+							"auto_name": "<?php",
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/C/wamp/www/wp/wp-content/plugins/abbey-ajax-comment/abbey-comment-rating.php",
+					"settings":
+					{
+						"buffer_size": 3168,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2212,
+								2212
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
 								{
-									"characters": ".#",
+									"characters": "<",
 									"selector": "text.html"
 								},
 								{
@@ -491,6 +533,40 @@
 								},
 								{
 									"characters": ".#",
+									"selector": "text.html"
+								}
+							],
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 653.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/C/wamp/www/wp/wp-content/plugins/abbey-ajax-comment/abbey-ajax-comment.js",
+					"settings":
+					{
+						"buffer_size": 2096,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1686,
+								1686
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": "<",
 									"selector": "text.html"
 								},
 								{
@@ -510,21 +586,21 @@
 									"selector": "text.html"
 								}
 							],
-							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 4217.0,
+						"translation.y": 606.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "/C/wamp/www/wp/wp-content/themes/Abbey/single.php",
+					"buffer": 3,
+					"file": "/C/wamp/www/wp/wp-content/plugins/abbey-contact-form/contact-form.js",
 					"settings":
 					{
-						"buffer_size": 514,
+						"buffer_size": 1394,
 						"regions":
 						{
 						},
@@ -564,145 +640,29 @@
 									"selector": "text.html"
 								}
 							],
-							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "/C/wamp/www/wp/wp-content/themes/Abbey/templates/content-post.php",
-					"settings":
-					{
-						"buffer_size": 1144,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1081,
-								1081
-							]
-						],
-						"settings":
-						{
-							"auto_complete_triggers":
-							[
-								{
-									"characters": "<",
-									"selector": "text.html"
-								},
-								{
-									"characters": ".#",
-									"selector": "text.html"
-								},
-								{
-									"characters": ".#",
-									"selector": "text.html"
-								},
-								{
-									"characters": ".#",
-									"selector": "text.html"
-								},
-								{
-									"characters": ".#",
-									"selector": "text.html"
-								},
-								{
-									"characters": ".#",
-									"selector": "text.html"
-								}
-							],
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "posts.less",
-					"settings":
-					{
-						"buffer_size": 2279,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								734,
-								734
-							]
-						],
-						"settings":
-						{
-							"auto_complete_triggers":
-							[
-								{
-									"characters": "<",
-									"selector": "text.html"
-								},
-								{
-									"characters": ".#",
-									"selector": "text.html"
-								},
-								{
-									"characters": ".#",
-									"selector": "text.html"
-								},
-								{
-									"characters": ".#",
-									"selector": "text.html"
-								},
-								{
-									"characters": ".#",
-									"selector": "text.html"
-								},
-								{
-									"characters": ".#",
-									"selector": "text.html"
-								},
-								{
-									"characters": ".#",
-									"selector": "text.html"
-								},
-								{
-									"characters": ".#",
-									"selector": "text.html"
-								}
-							],
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 39.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 4,
-					"file": "responsive.less",
+					"file": "/C/wamp/www/wp/wp-content/themes/Abbey/functions/plugins.php",
 					"settings":
 					{
-						"buffer_size": 5148,
+						"buffer_size": 6244,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1298,
-								1298
+								4670,
+								4670
 							]
 						],
 						"settings":
@@ -720,39 +680,9 @@
 								{
 									"characters": ".#",
 									"selector": "text.html"
-								}
-							],
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 321.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "misc.less",
-					"settings":
-					{
-						"buffer_size": 1904,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1662,
-								1662
-							]
-						],
-						"settings":
-						{
-							"auto_complete_triggers":
-							[
+								},
 								{
-									"characters": "<",
+									"characters": ".#",
 									"selector": "text.html"
 								},
 								{
@@ -764,11 +694,12 @@
 									"selector": "text.html"
 								}
 							],
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 572.0,
+						"translation.y": 1424.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

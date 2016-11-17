@@ -47,6 +47,7 @@ function html5_comment( $comment, $args, $depth ) {
 				<div class="comment-time">
 					<time datetime="<?php comment_time( 'c' ); ?>" itemprop="datePublished">
 						<?php printf( _x( '%1$s at %2$s', '1: date, 2: time' ), get_comment_date(), get_comment_time() ); ?>
+						<small> &nbsp; - <?php echo human_time_diff( get_comment_time("U"), current_time("timestamp") ); ?></small>
 					</time>
 				</div><!-- .comment-time -->
 
@@ -75,6 +76,15 @@ function html5_comment( $comment, $args, $depth ) {
 						echo sprintf( '<li class="%1$s">%2$s</li>', esc_attr( $action ), $link ); 
 						endforeach; endif;
 					?>
+					<?php $extra_action_links = apply_filters( "abbey_comment_action_links", array(), $comment );
+							if ( count ( $extra_action_links ) > 0 ){
+								foreach ( $extra_action_links as $action => $link ){
+									echo sprintf( '<li class="%1$s">%2$s</li>', 
+													esc_attr( $action ), 
+													$link 
+												);
+								}
+							}	?>
 				</ul>
 				
 			</div><!--row-->

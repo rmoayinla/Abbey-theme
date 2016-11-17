@@ -99,10 +99,12 @@ function abbey_custom_comment_class ( $classes, $class, $comment_ID, $comment, $
 
 add_action('pre_get_comments', 'abbey_show_all_comments' ); 
 function abbey_show_all_comments ( $query ) {
-    if ( is_admin() || !is_user_logged_in() || !current_user_can( 'moderate_comments' ) )
+    if( is_admin() )
         return;
-    $args = array( 'status' => [ 'all', 'spam' ] );
-
+    $args = array();
+    if ( is_user_logged_in() && current_user_can( 'moderate_comments' ) )
+        $args['status'] = [ 'all', 'spam' ] ;
+    
     $query->query_vars = wp_parse_args( $args, $query->query_vars );
 
 }
@@ -117,6 +119,38 @@ add_filter( 'edit_comment_link', 'abbey_custom_edit_comment_link', 10, 3 );
 function abbey_custom_edit_comment_link ( $link, $comment_ID, $text ){
     $link = preg_replace('~<a(.*)>(.*)</a>~i',"<a $1 target='_blank'><span class='fa fa-pencil'></span>&nbsp;$2</a>", $link );
     return $link;
+}
+
+add_filter( 'human_time_diff', 'abbey_time_diff', 10, 4 ); 
+function abbey_time_diff( $since, $diff, $from, $to ){
+    $mins = absint( round( $diff / MINUTE_IN_SECONDS ) );
+    $hours = absint( round( $diff / HOUR_IN_SECONDS  ) );
+    $days = absint( round( $diff / DAY_IN_SECONDS ) );
+    $weeks = round( $diff / WEEK_IN_SECONDS );
+    $months = round( $diff / MONTH_IN_SECONDS );
+    $years = round( $diff / YEAR_IN_SECONDS );
+
+    if ( $mins <= 10  ){
+        $since = __( "Just now", "abbey" );
+    } elseif ( $hours === 1 && $mins >= 60 ){
+        $since = __( "An hour ago", "abbey" );
+    } elseif( $days === 1 && $hours >= 24 ){
+        $since = __( "Yesterday", "abbey" );
+    }elseif( $weeks === 1 && $days > 7 ){
+        $since = __( "Last week", "abbey" );
+    }elseif( $months === 1 && $weeks > 4 ){
+        $since = __( "Last month", "abbey" );
+    }else{
+        $since .= __( " ago", "abbey");
+    }
+
+    return $since;
+}
+
+add_filter('the_content', 'abbey_filter_content', 99 );
+function abbey_filter_content( $content ){
+    $content = preg_replace( '#<([^ >]+)[^>]*>([[:space:]]|&nbsp;)*</\1>#', '', $content );
+    return $content;
 }
 /*
 function modify_read_more_link() {

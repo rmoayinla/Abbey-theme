@@ -28,25 +28,13 @@
 			border-color: #ddd;
 			.entry-content{
 				&:extend(.padding-bottom-sm, .margin-bottom-sm);
-				figure.alignnone{
-					&:extend(#box-shadow .box-shadow-small, .border, .margin-bottom-sm);
-					border-radius: 0px 0px 10px 10px;
-					border-color: @gray-color;
-					figcaption{
-						&:extend(.bg-gray);
-					}
-				}
-				figure.alignleft{
+				figure.alignleft, figure.alignright, figure.alignnone{
 					&:extend(.border, .bg-light);
 					img{
 						&:extend(.full-width-image);
 					}
 				}
-				.well{
-					&:extend(.bg-white);
-					border: 3px dotted @primary-color;
-
-				}	p > a{
+				p > a :not(img){
 						&:extend(#link .primary); 
 						&:visited{
 

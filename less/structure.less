@@ -319,26 +319,36 @@ body{
 		&:extend(.max-full-width);
 		width: auto; 
 	}
+	figure{
+		&:extend(.margin-bottom-sm);
+	}
 	figcaption.wp-caption-text{
-		&:extend(.oblique, .pad-small);
+		&:extend(.oblique, .pad-small, .font-small);
 	}
 	figure.alignnone {
-		&:extend(.full-width-image, .text-center);
+		&:extend(.full-width-image, .text-center, .float-none);
 		img{
 			&:extend(.max-full-width);
 		}
 	}
-	figure.alignnone:hover, iframe[src *= "youtube"]:hover {
+	figure:hover, iframe[src *= "youtube"]:hover {
 		.opacity(0.5);
 		& a img{
 			&:extend(.zoom-cursor);
 		}
 	}
-	figure.alignleft{
-		&:extend(.float-left, .margin-left-xs);
+	figure.alignleft, figure.alignright {
+		&:extend(.margin-right-xs);
 		max-width: 50% !important;
 	}
-	figure.alignleft + p{
+	figure.alignleft{
+		&:extend(.float-left);
+	}
+	figure.alignright{
+		&:extend(.float-right);
+	}
+
+	figure.alignleft + :not(.alignleft){
 		&:extend(.float-none);
 	}
 	& > p:first-of-type::first-letter{
