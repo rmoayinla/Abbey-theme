@@ -41,19 +41,9 @@
 	}
 	.entry-content{
 		.page-header{
-			&:extend(.dark, #text-shadow .text-shadow-md);
+			&:extend(.dark, #text-shadow .text-shadow-md, .no-border);
 			font-size: 8em;
 			
-		}
-		#search-form{
-			&:extend(.margin-top-sm);
-				.input-group{
-					.form-control{ 
-						padding: 20px;
-						border-radius: 10px 0px 0px 10px;
-					}
-					.btn{ padding: 10px;}
-				}
 		}
 	}
 	
@@ -103,7 +93,7 @@
 	#page-content-header{
 		&:extend(.padding-bottom-sm);
 		.page-title{
-			&:extend(.margin-bottom-sm, .font-large, .white );
+			&:extend(.margin-bottom-sm, .font-large, .white, .no-border );
 			text-shadow: 3px 6px 12px #000;
 			top: 25%;
 			left: 25%;

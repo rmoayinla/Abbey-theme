@@ -69,10 +69,10 @@ function abbey_author_info( $author, $key = "" ){
 	return $author_info;
 }
 
-function abbey_post_info( $echo = true ){
+function abbey_post_info( $echo = true, $keys = array() ){
 	$info = array();
 	$cats = get_the_category(); // $cats[0]->name->categroy_count
-	$cat_link = get_category_link( $cats[0]->cat_ID );
+	
 	$info["author"] = sprintf ( '<span class="sr-only"> %1$s </span> %2$s', __( "Posted by:", "abbey" ), abbey_show_author( false )
 						); 
 	$info["date"] = sprintf( '<time datetime="%3$s"><span class="sr-only">%2$s</span><span>%1$s </span></time>',
@@ -80,15 +80,21 @@ function abbey_post_info( $echo = true ){
 						__( "Posted on:", "abbey" ), 
 						get_the_time('Y-md-d')
 					); 
-	$info["more"] = sprintf( '<a href="%1$s" title="%2$s" role="button" class="">%3$s </a>', 
+	if( !empty ( $cats[0] ) ){
+		$cat_link = ( isset( $cats[0] ) ) ? get_category_link( $cats[0]->cat_ID ) : "";
+		$info["more"] = sprintf( '<a href="%1$s" title="%2$s" role="button" class="">%3$s </a>', 
 	 				esc_url( $cat_link ), 
 	 				__( "Click to read more posts", "abbey" ), 
 	 				sprintf( __( "More posts from %s", "abbey" ), esc_html( $cats[0]->name ) )
 	 				);
+	}
+
 	$post_infos = apply_filters( "abbey_post_info", $info );
 	$html = "";
 	if( !empty( $post_infos ) ) {
 		foreach ( $post_infos as $key => $post_info ){
+			if( !empty( $keys ) && !in_array( $key, $keys ) )
+				continue;
 			$class = esc_attr( $key );
 			$html .= "<li class='$class'>$post_info</li>\n";
 		}
@@ -132,20 +138,21 @@ function abbey_show_nav( $post, $nav = "previous" ){
 			);
 }
 
-function abbey_cats_or_tags( $cats ){
-	$list = $title = $icon = ""; 
+function abbey_cats_or_tags( $cats, $title = "", $icon = "", $notes = ""){
+
 	$list = ( $cats === "categories" ) ? get_the_category_list() : get_the_tag_list( "<ul class='tag-list'><li>", "</li><li>", "</li></ul>" ); 
-	$title = ( $cats === "categories" ) ? __( "This post can be found in:", "abbey" ) : __( "This post is tagged with:", "abbey" );
-	$icon = ( $cats === "categories" ) ? "fa-folder-open" : "fa-tags";
-	$html = sprintf( '<div class="col-md-6">
-							<span class="inline"><i class="fa %3$s fa-2x"></i></span>
-							<div class="inline middle">
-								<h4 class="oblique">%1$s</h4>
-								%2$s </div>
-							</div>', 
-							esc_html( $title ), 
+
+	if( empty( $list ) )
+		return;
+
+	$html = sprintf( '<i class="fa %1$s fa-fw %5$s-icon"></i><span class="%5$s-heading">%2$s</span>
+						%3$s
+						<div class="%5$s-list">%4$s</div>', 
+							esc_attr( $icon ),  
+							esc_html( $title ),
+							$notes,
 							$list, 
-							esc_attr( $icon )
+							esc_attr($cats)			
 				);
 	return $html;
 }
@@ -158,4 +165,20 @@ function abbey_list_comments( $args = array() ){
 		'callback'	=> 'html5_comment'			
 		) 
 	);
+}
+
+function abbey_show_post_type(){
+	$post_type = get_post_type(); 
+	$post = "";
+	switch ( $post_type ){
+		case "post":
+			$post = __( "Blog post", "abbey" );
+			break; 
+		case "page":
+			$post = __( "Page", "abbey" ); 
+			break; 
+		default: 
+			$post = $post_type; 
+	}
+	echo $post;
 }

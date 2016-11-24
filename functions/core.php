@@ -375,5 +375,32 @@ function abbey_comments_args(){
 	return $args;
 }
 
+function abbey_setup_query(){
+	global $wp_query, $abbey_query; 
+	if ( count( $wp_query->posts ) > 0 ){
+		foreach( $wp_query->posts as $post ){
+			$abbey_query[] = array(
+				"ID" => $post->ID, 
+				"post_type" => $post->post_type, 
+				"post_author" => $post->post_author, 
+				"comment_count" => $post->comment_count
+			); 
+		}
+		$abbey_query["summary"][ "found_posts" ] = array( 
+			"key" => $wp_query->found_posts, "icon" => "", "title" => __( "Total posts found", "abbey" )
+		);
+		$abbey_query["summary"][ "num_pages" ] = array(
+			"key" => $wp_query->max_num_pages, "icon" => "", "title" => __( "Number of page", "abbey" )
+		); 
+		if( is_search() ){
+			$abbey_query["summary"][ "keyword" ] = array(
+			"key" => get_search_query(), "icon" => "fa-search", "title" => __( "Searched keyword", "abbey" )
+			);
+		}
 
+		$abbey_query = apply_filters( "abbey_theme_query", $abbey_query );
+	}
+
+
+}
 

@@ -128,17 +128,44 @@ function abbey_post_author_info(){
 }
 add_action ( "abbey_theme_post_footer", "abbey_post_author_info", 20);
 
-function abbey_post_categories_and_tags(){
-	$html = "<div class='row inner-pad-responsive'>";
+function abbey_post_categories(){
+	$notes = sprintf( '<p class="small cats-note">%s</p>',
+						__( "* You can learn more about this post by clicking on these links, 
+							each topic contains several posts that are related to this article", 
+							"abbey" )
+					);
+	$html = "<div class='row inner-pad-responsive outer-pad-medium' id='post-cats'>";
+	
 	if ( count( get_the_category() ) > 0 ){
-		$html .= abbey_cats_or_tags( "categories" );
+		$html .= abbey_cats_or_tags( "categories", __( "Topics", "abbey" ), "fa-folder-o", $notes );
 	}
-	if ( count( get_the_tags() ) > 0 ){
-		$html .= abbey_cats_or_tags( "tags" );
-	}
-
-	$html .= "</div>";//.row div closes //
+	$html .= "</div>";
 
 	echo $html;
 }
-add_action ( "abbey_theme_post_footer", "abbey_post_categories_and_tags", 5);
+add_action ( "abbey_theme_post_footer", "abbey_post_categories", 5 );
+
+/* search page 
+
+
+
+</li>*/
+
+add_action( "abbey_search_page_summary", "abbey_search_summary" ); 
+function abbey_search_summary( $abbey ){
+	$summaries = ( isset( $abbey["summary"] ) ) ? $abbey["summary"] : array();
+	$html = "";
+	if( count( $summaries ) > 0 )
+		foreach( $summaries as $title => $summary ){
+			$html .= "<li class='list-group-item $title relative'>";
+			if( !empty( $summary["title"] ) )
+				$html .= sprintf( '<p class="list-group-item-text">%s</p>', esc_html( $summary["title"] ) );
+			if( !empty( $summary["key"] ) )
+				$html .= sprintf( '<h4 class="list-group-item-heading">%s</h4>', $summary["key"] );
+			$html .= "</li>";
+		}
+		
+
+	echo $html;
+
+}

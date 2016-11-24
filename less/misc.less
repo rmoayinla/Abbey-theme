@@ -13,7 +13,7 @@
 	}
 }
 
-.tooltip-box{
+.tooltip-box-md{
 	&:extend(#tool-tip .tool-tip-box);
 	&:after{
 		&:extend(#tool-tip .tool-tip-box::after);
@@ -64,11 +64,10 @@
 
 #link{
 	.primary{
-		&:extend(.primary, .inline);
-		border-bottom: 1px dotted @primary-color;
+		&:extend(.primary);
 		&:visited{
 			border-bottom: 1px solid @primary-color;
-			&:extend(.strong);
+			&:extend(.strong, .no-text-decoration);
 		}
 		&:hover{
 			&:extend(.dark, .no-text-decoration);

@@ -1,12 +1,20 @@
 #post-page{
+	.post-tags{
+		&:extend(.padding-left-sm, .padding-top-sm);
+		.tags-icon, .tags-heading{
+			&:extend(.strong); 
+			font-size: 16px;
+		}
+		
+	}
 	#content{
-		&:extend(.pad-medium);
+		&:extend(.pad-medium,.no-top-padding);
 	}
 	#post-content-header{
 		&:extend(.margin-top-sm);
 		#post-info{
 			.breadcrumb{ 
-			&:extend(.no-bg, .font-small, .dark); 
+			&:extend(.no-bg, .font-small, .dark, .no-list-style); 
 			li{
 				display: inline !important;
 				}
@@ -34,16 +42,17 @@
 						&:extend(.full-width-image);
 					}
 				}
-				p > a :not(img){
-						&:extend(#link .primary); 
-						&:visited{
-
-						}
-						&:hover{
-							&:extend(#link .primary:hover);
-						}
-
+				p > a:not(img){
+					border-bottom: 1px dotted @primary-color;
+					padding-bottom: 10px;
+					&:extend(.inline);
+					&:hover{
+						&:extend(#link .primary:hover);
 					}
+				}
+				p em:only-child{
+					&:extend(.dark,.block, .pad-xs, .bottom-border, .top-border, .margin-top-sm, .margin-bottom-sm);
+				}
 				.pagination{
 					li >a{
 						&:extend(#link .secondary);
@@ -63,9 +72,6 @@
 			.entry-footer{
 				&:extend(.margin-minus-left-md, .margin-minus-right-md, .margin-top-sm);
 				color: #000;
-				.post-categories, .tag-list{
-					&:extend(.no-list-style);
-				}
 				.post-navigation{
 					.glyphicon{
 						font-size: 48px;
@@ -110,6 +116,27 @@
 						&:extend(.margin-top-sm);
 					}
 				}
+				#post-cats{
+					.cats-note{
+					&:extend(.oblique, .gray);
+					}
+					.categories-icon{
+					&:extend(.margin-right-xs);
+					}
+					.categories-heading, .categories-icon{
+					&:extend(.strong); 
+					font-size: 24px;
+					}
+					.categories-list{
+						a[rel='category tag']{
+							&:extend(#button .button-md);
+							&:hover{
+								&:extend(#button .button-md:hover);
+							}
+						}
+					}
+					
+				}//#post-cats
 			} //entry-footer
 		}
 		img.wp-post-image{
@@ -127,4 +154,30 @@
 		&:extend(.light);
 	}
 
+	
+
+}
+
+.tag-list, .post-categories{
+	&:extend(.no-list-style);
+}
+.categories-list{
+	&:extend(.margin-top-sm, .margin-bottom-sm);
+	
+	li{
+	&:extend(.inline);
+	}
+}
+
+.tags-list{
+	&:extend(.inline);
+	.tag-list{
+		li{
+			&:extend(.inline, .margin-left-xs);
+		}
+		li + li:before{
+			content: "\00bb"; 
+			padding: 0 5px;
+		}
+	}
 }
