@@ -3,10 +3,21 @@
 function abbey_page_title(){
 	global $abbey_defaults;
 	$page_description = ( !empty( $abbey_defaults["page"]["description"] ) ) ? esc_html( $abbey_defaults["page"]["description"] ) : "";
-	$title = '<h1 class="page-title" itemprop="headline">' . get_the_title() . '</h1>
-		<summary class="description" itemprop="summary">
-			<em>'.apply_filters( "abbey_page_description", $page_description, get_the_ID() ) . '</em>.
-		</summary>';
+	
+	$title = sprintf('<div class="page-title-wrap">
+							<h1 class="page-title" itemprop="headline">
+								<span class="fa %1$s page-title-icon"></span> 
+								<span class="page-title-text">%2$s</span>
+							</h1>
+							<summary class="description" itemprop="summary">
+								<em>%3$s</em>
+							</summary>
+						</div>',
+						apply_filters( "abbey_page_icon", "fa-envelope" ),
+						get_the_title(), 
+						apply_filters( "abbey_page_description", $page_description, get_the_ID() )
+					);
+
 	echo apply_filters( "abbey_theme_page_title", $title );
 }
 

@@ -9,17 +9,15 @@
 		
 	}
 	#header-top{
+		&:extend(#box-shadow .box-shadow-md, .relative);
+		z-index: 10;
 		.alert-dismissable {
-			&:extend(.full-width, .no-bottom-margin);
-			background-color: @bg-color-dark;
-			padding-right: 15px !important;
+			&:extend(.full-width, .no-bottom-margin, .pad-small );
 			.close{
 			right: 0px;
 			}
 		}
-		.alert{
-			padding: 10px;
-		}
+
 	}
 	#main-header{
 		&:extend(.bg-white);
@@ -57,7 +55,6 @@
 			&:extend(.font-small);
 		}
 		.navbar-header{
-
 			.custom-logo{
 				width: 45px; 
 				height: 45px;
@@ -75,6 +72,9 @@
 			}
 		}
 		
+	}
+	.navbar{
+		&:extend(.no-border, .bg-light);
 	}
 }
 

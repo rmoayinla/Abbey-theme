@@ -92,10 +92,10 @@ function abbey_post_info( $echo = true, $keys = array() ){
 	$post_infos = apply_filters( "abbey_post_info", $info );
 	$html = "";
 	if( !empty( $post_infos ) ) {
-		foreach ( $post_infos as $key => $post_info ){
-			if( !empty( $keys ) && !in_array( $key, $keys ) )
+		foreach ( $post_infos as $title => $post_info ){
+			if( !empty( $keys ) && !in_array( $title, $keys ) )
 				continue;
-			$class = esc_attr( $key );
+			$class = esc_attr( $title );
 			$html .= "<li class='$class'>$post_info</li>\n";
 		}
 	}

@@ -1,9 +1,7 @@
 #front-page {
 	.frontpage-sections{
 		&:extend(.pad-large);
-		.page-header{
-			&:extend(.no-bottom-border);
-		}
+		
 	}
 	#site-banner{
 		&:extend(.relative);
@@ -15,21 +13,21 @@
 				width: 100% !important;
 				height: 480px;
 			}
-		.carousel-caption{
-			top: 10px;
-			right: 15%;
-			.page-header{
-				&:extend(.pad-large .page-header);
-				h1{&:extend(.font-large);}
-			}
-			#site-info{
+			.carousel-caption{
+				top: 10px;
+				right: 15%;
+				.page-header{
+					&:extend(.pad-large .page-header);
+					h1{&:extend(.font-large);}
+				}
+				#site-info{
 
-			}
-			#admin-profile{
-				&:extend(.margin-top-md);
-			}
-		}
-		}
+				}
+				#admin-profile{
+					&:extend(.margin-top-md);
+				}
+			}//.carousel-caption
+		}//#carousel
 	}
 	#services{
 		.service-icons {
@@ -61,4 +59,8 @@
 		}
 		
 	}
+}
+
+.page-header{
+	&:extend(.no-bottom-border);
 }

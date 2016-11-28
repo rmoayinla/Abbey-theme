@@ -20,7 +20,9 @@ get_header(); ?>
 	<?php else : get_template_part("templates/content", "none");?>
 
 	<?php endif; ?>
-
+	<aside class="col-md-3" role="complimentary" id="primary-sidebar">
+		<?php abbey_display_sidebar( "sidebar-main" ); ?>
+	</aside>
 
 
 </main> <!--main #page closes -->	<?php 

@@ -23,21 +23,25 @@
 }
 
 #primary-menu{
-	&:extend(.no-border, .bg-white, #box-shadow .box-shadow-small);
-	
-
+	&:extend(.no-border, .bg-white);
 	.custom-logo{
-		.image-size(60px,60px) !important;
+		.image-size(48px, 48px) !important;
 	}
 	.navbar-collapse{
 		&:extend(.float-left,.float-none-sm, .float-none-xs);
+		li > a{
+			padding-top: 24px;
+		}
 
 	}
-	.navbar-brand{
-		&:extend(.float-none-sm);
-		height: auto !important;
-		padding: 0px !important;
-		font-size: 24px;
+	.navbar-header{
+	&:extend(.pad-xs);
+		.navbar-brand{
+			&:extend(.float-none-sm);
+			height: auto !important;
+			padding: 0px !important;
+			font-size: 24px;
+		}
 	}
 
 	
