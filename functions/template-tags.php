@@ -90,13 +90,19 @@ function abbey_post_info( $echo = true, $keys = array() ){
 	}
 
 	$post_infos = apply_filters( "abbey_post_info", $info );
-	$html = "";
+	$html = $icon = $heading = $class = "";
 	if( !empty( $post_infos ) ) {
 		foreach ( $post_infos as $title => $post_info ){
-			if( !empty( $keys ) && !in_array( $title, $keys ) )
+			if( !empty( $keys ) && !( in_array( $title, $keys ) || array_key_exists($title, $keys ) )  )
 				continue;
+			if( !empty( $keys[$title] ) && is_array( $keys[$title] ) )
+				$icon = ( !empty( $keys[$title]["icon"] ) ) ? 
+						"<span class='fa ".esc_attr( $keys[$title]["icon"] )."'></span>" : "";
+				$heading = ( !empty( $keys[$title]["title"] ) ) ? 
+							"<span class='$title-heading'>".esc_html( $keys[$title]["title"] )."</span>" : "";
+
 			$class = esc_attr( $title );
-			$html .= "<li class='$class'>$post_info</li>\n";
+			$html .= "<li class='$class'>$icon $heading $post_info</li>\n";
 		}
 	}
 	if ( $echo )

@@ -138,7 +138,9 @@ function abbey_theme_page_id( $id= "" ){
 		if ( is_page() ) { $id = "site-page"; }
 		if( is_404() ) { $id = "error-404-page"; }
 		if( is_search() ) { $id = "search-page"; }
-		if ( is_single() ) { $id = "post-page"; }
+		if ( is_single() ) {
+			$id = ( ! has_post_format() ) ? "post-page" : get_post_format()."-post-page"; 
+		}
 	} 
 	echo esc_attr( apply_filters( "abbey_theme_page_id", $id ) );
 

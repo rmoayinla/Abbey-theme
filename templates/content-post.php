@@ -12,7 +12,7 @@
 
 		<div class="clearfix"></div>
 
-		<div class="" id="post-info"><ul class="breadcrumb"><?php abbey_post_info(); ?></ul></div>
+		<div id="post-info"><ul class="breadcrumb"><?php abbey_post_info(); ?></ul></div>
 	
 	</header><!-- #page-content-header closes -->
 

@@ -156,11 +156,13 @@ function abbey_post_categories(){
 }
 add_action ( "abbey_theme_post_footer", "abbey_post_categories", 5 );
 
-/* search page 
+/* 
+
+search page 
 
 
 
-</li>*/
+*/
 
 add_action( "abbey_search_page_summary", "abbey_search_summary" ); 
 function abbey_search_summary( $abbey ){

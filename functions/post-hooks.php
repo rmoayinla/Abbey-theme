@@ -10,3 +10,16 @@ function abbey_post_tags(){
 
 	echo $html;
 }
+
+/*
+Quote post
+*/
+add_action( "abbey_theme_quote_post_footer", "abbey_show_quote_archive", 10 ); 
+function abbey_show_quote_archive(){
+	$html = sprintf( '<a href="%1$s" title="%2$s">%3$s</a>', 
+						get_post_format_link( "quote" ), 
+						__( "Read all my quotes", "abbey" ), 
+						__( "RMO Book of Quotes", "abbey" ) 
+					);
+	echo "<li>$html</li>";
+}

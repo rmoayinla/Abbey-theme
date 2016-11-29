@@ -388,16 +388,8 @@ a{
 	figure.alignleft + :not(.alignleft){
 		&:extend(.float-none);
 	}
-	& > p:first-of-type::first-letter{
-		font-size: 64px;
-		&:extend(.float-left, .dark, .margin-top-xs );
-	}
-	h2 {
-		border-left: 3px solid @dark-primary-color;
-		padding: 10px 3px 10px 40px;
-		margin-left: -45px;
-		&:extend(.text-uppercase);
-	}
+	
+	
 	iframe[src *= "youtube"]{
 		&:extend(.max-full-width);
 		min-height: 314px;
