@@ -11,8 +11,11 @@ global $more; ?>
 				<?php do_action( "abbey_theme_before_post_content" ); ?>
 			</header>
 			
-			<?php get_template_part("templates/content", "post"); ?>
-
+			<?php if( ! has_post_format() ) : ?>
+				<?php get_template_part("templates/content", "post"); ?>
+			<?php else: ?>
+				<?php get_template_part("templates/content", get_post_format() ); ?>
+			<?php endif; ?>
 			
 			
 		<?php endwhile; ?> 
