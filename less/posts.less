@@ -173,14 +173,14 @@
 
 	.tags-list{
 		&:extend(.inline);
-		.tag-list{
-			li{
-				&:extend(.inline, .margin-left-xs);
-			}
-			li + li:before{
-				content: "\00bb"; 
-				padding: 0 5px;
-			}
+	}
+	.tag-list{
+		li{
+			&:extend(.inline, .margin-left-xs);
+		}
+		li + li:before{
+			content: "\00bb"; 
+			padding: 0 5px;
 		}
 	}
 
@@ -199,11 +199,32 @@
 	}
 	.entry-content{
 		&:extend(.bg-white, #box-shadow .box-shadow-small, .pad-medium);
+		footer{
+			&:extend(#search-page .post-panel-footer);
+			&:before{
+				&:extend(.float-right);
+			}
+		}
 	}
 	.breadcrumb{
 		&:extend(.no-bg);
 		li+li:before{
 			content: "";
 		}
+	}
+	.categories-list{
+		&:extend(#search-page .categories-list);
+	}
+	.tags-list{
+		&:extend( #post-page .tags-list );
+	}
+	.tag-list, .post-categories{
+		&:extend(.no-list-style);
+		li + li:before{
+			&:extend(#post-page .tag-list li +li:before);
+		}
+	}
+	.tags-icon, .categories-icon{
+		&:extend(#search-page .post-panel-footer .fa-fw);
 	}
 }
