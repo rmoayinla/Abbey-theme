@@ -25,15 +25,24 @@ $abbey_query = array();
 
 		<section id="content" class="row">
 			<?php if ( have_posts() ) : abbey_setup_query(); ?>
+				
 				<div class="col-md-3" id="search-results-summary">
-					<ul class="list-group"><?php do_action( "abbey_search_page_summary", $abbey_query ); ?>
+					<ul class="list-group">
+						<?php do_action( "abbey_search_page_summary", $abbey_query ); ?>
 					</ul>
 				</div>
+
 				<div id="search-results" class="col-md-6">
+					
 					<?php while ( have_posts() ) : the_post(); $count++; ?>
+					
 						<?php get_template_part("templates/content", "search"); ?>
+
 					<?php endwhile; ?> 
+
 				</div>
+
+		
 				<?php else : get_template_part("templates/content", "none"); ?>
 		</section>
 

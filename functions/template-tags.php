@@ -130,26 +130,36 @@ function abbey_post_pagination( $args = array() ){
 function abbey_show_nav( $post, $nav = "previous" ){
 	$class = ( $nav === "previous" ) ? "previous-button" : "next-button";
 	$icon = ( $nav === "previous" ) ? "glyphicon-chevron-left" : "glyphicon glyphicon-chevron-right";
+	$title = ( !get_post_format( $post->ID ) ) ? "" : sprintf( '%s:', ucwords( get_post_format( $post->ID ) ) );
 	
-	return sprintf( '<a href="%1$s" class="%5$s-button" title="%2$s">
-				<span class="glyphicon %6$s"></span>
-		 		<p> %3$s </p><h4 class="%5$s-post-title">%4$s</h4>
+	return sprintf( '<a href="%1$s" class="%2$s-button" title="%3$s">
+				<span class="glyphicon %4$s"></span>
+		 		<p> %5$s </p><h4 class="%2$s-post-title"><em>%6$s</em> %7$s </h4>
 		 	   </a>',
 			get_permalink($post->ID),
-			sprintf( __( "Click to view %s post", "abbey" ), $nav ),
-			sprintf( __( "%s post:", "abbey" ), ucwords( $nav ) ), 
-			apply_filters( "the_title", $post->post_title ), 
 			esc_attr( $nav ),
-			esc_attr( $icon ) 
+			sprintf( __( "Click to view %s post", "abbey" ), $nav ),
+			esc_attr( $icon ),
+			sprintf( '%s post', ucwords( $nav ) ),
+			$title,
+			apply_filters( "the_title", $post->post_title )
 			);
 }
 
-function abbey_cats_or_tags( $cats, $title = "", $icon = "", $notes = ""){
+function abbey_cats_or_tags( $cats, $title = "", $icon = "", $notes = "" ){
+	$list = $cats;
+	if( $cats === "categories" )
+		$list = get_the_category_list(); 
 
-	$list = ( $cats === "categories" ) ? get_the_category_list() : get_the_tag_list( "<ul class='tag-list'><li>", "</li><li>", "</li></ul>" ); 
+	elseif ( $cats === "tags"  )
+		$list = get_the_tag_list( "<ul class='tag-list'><li>", "</li><li>", "</li></ul>" );
+
 
 	if( empty( $list ) )
 		return;
+	
+	if( $cats !== "categories" && $cats !== "tags" )
+		$cats = "categories"; 
 
 	$html = sprintf( '<i class="fa %1$s fa-fw %5$s-icon"></i><span class="%5$s-heading">%2$s</span>
 						%3$s

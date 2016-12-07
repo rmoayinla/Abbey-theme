@@ -368,12 +368,7 @@ a{
 			&:extend(.max-full-width);
 		}
 	}
-	figure:hover, iframe[src *= "youtube"]:hover {
-		.opacity(0.5);
-		& a img{
-			&:extend(.zoom-cursor);
-		}
-	}
+
 	figure.alignleft, figure.alignright {
 		&:extend(.margin-right-xs);
 		max-width: 48% !important;
@@ -389,7 +384,6 @@ a{
 		&:extend(.float-none);
 	}
 	
-	
 	iframe[src *= "youtube"]{
 		&:extend(.max-full-width);
 		min-height: 314px;
@@ -399,26 +393,12 @@ a{
 	}
 	.gallery-item{
 		&:extend(.relative, .no-overflow, .no-border);
-		&:hover{
-			&:extend(.border);
-			figcaption{
-				display: block !important;
-			}
-		}
 		img{
 			&:extend(.full-width-image);
-		}
-		figcaption{
-			&:extend(.bg-dark, .no-display);
 		}
 	}
 	.gallery-columns-2{
 		&:extend(.margin-right-xs);
-		.gallery-item{
-			&:extend(.inline, .pad-xs, .half-largescreen);
-			vertical-align: top;
-			
-		}
 	}
 	.gallery-columns-1{
 		&:extend(.pad-medium);
@@ -433,6 +413,7 @@ a{
 			vertical-align: top;
 		}
 	}
+	
 	table{
 		width: 100% !important;
 		border-collapse: collapse;

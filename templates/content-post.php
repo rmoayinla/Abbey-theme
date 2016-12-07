@@ -21,7 +21,7 @@
 	<section class="row post-entry">
 		<article <?php abbey_post_class( "col-md-8 col-xs-12" ); ?> id="post-<?php the_ID(); ?>">
 			
-			<?php the_content("Read more . . "); ?>
+			<?php the_content(); ?>
 			
 			<div><?php abbey_post_pagination(); ?> </div>
 		</article>

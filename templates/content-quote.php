@@ -20,25 +20,32 @@
 			<ul class="breadcrumb">
 				<?php abbey_post_info( true, array( "author", "date" => [ "icon" => "fa-calendar-o" ] ) ); ?>
 			</ul>
+			
 			<blockquote <?php abbey_post_class(); ?> id="post-<?php the_ID(); ?>">
+				
 				<?php the_content(); ?>
+
 				<footer>
 					<ul class="list-inline"><?php do_action( "abbey_theme_quote_post_footer" ); ?></ul>
 				</footer>
+
 			</blockquote>
 
 			<div><?php abbey_post_pagination(); ?> </div>
+			
 			<footer>
-				<ul class="list-inline">
-					<li><?php echo abbey_cats_or_tags( "categories", "", "fa-folder-o" ); ?></li>
-					<li><?php echo abbey_cats_or_tags( "tags", "", "fa-tags" );  ?></li>
+					<div><?php echo abbey_cats_or_tags( "categories", "", "fa-folder-o" ); ?></div>
+					<div><?php echo abbey_cats_or_tags( "tags", "", "fa-tags" );  ?></div>
+					<?php abbey_post_nav(); ?>
 				</ul>
 			</footer>
+
 		</article>
 
 		<aside id="quote-post-sidebar" role="complimentary" class="col-md-3">
 
-		</aisde>
+		</aside>
+
 
 	</div>
 

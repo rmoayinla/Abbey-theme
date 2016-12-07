@@ -147,9 +147,21 @@ function abbey_post_categories(){
 					);
 	$html = "<div class='row inner-pad-responsive outer-pad-medium' id='post-cats'>";
 	
-	if ( count( get_the_category() ) > 0 ){
-		$html .= abbey_cats_or_tags( "categories", __( "Topics", "abbey" ), "fa-folder-o", $notes );
+	if ( count( $categories = get_the_category() ) > 0 ){
+		$list = "<ul class='post-categories'>";
+		foreach( $categories as $category ){
+			$list .=  sprintf( '<li><a href="%1$s" rel="category">%2$s 
+						<span class="badge category-count">%3$s </span></a></li>',
+				esc_url( get_category_link( $category->term_id ) ), 
+				$category->name, 
+				$category->count
+				);
+		}
+		$list .= "</ul>\n"; 
+
+		$html .= abbey_cats_or_tags( $list, __( "Topics", "abbey" ), "fa-folder-o", $notes );
 	}
+
 	$html .= "</div>";
 
 	echo $html;
