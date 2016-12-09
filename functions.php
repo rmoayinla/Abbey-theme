@@ -142,7 +142,9 @@ if( !function_exists( "abbey_theme_enque_styles" ) ) {
 	
 	function abbey_theme_enque_styles () {
 
-		wp_enqueue_script( "abbey-script", get_template_directory_uri()."/js/script.js", array( "jquery" ), 1.0, true );
+		$theme_dir = get_template_directory_uri();
+
+		wp_enqueue_script( "abbey-script", $theme_dir."/js/script.js", array( "jquery" ), 1.0, true );
 
 		/*
 		* enqueueu bootstrap js 
@@ -155,7 +157,7 @@ if( !function_exists( "abbey_theme_enque_styles" ) ) {
 		*
 		*/
 		$bootstrap_cdn = "//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css";
-		wp_enqueue_style( 'abbey-bootstrap-css', esc_url($bootstrap_cdn), array(), null );
+		wp_enqueue_style( 'abbey-bootstrap', esc_url($bootstrap_cdn), array(), null );
 
 
 		// enqueue theme style.css//
@@ -166,17 +168,25 @@ if( !function_exists( "abbey_theme_enque_styles" ) ) {
 		* enque font-awesome 
 		*
 		*/
-		wp_enqueue_style("abbey-fontawesome-css", get_template_directory_uri()."/css/font-awesome.min.css" ); 
+		wp_enqueue_style("abbey-fontawesome", $theme_dir."/css/font-awesome.min.css" ); 
 
 		if ( !is_admin() && is_singular() && comments_open() && get_option('thread_comments') )
   			wp_enqueue_script( 'comment-reply' );
 
-		
+		/*
+		* Slick Jquery plugin 
+		* style and javascript for sliders
+		*
+		*/
+		wp_enqueue_script( "abbey-slick-js", $theme_dir."/libs/slick/slick.min.js", array( "jquery" ), "", true );
+
+		wp_enqueue_style("abbey-slick", $theme_dir."/libs/slick/slick.css" ); 
+
 		/*
 		* action hook for other enqueueus 
 		*
 		*/
-		do_action( "abbey_theme_enqueues" ); 
+		do_action( "abbey_theme_enqueues", $theme_dir ); 
 
 
 	}

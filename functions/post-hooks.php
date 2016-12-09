@@ -57,7 +57,104 @@ function abbey_show_quote_archive(){
 /*
 * Gallery post 
 */
-add_action( "abbey_gallery_post_summary", "abbey_gallery_summary" ); 
-function abbey_gallery_summary( $galleries ){
+add_action( "abbey_gallery_post_sidebar", "abbey_gallery_title", 10 ); 
+function abbey_gallery_title( $galleries ){
+	$html = sprintf( '<div class="widgets gallery-widgets gallery-title-widget">
+						<h4 class="widget-title">%1$s </h4>
+						<span class="widget-icon"><i class="fa fa-camera"></i></span>
+						<p class="widget-text">%2$s<p>
+						</div>',
+						__( "Album title:", "abbey" ),
+						get_the_title() 
+					);
+	echo $html;
+}
+
+add_action( "abbey_gallery_post_sidebar", "abbey_gallery_count", 20 ); 
+function abbey_gallery_count( $galleries ){
+	$image_count = ( !empty( $galleries ) ) ? (int) count( $galleries ) : 0;
+	$gallery_count = ( !empty( $galleries["galleries"] ) ) ? (int) count( $galleries[ "galleries" ] ) : 0;
+	$html = sprintf( '<div class="widgets gallery-widgets gallery-count-widget">
+						<h4 class="widget-title">%s </h4>', 
+						__( "Album photo count", "abbey" )
+					);
+	if ( $image_count > 0 )
+		$html .= sprintf( '<div class="widget-content">
+							<span class="widget-icon"><i class="fa fa-file-image-o"></i></span>
+							<p class="widget-text">%1$s</p>
+							</div>',
+							sprintf( __( "There are <strong>%s</strong> pictures in this album", "abbey" ), 
+									$image_count ) 
+						);
+	if ( $gallery_count > 0 )
+		$html .= sprintf( '<div class="widget-content">
+							<span class="widget-icon"><i class="fa fa-picture-o"></i></span>
+							<p class="widget-text">%1$s</p>
+							</div>',
+							sprintf( __( "There are <strong>%s</strong> gallery in this album", "abbey" ), 
+									$gallery_count ) 
+						);
+	$html .= "</div>";
+
+	echo $html;
+
+}
+
+add_action( "abbey_gallery_post_sidebar", "abbey_gallery_date", 30 ); 
+function abbey_gallery_date( $galleries ){
+	$html = sprintf( '<div class="widgets gallery-widgets gallery-date-widget">
+						<h4 class="widget-title">%s</h4>',
+						__( "Album uploaded date", "abbey" ) 
+					);
+	$html .= '<div class="widget-content">
+				<span class="widget-icon"><i class="fa fa-calendar-o"></i></span>';
+	$html .= sprintf( '<time datetime="%3$s" class="widget-text"><span class="sr-only">%2$s</span><span>%1$s </span></time>',
+						get_the_time( get_option( 'date_format' ).' \@ '.get_option( 'time_format' ) ), 
+						__( "Posted on:", "abbey" ), 
+						get_the_time('Y-md-d')
+					); 
+	$html  .= "</div>\n </div>"; 
+
+	echo $html;
+}
+
+add_action( "abbey_gallery_post_sidebar", "abbey_gallery_author", 40 ); 
+function abbey_gallery_author( $galleries ){
+	$html = sprintf( '<div class="widgets gallery-widgets gallery-author-widget">
+						<h4 class="widget-title">%s</h4>',
+						__( "Album uploaded by", "abbey" ) 
+					);
+	$author = abbey_post_author();
+	$html .= sprintf( '<div class="widget-content">%s</div>', 
+						abbey_show_author( false )
+				);
+	$html .= "</div>\n";
+
+	echo $html;
 	
+}
+
+add_action( "abbey_gallery_image_slides", "abbey_gallery_slides" );
+function abbey_gallery_slides( $galleries ){
+	$slide_images = $galleries;
+	$html = "";
+
+	if( !empty( $slide_images ) )
+		$html = "<div class='gallery-slides'>"; 
+		foreach( $slide_images as $key => $image ){
+			if( !is_int( $key ) )
+				continue;
+			$html .= sprintf( '<div class="gallery-image" id="gallery-image-%1$s">
+								<img src="%2$s" alt="%3$s" />
+								</div>',
+								esc_attr( $key ), 
+								esc_url( $image ), 
+								sprintf( __( "Gallery Picture %s", "abbey" ), esc_attr( $key ) )
+							);
+		}
+		$html .= "</div>";
+
+	echo $html;
+
+	//print_r($slide_images);//
 }

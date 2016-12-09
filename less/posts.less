@@ -254,10 +254,9 @@
 
 #gallery-post-page{
 	#quote-content{
-		&:extend(#custom-page #inner-content, .inner-auto-margin);
+		&:extend(#custom-page #inner-content, .inner-auto-margin, .pad-medium);
 	}
 	.entry-content{
-		&:extend(.pad-medium);
 		.gallery-item{
 			&:extend(.inline, .half-largescreen, #custom-page .entry-content figure.alignleft, 
 			.margin-right-xs, .float-left, .no-overflow);
@@ -279,5 +278,37 @@
 			}
 		}
 
+	}
+	#post-content-header{
+		&:extend(#quote-post-page #post-content-header);
+	}
+	.page-title{
+		&:extend(#post-page .page-title);
+	}
+	.gallery-image{
+		&:extend(.no-overflow);
+		height: 120px; 
+		img{
+			&:extend(.full-width-image);
+			min-height: 130px;
+		}
+	}
+	#gallery-sidebar{
+		&:extend(.border-radius-md, .border, .no-padding, .relative);
+	}
+	.gallery-widgets{
+		&:extend(.pad-small, .bottom-border, .relative);
+	}
+	.gallery-widgets:last-of-type{
+		&:extend(.no-border, .bg-white);
+	}
+	.gallery-widgets:nth-child(even):not(:last-of-type){
+		&:extend(.bg-light);
+	}
+	.widget-icon, .widget-text{
+		&:extend(.table-cell, .middle);
+	}
+	.widget-icon{
+		&:extend(.font-medium, .padding-right-sm);
 	}
 }

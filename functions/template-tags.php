@@ -32,8 +32,12 @@ function abbey_post_author( $key = "" ){
 function abbey_show_author( $echo = true ){
 	$author = abbey_post_author();
 	$html = sprintf( '<span class="post-author-image">%1$s</span>
-					<span class="post-author-name strong"> %2$s </span>', 
+					<span class="post-author-name strong">
+						<a href="%2$s" title="%3$s"> %4$s </a> 
+					</span>', 
 					abbey_author_photo( $author->ID, 32, "img-circle" ), 
+					get_author_posts_url( $author->ID ), 
+					__( "Read all author posts", "abbey" ),
 					esc_html( $author->display_name ) 
 				);
 	if ( $echo ) 

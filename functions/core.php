@@ -406,3 +406,23 @@ function abbey_setup_query(){
 
 }
 
+function abbey_gallery_images(){
+	global $post; 
+	
+	$galleries = get_post_galleries_images( $post );
+
+	$slide_images = $galleries;
+
+	if( count( $galleries ) > 0 )
+		$slide_images = array();
+		for( $i = 0; $i < count( $galleries ); $i++ ){
+			if( is_array( $galleries[$i] ) && !empty( $galleries[$i] ) ){
+				foreach( $galleries[$i] as $gallery ){
+					$slide_images[] = $gallery;
+				}
+			}
+		}
+		$slide_images[ "galleries" ] = $galleries;
+
+	return $slide_images; 
+}
