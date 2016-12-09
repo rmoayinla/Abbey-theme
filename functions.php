@@ -182,6 +182,7 @@ if( !function_exists( "abbey_theme_enque_styles" ) ) {
 
 		wp_enqueue_style("abbey-slick", $theme_dir."/libs/slick/slick.css" ); 
 
+		wp_enqueue_style("abbey-slick-theme", $theme_dir."/libs/slick/slick-theme.css" );
 		/*
 		* action hook for other enqueueus 
 		*
