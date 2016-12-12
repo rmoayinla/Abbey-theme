@@ -23,7 +23,7 @@ global $count;
 				</div>
 			</div>
 			<footer class="post-panel-footer">
-				<ul class="list-inline">
+				<ul class="list-inline no-list-style">
 					<li><?php echo abbey_cats_or_tags( "categories", "", "fa-folder-o" ); ?></li>
 					<li><?php echo abbey_cats_or_tags( "tags", "", "fa-tags" );  ?></li>
 				</ul>

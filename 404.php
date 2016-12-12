@@ -6,7 +6,7 @@
 
 get_header();	?>
 
-		<main id="<?php abbey_theme_page_id(); ?>" class="site-content">
+		<main id="<?php abbey_theme_page_id(); ?>" class="site-content row">
 			<header id="site-content-header">
 					<?php do_action( "abbey_theme_before_page_content" ); ?>
 			</header>

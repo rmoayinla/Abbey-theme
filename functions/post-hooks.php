@@ -72,7 +72,7 @@ function abbey_gallery_title( $galleries ){
 
 add_action( "abbey_gallery_post_sidebar", "abbey_gallery_count", 20 ); 
 function abbey_gallery_count( $galleries ){
-	$image_count = ( !empty( $galleries ) ) ? (int) ( count( $galleries ) - 1 ) : 0;
+	$image_count = ( !empty( $galleries ) ) ? (int) count( $galleries ) : 0;
 	$gallery_count = ( !empty( $galleries["galleries"] ) ) ? (int) count( $galleries[ "galleries" ] ) : 0;
 	$html = sprintf( '<div class="widgets gallery-widgets gallery-count-widget">
 						<h4 class="widget-title">%s </h4>', 
@@ -133,6 +133,8 @@ function abbey_gallery_author( $galleries ){
 	echo $html;
 	
 }
+
+
 add_action( "abbey_gallery_post_sidebar", "abbey_gallery_pictures", 90 ); 
 function abbey_gallery_pictures( $galleries ){
 	$image_count = ( !empty( $galleries ) ) ? (int) count( $galleries ) : 0;
@@ -154,7 +156,6 @@ function abbey_gallery_pictures( $galleries ){
 			$image_in_slide = ( $no === 0 ) ?  1 : $image_in_slide;
 			$image_number = ( $no + 1 );
 			$slide_no = 1;
-
 			if( $image_number === 1  ){
 				$html .= "<div class='widget-content slide-$slide_no'>";
 			}
@@ -163,21 +164,18 @@ function abbey_gallery_pictures( $galleries ){
 				$html .= "</div><div class='widget-content slide-$slide_no'>";
 				$image_in_slide = 0;
 			}
-
 			$html .= sprintf( '<a href= "" title=""><img src="%1$s" class="image-%2$s" /></a>', 
 				esc_url( $image ), 
 				esc_attr( $image_number ) 
 				); 
 			if( $image_count === $no )
 				$html .= "</div>";
-
 			$image_in_slide += 1;
 		}
-
 	$html .= "</div> \n </div>";
-
 	echo $html;
 }
+
 
 add_action( "abbey_gallery_image_slides", "abbey_gallery_slides" );
 function abbey_gallery_slides( $galleries ){
