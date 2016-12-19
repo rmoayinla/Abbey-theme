@@ -1,9 +1,11 @@
 #search-page{
 	#site-content-header{
-	&:extend(.inner-pad-responsive);
+		&:extend(.inner-pad-responsive, .outer-pad-medium, #box-shadow .box-shadow-md, .bg-white);
 	}
 	#content{
-		&:extend(.inner-auto-margin, .float-none, .pad-medium);
+		&:extend(.inner-auto-margin, .float-none, .pad-medium, #custom-page #inner-content, .relative );
+		opacity: 1;
+		.transition(opacity;.8s;ease-in-out);
 	}
 	.post-panel{
 		line-height: 1.5em;
@@ -47,12 +49,29 @@
 			&:extend(#post-page .post-categories);
 		}
 	}
+	.post-panel-body{
+		&:extend(.margin-minus-top-sm);
+	}
+	.post-thumbnail{
+		img{
+			&:extend(.full-width-image);
+		}
+		& + .post-excerpts{
+			&:extend(.margin-top-sm);
+		}
+	}
+	.post-excerpts{
+		&:extend(.text-justify);
+	}
 	.categories-list, .tags-list{
 		&:extend(#post-page .tags-list);
 		.post-categories, .tag-list {
 			li + li:before{
 				&:extend(#post-page .tag-list li + li:before);
-			}						
+			}
+			li{
+				&:extend(.inline);
+			}					
 		}
 		.tag-list{
 			&:extend(#post-page .tag-list);

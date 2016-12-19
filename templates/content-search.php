@@ -9,7 +9,11 @@ global $count;
 						<li> <?php echo human_time_diff( get_the_time("U"), current_time("timestamp") ); ?> </li>
 					</ul>
 				</div>
-				<?php the_title( "<h2>", "</h2>" ); ?>
+				<?php echo sprintf( '<h2><a href="%1$s" title="%2$s">%3$s</a></h2>', 
+									get_permalink(), 
+									__( "Read this article", "abbey" ), 
+									get_the_title()
+								); ?>
 				<ul class="breadcrumb"><?php abbey_post_info( true, array( "author", "date" )); ?></ul>
 			</header>
 			<div class="post-panel-body">

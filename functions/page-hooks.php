@@ -179,14 +179,18 @@ search page
 add_action( "abbey_search_page_summary", "abbey_search_summary" ); 
 function abbey_search_summary( $abbey ){
 	$summaries = ( isset( $abbey["summary"] ) ) ? $abbey["summary"] : array();
-	$html = "";
+	$html = $keyword = "";
 	if( count( $summaries ) > 0 )
 		foreach( $summaries as $title => $summary ){
 			$html .= "<li class='list-group-item $title relative'>";
 			if( !empty( $summary["title"] ) )
 				$html .= sprintf( '<p class="list-group-item-text">%s</p>', esc_html( $summary["title"] ) );
 			if( !empty( $summary["key"] ) )
-				$html .= sprintf( '<h4 class="list-group-item-heading">%s</h4>', $summary["key"] );
+				$keyword = ( $title === "keyword" ) ? "<span class='search-keyword'>" : "<span>";
+				$html .= sprintf( '<h4 class="list-group-item-heading">%1$s %2$s </span></h4>', 
+								$keyword, 
+								$summary["key"] 
+							);
 			$html .= "</li>";
 		}
 		

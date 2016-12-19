@@ -1,4 +1,4 @@
-<form action="<?php echo esc_url( home_url() ). "/"?>" method="get" role="search">
+<form action="<?php echo esc_url( home_url() ). "/"?>" method="get" role="search" id="searchform">
     <div class="input-group">
 	    <label for="search" class="sr-only">
 	    	<?php echo apply_filters( "abbey_theme_search_form_sr_label", $label ) ?>

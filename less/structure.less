@@ -274,6 +274,10 @@ a{
 	display: block;
 }
 
+.screen-reader-text{
+	&:extend(.no-display);
+}
+
 .inline{
 	display: inline-block !important;
 	width: auto;
@@ -314,6 +318,9 @@ a{
 	text-align: center;
 }
 
+.text-justify{
+	text-align: justify;
+}
 .text-right{
 	text-align: right;
 }
@@ -417,6 +424,7 @@ a{
 	
 	table{
 		width: 100% !important;
+		height: auto !important;
 		border-collapse: collapse;
 		&:extend(.float-none, .margin-top-sm, .margin-bottom-sm); 
 		th, td{

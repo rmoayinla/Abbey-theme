@@ -88,9 +88,11 @@
 .dark-primary-color-rgba ( @alpha: 0.8 ){
 	@dark-primary-color-rgba: rgba(179,71,0, @alpha);
 }
-.transition(@type:all;@duration:1s;@speed:linear;@delay:1s){
+.transition(@type:all;@duration:1s;@speed:linear;@delay:0s){
 	transition: @arguments;
 	-webkit-transition:@arguments;
+	-o-transition:@arguments;
+	-moz-transition:@arguments;
 }
 .scale(@x:1;@y:1){
 	transform: scale(@x, @y); 

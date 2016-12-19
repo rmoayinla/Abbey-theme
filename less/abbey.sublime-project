@@ -9,6 +9,9 @@
 		},
 		{
 			"path": "/C/wamp/www/wp/wp-content/plugins/abbey-ajax-comment"
+		},
+		{
+			"path": "/C/wamp/www/wp/wp-content/plugins/abbey-ajax-search"
 		}
 	],
 	"settings":
