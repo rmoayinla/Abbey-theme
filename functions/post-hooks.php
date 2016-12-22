@@ -14,7 +14,7 @@ function abbey_post_tags(){
 	echo $html;
 }
 
-add_action( "abbey_theme_after_page_header", "abbey_post_gallery_slides" );
+//add_action( "abbey_theme_after_page_header", "abbey_post_gallery_slides" );//
 function abbey_post_gallery_slides(){
 	$gallery = get_post_gallery( get_the_ID(), false ); 
 	
