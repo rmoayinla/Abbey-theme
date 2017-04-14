@@ -4,6 +4,22 @@
 
 		setupMoreButton();
 
+
+		$(window).on("hashchange", function(event){
+			event.preventDefault();
+			var hash, id;
+			if( this.location.hash !== "" ){
+				id = $(this.location.hash);
+				$("html").animate(
+				{scrollTop: id.offset().top}, 5000
+				);
+				
+			}
+
+		});
+
+		$(window).trigger("hashchange");
+
 		$(".gallery-slides").slick({
 			autoplay: true, 
 			autoplaySpeed: 2000, 
@@ -51,4 +67,18 @@ function setupMoreButton(){
 		moreButton = jQuery(".entry-content .more-button");
 		moreButton.unwrap(); 
 		moreButton.nextAll().wrapAll("<div id='more-content' class='hidden'></div>");
+}
+
+function smoothScroll( url ){
+	var hash,id;
+	if( jQuery(url.hash) !== "" ){
+		hash = url.hash;
+		id = jQuery(hash);
+		jQuery('html, body').animate(
+		{scrollTop: id.offset().top }, 
+        5000
+        );
+
+	}
+	
 }

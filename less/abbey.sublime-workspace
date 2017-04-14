@@ -4,12 +4,104 @@
 		"selected_items":
 		[
 			[
-				"search_query",
-				"search_query_args"
+				"fa-ellip",
+				"fa-ellipsis-v	 font-awesome.css"
+			],
+			[
+				"_",
+				"_POST"
 			],
 			[
 				"abbey",
-				"abbey_query"
+				"abbey-author-widget"
+			],
+			[
+				"jqu",
+				"jqueryData"
+			],
+			[
+				"alert",
+				"alertClass"
+			],
+			[
+				"jQu",
+				"jqueryData"
+			],
+			[
+				"index",
+				"indexNum"
+			],
+			[
+				"initial",
+				"initialTags"
+			],
+			[
+				"bio",
+				"bio_section"
+			],
+			[
+				"respond",
+				"respondValues"
+			],
+			[
+				"respo",
+				"respondSelect"
+			],
+			[
+				"profil",
+				"profile-form"
+			],
+			[
+				"data",
+				"data_json"
+			],
+			[
+				"abbe",
+				"abbey_author_profile"
+			],
+			[
+				"Abbey",
+				"Abbey_Author_Profile"
+			],
+			[
+				"add",
+				"add_field"
+			],
+			[
+				"__",
+				"__FILE__"
+			],
+			[
+				"plugin",
+				"plugin_dir_path"
+			],
+			[
+				"taxonomy",
+				"taxonomy_exists"
+			],
+			[
+				"custom",
+				"custom_posts"
+			],
+			[
+				"post",
+				"posts_query"
+			],
+			[
+				"qu",
+				"queried_object"
+			],
+			[
+				"scroll",
+				"scrollTop"
+			],
+			[
+				"query",
+				"query_vars"
+			],
+			[
+				"search_query",
+				"search_query_args"
 			],
 			[
 				"sort",
@@ -36,20 +128,12 @@
 				"abbey_custom_comment_class"
 			],
 			[
-				"abbe",
-				"abbeyContact"
-			],
-			[
 				"form",
 				"formValues"
 			],
 			[
 				"aja",
 				"ajaxUrl"
-			],
-			[
-				"alert",
-				"alert_class"
 			],
 			[
 				"display",
@@ -192,60 +276,48 @@
 	"buffers":
 	[
 		{
-			"file": "/C/wamp/www/wp/wp-content/themes/Abbey/templates/content-post.php",
+			"file": "abbey.sublime-project",
 			"settings":
 			{
-				"buffer_size": 1501,
+				"buffer_size": 821,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/wamp/www/Arabiyya/wp-content/themes/Abbey/page.php",
+			"settings":
+			{
+				"buffer_size": 1944,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "/C/wamp/www/wp/wp-content/themes/Abbey/functions/post-hooks.php",
+			"file": "/C/wamp/www/Arabiyya/wp-content/themes/Abbey/templates/content-page.php",
 			"settings":
 			{
-				"buffer_size": 6231,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "posts.less",
-			"settings":
-			{
-				"buffer_size": 6587,
+				"buffer_size": 582,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "structure.less",
+			"file": "/C/wamp/www/Arabiyya/wp-content/themes/Abbey/less/page.less",
 			"settings":
 			{
-				"buffer_size": 7027,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "misc.less",
-			"settings":
-			{
-				"buffer_size": 2865,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "responsive.less",
-			"settings":
-			{
-				"buffer_size": 5876,
-				"line_ending": "Unix"
+				"buffer_size": 3002,
+				"line_ending": "Windows"
 			}
 		}
 	],
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 150.0,
+		"height": 392.0,
 		"selected_items":
 		[
+			[
+				"Package Control: ",
+				"Package Control: Enable Package"
+			],
 			[
 				"PHP Code Sniffer: ",
 				"PHP Code Sniffer: Sniff this file"
@@ -271,7 +343,7 @@
 				"Snippet: <?php else: ?>"
 			]
 		],
-		"width": 512.0
+		"width": 400.0
 	},
 	"console":
 	{
@@ -288,134 +360,134 @@
 	},
 	"file_history":
 	[
+		"/C/wamp/www/Arabiyya/wp-content/plugins/abbey-plugins/abbey-recent-posts.php",
+		"/C/wamp/www/Arabiyya/wp-content/plugins/abbey-plugins/abbey-author-widget.php",
+		"/C/wamp/www/Arabiyya/wp-content/themes/Abbey/functions/core.php",
+		"/C/wamp/www/Arabiyya/wp-content/themes/Abbey/less/sidebar.less",
+		"/C/wamp/www/Arabiyya/wp-content/themes/Abbey/functions/plugins.php",
+		"/C/wamp/www/Arabiyya/wp-content/themes/Abbey/functions.php",
+		"/C/wamp/www/Arabiyya/wp-content/themes/Abbey/less/images.less",
+		"/C/wamp/www/Arabiyya/wp-content/plugins/abbey-server-security/abbey-secure-server.php",
+		"/C/wamp/www/Arabiyya/wp-content/plugins/abbey-server-security/abbey-theme-login.php",
+		"/C/wamp/www/Arabiyya/wp-content/themes/Abbey/style.css",
+		"/C/wamp/www/Arabiyya/wp-content/plugins/abbey-server-security/css/login-form.css",
+		"/C/wamp/www/Arabiyya/wp-content/themes/Abbey/less/page.less",
+		"/C/wamp/www/Arabiyya/wp-content/themes/Abbey/page.php",
+		"/C/wamp/www/Arabiyya/wp-content/plugins/abbey-contact-form/contact-form.php",
+		"/C/wamp/www/Arabiyya/wp-content/themes/Abbey/footer.php",
+		"/C/wamp/www/Arabiyya/wp-content/themes/Abbey/page-s_error.php",
+		"/C/wamp/www/Arabiyya/wp-content/themes/Abbey/functions/template-tags.php",
+		"/C/wamp/www/Arabiyya/wp-content/themes/Abbey/header.php",
+		"/C/wamp/www/Arabiyya/wp-content/plugins/abbey-author-profile/abbey-author-profile.php",
+		"/C/wamp/www/Arabiyya/wp-content/themes/Abbey/404.php",
+		"/C/wamp/www/Arabiyya/wp-content/themes/Abbey/templates/content-none.php",
+		"/C/wamp/www/wp/wp-content/plugins/abbey-ajax-comment/abbey-sort-comments.php",
+		"/C/wamp/www/Arabiyya/wp-content/plugins/abbey-author-archives/abbey-author-archive.php",
+		"/C/wamp/www/Arabiyya/wp-content/plugins/abbey-author-profile/abbey-author-contacts.php",
+		"/C/wamp/www/Arabiyya/wp-content/themes/Abbey/s_error.php",
+		"/C/wamp/www/wp/wp-content/plugins/abbey-ajax-comment/abbey-comment-rating.php",
+		"/C/wamp/www/wp/wp-content/plugins/abbey-ajax-comment/abbey-ajax-comment.php",
+		"/C/wamp/www/Arabiyya/wp-content/themes/Abbey/templates/content-author-archive.php",
+		"/C/wamp/www/Arabiyya/wp-content/themes/Abbey/templates/content-recordings.php",
+		"/C/wamp/www/Arabiyya/wp-content/themes/Abbey/js/script.js",
+		"/C/wamp/www/Arabiyya/wp-content/themes/Abbey/less/misc.less",
+		"/C/wamp/www/Arabiyya/wp-content/themes/Abbey/less/archive.less",
+		"/C/wamp/www/Arabiyya/wp-content/themes/Abbey/single.php",
+		"/C/wamp/www/Arabiyya/wp-content/themes/Abbey/author.php",
+		"/C/wamp/www/Arabiyya/wp-content/themes/Abbey/templates/content-news.php",
+		"/C/wamp/www/Arabiyya/wp-content/themes/Abbey/less/variables.less",
+		"/C/wamp/www/Arabiyya/wp-content/themes/Abbey/less/plugins.less",
+		"/C/wamp/www/Arabiyya/wp-content/themes/Abbey/less/responsive.less",
+		"/C/wamp/www/Arabiyya/wp-content/themes/Abbey/templates/content-archive.php",
+		"/C/wamp/www/Arabiyya/wp-content/themes/Abbey/archive.php",
+		"/C/wamp/www/Arabiyya/wp-content/themes/Abbey/less/structure.less",
+		"/C/wamp/www/Arabiyya/wp-content/themes/Abbey/functions/page-hooks.php",
+		"/C/wamp/www/Arabiyya/wp-content/themes/Abbey/less/posts.less",
+		"/C/wamp/www/Arabiyya/wp-content/plugins/abbey-plugins/recent-posts.js",
+		"/C/wamp/www/Arabiyya/wp-content/themes/Abbey/less/widgets.less",
+		"/C/wamp/www/Arabiyya/wp-content/themes/Abbey/less/style.less",
+		"/C/wamp/www/Arabiyya/wp-content/themes/Abbey/functions/front-page-hooks.php",
+		"/C/wamp/www/Arabiyya/wp-content/plugins/abbey-contact-form/contact-form.js",
+		"/C/wamp/www/Arabiyya/wp-content/themes/Abbey/less/abbey.sublime-project",
+		"/C/wamp/www/Arabiyya/wp-content/themes/Abbey/functions/post-hooks.php",
+		"/C/wamp/www/Arabiyya/wp-content/themes/Abbey/css/font-awesome.css",
+		"/C/wamp/www/Arabiyya/wp-content/plugins/abbey-plugins/abbey-plugins.php",
+		"/C/wamp/www/Arabiyya/wp-content/plugins/abbey-plugins/post_templates.php",
+		"/C/wamp/www/Arabiyya/wp-content/plugins/abbey-plugins/author-box.php",
+		"/C/wamp/www/Arabiyya/wp-content/plugins/abbey-author-profile/author-profile.js",
+		"/C/wamp/www/Arabiyya/wp-content/themes/Abbey/less/rtl/rtl.less",
+		"/C/wamp/www/Arabiyya/wp-content/themes/Abbey/templates/content-page.php",
+		"/C/wamp/www/Arabiyya/wp-content/themes/Abbey/templates/content-post.php",
+		"/C/wamp/www/Arabiyya/wp-content/themes/Abbey/less/mixins.less",
+		"/C/wamp/www/Arabiyya/wp-content/plugins/abbey-author-profile/profile-options.php",
+		"/C/wamp/www/Arabiyya/wp-content/plugins/abbey-author-profile/profile-fields.php",
+		"/C/wamp/www/Arabiyya/wp-content/plugins/abbey-author-profile/display-fields.php",
+		"/C/wamp/www/Arabiyya/wp-content/plugins/abbey-author-profile/sanitize-options.php",
+		"/C/wamp/www/Arabiyya/wp-content/plugins/abbey-author-profile/data.json",
+		"/C/wamp/www/Arabiyya/wp-content/themes/Abbey/functions/theme_setup.php",
+		"/C/wamp/www/Arabiyya/wp-content/plugins/abbey-author-profile/author-profile.css",
+		"/C/wamp/www/Arabiyya/wp-content/plugins/abbey-author-profile/libs/quicktags/jquery.tag-editor.js",
+		"/C/wamp/www/Arabiyya/wp-content/plugins/abbey-author-profile/libs/quicktags/jquery.tag-editor.min.js",
+		"/C/wamp/www/Arabiyya/wp-content/plugins/abbey-author-profile/libs/quicktags/jquery.tag-editor.css",
+		"/C/wamp/www/Arabiyya/wp-content/plugins/abbey-author-profile/libs/quicktags/jquery.caret.min.js",
+		"/C/wamp/www/Arabiyya/wp-content/plugins/abbey-author-profile/libs/quicktag/js/tag-it.js",
+		"/C/wamp/www/Arabiyya/wp-content/plugins/abbey-author-profile/libs/quicktag/js/tag-it.min.js",
+		"/C/wamp/www/Arabiyya/wp-content/plugins/abbey-author-profile/abbey-json.php",
+		"/C/wamp/www/wp/wp-content/themes/Abbey/less/abbey.sublime-project",
+		"/C/wamp/www/wp/wp-content/plugins/abbey-ajax-comment/abbey-ajax-comment.js",
+		"/C/wamp/www/Arabiyya/wp-content/plugins/abbey-author-profile/santize-options.php",
+		"/C/wamp/www/Arabiyya/wp-content/themes/Abbey/less/comments.less",
+		"/C/wamp/www/Arabiyya/wp-content/themes/Abbey/front-page.php",
+		"/C/wamp/www/Arabiyya/wp-content/themes/Abbey/category.php",
+		"/C/wamp/www/Arabiyya/wp-content/themes/Abbey/templates/content-front-page.php",
+		"/C/wamp/www/Arabiyya/wp-content/themes/Abbey/search.php",
+		"/C/wamp/www/Arabiyya/wp-content/themes/Abbey/templates/content-archive-none.php",
+		"/C/wamp/www/Arabiyya/wp-content/themes/Abbey/home.php",
+		"/C/wamp/www/Arabiyya/wp-content/themes/Abbey/less/navigation.less",
+		"/C/wamp/www/Arabiyya/wp-content/themes/Abbey/partials/custom-page.php",
+		"/C/wamp/www/Arabiyya/wp-content/themes/Abbey/custom-single.php",
+		"/C/wamp/www/Arabiyya/wp-content/themes/Abbey/less/front-page.less",
+		"/C/wamp/www/Arabiyya/wp-content/themes/Abbey/less/rtl/structure.less",
+		"/C/wamp/www/Arabiyya/wp-content/themes/Abbey/templates/content-search.php",
+		"/C/wamp/www/Arabiyya/wp-content/themes/Abbey/templates/content-custom-page.php",
+		"/C/wamp/www/Arabiyya/wp-content/themes/Abbey/searchform.php",
+		"/C/wamp/www/Arabiyya/wp-content/themes/Abbey/single-recordings.php",
+		"/C/wamp/www/Arabiyya/wp-content/themes/Abbey/single-news.php",
+		"/C/wamp/www/Arabiyya/wp-content/themes/Abbey/templates/content-recording.php",
+		"/C/wamp/www/Arabiyya/wp-content/themes/Abbey/less/footer.less",
+		"/C/wamp/www/Arabiyya/wp-content/themes/Abbey/rtl.css",
+		"/C/Users/ACER/AppData/Roaming/Sublime Text 2/Packages/User/less2css.sublime-settings",
+		"/C/wamp/www/Arabiyya/wp-content/themes/Abbey/less/header.less",
+		"/C/wamp/www/wp/wp-content/themes/Abbey/templates/content-post.php",
+		"/C/wamp/www/wp/wp-content/themes/Abbey/functions/post-hooks.php",
+		"/C/wamp/www/wp/wp-content/plugins/abbey-ajax-search/ajax-search.js",
+		"/C/wamp/www/wp/wp-content/themes/Abbey/js/script.js",
+		"/C/wamp/www/wp/wp-content/plugins/abbey-plugins/extend-tinymce.php",
+		"/C/wamp/www/wp/wp-content/themes/Abbey/less/posts.less",
+		"/C/wamp/www/wp/wp-content/themes/Abbey/less/structure.less",
+		"/C/wamp/www/wp/wp-content/themes/Abbey/less/misc.less",
+		"/C/wamp/www/wp/wp-content/themes/Abbey/less/responsive.less",
 		"/C/wamp/www/wp/wp-content/themes/Abbey/less/page.less",
 		"/C/wamp/www/wp/wp-content/themes/Abbey/comments.php",
 		"/C/wamp/www/wp/wp-content/themes/Abbey/less/comments.less",
-		"/C/wamp/www/wp/wp-content/themes/Abbey/less/responsive.less",
 		"/C/wamp/www/wp/wp-content/themes/Abbey/functions/page-hooks.php",
 		"/C/wamp/www/wp/wp-content/themes/Abbey/functions/template-tags.php",
 		"/C/wamp/www/wp/wp-content/themes/Abbey/less/archive.less",
-		"/C/wamp/www/wp/wp-content/plugins/abbey-ajax-search/ajax-search.js",
-		"/C/wamp/www/wp/wp-content/plugins/abbey-ajax-comment/abbey-comment-rating.php",
 		"/C/wamp/www/wp/wp-content/themes/Abbey/templates/content-search.php",
 		"/C/wamp/www/wp/wp-content/themes/Abbey/search.php",
 		"/C/wamp/www/wp/wp-content/plugins/abbey-ajax-search/ajax-search.php",
-		"/C/wamp/www/wp/wp-content/themes/Abbey/less/structure.less",
 		"/C/wamp/www/wp/wp-content/themes/Abbey/less/mixins.less",
-		"/C/wamp/www/wp/wp-content/themes/Abbey/less/misc.less",
 		"/C/wamp/www/wp/wp-content/plugins/abbey-contact-form/contact-form.js",
-		"/C/wamp/www/wp/wp-content/plugins/abbey-ajax-comment/abbey-ajax-comment.php",
-		"/C/wamp/www/wp/wp-content/themes/Abbey/less/posts.less",
 		"/C/wamp/www/wp/wp-content/themes/Abbey/functions/core.php",
-		"/C/wamp/www/wp/wp-content/plugins/abbey-ajax-comment/abbey-sort-comments.php",
-		"/C/wamp/www/wp/wp-content/plugins/abbey-ajax-comment/abbey-ajax-comment.js",
 		"/C/wamp/www/wp/wp-content/themes/Abbey/searchform.php",
 		"/C/wamp/www/wp/wp-content/themes/Abbey/templates/content-archive-none.php",
 		"/C/wamp/www/wp/wp-content/plugins/abbey-contact-form/contact-form.php",
-		"/C/wamp/www/wp/wp-content/themes/Abbey/functions/post-hooks.php",
 		"/C/wamp/www/wp/wp-content/themes/Abbey/templates/content-page.php",
-		"/C/wamp/www/wp/wp-content/themes/Abbey/js/script.js",
 		"/C/wamp/www/wp/wp-content/themes/Abbey/404.php",
 		"/C/wamp/www/wp/wp-content/themes/Abbey/templates/content-none.php",
 		"/C/wamp/www/wp/wp-content/themes/Abbey/functions.php",
-		"/C/wamp/www/wp/wp-content/themes/Abbey/templates/content-post.php",
 		"/C/wamp/www/wp/wp-content/themes/Abbey/templates/content-custom-page.php",
-		"/C/wamp/www/wp/wp-content/themes/Abbey/functions/custom-functions.php",
-		"/C/wamp/www/wp/wp-content/themes/Abbey/functions/theme_setup.php",
-		"/C/wamp/www/wp/wp-content/themes/Abbey/functions/plugins.php",
-		"/C/wamp/www/wp/wp-content/themes/Abbey/libs/abbey_bootstrap_comments.php",
-		"/C/wamp/www/wp/wp-content/themes/Abbey/libs/wp_bootstrap_navwalker.php",
-		"/C/wamp/www/wp/wp-content/themes/Abbey/templates/content-quote.php",
-		"/C/wamp/www/wp/wp-content/themes/Abbey/templates/content-gallery.php",
-		"/C/wamp/www/wp/wp-content/themes/Abbey/single.php",
-		"/C/wamp/www/wp/wp-content/themes/Abbey/less/header.less",
-		"/C/wamp/www/wp/wp-content/themes/Abbey/less/navigation.less",
-		"/C/wamp/www/wp/wp-content/themes/Abbey/css/font-awesome.min.css",
-		"/C/wamp/www/wp/wp-content/themes/Abbey/page.php",
-		"/C/wamp/www/wp/wp-content/themes/Abbey/header.php",
-		"/C/wamp/www/wp/wp-content/themes/Abbey/less/front-page.less",
-		"/C/wamp/www/wp/wp-content/themes/Abbey/less/style.less",
-		"/C/wamp/www/wp/wp-content/themes/Abbey/templates/content-front-page.php",
-		"/C/wamp/www/wp/wp-content/themes/Abbey/functions/front-page-hooks.php",
-		"/C/wamp/www/wp/wp-content/plugins/abbey-ajax-comment/abbey-html5-comment.php",
-		"/C/wamp/www/wp/wp-content/plugins/abbey-ajax-comment/abbey-hmtl5-comment.php",
-		"/C/wamp/www/wp/wp-content/plugins/abbey-comments-meta/comments-meta.php",
-		"/C/wamp/www/wp/wp-content/themes/Abbey/header-custom.php",
-		"/C/wamp/www/wp/wp-content/themes/Abbey/footer.php",
-		"/C/wamp/www/wp/wp-content/themes/Abbey/partials/custom-page.php",
-		"/C/wamp/www/wp/wp-content/themes/Abbey/style.css",
-		"/C/wamp/www/wp/wp-content/plugins/abbey-plugins/extend-tinymce.php",
-		"/C/wamp/www/wp/wp-content/plugins/abbey-plugins/abbey-contact-form/contact-form.js",
-		"/C/wamp/www/wp/wp-content/plugins/abbey-plugins/abbey-contact-form/contact-form.php",
-		"/C/wamp/www/wp/wp-content/plugins/abbey-plugins/contact-form.php",
-		"/C/wamp/www/wp/wp-content/plugins/abbey-plugins/post_templates.php",
-		"/C/wamp/www/wp/wp-content/plugins/abbey-plugins/abbey-plugins.php",
-		"/C/wamp/www/wp/wp-content/themes/Abbey/less/footer.less",
-		"/C/wamp/www/wp/wp-content/themes/Abbey/less/images.less",
-		"/C/wamp/www/wp/wp-content/themes/Abbey/custom-single.php",
-		"/C/Users/ACER/AppData/Roaming/Sublime Text 2/Packages/User/less2css.sublime-settings",
-		"/C/wamp/www/wp/wp-content/themes/Abbey/less/abbey.sublime-project",
-		"/C/Users/ACER/AppData/Roaming/Sublime Text 2/Packages/User/Preferences.sublime-settings",
-		"/C/wamp/www/wp/wp-content/themes/Abbey/editor-style.css",
-		"/C/wamp/www/wp/wp-content/themes/Abbey/editor-style.less",
-		"/C/Users/ACER/AppData/Roaming/Sublime Text 2/Packages/Less2Css/less2css.sublime-settings",
-		"/C/wamp/www/wp/wp-content/themes/Abbey/less/abbey.sublime-workspace",
-		"/C/wamp/www/wp/wp-content/themes/Abbey/less/variables.less",
-		"/C/wamp/www/wp/wp-content/plugins/abbey-plugins/register_post_types.php",
-		"/C/wamp/www/wp/wp-content/themes/Abbey/front-page.php",
-		"/C/wamp/www/wp/wp-content/themes/Abbey/less/sidebar.less",
-		"/C/wamp/www/wp/wp-content/themes/Abbey/libs/abbey_social_navwalker.php",
-		"/C/wamp/www/wp/wp-content/themes/Abbey/partials/header-custom.php",
-		"/C/wamp/www/wp/wp-content/themes/Abbey/sidebar-404.php",
-		"/C/wamp/www/wp/wp-content/themes/Abbey/index.php",
-		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.316/rmoayinla-abbey-theme-e70b3c0308b0/less/responsive.less",
-		"/C/wamp/www/wp/wp-content/themes/Abbey/customizer/front-page-customizer.php",
-		"/C/wamp/www/wp/wp-content/themes/Abbey/less/icons.less",
-		"/C/wamp/www/wp/wp-content/themes/Abbey/home.php",
-		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.881/font-awesome-4.6.3/css/font-awesome.css",
-		"/C/Users/ACER/AppData/Roaming/Sublime Text 2/Packages/User/abbey.sublime-project",
-		"/C/wamp/www/wordpress/wp-content/themes/Abbey/less/structure.less",
-		"/C/wamp/www/wordpress/wp-content/themes/Abbey/less/mixins.less",
-		"/C/wamp/www/wordpress/wp-content/themes/Abbey/less/style.less",
-		"/C/wamp/www/wordpress/wp-content/themes/Abbey/style.css",
-		"/C/wamp/www/wordpress/wp-content/themes/Abbey",
-		"/C/wamp/www/wordpress/wp-content/themes/Abbey/less/style.css",
-		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.113/virtue/functions.php",
-		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.113/virtue/lib/metaboxes.php",
-		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.113/virtue/lib/widgets.php",
-		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.113/virtue/lib/nav.php",
-		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.113/virtue/templates/header-topbar.php",
-		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.113/virtue/templates/entry-meta.php",
-		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.113/virtue/templates/entry-meta-subhead.php",
-		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.113/virtue/templates/content.php",
-		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.113/virtue/page-sidebar.php",
-		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.113/virtue/lib/config.php",
-		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.113/virtue/lib/admin_scripts.php",
-		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.113/virtue/themeoptions/core/dashboard.php",
-		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.113/virtue/themeoptions/options/virtue_extension.php",
-		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.113/virtue/themeoptions/options.php",
-		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.113/virtue/themeoptions/framework.php",
-		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.553/wordpress-theme-customizer-custom-controls-master/theme-customizer-demo.php",
-		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.553/wordpress-theme-customizer-custom-controls-master/date/date-picker-custom-control.php",
-		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.553/wordpress-theme-customizer-custom-controls-master/select/google-font-dropdown-custom-control.php",
-		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.553/wordpress-theme-customizer-custom-controls-master/select/cache/google-web-fonts.txt",
-		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.553/wordpress-theme-customizer-custom-controls-master/select/taxonomy-dropdown-custom-control.php",
-		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.553/wordpress-theme-customizer-custom-controls-master/select/post-type-dropdown-custom-control.php",
-		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.553/wordpress-theme-customizer-custom-controls-master/layout/layout-picker-custom-control.php",
-		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.472/debut-master/functions.php",
-		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.472/debut-master/inc/customizer.php",
-		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.297/easy-author-image/easy-author-image.php",
-		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.055/custom-user-profile-photo/3five_cupp.php",
-		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.355/custom-user-profile-photo/3five_cupp.php",
-		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.879/custom-user-profile-photo/js/scripts.js",
-		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.828/wp-user-avatar/includes/class-wp-user-avatar-shortcode.php",
-		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.934/sparkling/image.php",
-		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.828/wp-user-avatar/index.html",
-		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.828/wp-user-avatar/readme.txt",
-		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.828/wp-user-avatar/includes/wpua-globals.php",
-		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.828/wp-user-avatar/includes/wpua-functions.php",
-		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.828/wp-user-avatar/uninstall.php",
-		"/C/Users/ACER/AppData/Local/Temp/Rar$DRa0.828/wp-user-avatar/wp-user-avatar.php"
+		"/C/wamp/www/wp/wp-content/themes/Abbey/functions/custom-functions.php"
 	],
 	"find":
 	{
@@ -433,6 +505,34 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"?>\n",
+			");\n",
+			"		\n",
+			");",
+			"repeaters",
+			"o.placeholder",
+			"placeholder",
+			"set_placeholder",
+			"set_place",
+			"setplace",
+			"setplaceholder",
+			" \"",
+			"abbey_post_pagination",
+			"is_archive",
+			".third-largescreen",
+			"font-smal",
+			"');\n",
+			"\"\"",
+			"#primary-menu .custom-logo",
+			".custom-logo",
+			".custom",
+			".entry-footer",
+			"abbey_show_nav",
+			"post_pagination",
+			"iframe",
+			"logo",
+			"#site-info",
+			".custom",
 			".hidden",
 			".hide",
 			";\n",
@@ -479,23 +579,23 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 3,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/C/wamp/www/wp/wp-content/themes/Abbey/templates/content-post.php",
+					"file": "abbey.sublime-project",
 					"settings":
 					{
-						"buffer_size": 1501,
+						"buffer_size": 821,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								808,
-								808
+								553,
+								553
 							]
 						],
 						"settings":
@@ -509,12 +609,132 @@
 								{
 									"characters": ".#",
 									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
 								}
 							],
-							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 4.0,
+						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
@@ -522,18 +742,18 @@
 				},
 				{
 					"buffer": 1,
-					"file": "/C/wamp/www/wp/wp-content/themes/Abbey/functions/post-hooks.php",
+					"file": "/C/wamp/www/Arabiyya/wp-content/themes/Abbey/page.php",
 					"settings":
 					{
-						"buffer_size": 6231,
+						"buffer_size": 1944,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								415,
-								415
+								1411,
+								1411
 							]
 						],
 						"settings":
@@ -542,6 +762,68 @@
 							[
 								{
 									"characters": "<",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								}
+							],
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 18.0,
+						"translation.y": 56.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/C/wamp/www/Arabiyya/wp-content/themes/Abbey/templates/content-page.php",
+					"settings":
+					{
+						"buffer_size": 582,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								525,
+								525
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": "<",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
 									"selector": "text.html"
 								},
 								{
@@ -559,57 +841,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "posts.less",
-					"settings":
-					{
-						"buffer_size": 6587,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4084,
-								4084
-							]
-						],
-						"settings":
-						{
-							"auto_complete_triggers":
-							[
-								{
-									"characters": "<",
-									"selector": "text.html"
-								},
-								{
-									"characters": ".#",
-									"selector": "text.html"
-								}
-							],
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 2582.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
 					"buffer": 3,
-					"file": "structure.less",
+					"file": "/C/wamp/www/Arabiyya/wp-content/themes/Abbey/less/page.less",
 					"settings":
 					{
-						"buffer_size": 7027,
+						"buffer_size": 3002,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4948,
-								4948
+								326,
+								326
 							]
 						],
 						"settings":
@@ -623,39 +867,13 @@
 								{
 									"characters": ".#",
 									"selector": "text.html"
-								}
-							],
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 3782.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "misc.less",
-					"settings":
-					{
-						"buffer_size": 2865,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"auto_complete_triggers":
-							[
+								},
 								{
-									"characters": "<",
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
 									"selector": "text.html"
 								},
 								{
@@ -667,45 +885,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "responsive.less",
-					"settings":
-					{
-						"buffer_size": 5876,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5500,
-								5500
-							]
-						],
-						"settings":
-						{
-							"auto_complete_triggers":
-							[
-								{
-									"characters": "<",
-									"selector": "text.html"
-								},
-								{
-									"characters": ".#",
-									"selector": "text.html"
-								}
-							],
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 4419.0,
+						"translation.y": 26.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

@@ -2,22 +2,39 @@
 	"folders":
 	[
 		{
-			"path": "/C/wamp/www/wp/wp-content/themes/Abbey"
-		},
-		{
-			"path": "/C/wamp/www/wp/wp-content/plugins/abbey-contact-form"
+			"path": "/C/wamp/www/Arabiyya/wp-content/themes/Abbey"
 		},
 		{
 			"path": "/C/wamp/www/wp/wp-content/plugins/abbey-ajax-comment"
 		},
 		{
-			"path": "/C/wamp/www/wp/wp-content/plugins/abbey-ajax-search"
+			"path": "/C/wamp/www/Arabiyya/wp-content/plugins/abbey-author-archives"
+		},
+		{
+			"path": "/C/wamp/www/Arabiyya/wp-content/plugins/abbey-author-profile"
+		},
+		{
+			"path": "/C/wamp/www/Arabiyya/wp-content/plugins/abbey-contact-form"
+		},
+		{
+			"path": "/C/wamp/www/Arabiyya/wp-content/plugins/abbey-plugins"
+		},
+		{
+			"path": "/C/wamp/www/Arabiyya/wp-content/plugins/abbey-server-security"
 		}
 	],
 	"settings":
 	{
 		"less2css":
 		{
+			"autoCompile": true,
+			"autoprefix": false,
+			"lessBaseDir": "./less",
+			"main_file": "style.less",
+			"minify": false,
+			"outputDir": ".",
+			"outputFile": "style.css",
+			"showErrorWithWindow": true
 		}
 	}
 }
