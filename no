@@ -1,0 +1,41 @@
+[33me7e98de[m added a read me file through git command
+[33m90d85cb[m no message
+[33m82b1f3f[m a lot has changed in my more modern abbey theme, but maybe i will have to rename this theme to something else, but added support for listening to event on scroll
+[33mc0f2a78[m changed my post template style, made some tweaks and added some javascript to collapse long posts with a continue reading button
+[33mc7629ad[m still working on my search page, also on search plugin to load result as ajax
+[33m89ef255[m rounding up some responsive styling, will be working next on my search page, want to enable ajax searching kind of
+[33mffcb2b6[m still working on my gallery sidebar and now adding some js scripts for slides and popup (will be later)
+[33m68e8863[m still working on my gallery template, added slick js for slide and carousel, added a sidebar for gallery and upcoming will be tweaking my search.php but
+[33m44d9b67[m started work on a gallery post format template, uhm and still working on some functions too
+[33m54daff0[m still working on my new post quote format template afterwords i will be moving to gallery post format template
+[33mb3b5605[m working gradually, got a quote post format, finally made some adjustment to the abbey_post_info function, changed some of my less files so that i can extend the classes more easily, uhm well maybe a day or 2 i should have a fully styled quote format
+[33m99bdcc9[m trying to make my post template more dynamic by supporting post formats, for now the post formats my theme will supporting will be standard, gallery and quote
+[33m23d8ae1[m Had some major changes, changed the version of fontawesome to 4.9, changed my page template and custom page template, styled my sidebar and widget area
+[33m323894a[m started working on my search page
+[33m708fda4[m still putting some one or two touches on my comments
+[33ma2aa4af[m still working on comment template and also a comment plugin
+[33m8f5a4f2[m eventually added comments template
+[33m15544dd[m now showing post categories and tags, getting closer on getting to comments
+[33md15de47[m new week, still on the blog post template
+[33m2354fda[m couple of changes, now post information are properly displayed, i think next up is showing categories
+[33m9872cc2[m got a lot of work to do and doing, working on my theme plugins, restructuring my author and template functions, added support for pagination and still working on some styling too
+[33md147a4b[m continuing working on my post template, and now dividing my functions too got a lot of them
+[33mbc57391[m Working on adding an author bio box
+[33m7ce3ddd[m night working just wished i could work longer really
+[33m7a26117[m taken a break, while i will have to resume at some point though
+[33ma283af4[m still working on those core functions
+[33md2e357a[m Trying to work on my translations and adding author details
+[33m211f9c1[m finetuning my custom page template
+[33me944993[m cant remember
+[33m92a1e08[m Working on some general styles and started working on sidebars and widgets
+[33md17e7fe[m working on my post templates and adding some plugins although they are not part of this commit
+[33m5e22ed6[m Started working on blog post template
+[33mb435ce6[m eventually added support for slides, and alwo worked on some responsive navigation menus
+[33me22dde8[m added some core functions and re-invented my header
+[33m06c7cd9[m making some amendments
+[33md46f300[m doing some works
+[33m053a0c8[m Actually so many changes, I dont know why i am suppose to be committing each changes individually but well yeah, so lets see - added a custom nav walker class, still got some upgrades i wanna do on that - added a custom header template - considering a lot of changes to my header template - added social icons in the header and some contacts too - added some functions to core e.g. nav_menu, primary_menu, secondary_menu - made some changes to responsive.less
+[33m38eb50d[m Added a new custom template
+[33m197bb1e[m working on 404 page and some adjustments
+[33mc76c61b[m Made so many additions, where should i start from, seems is been a while have commit my changes fuck!, cant be committing them one by one so uhm i just have to put in some brief important ones right?, okay, lets see, footer.php - added wp_footer hook and close some divs there ehm yeah
+[33mad23ab5[m ok
